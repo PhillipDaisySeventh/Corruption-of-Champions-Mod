@@ -165,7 +165,7 @@ package classes.Scenes.Areas.HighMountains
 			this.a = "the ";
 			this.short = "cockatrice";
 			this.imageName = "cockatrice";
-			this.long = "The cockatrice before you stands at about 6 foot 2. The harpy/basilisk hybrid hops from one clawed foot to the other,"
+			this.long = "The cockatrice before you stands at about " + UnitSystem.display("6 foot 2", UnitSystem.displayHeight2(6, 2)) + ". The harpy/basilisk hybrid hops from one clawed foot to the other,"
 			           +" its turquoise neck ruff puffed out. From the creatures flat chest and tight butt, you assume that it must be male."
 			           +" He watches you, his electric blue eyes glinting as his midnight blue tail swishes behind him. Every so often he lunges"
 			           +" forward, beak open before revealing it was a feint. He is wielding his sharp claws as a weapon and is shielded only by his"

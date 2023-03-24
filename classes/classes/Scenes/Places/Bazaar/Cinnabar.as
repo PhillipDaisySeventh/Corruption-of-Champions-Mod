@@ -3,6 +3,7 @@ package classes.Scenes.Places.Bazaar
 	import classes.GlobalFlags.kFLAGS;
 	import classes.display.SpriteDb;
 	import classes.internals.*;
+	import classes.UnitSystem;
 
 	//Cinnabar - Female rat-morph, size queen. Likes bizarre
 	//stuff and extreme pen, VERY STRETCHY, & Hammerspace 
@@ -143,7 +144,7 @@ package classes.Scenes.Places.Bazaar
 			outputText("Too shocked to keep your grip, you listen dumbly as Cinnabar groans, \"<i>" + player.mf("Master","Mistress") + " is pleased? This one knows how to use portals for their intended purpose. Watch slut make more sexy portals.</i>\" True to her words, many of the other mirrors change, showing both sets of nipples");
 			if (!player.hasVagina()) outputText(" and your " + player.assholeDescript());
 			else outputText(", your " + player.vaginaDescript() + ", and your " + player.assholeDescript());
-			outputText(" just inches away. Without any prompting, you reach through to touch her arousal engorged lips, slipping fingertips through the needy gash and marveling at how large it feels. You push forward, burying one, two, three, and finally four fingers inside her hungry nethers.\n\n");
+			outputText(" just " + UnitSystem.literalInches() + " away. Without any prompting, you reach through to touch her arousal engorged lips, slipping fingertips through the needy gash and marveling at how large it feels. You push forward, burying one, two, three, and finally four fingers inside her hungry nethers.\n\n");
 			
 			outputText("Cinnabar pants, \"<i>Ungh... more. Stuff this whore's cunt,</i>\" all while she wiggles her backside against the mirror, clearly enjoying the attention. You pull back to tease her, but the horny whore groans and reaches through another portal to ");
 			if (player.hasVagina()) outputText("grab your " + player.clitDescript() + ", rolling it between her thumb-pads with a hair too much pressure");
@@ -281,7 +282,7 @@ package classes.Scenes.Places.Bazaar
 			
 			outputText("You slap her ass and watch it jiggle, grunting with pleasure when the ripples work their way from her reddened butt-cheek into her taut, brutalized cunt. Cinnabar is watching you through one of her portals, mouth parted and eyes rolled partway back as she struggles to keep it together. Somehow she manages to keep talking. \"<i>Ungh... I can feel it stretching me... stretching me so good. Fuck... my – ung – hips... oh gods look how wide my hips are! You're gonna gape me so fucking good! I'm gonna be your stretched out cock-sleeve, are you happy? I'm gonna – ooooohhh... look like your broken, fucked-out brood-rat.</i>\"\n\n");
 			
-			outputText("It barely registers – you're too busy cramming inch after inch into the slowly-widening vice in front of you, enthralled by just how much cock-flesh her body can devour. She's frothing at the mouth, screaming, squeaking, and pounding on the bed. You push forward a little harder, tugging on the base of her tail for leverage as huge globs of rat-cum rain from the stretched-out snatch onto the sheets.  Another three inches sink into your new cock-sleeve, and she starts to whimper and squeak, reminding you of an old, worn-out chew-toy that your father's dog used to play with.");
+			outputText("It barely registers – you're too busy cramming " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " into the slowly-widening vice in front of you, enthralled by just how much cock-flesh her body can devour. She's frothing at the mouth, screaming, squeaking, and pounding on the bed. You push forward a little harder, tugging on the base of her tail for leverage as huge globs of rat-cum rain from the stretched-out snatch onto the sheets.  Another " + UnitSystem.displayInchesTextually(3) + " sink into your new cock-sleeve, and she starts to whimper and squeak, reminding you of an old, worn-out chew-toy that your father's dog used to play with.");
 			//HUger
 			if (player.cockArea(x) >= 200) {
 				if (player.cor >= 75) doNext(fuckCinnabarHugerAndCorruptedEr);
@@ -301,7 +302,7 @@ package classes.Scenes.Places.Bazaar
 			if (flags[kFLAGS.CINNABAR_FUCKED_CORRUPT_PREVIOUSLY] > 0) outputText(" You're doing it again – turning her into a cum-sleeve without a care for her pleasure, but you don't fucking care. You're too horny and she's too sexy not to abuse.");
 			outputText("\n\n");
 			
-			outputText("That one push sent nearly two feet of cock into the violated vermin, and you don't intend to stop until you've buried all " + num2Text(int(player.cocks[x].cockLength/12)) + " turgid feet inside her. Cinnabar feels so light in comparison to your " + player.cockDescript(x) + ", barely dragging it down at all. You get a wicked idea and lean back, letting your iron-hard member shift with you, pulling the rust-red rat completely off the bed and into the air. With nothing to grab on to and no way to reach the ground, her entire weight is supported entirely by the friction of her over-burdened walls, and with how juicy this bitch is, she's already sliding down, accelerating her gravity-fed violation with her unintentionally well-lubricated fuck-hole.\n\n");
+			outputText("That one push sent nearly " + UnitSystem.displayFeetEstimateTextually(2) + " of cock into the violated vermin, and you don't intend to stop until you've buried all " + UnitSystem.displayQualifiedFeetEstimateTextually(player.cocks[x].cockLength/12, " turgid ") + " inside her. Cinnabar feels so light in comparison to your " + player.cockDescript(x) + ", barely dragging it down at all. You get a wicked idea and lean back, letting your iron-hard member shift with you, pulling the rust-red rat completely off the bed and into the air. With nothing to grab on to and no way to reach the ground, her entire weight is supported entirely by the friction of her over-burdened walls, and with how juicy this bitch is, she's already sliding down, accelerating her gravity-fed violation with her unintentionally well-lubricated fuck-hole.\n\n");
 			
 			outputText("\"<i>T-too fast... " + player.mf("Master","Mistress") + ", too fast! Please go slower... please... ungghhAAAHHH... Godda-ah-aH-AH-AMNIT!</i>\" she protests.\n\n");
 			
@@ -364,7 +365,7 @@ package classes.Scenes.Places.Bazaar
 			clearOutput();
 			spriteSelect(SpriteDb.s_cinnabar);
 			
-			outputText("You're almost there, so close to your orgasm, but you've got so much more cock to bury inside this flexible, stretched-out pussy, and you're determined to bury every last inch of your improbably-large prick inside her before you blast your load. At this rate, you'll be pushing in all day, so you decide to speed things up. You grab her by the haunches, feeling your fingers sink into her silky fur, and you pull her back, flexing your biceps as you yank her down with all your might. She slides down fast, taking a foot of cock in seconds, fast enough to make her belly bulge out in a distinctly dick-like manner.\n\n");
+			outputText("You're almost there, so close to your orgasm, but you've got so much more cock to bury inside this flexible, stretched-out pussy, and you're determined to bury every last " + UnitSystem.literalInch() + " of your improbably-large prick inside her before you blast your load. At this rate, you'll be pushing in all day, so you decide to speed things up. You grab her by the haunches, feeling your fingers sink into her silky fur, and you pull her back, flexing your biceps as you yank her down with all your might. She slides down fast, taking " + UnitSystem.aFoot() + " of cock in seconds, fast enough to make her belly bulge out in a distinctly dick-like manner.\n\n");
 			
 			outputText("The rest of you sinks in, plowing through her surprisingly spongy cervix to violate the very core of her womb. It pushes out far enough that she looks like a ruddy cock-sleeve, with two bouncing tits hanging off your " + player.cockHead(x) + ". Incredibly, Cinnabar doesn't seem to mind that her body is being stretched in impossible ways, distended completely beyond the limits of reason. Instead, she starts murmuring, \"<i>Oooh yeah, feel how fucking tight my womb is. Can't you feel my cervix clamping down, squeezing tight like a cock-ring you couldn't get the whole way down? ..hahahaha I'm broken aren't I? Look at me, I'm your furry condom. My pussy's completely broken... I'm so gaped I'll never walk right again, and I can - I can jerk you off through my belly and womb!</i>\"\n\n");
 			
@@ -372,8 +373,8 @@ package classes.Scenes.Places.Bazaar
 			if (player.balls > 0) outputText(player.ballsDescriptLight());
 			else outputText("base");
 			outputText(" to prod at your " + player.assholeDescript() + ", sliding in to push your prostate. She hits it hard enough to make you pump cum with enough force to distort her already-ballooned body, and you go into an orgasmic frenzy, dragging your " + player.cockDescript(x) + " back to her entrance before jamming in all ");
-			if (player.cocks[x].cockLength < 24) outputText(num2Text(Math.round(player.cocks[x].cockLength)) + " inches");
-			else outputText(num2Text(Math.round(player.cocks[x].cockLength/12)) + " feet");
+			if (player.cocks[x].cockLength < 24) outputText(UnitSystem.displayInchesTextually(player.cocks[x].cockLength));
+			else outputText(UnitSystem.displayFeetTextually(player.cocks[x].cockLength/12));
 			outputText(" all over again.");
 			if (player.cocks[x].cockLength >= 60) outputText(" There's no way this should be possible, but it's happening and you couldn't be happier.");
 			outputText("\n\n");
@@ -392,7 +393,7 @@ package classes.Scenes.Places.Bazaar
 			}
 			outputText("Cinnabar goes limp, but speared as she is, her near-unconscious body just hangs on you like a sock for your cock. You shift position, and gently slide her off, shivering from how tightly her interior grips you as she's peeled off.\n\n");
 			
-			outputText("At last, your " + player.cockHead(x) + " pops from her pussy, showing just how completely you've worked over her body. Her hips are stretched damn near a foot apart, and you can see deep enough inside her ");
+			outputText("At last, your " + player.cockHead(x) + " pops from her pussy, showing just how completely you've worked over her body. Her hips are stretched damn near " + UnitSystem.aFoot() + " apart, and you can see deep enough inside her ");
 			if (player.cocks[x].cockLength >= 60) outputText("that it should be sticking up past her head, yet somehow isn't.");
 			else outputText("to know that she must be some kind of magical to take a fucking like that without damage.");
 			outputText(" Starting from her abused cervix, Cinnabar's pussy slowly begins to change, narrowing until it closes off your view of her womb. The whole canal draws closed in one long motion that squeezes fuck-juices all over the bed, and then you hear her hips pop back into place.\n\n");
@@ -414,7 +415,7 @@ package classes.Scenes.Places.Bazaar
 
 			clearOutput();
 			spriteSelect(SpriteDb.s_cinnabar);
-			outputText("You're almost there, and though you can feel the burgeoning warmth growing underneath your " + player.cockDescript(x) + ", you're determined to push the whole way inside her before you blow. Cinnabar crams her muzzle through a particularly large mirror and locks onto your lips, ramming her tongue deeper into your throat, pushing harder with each inch of tightly-packed cock you shove inside her. At last you bottom out, your " + player.cockHead(x) + " bumps the tight ring of her cervix while her tail pulls tight about your ");
+			outputText("You're almost there, and though you can feel the burgeoning warmth growing underneath your " + player.cockDescript(x) + ", you're determined to push the whole way inside her before you blow. Cinnabar crams her muzzle through a particularly large mirror and locks onto your lips, ramming her tongue deeper into your throat, pushing harder with each " + UnitSystem.literalInch() + " of tightly-packed cock you shove inside her. At last you bottom out, your " + player.cockHead(x) + " bumps the tight ring of her cervix while her tail pulls tight about your ");
 			if (player.balls > 0) outputText(player.ballsDescriptLight());
 			else if (player.hasSheath()) outputText("sheath");
 			else outputText("base");

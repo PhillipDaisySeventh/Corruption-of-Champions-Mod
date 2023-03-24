@@ -5,6 +5,7 @@ package classes.Items.Consumables
 	import classes.Items.Consumable;
 	import classes.Items.ConsumableLib;
 	import classes.PerkLib;
+	import classes.UnitSystem;
 	
 	/**
 	 * Raccoon transformative item.
@@ -48,7 +49,7 @@ package classes.Items.Consumables
 			if (player.hasCock()) {
 				//gain ball size
 				if (player.balls > 0 && player.ballSize < 15 && rand(4) === 0 && changes < changeLimit) {
-					outputText("\n\nYour [balls] inflate, stretching the skin of your sack.  Exposing them, you can see that they've grown several inches!  How magical!");
+					outputText("\n\nYour [balls] inflate, stretching the skin of your sack.  Exposing them, you can see that they've grown several " + UnitSystem.literalInches() + "!  How magical!");
 					player.ballSize += 2 + rand(3);
 					dynStats("lib", 1);
 				}

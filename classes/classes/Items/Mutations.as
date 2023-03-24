@@ -753,13 +753,13 @@ package classes.Items
 						outputText("\nSlowly your tongue swells, thickening up until it's about as thick as your thumb, while staying quite "
 					              +" flexible. You drool, your tongue lolling out of your mouth as you slowly begin to regain control of your forked"
 					              +" organ. When you retract your tongue however, you are shocked to find it is much longer than it used to be,"
-					              +" now a foot long. As you cram your newly shifted appendage back in your mouth, you feel a sudden SNAP,"
+					              +" now " + UnitSystem.aFoot() + " long. As you cram your newly shifted appendage back in your mouth, you feel a sudden SNAP,"
 					              +" and on inspection, find you've snapped off your fangs! Well, you suppose you needed the room anyway.");
 						break;
 
 					case Tongue.DEMONIC:
 						outputText("\nYour tongue gently shrinks down, the thick appendage remaining flexible but getting much smaller. There's"
-					              +" little you can do but endure the weird pinching feeling as your tongue eventually settles at being a foot long."
+					              +" little you can do but endure the weird pinching feeling as your tongue eventually settles at being " + UnitSystem.aFoot() + " long."
 					              +" The pinching sensation continues as the tip of your tongue morphs, becoming a distinctly forked shape."
 					              +" As you inspect your tongue you slowly regain control, retracting it into your mouth, the forked tips picking up"
 					              +" on things you couldn't taste before.");
@@ -767,7 +767,7 @@ package classes.Items
 
 					case Tongue.DRACONIC:
 						outputText("\nYour tongue rapidly shrinks down, the thick appendage remaining flexible but getting much smaller. There's"
-					              +" little you can do but endure the weird pinching feeling as your tongue eventually settles at being a foot long."
+					              +" little you can do but endure the weird pinching feeling as your tongue eventually settles at being " + UnitSystem.aFoot() + " long."
 					              +" The pinching sensation continues as the tip of your tongue morphs, becoming a distinctly forked shape."
 					              +" As you inspect your tongue you slowly regain control, retracting it into your mouth, the forked tips picking up"
 					              +" on things you couldn't taste before.");
@@ -781,7 +781,7 @@ package classes.Items
 
 					default:
 						outputText("\nSlowly your tongue swells, thickening up until it’s about as thick as your thumb, filling your mouth as you"
-					              +" splutter. It begins lengthening afterwards, continuing until it hangs out your mouth, settling at 1 foot long."
+					              +" splutter. It begins lengthening afterwards, continuing until it hangs out your mouth, settling at " + UnitSystem.displayFeetEstimate(1) + " long."
 					              +" The tip pinches making you wince, morphing into a distinctly forked shape. As you inspect your tongue you slowly"
 					              +" regain control, retracting it into your mouth, the forked tips picking up on things you couldn't taste before.");
 				}
@@ -814,7 +814,7 @@ package classes.Items
 				if (player.horns.value > 0) {
 					//High quantity demon horns
 					if (player.horns.type == Horns.DEMON && player.horns.value > 4) {
-						outputText("\n\nYour horns condense, twisting around each other and merging into larger, pointed protrusions.  By the time they finish you have four draconic-looking horns, each about twelve inches long.");
+						outputText("\n\nYour horns condense, twisting around each other and merging into larger, pointed protrusions.  By the time they finish you have four draconic-looking horns, each about " + UnitSystem.displayInchesEstimateTextually(12) + " long.");
 						player.horns.value = 12;
 						player.horns.type = Horns.DRACONIC_X4_12_INCH_LONG;
 					}
@@ -822,7 +822,7 @@ package classes.Items
 						outputText("\n\nYou feel your horns changing and warping, and reach back to touch them.  They have a slight curve and a gradual taper.  They must look something like the horns the dragons in your village's legends always had.");
 						player.horns.type = Horns.DRACONIC_X2;
 						if (player.horns.value > 13) {
-							outputText("  The change seems to have shrunken the horns, they're about a foot long now.");
+							outputText("  The change seems to have shrunken the horns, they're about " + UnitSystem.aFoot() + " long now.");
 							player.horns.value = 12;
 						}
 
@@ -832,7 +832,7 @@ package classes.Items
 				//No horns
 				else {
 					//-If no horns, grow a pair
-					outputText("\n\nWith painful pressure, the skin on the sides of your forehead splits around two tiny nub-like horns.  They're angled back in such a way as to resemble those you saw on the dragons in your village's legends.  A few inches of horn sprout from your head before stopping.  <b>You have about four inches of dragon-like horn.</b>");
+					outputText("\n\nWith painful pressure, the skin on the sides of your forehead splits around two tiny nub-like horns.  They're angled back in such a way as to resemble those you saw on the dragons in your village's legends.  A few " + UnitSystem.literalInches() + " of horn sprout from your head before stopping.  <b>You have about " + UnitSystem.displayInchesTextually(4) + " of dragon-like horn.</b>");
 					player.horns.value = 4;
 					player.horns.type = Horns.DRACONIC_X2;
 
@@ -844,11 +844,11 @@ package classes.Items
 				if (player.horns.type == Horns.DRACONIC_X2) {
 					if (player.horns.value < 12) {
 						if (rand(3) == 0) {
-							outputText("\n\nYou get a headache as an inch of fresh horn escapes from your pounding skull.");
+							outputText("\n\nYou get a headache as " + UnitSystem.anInch() + " of fresh horn escapes from your pounding skull.");
 							player.horns.value += 1;
 						}
 						else {
-							outputText("\n\nYour head aches as your horns grow a few inches longer.  They get even thicker about the base, giving you a menacing appearance.");
+							outputText("\n\nYour head aches as your horns grow a few " + UnitSystem.literalInches() + " longer.  They get even thicker about the base, giving you a menacing appearance.");
 							player.horns.value += 3 + rand(3);
 						}
 						if (player.horns.value >= 12) outputText("  <b>Your horns settle down quickly, as if they're reached their full size.</b>");
@@ -930,7 +930,7 @@ package classes.Items
 			}
 			//Demon tongue
 			if (player.tongue.type == Tongue.SNAKE && rand(3) === 0) {
-				outputText("\n\nYour snake-like tongue tingles, thickening in your mouth until it feels more like your old human tongue, at least for the first few inches.  It bunches up inside you, and when you open up your mouth to release it, roughly two feet of tongue dangles out.  You find it easy to move and control, as natural as walking.  <b>You now have a long demon-tongue.</b>");
+				outputText("\n\nYour snake-like tongue tingles, thickening in your mouth until it feels more like your old human tongue, at least for the first few " + UnitSystem.literalInches() + ".  It bunches up inside you, and when you open up your mouth to release it, roughly " + UnitSystem.displayFeetEstimateTextually(2) + " of tongue dangles out.  You find it easy to move and control, as natural as walking.  <b>You now have a long demon-tongue.</b>");
 				player.tongue.type = Tongue.DEMONIC;
 				changes++;
 			}

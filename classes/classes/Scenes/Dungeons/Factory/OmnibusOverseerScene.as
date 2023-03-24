@@ -11,6 +11,7 @@ package classes.Scenes.Dungeons.Factory
 	import classes.display.SpriteDb;
 	import classes.internals.*;
 	import classes.lists.Gender;
+	import classes.UnitSystem;
 	
 	public class OmnibusOverseerScene extends BaseContent
 	{
@@ -121,9 +122,9 @@ package classes.Scenes.Dungeons.Factory
 			clearOutput();
 			//No dick?  Grow one!
 			if (player.cocks.length == 0) {
-				outputText("A sudden pressure builds in your groin.  You look down in wonder, more than a little turned on by the prospect of growing your own penis.  Your skin ripples and bulges outwards, the sensation turning from pressure to feelings of intense warmth.  The bump distends, turning purple near the tip as it reaches three inches in size.  You touch it and cry out with pleasure, watching it leap forwards another inch in response.  Your tiny dick's crown becomes more and more defined as it grows larger, until you have what looks like a normal six inch dick.  You sigh with happiness and desire at your new addition.  Before you can enjoy it, another wave of heat washes through you, making your new addition respond.  It grows painfully hard as it crests eight inches in length.  ");
-				if (player.cor < 80) outputText("In horror you watch the skin turn a shiny-dark purple.  Tiny wriggling nodules begin to erupt from the purplish skin, making your cock look more like a crazed sex-toy than a proper penis.  You pant and nearly cum as it lengthens one last time, peaking at ten inches long.  One last ring of nodules forms around the edge of your demon-dick's crown, pulsating darkly with each beat of your horrified heart.");
-				else outputText("Curious, you watch the skin turn a shiny-dark purple.  Tiny wriggling nodules begin to erupt from the purplish skin, making your penis look more like those amazing cocks you saw on demons!  You pant and moan in happiness as it lengthens one last time, peaking at ten inches long.  The excitement of possessing such a magnificent pleasure tool makes you cum.  As one last ring of nodules forms around the edge of your new demon-dick's crown, you notice to your surprise that the liquid you ejaculated is pitch black!  But as your new cock pulsates darkly with each beat of your heart, the only thing you have on your mind is to try it out as soon as possible...");
+				outputText("A sudden pressure builds in your groin.  You look down in wonder, more than a little turned on by the prospect of growing your own penis.  Your skin ripples and bulges outwards, the sensation turning from pressure to feelings of intense warmth.  The bump distends, turning purple near the tip as it reaches " + UnitSystem.displayInchesTextually(3) + " in size.  You touch it and cry out with pleasure, watching it leap forwards another " + UnitSystem.literalInch() + " in response.  Your tiny dick's crown becomes more and more defined as it grows larger, until you have what looks like a normal " + UnitSystem.displayInchWithHyphenTextually(6) + " dick.  You sigh with happiness and desire at your new addition.  Before you can enjoy it, another wave of heat washes through you, making your new addition respond.  It grows painfully hard as it crests " + UnitSystem.displayInchesTextually(8) + " in length.  ");
+				if (player.cor < 80) outputText("In horror you watch the skin turn a shiny-dark purple.  Tiny wriggling nodules begin to erupt from the purplish skin, making your cock look more like a crazed sex-toy than a proper penis.  You pant and nearly cum as it lengthens one last time, peaking at " + UnitSystem.displayInchesTextually(10) + " long.  One last ring of nodules forms around the edge of your demon-dick's crown, pulsating darkly with each beat of your horrified heart.");
+				else outputText("Curious, you watch the skin turn a shiny-dark purple.  Tiny wriggling nodules begin to erupt from the purplish skin, making your penis look more like those amazing cocks you saw on demons!  You pant and moan in happiness as it lengthens one last time, peaking at " + UnitSystem.displayInchesTextually(10) + " long.  The excitement of possessing such a magnificent pleasure tool makes you cum.  As one last ring of nodules forms around the edge of your new demon-dick's crown, you notice to your surprise that the liquid you ejaculated is pitch black!  But as your new cock pulsates darkly with each beat of your heart, the only thing you have on your mind is to try it out as soon as possible...");
 				player.createCock();
 				player.cocks[0].cockType = CockTypesEnum.DEMON;
 				player.cocks[0].cockLength = 10;
@@ -131,17 +132,17 @@ package classes.Scenes.Dungeons.Factory
 			}
 			if (player.cocks.length == 1) {
 				if (player.countCocksOfType(CockTypesEnum.DEMON) < 1) {
-					outputText("You smile, watching your " + player.cockDescript(0) + " grow longer.  Inches of newfound dick-flesh erupt from your crotch in response to omnibus' dark magics.  Before you can play with your transformed tool, a wave of burning desire passes through you.  ");
+					outputText("You smile, watching your " + player.cockDescript(0) + " grow longer.  " + capitalizeFirstLetter(UnitSystem.literalInches()) + " of newfound dick-flesh erupt from your crotch in response to omnibus' dark magics.  Before you can play with your transformed tool, a wave of burning desire passes through you.  ");
 					if (player.cor < 80) outputText("You watch in horror as the skin of your " + player.cockDescript(0) + " turns shiny and purplish-black.  ");
 					else outputText("Curious, you watch the skin of your " + player.cockDescript(0) + " turn a shiny-dark purple.  ");
 					player.cocks[0].cockLength += 3 + rand(5);
 					player.cocks[0].thickenCock(2);
 					player.cocks[0].cockType = CockTypesEnum.DEMON;
-					if (player.cor < 50) outputText("Corrupt nodules begin to spring up over its entire length.  <b>Your penis is transforming into a " + player.cockDescript(0) + "!</b>  The new nubs wriggle about as they sprout over every inch of surface, save for the head.  Unable to do anything but groan with forced pleasure and horror, you can only watch.  One last batch of nodules forms in a ring around the crown of your " + player.cockDescript(0) + ", seemingly completing its transformation, until you notice, almost throwing up, that your testicles are also getting covered in black veins under your powerless eyes!  ");
+					if (player.cor < 50) outputText("Corrupt nodules begin to spring up over its entire length.  <b>Your penis is transforming into a " + player.cockDescript(0) + "!</b>  The new nubs wriggle about as they sprout over every " + UnitSystem.literalInch() + " of surface, save for the head.  Unable to do anything but groan with forced pleasure and horror, you can only watch.  One last batch of nodules forms in a ring around the crown of your " + player.cockDescript(0) + ", seemingly completing its transformation, until you notice, almost throwing up, that your testicles are also getting covered in black veins under your powerless eyes!  ");
 					else outputText("As you watch expectantly, tiny wriggling nodules begin to erupt from the purplish skin, like those magnificent cocks you saw on demons!  <b>Your penis is transforming into a " + player.cockDescript(0) + "!</b>  You pant and moan in happiness as it lengthens one last time.  As you stroke all of its amazing length with both hands, the excitement of possessing such a beautiful pleasure tool makes you cum.  As one last ring of nodules forms around the edge of your " + player.cockDescript(0) + "'s crown, you notice that the squirts getting out of your cock-slit are not completely white and gradually become darker, the last drops being pitch-black! Your new " + player.cockDescript(0) + " pulsates darkly with each beat of your heart, but the thick, throbbing veins that are finishing to cover your testicles do not contain blood, but a black liquid which apparently has perverted them. You ponder what its purpose might be, but then you decide, as you stroke the huge, dark, bumpy shaft, that if this feels as good as this looks, it doesn't really matter.  ");
 				}
 				else {
-					outputText("Your " + player.cockDescript(0) + " leaps forwards, taking to the dark magic with ease.  Inch after inch of new length erupts from your groin as your " + player.cockDescript(0) + " gets longer and thicker.  It pulsates, as if promising dark pleasure as it settles into its new enhanced size.");
+					outputText("Your " + player.cockDescript(0) + " leaps forwards, taking to the dark magic with ease.  " + capitalizeFirstLetter(UnitSystem.literalInch()) + " after " + UnitSystem.literalInch() + " of new length erupts from your groin as your " + player.cockDescript(0) + " gets longer and thicker.  It pulsates, as if promising dark pleasure as it settles into its new enhanced size.");
 					player.cocks[0].cockLength += 6 + rand(10);
 					player.cocks[0].thickenCock(3);				
 				}
@@ -149,7 +150,7 @@ package classes.Scenes.Dungeons.Factory
 			if (player.cocks.length > 1) {
 				//Already has demoncocks
 				if (player.countCocksOfType(CockTypesEnum.DEMON) == player.cockTotal()) {
-					outputText("Your " + player.multiCockDescriptLight() + " leap forwards, taking to the dark magic with ease.  Inch after inch of new length erupts from your groin as your " + player.multiCockDescriptLight() + " get longer and thicker.  They pulsate, as if promising dark pleasure as they settle into their new enhanced size.");
+					outputText("Your " + player.multiCockDescriptLight() + " leap forwards, taking to the dark magic with ease.  " + capitalizeFirstLetter(UnitSystem.literalInch()) + " after " + UnitSystem.literalInch() + " of new length erupts from your groin as your " + player.multiCockDescriptLight() + " get longer and thicker.  They pulsate, as if promising dark pleasure as they settle into their new enhanced size.");
 					temp = player.cocks.length;
 					while(temp > 0) {
 						temp--;
@@ -159,7 +160,7 @@ package classes.Scenes.Dungeons.Factory
 				}
 				//Not yet full of demoncocks...
 				else {
-					outputText("You smile, watching your " + player.multiCockDescriptLight() + " grow longer.  Inches of newfound dick-flesh erupt from your crotch in response to omnibus' dark magics.  Before you can play with your transformed pleasure tools, a wave of burning desire passes through you.  You watch");
+					outputText("You smile, watching your " + player.multiCockDescriptLight() + " grow longer.  " + capitalizeFirstLetter(UnitSystem.literalInches()) + " of newfound dick-flesh erupt from your crotch in response to omnibus' dark magics.  Before you can play with your transformed pleasure tools, a wave of burning desire passes through you.  You watch");
 					if (player.cor < 80) outputText(" in horror");
 					else outputText(" curiously");			
 					outputText(" as the skin of your " + player.multiCockDescriptLight() + " turns shiny and purplish-black.  Corrupt nodules begin to spring up over the entire length of each dick.  ");
@@ -170,8 +171,8 @@ package classes.Scenes.Dungeons.Factory
 						player.cocks[temp].thickenCock(2);
 						player.cocks[temp].cockType = CockTypesEnum.DEMON;
 					}
-					if (player.cor < 50) outputText("<b>Your dicks are transforming into " + player.multiCockDescriptLight() + "!</b>  The new nubs wriggle about as they sprout over every inch of surface, save for the heads.  Unable to do anything but groan with forced pleasure and horror, you can only watch.  One last batch of nodules forms in a ring around the crowns of your " + player.multiCockDescriptLight() + ", seemingly completing its transformation, until you notice, almost throwing up, that your testicles are also getting covered in black veins under your powerless eyes!  ");
-					else outputText("<b>Your dicks are transforming into " + player.multiCockDescriptLight() + "!</b>  The new nubs wriggle about as they sprout over every inch of surface, save for the heads.  You pant and moan in happiness as they lengthen one last time.  As you stroke all of their amazing length with both hands, the excitement of possessing such a magnificent pleasure tool makes you cum. You lick your fingers eagerly, tasting your new cum, while a last ring of nodules forms around the crowns of your beautiful " + player.multiCockDescriptLight() + ".   Your new " + player.multiCockDescriptLight() + " pulsate darkly with each beat of your heart, but the thick, throbbing veins that are finishing to cover your testicles do not contain blood, but a black liquid which apparently has perverted them. You ponder what its purpose might be, but then you decide, as you stroke a huge, dark, bumpy shaft, that if they feel as good as they look, it doesn't really matter.  ");
+					if (player.cor < 50) outputText("<b>Your dicks are transforming into " + player.multiCockDescriptLight() + "!</b>  The new nubs wriggle about as they sprout over every " + UnitSystem.literalInch() + " of surface, save for the heads.  Unable to do anything but groan with forced pleasure and horror, you can only watch.  One last batch of nodules forms in a ring around the crowns of your " + player.multiCockDescriptLight() + ", seemingly completing its transformation, until you notice, almost throwing up, that your testicles are also getting covered in black veins under your powerless eyes!  ");
+					else outputText("<b>Your dicks are transforming into " + player.multiCockDescriptLight() + "!</b>  The new nubs wriggle about as they sprout over every " + UnitSystem.literalInch() + " of surface, save for the heads.  You pant and moan in happiness as they lengthen one last time.  As you stroke all of their amazing length with both hands, the excitement of possessing such a magnificent pleasure tool makes you cum. You lick your fingers eagerly, tasting your new cum, while a last ring of nodules forms around the crowns of your beautiful " + player.multiCockDescriptLight() + ".   Your new " + player.multiCockDescriptLight() + " pulsate darkly with each beat of your heart, but the thick, throbbing veins that are finishing to cover your testicles do not contain blood, but a black liquid which apparently has perverted them. You ponder what its purpose might be, but then you decide, as you stroke a huge, dark, bumpy shaft, that if they feel as good as they look, it doesn't really matter.  ");
 				}
 			}
 			postOmnibusBoon();
@@ -260,13 +261,13 @@ package classes.Scenes.Dungeons.Factory
 			//Super long nerf
 			if (player.hasCock()) {
 				if (player.cocks[0].cockLength > 12) {
-					outputText("A tingling sensation worms through your " + player.cockDescript(0) + " as it shrinks down to a more modest eleven inches.  ");
+					outputText("A tingling sensation worms through your " + player.cockDescript(0) + " as it shrinks down to a more modest " + UnitSystem.displayInchesTextually(11) + ".  ");
 					player.cocks[0].cockLength = 11;
 					temp++;
 				}
 				//Super thick nerf
 				if (player.cocks[0].cockThickness > 2) {
-					outputText("Your " + player.cockDescript(0) + "'s obscene thickness withers down to roughly two inches of girth.  ");
+					outputText("Your " + player.cockDescript(0) + "'s obscene thickness withers down to roughly " + UnitSystem.displayInchesEstimateTextually(2) + " of girth.  ");
 					player.cocks[0].cockThickness = 2;
 					temp++;
 				}
@@ -304,9 +305,9 @@ package classes.Scenes.Dungeons.Factory
 					player.cocks[0].cockType = CockTypesEnum.DEMON;
 					player.cocks[0].cockLength = 10;
 					player.cocks[0].cockThickness = 2;
-					outputText("A sudden pressure builds in your groin.  You look down in wonder, more than a little turned on by the prospect of growing your own penis.  Your skin ripples and bulges outwards, the sensation turning from pressure to feelings of intense warmth.  The bump distends, turning purple near the tip as it reaches three inches in size.  You touch it and cry out with pleasure, watching it leap forwards another inch in response.  Your tiny dick's crown becomes more and more defined as it grows larger, until you have what looks like a normal six inch dick.  You sigh with happiness and desire at your new addition.  Before you can enjoy it, another wave of heat washes through you, making your new addition respond.  It grows painfully hard as it crests eight inches in length.  ");
-					if (player.cor < 80) outputText("In horror you watch the skin turn a shiny-dark purple.  Tiny wriggling nodules begin to erupt from the purplish skin, making your cock look more like a crazed sex-toy than a proper penis.  You pant and nearly cum as it lengthens one last time, peaking at ten inches long.  One last ring of nodules forms around the edge of your demon-dick's crown, pulsating darkly with each beat of your horrified heart.");
-					else outputText("Curious, you watch the skin turn a shiny-dark purple.  Tiny wriggling nodules begin to erupt from the purplish skin, making your penis look more like those amazing cocks you saw on demons!  You pant and moan in happiness as it lengthens one last time, peaking at ten inches long.  The excitement of possessing such a magnificent pleasure tool makes you cum.  As one last ring of nodules forms around the edge of your new demon-dick's crown, you notice to your surprise that the liquid you ejaculated is pitch black!  But as your new cock pulsates darkly with each beat of your heart, the only thing you have on your mind is to try it out as soon as possible...");
+					outputText("A sudden pressure builds in your groin.  You look down in wonder, more than a little turned on by the prospect of growing your own penis.  Your skin ripples and bulges outwards, the sensation turning from pressure to feelings of intense warmth.  The bump distends, turning purple near the tip as it reaches " + UnitSystem.displayInchesTextually(3) + " in size.  You touch it and cry out with pleasure, watching it leap forwards another " + UnitSystem.literalInch() + " in response.  Your tiny dick's crown becomes more and more defined as it grows larger, until you have what looks like a normal " + UnitSystem.displayInchWithHyphenTextually(6) + " dick.  You sigh with happiness and desire at your new addition.  Before you can enjoy it, another wave of heat washes through you, making your new addition respond.  It grows painfully hard as it crests " + UnitSystem.displayInchesTextually(8) + " in length.  ");
+					if (player.cor < 80) outputText("In horror you watch the skin turn a shiny-dark purple.  Tiny wriggling nodules begin to erupt from the purplish skin, making your cock look more like a crazed sex-toy than a proper penis.  You pant and nearly cum as it lengthens one last time, peaking at " + UnitSystem.displayInchesTextually(10) + " long.  One last ring of nodules forms around the edge of your demon-dick's crown, pulsating darkly with each beat of your horrified heart.");
+					else outputText("Curious, you watch the skin turn a shiny-dark purple.  Tiny wriggling nodules begin to erupt from the purplish skin, making your penis look more like those amazing cocks you saw on demons!  You pant and moan in happiness as it lengthens one last time, peaking at " + UnitSystem.displayInchesTextually(10) + " long.  The excitement of possessing such a magnificent pleasure tool makes you cum.  As one last ring of nodules forms around the edge of your new demon-dick's crown, you notice to your surprise that the liquid you ejaculated is pitch black!  But as your new cock pulsates darkly with each beat of your heart, the only thing you have on your mind is to try it out as soon as possible...");
 					if (player.balls == 0) {
 						player.balls = 2;
 						outputText("\n\nIncredible pain scythes through your crotch, doubling you over.  In shock, you barely register the sight before your eyes: <b>You have balls!</b>");
@@ -420,7 +421,7 @@ package classes.Scenes.Dungeons.Factory
 				outputText("\"<i>Your greatest fetish is allowing demonic creatures to feed on your cum,</i>\" she says, and it feels so right.  Your cum is meant for demons and plants to feast on.  Just the thought makes you want to orgasm again.\n\n");
 				outputText("\"<i>Since you provide food-source, that must make you livestock.  You like being livestock.  Livestock don't have to think.  Livestock follow orders.  Best of all, as livestock you can live your favorite fetish of being milked of all your cum, every hour of every day,</i>\" the voice says, filling your mind with new thoughts.  Of course it's right, you can just let a demon or tentacle plant milk you and do all the hard stuff, like thinking.  All you have to do is cum.  The thought makes you shiver as the plant-suit absorbs the encapsulated bubbles of jizz.  The dazzling lights grow even brighter as it takes in the nutrients.\n\n");
 				outputText("*FLASH* \"<i>You want to cum for the plant.</i>\"\n\n");
-				outputText("Tendrils of plant crawl up your belly, coating you in slime as they massage every inch of you.\n\n");
+				outputText("Tendrils of plant crawl up your belly, coating you in slime as they massage every " + UnitSystem.literalInch() + " of you.\n\n");
 				outputText("*FLASH* \"<i>You need to cum for the plant.</i>\"\n\n");
 				if (player.breastRows.length == 1) outputText("They reach the lower curve of your breasts.\n\n");
 				if (player.breastRows.length > 1) outputText("They slide over your lowest pair of breasts, encapsulating them in wriggling tightness.\n\n");

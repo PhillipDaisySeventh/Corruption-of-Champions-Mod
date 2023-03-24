@@ -7,6 +7,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 	import classes.CockTypesEnum;
 	import classes.BodyParts.Butt;
 	import classes.BodyParts.Hips;
+	import classes.UnitSystem;
 	
 	public class DriderIncubus extends AbstractSpiderMorph
 	{
@@ -444,7 +445,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 		
 		private function goblinTongueGrapple():void
 		{
-			outputText("The determined goblin love-slave opens wide, launching a tongue that must be at least three feet long toward her master’s member with pinpoint accuracy. It makes contact with a wet ‘snap’ and wraps round the oozing, demonic length before either you or the drider can react. His motions slow from the attention, and he nearly stumbles, giving the goblin time to close to the distance, mummifying his member under layers of hot pink pleasure.");
+			outputText("The determined goblin love-slave opens wide, launching a tongue that must be at least " + UnitSystem.displayFeetEstimateTextually(3) + " long toward her master’s member with pinpoint accuracy. It makes contact with a wet ‘snap’ and wraps round the oozing, demonic length before either you or the drider can react. His motions slow from the attention, and he nearly stumbles, giving the goblin time to close to the distance, mummifying his member under layers of hot pink pleasure.");
 			lust += 5;
 			if (lust100 <= 100)
 			{
@@ -467,7 +468,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 			outputText("Every time she makes a grab for the demonic drider’s tool, he skitters aside, the ebb and flow of your fight keeping her from her objective. In a huff, she grabs hold of a hanging strand of web and affixes the sticky end to one of her nipples. Then, she gives the source spinnaret a squeeze, but not before pressing her other jiggling tit against it.");
 			if (this._goblinWebChain == false)
 			{
-				outputText("\n\nShe comes away with an organic nipple chain, one that has her moaning with need as she shakes her diminutive body for her master’s pleasure. He tries his best to ignore her, even a demon can’t ignore a pair of white-plastered tits shaking a few feet away.");
+				outputText("\n\nShe comes away with an organic nipple chain, one that has her moaning with need as she shakes her diminutive body for her master’s pleasure. He tries his best to ignore her, even a demon can’t ignore a pair of white-plastered tits shaking " + UnitSystem.aFewFeet() + " away.");
 				this._goblinWebChain = true;
 			}
 			else

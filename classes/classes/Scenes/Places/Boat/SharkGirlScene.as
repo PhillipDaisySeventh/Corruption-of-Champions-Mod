@@ -61,7 +61,7 @@ public function sharkGirlEncounter(exploreLoc:Number = 0):void {
 	else {
 		outputText("You wander around the sandy shores of the lake before raising your eyebrow at a strange sight: A solitary fin, circling around in the water. You take a step back in surprise when the fin suddenly starts barrelling toward the shore at inhuman speeds.  ");
 	}
-	outputText("A grey blur bursts from the water and lands on the ground a few feet away from you.\n\n");
+	outputText("A grey blur bursts from the water and lands on the ground " + UnitSystem.aFewFeet() + " away from you.\n\n");
 	outputText("It's a woman – a peculiarly corrupted woman, with shiny grey skin, silver hair, and a fin positioned between her shoulder blades. She's wearing some rather revealing black swimwear. The girl looks up at you and grins widely, showing rows of knife-like teeth. \"<i>Wanna play? Heads up though, I play 'rough'!</i>\"\n\n");
 	unlockCodexEntry("Shark-girls & Tigershark-girls", kFLAGS.CODEX_ENTRY_SHARKGIRLS, false, true);
 	outputText("You're fighting a shark girl!");
@@ -339,7 +339,7 @@ internal function sharkLossRape():void {
 		outputText("Her gaze drifts over to your " + player.vaginaDescript(0) + " and she licks her lips in delight. \"<i>Now that's what I'm looking for! Tell you what dear, you get me wet and I might just give you some pleasure too.</i>\"\n\n");
 		
 		outputText("She roughly grabs you by the hair and pulls your face into her drooling cunt, your tongue instinctively probing into her. \"<i>Mmm... don't you dare stop licking you dumb bitch, if you know what's good for you,</i>\" she orders. You reply by speeding up your tongue work. You're a little ashamed to admit it, but her dominant command makes you feel rather hot and bothered.\n\n");
-		outputText("The shark girl eventually sighs happily and relaxes her grip on your hair, pulling your head away a few inches. \"<i>Not bad bitch, not bad. Now get on your back.</i>\" You obey your mistress's command and flop onto your back. A sense of joy fills you as she positions her crotch in front of your face and moves her own head between your legs. You quickly resume eating her out, and this time she joins in the feast. It's not too long before the two of you orgasm, spraying girl-cum onto each other's faces.\n\n");
+		outputText("The shark girl eventually sighs happily and relaxes her grip on your hair, pulling your head away a few " + UnitSystem.literalInches() + ". \"<i>Not bad bitch, not bad. Now get on your back.</i>\" You obey your mistress's command and flop onto your back. A sense of joy fills you as she positions her crotch in front of your face and moves her own head between your legs. You quickly resume eating her out, and this time she joins in the feast. It's not too long before the two of you orgasm, spraying girl-cum onto each other's faces.\n\n");
 		outputText("The shark girl stands to leave and winks at you before diving back into the water. You eventually pass out from the exertion.");
 		//(Corruption +2, Intelligence -4)
 		player.orgasm('Vaginal');

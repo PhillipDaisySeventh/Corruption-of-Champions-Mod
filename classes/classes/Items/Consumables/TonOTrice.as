@@ -10,6 +10,7 @@ package classes.Items.Consumables
 	import classes.StatusEffects;
 	import classes.lists.BreastCup;
 	import classes.lists.Gender;
+	import classes.UnitSystem;
 
 	/**
 	 * @since  26.05.2017
@@ -258,8 +259,8 @@ package classes.Items.Consumables
 				if (player.shortestCockLength() < 6 && rand(3) == 0 && changes < changeLimit) {
 					var increment:Number = player.increaseCock(player.shortestCockIndex(), 1 + rand(2));
 					outputText("Your [if (cocks > 1)shortest] cock fills to its normal size, but doesn’t just stop there. Your cock feels incredibly"
-					          +" tight as a few more inches of length seem to pour out from your crotch."
-					          +" Your cock has gained "+ increment + " inches.");
+					          +" tight as a few more " + UnitSystem.literalInches() + " of length seem to pour out from your crotch."
+					          +" Your cock has gained "+ UnitSystem.displayInches(increment) + ".");
 					changes++;
 				}
 
@@ -467,7 +468,7 @@ package classes.Items.Consumables
 			}
 			//Arm TF
 			if (player.arms.type != Arms.COCKATRICE && changes < changeLimit && rand(4) == 0) {
-				outputText("\n\nPrickling discomfort suddenly erupts all over your body, like every last inch of your skin has suddenly developed"
+				outputText("\n\nPrickling discomfort suddenly erupts all over your body, like every last " + UnitSystem.literalInch() + " of your skin has suddenly developed"
 				          +" pins and needles. You scratch yourself, hoping for relief; but soon notice lumps forming under the skin as your lower"
 				          +" arm begins to shed. A coat of " + (player.hasCockatriceSkin() ? player.skin.furColor : player.hair.color) + " feathers sprouts"
 				          +" from your skin, covering your upper arm and shoulder entirely, ending at your elbow in a fluffy cuff."
@@ -544,7 +545,7 @@ package classes.Items.Consumables
 			if (player.tail.type != Tail.COCKATRICE && changes < changeLimit && rand(4) == 0) {
 				outputText("\n\nA sudden dull, throbbing pain in your [butt] forces your hands to it; you can feel an ominous lump over your tail"
 				          +" bone, swelling bigger and bigger with every heartbeat.  All of a sudden, it seems to explode, jutting out and around"
-				          +" until it hovers near your ankles. The skin beneath your fingers is covered in feathers but terminates about an inch"
+				          +" until it hovers near your ankles. The skin beneath your fingers is covered in feathers but terminates about " + UnitSystem.anInch()
 				          +" later in a 'v'shape, giving way to " + player.skin.tone + " scales.");
 				outputText("\n<b>You now have a cockatrice tail!</b>");
 				player.tail.type = Tail.COCKATRICE;

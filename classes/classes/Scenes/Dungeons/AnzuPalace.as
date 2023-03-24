@@ -145,7 +145,7 @@ package classes.Scenes.Dungeons
 			credits.modContent = true;
 			credits.authorText = "Coalsack";
 			outputText("<b><u>Bathroom</u></b>\n");
-			outputText("A central round pool, with almost thirty feet of diameter, dominates the center of the room. The warm water of the pool is so clear that you can see the light blue colored tiles of its bottom. Several columns in a light golden marble surround the pool, and give the room a cozy feeling. They’re eleven in total, now that you can count them well.");
+			outputText("A central round pool, with almost " + UnitSystem.displayFeetEstimateTextually(30) + " of diameter, dominates the center of the room. The warm water of the pool is so clear that you can see the light blue colored tiles of its bottom. Several columns in a light golden marble surround the pool, and give the room a cozy feeling. They’re eleven in total, now that you can count them well.");
 			outputText("\n\nThe rest of the room is covered with light brown tiles on the floor and the lower part of the walls, and a pattern of golden tiles and gold inlaids on the upper walls, separated by a band of mosaics displaying fish in exotic colors, sea serpents and aquatic monsters of a kind that you can’t recognize.");
 			outputText("\n\nSome lamps around the room keep the bath well illuminated, and a door to the south leads back to living room.");
 			dungeons.setDungeonButtons(null, roomLivingRoom, null, null);

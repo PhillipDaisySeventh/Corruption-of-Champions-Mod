@@ -367,7 +367,7 @@ package classes.Scenes.Combat
 			}
 			else if (monster.hasStatusEffect(StatusEffects.Constricted)) {
 				menu();
-				addButton(0, "Squeeze", getGame().desert.nagaScene.naggaSqueeze).hint("Squeeze some HP out of your opponent! \n\nFatigue Cost: " + player.physicalCost(20) + "");
+				addButton(0, "Squeeze", getGame().desert.nagaScene.naggaSqueeze).hint("Squeeze some HP out of your opponent! \n\nFatigue Cost: " + player.physicalCost(20));
 				addButton(1, "Tease", getGame().desert.nagaScene.naggaTease);
 				addButton(4, "Release", getGame().desert.nagaScene.nagaLeggoMyEggo);
 			}
@@ -985,7 +985,7 @@ package classes.Scenes.Combat
 				if (rand(10) <= 1) {
 					outputText("Seeing your " + player.weaponName + " raised, the anemone looks down at the water, angles her eyes up at you, and puts out a trembling lip.  ");
 					if (player.cor < 75) {
-						outputText("You stare into her hangdog expression and lose most of the killing intensity you had summoned up for your attack, stopping a few feet short of hitting her.\n");
+						outputText("You stare into her hangdog expression and lose most of the killing intensity you had summoned up for your attack, stopping " + UnitSystem.aFewFeet() + " short of hitting her.\n");
 						damage = 0;
 						//Kick back to main if no damage occured!
 						if (countMonstersLeft() > 0) {

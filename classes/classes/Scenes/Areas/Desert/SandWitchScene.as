@@ -237,7 +237,7 @@ internal function sandwitchRape():void {
 	else { 
 		if (player.biggestTitSize() >= 9 && player.biggestLactation() >= 3 && !player.isPureEnough(25)) {
 			clearOutput();
-			outputText("You stagger and fall to one knee, too overcome by pain to keep fighting.\n\nAs your vision wavers with exhaustion, the witch strides towards you, seeming to glide across the sand. Your consciousness starts to fade, and you see the exotic woman lick her lips and smile cruelly, staring at your generous breasts.\n\nThe last thing you hear before passing out is a mysterious spell, murmured right into your ear in a low, throaty whisper: \"<i>Evals klim ym emoceb llahs uoy.</i>\"\n\nYou dream of walking proudly through the desert, enormous rack jiggling shamelessly with every step, and of tempting nubile young champions to wrap their lips around your nipples and drink. Your sleep becomes fevered as your dreams grow more and more corrupt - you dream of using dark magic to lactate succubus milk, and of your former friends from Ingnam greedily drinking your enhanced milk until their bellies strain to contain it all, then going wide-eyed as pound after pound of breast-flesh suddenly swells upon their chests...");
+			outputText("You stagger and fall to one knee, too overcome by pain to keep fighting.\n\nAs your vision wavers with exhaustion, the witch strides towards you, seeming to glide across the sand. Your consciousness starts to fade, and you see the exotic woman lick her lips and smile cruelly, staring at your generous breasts.\n\nThe last thing you hear before passing out is a mysterious spell, murmured right into your ear in a low, throaty whisper: \"<i>Evals klim ym emoceb llahs uoy.</i>\"\n\nYou dream of walking proudly through the desert, enormous rack jiggling shamelessly with every step, and of tempting nubile young champions to wrap their lips around your nipples and drink. Your sleep becomes fevered as your dreams grow more and more corrupt - you dream of using dark magic to lactate succubus milk, and of your former friends from Ingnam greedily drinking your enhanced milk until their bellies strain to contain it all, then going wide-eyed as " + UnitSystem.literalPound() + " after " + UnitSystem.literalPound() + " of breast-flesh suddenly swells upon their chests...");
 			//BAD END.
 			doNext(sandWitchBadEnd);
 			return;
@@ -292,7 +292,7 @@ private function sandwitchRaped():void {
 	if (player.gender == 1 || player.gender == 3) {
 		//Not so corrupt
 		if (player.isPureEnough(50)) {
-			outputText("You smile at the sand witch, trying to seem enticing. A tiny smile plays across her face even though she supports a worried frown. She reaches up to you, and you allow her to gently pull you down to her. You marvel at her multiple breasts, each perfectly rounded. Each has a nipple approximately two inches long, enough to suck if you wanted to.  ");
+			outputText("You smile at the sand witch, trying to seem enticing. A tiny smile plays across her face even though she supports a worried frown. She reaches up to you, and you allow her to gently pull you down to her. You marvel at her multiple breasts, each perfectly rounded. Each has a nipple approximately " + UnitSystem.displayInchesEstimateTextually(2) + " long, enough to suck if you wanted to.  ");
 			outputText("Your attention wanders down to the damp sand underneath her legs, and her musky scent hits your nose. Which do you go after?\n\n");			
 			menu();
 			addButton(0, "Breasts", sandwitchBewbs);
@@ -336,7 +336,7 @@ private function sandwitchRaped():void {
 	}
 	//Femfem
 	else {
-		outputText("You smile at the sand witch, trying to seem enticing. A tiny smile plays across her face even though she supports a worried frown. She reaches up to you, and you allow her to gently pull you down to her. You marvel at her multiple breasts, each perfectly rounded. Each has a nipple approximately two inches long, enough to suck if you wanted to.  ");
+		outputText("You smile at the sand witch, trying to seem enticing. A tiny smile plays across her face even though she supports a worried frown. She reaches up to you, and you allow her to gently pull you down to her. You marvel at her multiple breasts, each perfectly rounded. Each has a nipple approximately " + UnitSystem.displayInchesEstimateTextually(2) + " long, enough to suck if you wanted to.  ");
 		outputText("Your attention wanders down to the damp sand underneath her legs, and her musky scent hits your nose.\n\n");
 		sandwitchBewbs();
 	}
@@ -938,7 +938,7 @@ private function laySomeEggsInThatWitchFinally():void {
 	outputText(", the ");
 	if (cunt) outputText("ribbed contours of her pussy");
 	else outputText("tight fit of her innards");
-	outputText(" enrapturing your egg-tube with every passing inch.  You begin the process of lubricating the antsy witch's ");
+	outputText(" enrapturing your egg-tube with every passing " + UnitSystem.literalInch() + ".  You begin the process of lubricating the antsy witch's ");
 	if (cunt) outputText("love-");
 	else outputText("anal ");
 	outputText("canal for the delivery of your young; the witch barely contains her moans and utter glee at being filled with such a hot, humid substance.  In perverted delight the sand witch coos between kisses, her moans betraying a curiosity to explore just how pleasant mating this way can truly be.");

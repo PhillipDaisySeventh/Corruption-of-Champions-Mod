@@ -3273,19 +3273,19 @@ package classes
 				}
 			}
 			if (temp2 > 1 && temp2 < 3) {
-				if (cocks.length == 1) outputText("A very pleasurable feeling spreads from your groin as your " + cockDescript(0) + " grows permanently longer - at least an inch - and leaks pre-cum from the pleasure of the change.");
+				if (cocks.length == 1) outputText("A very pleasurable feeling spreads from your groin as your " + cockDescript(0) + " grows permanently longer - at least " + UnitSystem.anInch() + " - and leaks pre-cum from the pleasure of the change.");
 				if (cocks.length > 1) {
-					if (ncocks == cocks.length) outputText("A very pleasurable feeling spreads from your groin as your " + multiCockDescriptLight() + " grow permanently longer - at least an inch - and leak plenty of pre-cum from the pleasure of the change.");
-					if (ncocks == 1) outputText("A very pleasurable feeling spreads from your groin as one of your " + multiCockDescriptLight() + " grows permanently longer, by at least an inch, and leaks plenty of pre-cum from the pleasure of the change.");
-					if (ncocks > 1 && ncocks < cocks.length) outputText("A very pleasurable feeling spreads from your groin as " + num2Text(ncocks) + " of your " + multiCockDescriptLight() + " grow permanently longer, by at least an inch, and leak plenty of pre-cum from the pleasure of the change.");
+					if (ncocks == cocks.length) outputText("A very pleasurable feeling spreads from your groin as your " + multiCockDescriptLight() + " grow permanently longer - at least " + UnitSystem.anInch() + " - and leak plenty of pre-cum from the pleasure of the change.");
+					if (ncocks == 1) outputText("A very pleasurable feeling spreads from your groin as one of your " + multiCockDescriptLight() + " grows permanently longer, by at least " + UnitSystem.anInch() + ", and leaks plenty of pre-cum from the pleasure of the change.");
+					if (ncocks > 1 && ncocks < cocks.length) outputText("A very pleasurable feeling spreads from your groin as " + num2Text(ncocks) + " of your " + multiCockDescriptLight() + " grow permanently longer, by at least " + UnitSystem.anInch() + ", and leak plenty of pre-cum from the pleasure of the change.");
 				}
 			}
 			if (temp2 >=3){
-				if (cocks.length == 1) outputText("Your " + cockDescript(0) + " feels incredibly tight as a few more inches of length seem to pour out from your crotch.");
+				if (cocks.length == 1) outputText("Your " + cockDescript(0) + " feels incredibly tight as a few more " + UnitSystem.literalInches() + " of length seem to pour out from your crotch.");
 				if (cocks.length > 1) {
-					if (ncocks == 1) outputText("Your " + multiCockDescriptLight() + " feel incredibly tight as one of their number begins to grow inch after inch of length.");
-					if (ncocks > 1 && ncocks < cocks.length) outputText("Your " + multiCockDescriptLight() + " feel incredibly number as " + num2Text(ncocks) + " of them begin to grow inch after inch of added length.");
-					if (ncocks == cocks.length) outputText("Your " + multiCockDescriptLight() + " feel incredibly tight as inch after inch of length pour out from your groin.");
+					if (ncocks == 1) outputText("Your " + multiCockDescriptLight() + " feel incredibly tight as one of their number begins to grow " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " of length.");
+					if (ncocks > 1 && ncocks < cocks.length) outputText("Your " + multiCockDescriptLight() + " feel incredibly number as " + num2Text(ncocks) + " of them begin to grow " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " of added length.");
+					if (ncocks == cocks.length) outputText("Your " + multiCockDescriptLight() + " feel incredibly tight as " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " of length pour out from your groin.");
 				}
 			}
 			//Display LengthChange

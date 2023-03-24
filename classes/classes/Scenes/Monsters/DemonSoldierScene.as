@@ -4,6 +4,7 @@ package classes.Scenes.Monsters
 	import classes.BodyParts.*;
 	import classes.GlobalFlags.*;
 	import classes.PregnancyStore;
+	import classes.UnitSystem;
 	
 	public class DemonSoldierScene extends BaseContent
 	{
@@ -252,7 +253,7 @@ package classes.Scenes.Monsters
 				outputText((player.isNaga() ? "serpentine groin" : "butt-cheeks") + ", the " + capitalizeFirstLetter((monster as DemonSoldier).demonTitle(2)) + " seals " + monster.mf("his", "her") + " lips over your [butthole]");
 			}
 			(" and snakes " + monster.mf("his", "her") + " demonic tongue inside you. You squirm at the sensation of the inhumanly long, slippery tendril of flesh probing the innermost recesses of your [vagOrAss], and soon your " + (player.hasVagina() ? player.vaginaDescript() + " is dripping with a combination of demonic saliva and your own lubrication." : player.assholeDescript() + " is sopping with demonic saliva. "));
-			outputText("\n\nThe relentless stimulation of the deepest, most intimate folds of your internal reaches has you biting your lower lip to keep yourself from crying out. Just as the tonguing really gets going, the Demon kneels upright, causing you to shudder as inch after inch of infernal tongue is whipped out of your wet hole. <i>\"That seems to be enough, I think,\"</i> the corrupted beast says.");
+			outputText("\n\nThe relentless stimulation of the deepest, most intimate folds of your internal reaches has you biting your lower lip to keep yourself from crying out. Just as the tonguing really gets going, the Demon kneels upright, causing you to shudder as " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " of infernal tongue is whipped out of your wet hole. <i>\"That seems to be enough, I think,\"</i> the corrupted beast says.");
 			outputText("\n\nAll you can do is lie there and take it as you feel your demonic assailant shift " + monster.mf("his", "her") + " position and press the tip of " + monster.mf("his", "her") + " throbbing demon-cock to your " + (player.hasVagina() ? "well-prepared pussy lips" : "spit-lubed sphincter") + ", pause for a brief moment, then lunge forward to ram " + monster.mf("his", "her") + " entire length into you, launching into a brutal slam-fucking. Both you and " + (monster as DemonSoldier).demonTitle(2) + " gasp and grunt as the creature pounds remorselessly at your [vagOrAss]. The rapid, drumbeat slapping of " + (player.isGoo() ? "flesh-on-slime" : "flesh-on-flesh") + " is overlaid with the wet, squelching of the Demon Soldier mercilessly punishing your hole.");
 			if (player.hasVagina()) player.cuntChange(monster.cockArea(0), true, true, false);
 			else player.buttChange(monster.cockArea(0), true, true, false);
@@ -382,7 +383,7 @@ package classes.Scenes.Monsters
 				outputText("\n\nThe Demon traces around the edges of your pussy lips with the tip of " + monster.mf("his", "her") + " infernal tongue, before flickering the end of the slimy appendage across your [clit], making you gasp in pleasure as your sex fluids begin to flow freely. Strands of pussy juice and demon spit stretch between your moistened sex-hole and the Demon's lips as " + monster.mf("he", "she") + " withdraws from the tonguing.");
 			}
 			else {
-				outputText("\n\nThe Demon " + (player.isNaga() ? "pushes " + monster.mf("his", "her") + " face into your [butt], and " : "") + "presses " + monster.mf("his", "her") + " lips to your [butthole]. You feel a pressure at your sphincter, and the beast's inhuman tongue burrows its way into your bowels. The sensation of the slimy appendage questing into the inner folds of your rectum forces a moan from your lips. The hellish creature withdraws with an audible slurp, yanking over a foot of tongue from your ass, and making you gasp, sharply.");
+				outputText("\n\nThe Demon " + (player.isNaga() ? "pushes " + monster.mf("his", "her") + " face into your [butt], and " : "") + "presses " + monster.mf("his", "her") + " lips to your [butthole]. You feel a pressure at your sphincter, and the beast's inhuman tongue burrows its way into your bowels. The sensation of the slimy appendage questing into the inner folds of your rectum forces a moan from your lips. The hellish creature withdraws with an audible slurp, yanking over " + UnitSystem.aFoot() + " of tongue from your ass, and making you gasp, sharply.");
 			}
 			//Phew. Let's proceed!
 			outputText("\n\n<i>\"Mmmmm, delicious.\"</i> " + monster.mf("He", "She") + " hisses <i>\"Now, let's put that pretty little mouth of yours to good use.\"</i> "+ (player.isTaur() || player.tallness >= 90 ? "On all fours, the " + (monster as DemonSoldier).demonTitle() + " slinks up to your head, and, with" : "With") + " a smooth swivel, the " + (monster as DemonSoldier).demonTitle() + " straddles your face.");
@@ -407,7 +408,7 @@ package classes.Scenes.Monsters
 				outputText("\n\nYour infernal attacker leans forward, ");
 				if (player.hasCock()) {
 					if (player.thickestCockThickness() < 4.5)
-						outputText((player.thickestCock() < 3 ? "engulfing the end of your [cock biggest] in " + monster.mf("his", "her") + " hot, wet mouth" : "forcing the end of your [cock biggest] past " + monster.mf("his", "her") + " stretched jaw") + " and easily swallowing down " + (player.biggestCockLength() > 14 ? "over a foot of your throbbing length" : "your entire throbbing length down to the [sheath], burying " + monster.mf("his", "her") + " nose in your " + (player.balls > 0 ? "[sack]" : (player.hasVagina() ? "[vagina]" : "taint"))) + ".");  
+						outputText((player.thickestCock() < 3 ? "engulfing the end of your [cock biggest] in " + monster.mf("his", "her") + " hot, wet mouth" : "forcing the end of your [cock biggest] past " + monster.mf("his", "her") + " stretched jaw") + " and easily swallowing down " + (player.biggestCockLength() > 14 ? "over " + UnitSystem.aFoot() + " of your throbbing length" : "your entire throbbing length down to the [sheath], burying " + monster.mf("his", "her") + " nose in your " + (player.balls > 0 ? "[sack]" : (player.hasVagina() ? "[vagina]" : "taint"))) + ".");  
 					else {
 						outputText(" messily licks " + monster.mf("his", "her") + " way along the length of your [cock biggest] to encircle the [cockHead biggest] with " + monster.mf("his", "her") + " tongue. "); 
 						if (player.cockTotal() >= 2 && player.cockTotal() < 4) {
@@ -434,7 +435,7 @@ package classes.Scenes.Monsters
 					outputText(" and begins to pump hard and fast.");
 				}
 				else if (player.cockTotal() == 1) {
-					outputText((player.isNaga() ? " reach out to your groin," : " shove " + monster.mf("his", "her") + " hands between your legs, ") + (player.balls > 0 ? "caressing your [balls] with one hand whilst, with the other, " : "") + (player.hasVagina() ? "" + monster.mf("he", "she") + " thrusts " + monster.mf("his", "her") + " fingers past your pussy lips, wiggling and wriggling inside you alongside " + monster.mf("his", "her") + " tongue." : (player.isNaga() ? " " + monster.mf("he", "she") + " runs " + monster.mf("his", "her") + " hands over your serpentine hips, before " : " " + monster.mf("he", "she") + " gropes roughly at your buttocks, ")) + "poking several fingers into your [butthole], searching out your prostate"); 
+					outputText((player.isNaga() ? " reach out to your groin," : " shove " + monster.mf("his", "her") + " hands between your legs, ") + (player.balls > 0 ? "caressing your [balls] with one hand whilst, with the other, " : "") + (player.hasVagina() ? monster.mf("he", "she") + " thrusts " + monster.mf("his", "her") + " fingers past your pussy lips, wiggling and wriggling inside you alongside " + monster.mf("his", "her") + " tongue." : (player.isNaga() ? " " + monster.mf("he", "she") + " runs " + monster.mf("his", "her") + " hands over your serpentine hips, before " : " " + monster.mf("he", "she") + " gropes roughly at your buttocks, ")) + "poking several fingers into your [butthole], searching out your prostate"); 
 				}
 				else {
 					outputText((player.isNaga() ? " reach out to your groin," : " shove " + monster.mf("his", "her") + " hands between your legs, ") + (player.hasVagina() ? " and thrust " + monster.mf("his", "her") + " fingers past your pussy lips, wiggling and wriggling inside you along side " + monster.mf("his", "her") + " tongue. " : (player.isNaga() ? " " + monster.mf("he", "she") + " runs " + monster.mf("his", "her") + " hands over your serpentine hips, before " : " " + monster.mf("he", "she") + " gropes roughly at your buttocks, ")) + "poking several fingers into your [butthole], searching out your prostate.");

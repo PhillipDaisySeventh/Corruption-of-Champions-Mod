@@ -105,32 +105,32 @@ package classes.Scenes.Combat
 			else {
 				if (player.hasStatusEffect(StatusEffects.KnowsCharge)) {
 					if (!player.hasStatusEffect(StatusEffects.ChargeWeapon))
-						addButton(0, "Charge W.", spellChargeWeapon).hint("The Charge Weapon spell will surround your weapon in electrical energy, causing it to do even more damage.  The effect lasts for the entire combat.  \n\nFatigue Cost: " + player.spellCost(15) + "", "Charge Weapon");
+						addButton(0, "Charge W.", spellChargeWeapon).hint("The Charge Weapon spell will surround your weapon in electrical energy, causing it to do even more damage.  The effect lasts for the entire combat.  \n\nFatigue Cost: " + player.spellCost(15), "Charge Weapon");
 					else outputText("<b>Charge weapon is already active and cannot be cast again.</b>\n\n");
 				}
 				if (player.hasStatusEffect(StatusEffects.KnowsBlind)) {
 					if (!monster.hasStatusEffect(StatusEffects.Blind))
-						addButton(1, "Blind", spellBlind).hint("Blind is a fairly self-explanatory spell.  It will create a bright flash just in front of the victim's eyes, blinding them for a time.  However if they blink it will be wasted.  \n\nFatigue Cost: " + player.spellCost(20) + "");
+						addButton(1, "Blind", spellBlind).hint("Blind is a fairly self-explanatory spell.  It will create a bright flash just in front of the victim's eyes, blinding them for a time.  However if they blink it will be wasted.  \n\nFatigue Cost: " + player.spellCost(20));
 					else outputText("<b>" + monster.capitalA + monster.short + " is already affected by blind.</b>\n\n");
 				}
-				if (player.hasStatusEffect(StatusEffects.KnowsWhitefire)) addButton(2, "Whitefire", spellWhitefire).hint("Whitefire is a potent fire based attack that will burn your foe with flickering white flames, ignoring their physical toughness and most armors.  \n\nFatigue Cost: " + player.spellCost(30) + "");
+				if (player.hasStatusEffect(StatusEffects.KnowsWhitefire)) addButton(2, "Whitefire", spellWhitefire).hint("Whitefire is a potent fire based attack that will burn your foe with flickering white flames, ignoring their physical toughness and most armors.  \n\nFatigue Cost: " + player.spellCost(30));
 			}
 			//BLACK MAGICSKS
 			if (player.lust < 50)
 				outputText("You aren't turned on enough to use any black magics.\n\n");
 			else {
-				if (player.hasStatusEffect(StatusEffects.KnowsArouse)) addButton(5, "Arouse", spellArouse).hint("The arouse spell draws on your own inner lust in order to enflame the enemy's passions.  \n\nFatigue Cost: " + player.spellCost(15) + "");
-				if (player.hasStatusEffect(StatusEffects.KnowsHeal)) addButton(6, "Heal", spellHeal).hint("Heal will attempt to use black magic to close your wounds and restore your body, however like all black magic used on yourself, it has a chance of backfiring and greatly arousing you.  \n\nFatigue Cost: " + player.spellCost(20) + "");
+				if (player.hasStatusEffect(StatusEffects.KnowsArouse)) addButton(5, "Arouse", spellArouse).hint("The arouse spell draws on your own inner lust in order to enflame the enemy's passions.  \n\nFatigue Cost: " + player.spellCost(15));
+				if (player.hasStatusEffect(StatusEffects.KnowsHeal)) addButton(6, "Heal", spellHeal).hint("Heal will attempt to use black magic to close your wounds and restore your body, however like all black magic used on yourself, it has a chance of backfiring and greatly arousing you.  \n\nFatigue Cost: " + player.spellCost(20));
 				if (player.hasStatusEffect(StatusEffects.KnowsMight)) {
 					if (!player.hasStatusEffect(StatusEffects.Might))
-						addButton(7, "Might", spellMight).hint("The Might spell draws upon your lust and uses it to fuel a temporary increase in muscle size and power.  It does carry the risk of backfiring and raising lust, like all black magic used on oneself.  \n\nFatigue Cost: " + player.spellCost(25) + "");
+						addButton(7, "Might", spellMight).hint("The Might spell draws upon your lust and uses it to fuel a temporary increase in muscle size and power.  It does carry the risk of backfiring and raising lust, like all black magic used on oneself.  \n\nFatigue Cost: " + player.spellCost(25));
 					else outputText("<b>You are already under the effects of Might and cannot cast it again.</b>\n\n");
 				}
-				if (player.hasStatusEffect(StatusEffects.KnowsBlackfire)) addButton(8, "Blackfire", spellBlackfire).hint("Blackfire is the black magic variant of Whitefire. It is a potent fire based attack that will burn your foe with flickering black and purple flames, ignoring their physical toughness and most armors.\n\nFatigue Cost: " + player.spellCost(40) + "");
+				if (player.hasStatusEffect(StatusEffects.KnowsBlackfire)) addButton(8, "Blackfire", spellBlackfire).hint("Blackfire is the black magic variant of Whitefire. It is a potent fire based attack that will burn your foe with flickering black and purple flames, ignoring their physical toughness and most armors.\n\nFatigue Cost: " + player.spellCost(40));
 			}
 			// JOJO ABILITIES -- kind makes sense to stuff it in here along side the white magic shit (also because it can't fit into M. Specials :|
 			if (player.findPerk(PerkLib.CleansingPalm) >= 0 && player.isPureEnough(10)) {
-				addButton(3, "C.Palm", spellCleansingPalm).hint("Unleash the power of your cleansing aura! More effective against corrupted opponents. Doesn't work on the pure.  \n\nFatigue Cost: " + player.spellCost(30) + "", "Cleansing Palm");
+				addButton(3, "C.Palm", spellCleansingPalm).hint("Unleash the power of your cleansing aura! More effective against corrupted opponents. Doesn't work on the pure.  \n\nFatigue Cost: " + player.spellCost(30), "Cleansing Palm");
 			}
 			addButton(14, "Back", combat.combatMenu, false);
 		}
@@ -595,7 +595,7 @@ package classes.Scenes.Combat
 				outputText("You thrust your palm forward, causing a blast of pure energy to slam against " + monsterTarget.a + monsterTarget.short + ", tossing");
 				if ((monsterTarget as Monster).plural == true) outputText(" them");
 				else outputText((monsterTarget as Monster).mfn(" him", " her", " it"));
-				outputText(" back a few feet.\n\n");
+				outputText(" back " + UnitSystem.aFewFeet() + ".\n\n");
 				if (silly() && corruptionMulti >= 1.75) outputText("It's super effective!  ");
 				outputText(monsterTarget.capitalA + monsterTarget.short + " takes <b><font color=\"#800000\">" + temp + "</font></b> damage.\n\n");
 			}
@@ -733,11 +733,11 @@ package classes.Scenes.Combat
 			}
 			//Possess
 			if (player.findPerk(PerkLib.Incorporeality) >= 0) {
-				addButton(button++, "Possess", possess).hint("Attempt to temporarily possess a foe and force them to raise their own lusts. \n\nFatigue Cost: " + player.spellCost(10) + "");
+				addButton(button++, "Possess", possess).hint("Attempt to temporarily possess a foe and force them to raise their own lusts. \n\nFatigue Cost: " + player.spellCost(10));
 			}
 			//Whisper
 			if (player.findPerk(PerkLib.Whispered) >= 0) {
-				addButton(button++, "Whisper", superWhisperAttack).hint("Whisper and induce fear in your opponent. \n\nFatigue Cost: " + player.spellCost(10) + "");
+				addButton(button++, "Whisper", superWhisperAttack).hint("Whisper and induce fear in your opponent. \n\nFatigue Cost: " + player.spellCost(10));
 			}
 			//Kitsune Spells
 			if (player.findPerk(PerkLib.CorruptedNinetails) >= 0) {
@@ -2382,7 +2382,7 @@ package classes.Scenes.Combat
 				//Success 2:
 				case 2:
 					if (monsterTarget.plural) outputText("  Gold-gilt lips press into one of their mouths, the victim's lips melding with yours.  You take your time with your suddenly cooperative captive and make sure to cover every bit of their mouth with your lipstick before you let them go.");
-					else outputText("  Gold-gilt lips press into " + monsterTarget.a + monsterTarget.short + ", " + monsterTarget.pronoun3 + " mouth melding with yours.  You take your time with your suddenly cooperative captive and make sure to cover every inch of " + monsterTarget.pronoun3 + " with your lipstick before you let " + monsterTarget.pronoun2 + " go.");
+					else outputText("  Gold-gilt lips press into " + monsterTarget.a + monsterTarget.short + ", " + monsterTarget.pronoun3 + " mouth melding with yours.  You take your time with your suddenly cooperative captive and make sure to cover every " + UnitSystem.literalInch() + " of " + monsterTarget.pronoun3 + " with your lipstick before you let " + monsterTarget.pronoun2 + " go.");
 					damage = 20;
 					break;
 				//CRITICAL SUCCESS (3)

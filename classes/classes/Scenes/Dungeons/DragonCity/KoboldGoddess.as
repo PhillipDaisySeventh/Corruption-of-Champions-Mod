@@ -10,6 +10,7 @@ package classes.Scenes.Dungeons.DragonCity
 	import classes.StatusEffects.Combat.IceBreathDebuff;
 	import classes.PerkLib;
 	import classes.internals.WeightedDrop;
+	import classes.UnitSystem;
 	import classes.Vagina;
 	
 	// The Main Boss
@@ -111,7 +112,7 @@ package classes.Scenes.Dungeons.DragonCity
 			this.a = "";
 			this.short = "Katharja";
 			this.imageName = "kobold-goddess";
-			this.long = "Before you stands Katharja, the self-proclaimed goddess of the kobolds! Unlike her subjects, Katharja is unquestionably a true dragon, a monstrous herm who stands 8 feet tall, covered in thick, dull-green scales. A decorative row of spikes runs in a line from between her eyes down her spine to the tip of her tail, while intimidating bull-like horns curve forward from the sides of her head. Instead of tail-blades like Ember has, her tail’s end thickens into a monstrous cudgel of gnarly bone, fit for crushing skulls. Burning mad red eyes glower at you, and she makes a show of running her draconic tongue along her razor-like teeth or clawed fingers, her tattered draconic wings flaring to make her look more intimidating. G-cup breasts bounce proudly upon her chest, while an arm-like draconic penis, easily 20” by 3”, juts from above her slavering cunt. She looks at you with distaste, like she was dealing with vermin far below her standing. Her stance is solid, with no openings and you can see the power behind her limbs; this is not going to be easy.";
+			this.long = "Before you stands Katharja, the self-proclaimed goddess of the kobolds! Unlike her subjects, Katharja is unquestionably a true dragon, a monstrous herm who stands " + UnitSystem.displayHeight2Estimate(8) + " tall, covered in thick, dull-green scales. A decorative row of spikes runs in a line from between her eyes down her spine to the tip of her tail, while intimidating bull-like horns curve forward from the sides of her head. Instead of tail-blades like Ember has, her tail’s end thickens into a monstrous cudgel of gnarly bone, fit for crushing skulls. Burning mad red eyes glower at you, and she makes a show of running her draconic tongue along her razor-like teeth or clawed fingers, her tattered draconic wings flaring to make her look more intimidating. G-cup breasts bounce proudly upon her chest, while an arm-like draconic penis, easily " + UnitSystem.display("20” by 3”", UnitSystem.displayInchesEstimate(20) + " by " + UnitSystem.displayInchesEstimate(3)) + ", juts from above her slavering cunt. She looks at you with distaste, like she was dealing with vermin far below her standing. Her stance is solid, with no openings and you can see the power behind her limbs; this is not going to be easy.";
 			this.race = "Dragon";
 			// this.plural = false;
 			this.createBreastRow(Appearance.breastCupInverse("F"));

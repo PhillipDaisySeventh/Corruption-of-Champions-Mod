@@ -551,8 +551,8 @@ package classes {
 					return randomChoice("sizable", "long", "lengthy");
 				}
 				if (length < 13) {
-					if (cockType === CockTypesEnum.DOG) return randomChoice("huge", "foot-long", "mastiff-like");
-					return randomChoice("huge", "foot-long", "cucumber-length");
+					if (cockType === CockTypesEnum.DOG) return randomChoice("huge", UnitSystem.footCompound() + "-long", "mastiff-like");
+					return randomChoice("huge", UnitSystem.footCompound() + "-long", "cucumber-length");
 				}
 				if (length < 18) return randomChoice("massive", "knee-length", "forearm-length");
 				if (length < 30) return randomChoice("enormous", "giant", "arm-like");
@@ -611,7 +611,7 @@ package classes {
 				}
 				else if (i_cockLength < 13) {
 					if (rand(2) === 0) description = "huge";
-					else description = "foot-long";
+					else description = UnitSystem.footCompound() + "-long";
 				}
 				else if (i_cockLength < 18) {
 					if (rand(2) === 0) description = "massive";
@@ -2004,21 +2004,23 @@ package classes {
 					[Ears.RED_PANDA, "red-panda"],
 				]
 		);
-		public static const DEFAULT_HORNS_NAMES:Object = createMapFromPairs(
-				[
-					[Horns.NONE, "non-existent"],
-					[Horns.DEMON, "demon"],
-					[Horns.COW_MINOTAUR, "cow"],
-					[Horns.DRACONIC_X2, "2 draconic"],
-					[Horns.DRACONIC_X4_12_INCH_LONG, "four 12\" long draconic"],
-					[Horns.ANTLERS, "deer"],
-					[Horns.GOAT, "goat"],
-					[Horns.RHINO, "rhino"],
-					[Horns.SHEEP, "sheep"],
-					[Horns.RAM, "ram"],
-					[Horns.IMP, "imp"],
-				]
-		);
+		public static function getDefaultHornsNames(hornType:int):String
+		{
+			switch (hornType) {
+				case Horns.DEMON: return "demon";
+				case Horns.COW_MINOTAUR: return "cow";
+				case Horns.DRACONIC_X2: return "2 draconic";
+				case Horns.DRACONIC_X4_12_INCH_LONG: return "four " + UnitSystem.displayInchesShort2(12) + " long draconic";
+				case Horns.ANTLERS: return "deer";
+				case Horns.GOAT: return "goat";
+				case Horns.RHINO: return "rhino";
+				case Horns.SHEEP: return "sheep";
+				case Horns.RAM: return "ram";
+				case Horns.IMP: return "imp";
+				case Horns.NONE:
+				default: return "non-existent";
+			}
+		}
 		public static const DEFAULT_ANTENNAE_NAMES:Object = createMapFromPairs(
 				[
 					[Antennae.NONE, "non-existent"],

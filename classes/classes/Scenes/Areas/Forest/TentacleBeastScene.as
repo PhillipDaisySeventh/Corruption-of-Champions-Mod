@@ -467,7 +467,7 @@ internal function tentacleLossRape():void {
 		//(Optional Paragraphs)
 		if (player.gender == 2) {
 			//[Female/Virgin-Tight Cunt]
-			if (player.vaginalCapacity() < 30) outputText("The beast senses your excitement and with beguiling speed swiftly impales your " + player.vaginaDescript(0) + " with one of its massive, knobbly tentacles.  You squeal in pain and pleasure as you feel every bumpy inch pound into you, your cunt being stretched to unbelievable proportions.  The tentacle quickly bottoms out in your shallow hole, pressing urgently against your cervix as it begins to rhythmically pound your " + player.vaginaDescript(0) + ".\n");
+			if (player.vaginalCapacity() < 30) outputText("The beast senses your excitement and with beguiling speed swiftly impales your " + player.vaginaDescript(0) + " with one of its massive, knobbly tentacles.  You squeal in pain and pleasure as you feel every bumpy " + UnitSystem.literalInch() + " pound into you, your cunt being stretched to unbelievable proportions.  The tentacle quickly bottoms out in your shallow hole, pressing urgently against your cervix as it begins to rhythmically pound your " + player.vaginaDescript(0) + ".\n");
 			//[Female/Loose-Moist Cunt]
 			else outputText("The beast senses your excitement and with beguiling speed swiftly impales your " + player.vaginaDescript(0) + " with one of its massive, knobbly tentacles.  You moan like a whore as the beast's knobbly cock slides into with ease, every bump sending shivers through your spine as it finally bottoms out deep in your cunt, pressing into your cervix urgently.  The monster begins to pound heartily at your " + player.vaginaDescript(0) + ", filling the air with lewd squishing sounds.\n");
 			if (player.cuntChange(20,true)) outputText("\n");
@@ -481,7 +481,7 @@ internal function tentacleLossRape():void {
 			if (player.cuntChange(20,true)) outputText("\n");
 			outputText("\n");
 		}
-		outputText("You slowly become aware that the beast has slowed its assault on your genitals and soon stops altogether, withdrawing entirely.  The beast lets out an audible gurgle and you smile as you feel the tentacles re-double their assault on your " + player.nippleDescript(0) + "s.  The beast slowly lifts you off the ground with its strong tentacles, suspending you about three feet off the ground before flipping you over.  You hang suspended in the air, your " + player.allBreastsDescript() + " dangling lewdly under you.  Suddenly you feel the desire to \"<i>moo</i>\" as the attack on your aching " + player.nippleDescript(0) + "s continues.  The tentacles continue their assault for what seems like hours, but then you gradually sense the tentacles beginning to slow.  Another gurgling sound confirms your suspicions - the beast wants your milk, but it's obvious you have far too much to offer!  You grin wickedly when the beast's tentacles begin to sag, quickly reaching up to fondle and massage your " + player.breastDescript(0) + ".  The stimulation causes even more milk to gush down the tentacles length.  After a few moments of the increased assault the beast groans and releases you, the tentacles popping off your nipples audibly, spraying your milk about as they release you.\n\n");
+		outputText("You slowly become aware that the beast has slowed its assault on your genitals and soon stops altogether, withdrawing entirely.  The beast lets out an audible gurgle and you smile as you feel the tentacles re-double their assault on your " + player.nippleDescript(0) + "s.  The beast slowly lifts you off the ground with its strong tentacles, suspending you about " + UnitSystem.displayFeetEstimateTextually(3) + " off the ground before flipping you over.  You hang suspended in the air, your " + player.allBreastsDescript() + " dangling lewdly under you.  Suddenly you feel the desire to \"<i>moo</i>\" as the attack on your aching " + player.nippleDescript(0) + "s continues.  The tentacles continue their assault for what seems like hours, but then you gradually sense the tentacles beginning to slow.  Another gurgling sound confirms your suspicions - the beast wants your milk, but it's obvious you have far too much to offer!  You grin wickedly when the beast's tentacles begin to sag, quickly reaching up to fondle and massage your " + player.breastDescript(0) + ".  The stimulation causes even more milk to gush down the tentacles length.  After a few moments of the increased assault the beast groans and releases you, the tentacles popping off your nipples audibly, spraying your milk about as they release you.\n\n");
 		//[Female/Herm]
 		if (player.gender >= 2) outputText("Your " + player.allBreastsDescript() + " ache, but you can tell immediately they are not depleted.  More milk dribbles as the tentacles try to retreat, and you grin, hardly satisfied with the beast's attack.  You reach between your thighs, seizing the nearest knobbly tentacle.  The beast is so sated it offers no resistance as you begin to pound your " + player.vaginaDescript(0) + " with the living dildo.  The idea of turning the tables on the raping beast spurs you on to new heights and you cum quickly around the knobbly shaft, your cunt spasming and milking the bumpy tentacle hard.  As you finish with the tentacle the beast gives a final gurgle and retreats into the forest.");
 		//[Male]
@@ -555,7 +555,7 @@ private function tentacleRapeContinuation():void {
 	spriteSelect(SpriteDb.s_tentacleMonster);
 	if (player.gender == 1) {
 		outputText(images.showImage("tentaclebeast-loss-male-sec-part"));
-		outputText("You next feel the wretched sensation of another tentacle pushing its way past your anus and into your rectum. You cry more out of frustration and anger than pain as the foreign body settles a few inches inside your body. With a furious, coordinated rhythm, the monstrosity begins swelling the tentacle in your ass and ");
+		outputText("You next feel the wretched sensation of another tentacle pushing its way past your anus and into your rectum. You cry more out of frustration and anger than pain as the foreign body settles a few " + UnitSystem.literalInches() + " inside your body. With a furious, coordinated rhythm, the monstrosity begins swelling the tentacle in your ass and ");
 		if (player.cockTotal() == 1)
 			outputText("using a sucking-stroking motion on your helpless " + player.multiCockDescriptLight() + ". The swelling of the ass tentacle pressures your prostate in a paradoxically pleasurable and painful manner. You realize, much to your terror, that this beast is MILKING you of your semen!");
 		else
@@ -639,13 +639,13 @@ private function tentacleRapeContinuationForFemales():void {
 		outputText("Satisfied, the creature drops you smartly, withdraws its limbs from you, and lumbers away.  Covered completely in cum, you see that your clitoris has swollen up to ");
 		//Big clit girls get huge clits
 		if ((player.findPerk(PerkLib.BigClit) >= 0 && player.getClitLength() > 2) || player.getClitLength() > 3)
-			outputText("almost " + num2Text(Math.floor(player.getClitLength() * 1.75)) + " inches in length. ");
+			outputText("almost " + UnitSystem.displayInchesEstimateTextually(player.getClitLength() * 1.75) + " in length. ");
 		//normal girls get big clits
 		else
-			outputText("almost four inches in length.  Bruised and sore, you pass into unconsciousness ");
+			outputText("almost " + UnitSystem.displayInchesEstimateTextually(4) + " in length.  Bruised and sore, you pass into unconsciousness ");
 	}
 	else {
-		outputText("Satisfied, the creature drops you smartly and withdraws its limbs from you and lumbers away.  Covered completely in cum, you see that your " + player.vaginas.length + " clits have swollen up to almost four inches in length.  Bruised and sore, you pass into unconsciousness, ");
+		outputText("Satisfied, the creature drops you smartly and withdraws its limbs from you and lumbers away.  Covered completely in cum, you see that your " + player.vaginas.length + " clits have swollen up to almost " + UnitSystem.displayInchesEstimateTextually(4) + " in length.  Bruised and sore, you pass into unconsciousness, ");
 	}
 	//Not too corrupt
 	if (player.cor < 75)
@@ -655,7 +655,7 @@ private function tentacleRapeContinuationForFemales():void {
 	//If has big-clit grow to max of 6"
 	if (player.getClitLength() < 7 && player.getClitLength() >= 3.5 && player.findPerk(PerkLib.BigClit) >= 0) {
 		player.changeClitLength(.1 + player.cor / 100);
-		outputText("Your massive clitty eventually diminishes, retaining a fair portion of its former glory.  It is now " + int(player.getClitLength() * 10) / 10 + " inches long when aroused, ");
+		outputText("Your massive clitty eventually diminishes, retaining a fair portion of its former glory.  It is now " + UnitSystem.displayInches(player.getClitLength(), 1) + " long when aroused, ");
 		if (player.getClitLength() < 5)
 			outputText("like a tiny cock.");
 		if (player.getClitLength() >= 5 && player.getClitLength() < 7)

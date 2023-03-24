@@ -9,6 +9,7 @@ package classes.Items.Consumables
 	import classes.Player;
 	import classes.internals.Utils;
 	import classes.GlobalFlags.kGAMECLASS;
+	import classes.UnitSystem;
 
 	public final class GroPlus extends Consumable {
 		
@@ -48,7 +49,7 @@ package classes.Items.Consumables
 			if (Utils.rand(4) == 0) {
 				outputText("You feel a trembling in your " + game.player.ballsDescriptLight() + " as the chemicals start to go to work.  You can tell they're going to be VERY effective.\n");
 				game.player.ballSize += Utils.rand(4) + 2;
-				outputText("They shift, stretching your " + game.player.sackDescript() + " tight as they gain inches of size.  You step to steady yourself as your center of balance shifts due to your newly enlarged " + game.player.ballsDescriptLight() + ".  ");
+				outputText("They shift, stretching your " + game.player.sackDescript() + " tight as they gain " + UnitSystem.literalInches() + " of size.  You step to steady yourself as your center of balance shifts due to your newly enlarged " + game.player.ballsDescriptLight() + ".  ");
 			}
 			else {
 				game.player.ballSize += Utils.rand(2) + 1;
@@ -76,7 +77,7 @@ package classes.Items.Consumables
 			game.player.slimeFeed();
 			outputText("You sink the needle into your clit, nearly crying with how much it hurts.  You push down the plunger and the pain vanishes as your clit starts to grow.\n\n");
 			game.player.changeClitLength(1);
-			outputText("Your " + game.player.clitDescript() + " stops growing after an inch of new flesh surges free of your netherlips.  It twitches, feeling incredibly sensitive.");
+			outputText("Your " + game.player.clitDescript() + " stops growing after " + UnitSystem.anInch() + " of new flesh surges free of your netherlips.  It twitches, feeling incredibly sensitive.");
 			game.dynStats("sen", 2, "lus", 10);
 			game.inventory.itemGoNext();
 		}
@@ -86,14 +87,14 @@ package classes.Items.Consumables
 			game.player.slimeFeed();
 			outputText("You sink the needle into the base of your " + game.player.multiCockDescriptLight() + ".  It hurts like hell, but as you depress the plunger, the pain vanishes, replaced by a tingling pleasure as the chemicals take effect.\n\n");
 			if (game.player.cocks.length == 1) {
-				outputText("Your " + game.player.cockDescript(0) + " twitches and thickens, pouring more than an inch of thick new length from your ");
+				outputText("Your " + game.player.cockDescript(0) + " twitches and thickens, pouring more than " + UnitSystem.anInch() + " of thick new length from your ");
 				game.player.increaseCock(0, 4);
 				game.player.cocks[0].cockLength += 1; // This was forcing "what was said" to match "what actually happened" no matter what increase/growCock /actually/ did.
 				game.player.cocks[0].cockThickness += 0.5; // And growCock never actually touched thickness. Nor does the new version. Thickness mod was stripped out entirely.
 			}
 			//MULTI
 			else {
-				outputText("Your " + game.player.multiCockDescriptLight() + " twitch and thicken, each member pouring out more than an inch of new length from your ");
+				outputText("Your " + game.player.multiCockDescriptLight() + " twitch and thicken, each member pouring out more than " + UnitSystem.anInch() + " of new length from your ");
 				for (var i:int = 0; i < game.player.cocks.length; i++) {
 					game.player.increaseCock(i, 2);
 					game.player.cocks[i].cockLength += 1;
@@ -112,7 +113,7 @@ package classes.Items.Consumables
 			game.player.slimeFeed();
 			outputText("You sink the needle into each of your " + game.player.nippleDescript(0) + "s in turn, dividing the fluid evenly between them.  Though each injection hurts, the pain is quickly washed away by the potent chemical cocktail.\n\n");
 		//Grow nipples
-			outputText("Your nipples engorge, prodding hard against the inside of your " + game.player.armorName + ".  Abruptly you realize they've grown more than an additional quarter-inch.\n\n");
+			outputText("Your nipples engorge, prodding hard against the inside of your " + game.player.armorName + ".  Abruptly you realize they've grown more than an additional " + UnitSystem.quarterInch() + ".\n\n");
 			game.player.nippleLength += (Utils.rand(2) + 3) / 10;
 			game.dynStats("lus", 15);
 			//NIPPLECUNTZZZ

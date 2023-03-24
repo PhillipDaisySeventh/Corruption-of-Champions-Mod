@@ -7,6 +7,7 @@ package classes.Scenes.Dungeons.DragonCity
 	import classes.BodyParts.Hips;
 	import classes.Monster;
 	import classes.StatusEffects;
+	import classes.UnitSystem;
 	import classes.Vagina;
 	import classes.internals.WeightedDrop;
 
@@ -91,7 +92,7 @@ package classes.Scenes.Dungeons.DragonCity
 			this.a = "the ";
 			this.short = "kobold broodmother";
 			this.imageName = "kobold-broodmother";
-			this.long = "She is a hermaphroditic reptilian creature, visibly similar to but larger than a regular Kobold. She wears nothing but a few bangles; you have a perfect view of her pillowy boobs, they look grossly large and out of place on her and constantly leak milk, like a cow’s. Her dripping wet pussy and reptilian dick, which is 13 inches long and 2 inches thick, throb with her apparent excitement. She is covered in fine muddy-green scales, shining with the glossy juices she seems to be constantly leaking. Her long, spindly fingers and toes are elongated and end in wicked-looking claws, while vestigial wings flap uselessly upon her back, and she has a prehensile tail. A crest of spines starts at her brow and trail down the length of her spine to the tip of her tail, though they seem more decorative than anything. She drools a slick looking translucent slime, slavering this around with a long draconic tongue.";
+			this.long = "She is a hermaphroditic reptilian creature, visibly similar to but larger than a regular Kobold. She wears nothing but a few bangles; you have a perfect view of her pillowy boobs, they look grossly large and out of place on her and constantly leak milk, like a cow’s. Her dripping wet pussy and reptilian dick, which is " + UnitSystem.displayInches(13) + " long and ", UnitSystem.displayInches(2) + " thick, throb with her apparent excitement. She is covered in fine muddy-green scales, shining with the glossy juices she seems to be constantly leaking. Her long, spindly fingers and toes are elongated and end in wicked-looking claws, while vestigial wings flap uselessly upon her back, and she has a prehensile tail. A crest of spines starts at her brow and trail down the length of her spine to the tip of her tail, though they seem more decorative than anything. She drools a slick looking translucent slime, slavering this around with a long draconic tongue.";
 			this.race = "Kobold";
 			// this.plural = false;
 			this.createBreastRow(Appearance.breastCupInverse("HHH"));

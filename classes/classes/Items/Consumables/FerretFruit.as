@@ -8,6 +8,7 @@ package classes.Items.Consumables
 	import classes.PerkLib;
 	import classes.StatusEffects;
 	import classes.lists.ColorLists;
+	import classes.UnitSystem;
 	
 	/**
 	 * Ferret transformative item.
@@ -431,7 +432,7 @@ package classes.Items.Consumables
 					case Skin.FEATHERED:
 						outputText("\n\nRubbing on of your arms to ease the itching, you’re somewhat alarmed at seeing some of the feathers falling,"
 						          +" but are soon relieved at discovering that they’re only changing, as they leave behind a patch of [furColor] fur."
-						          +" Similar changes happen over your legs, chest and back, not leaving an inch of your plumage unaffected. Fur grows"
+						          +" Similar changes happen over your legs, chest and back, not leaving " + UnitSystem.literalAnInch() + " of your plumage unaffected. Fur grows"
 						          +" over your body as the feathers fall, the lone patches joining and closing as the layer of plumage disappears,"
 						          +" and in a matter of seconds, your entire body is covered with a lovely coat of thick fur. The soft and fluffy"
 						          +" sensation is quite pleasant to the touch."
@@ -442,8 +443,8 @@ package classes.Items.Consumables
 					case Skin.WOOL:
 						outputText("\n\nRubbing on of your arms to ease the itching, you’re somewhat alarmed at seeing some of the wool falling,"
 						          +" but are soon relieved at discovering that they’re only changing, as they leave behind a patch of [furColor] fur,"
-						          +" much more shorter, but still quite fuzzy. Similar changes happen over your legs, chest and back, not leaving an"
-						          +" inch of your wool unaffected. Fur grows over your body as the strands of wool fall, the lone patches joining and"
+						          +" much more shorter, but still quite fuzzy. Similar changes happen over your legs, chest and back, not leaving"
+						          +" " + UnitSystem.literalAnInch() + " of your wool unaffected. Fur grows over your body as the strands of wool fall, the lone patches joining and"
 						          +" closing as the layer of wooly fur disappear, and in a matter of seconds, your entire body is covered with a"
 						          +" lovely coat of standard, fuzzy fur. The soft and fluffy sensation is quite pleasant to the touch."
 						          +"\n<b>Seems like you’re now covered from head to toe with [furColor] fur"

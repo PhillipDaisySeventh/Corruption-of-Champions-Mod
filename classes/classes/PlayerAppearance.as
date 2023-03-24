@@ -8,11 +8,6 @@ package classes
 	{
 		public function PlayerAppearance() {}
 
-		protected function footInchOrMetres(...args):String { return Measurements.footInchOrMetres.apply(null, args); }
-		protected function numInchesOrCentimetres(inches:Number):String { return Measurements.numInchesOrCentimetres(inches); }
-		protected function inchesOrCentimetres(...args):String { return Measurements.inchesOrCentimetres.apply(null, args); }
-		protected function shortSuffix(...args):String { return Measurements.shortSuffix.apply(null, args); }
-
 		public function appearance():void {
 			funcs = new Array();
 			args = new Array();
@@ -111,7 +106,7 @@ package classes
 					else
 						outputText("  A coat of [skinFurScales] decorates your muzzle.");
 				else if (player.hasScales())
-					outputText("  Strangely, [skinFurScales] adorn every inch of your animalistic visage.");
+					outputText("  Strangely, [skinFurScales] adorn every " + UnitSystem.literalInch() + " of your animalistic visage.");
 			}
 			else if (player.face.type == Face.BUCKTEETH)
 			{
@@ -422,21 +417,21 @@ package classes
 
 				case Tongue.DEMONIC:
 					outputText("  A slowly undulating tongue occasionally slips from between your lips."
-					          +" It hangs nearly two feet long when you let the whole thing slide out, though you can retract it to appear normal.");
+					          +" It hangs nearly " + UnitSystem.displayFeetEstimateTextually(2) + " long when you let the whole thing slide out, though you can retract it to appear normal.");
 					break;
 
 				case Tongue.DRACONIC:
-					outputText("  Your mouth contains a thick, fleshy tongue that, if you so desire, can telescope to a distance of about four feet."
+					outputText("  Your mouth contains a thick, fleshy tongue that, if you so desire, can telescope to a distance of about " + UnitSystem.displayFeetEstimateTextually(4) + "."
 					          +" It has sufficient manual dexterity that you can use it almost like a third arm.");
 					break;
 
 				case Tongue.ECHIDNA:
-					outputText("  A thin echidna tongue, at least a foot long, occasionally flits out from between your lips.");
+					outputText("  A thin echidna tongue, at least " + UnitSystem.aFoot() + " long, occasionally flits out from between your lips.");
 					break;
 
 				case Tongue.LIZARD:
 					outputText("  Your mouth contains a thick, fleshy lizard tongue, bringing to mind the tongue of large predatory reptiles."
-					          +" It can reach up to one foot, its forked tips tasting the air as they flick at the end of each movement.");
+					          +" It can reach up to " + UnitSystem.displayFeetEstimateTextually(1) + ", its forked tips tasting the air as they flick at the end of each movement.");
 					break;
 
 				case Tongue.CAT:
@@ -456,9 +451,9 @@ package classes
 				if (player.horns.value == 4)
 					outputText("  A quartet of prominent horns has broken through your [skinDesc].  The back pair are longer, and curve back along your head.  The front pair protrude forward demonically.");
 				if (player.horns.value == 6)
-					outputText("  Six horns have sprouted through your [skinDesc], the back two pairs curve backwards over your head and down towards your neck, while the front two horns stand almost "+numInchesOrCentimetres(8)+" long upwards and a little forward.");
+					outputText("  Six horns have sprouted through your [skinDesc], the back two pairs curve backwards over your head and down towards your neck, while the front two horns stand almost " + UnitSystem.displayInchesTextually(8) + " long upwards and a little forward.");
 				if (player.horns.value >= 8)
-					outputText("  A large number of thick demonic horns sprout through your [skinDesc], each pair sprouting behind the ones before.  The front jut forwards nearly "+numInchesOrCentimetres(10)+" while the rest curve back over your head, some of the points ending just below your ears.  You estimate you have a total of " + num2Text(player.horns.value) + " horns.");
+					outputText("  A large number of thick demonic horns sprout through your [skinDesc], each pair sprouting behind the ones before.  The front jut forwards nearly " + UnitSystem.displayInchesTextually(10) + " while the rest curve back over your head, some of the points ending just below your ears.  You estimate you have a total of " + num2Text(player.horns.value) + " horns.");
 			}
 			//Minotaur horns
 			if (player.horns.type == Horns.COW_MINOTAUR)
@@ -470,18 +465,18 @@ package classes
 				if (player.horns.value >= 6 && player.horns.value < 12)
 					outputText("  Two large horns sprout from your forehead, curving forwards like those of a bull.");
 				if (player.horns.value >= 12 && player.horns.value < 20)
-					outputText("  Two very large and dangerous looking horns sprout from your head, curving forward and over a foot long.  They have dangerous looking points.");
+					outputText("  Two very large and dangerous looking horns sprout from your head, curving forward and over " + UnitSystem.aFoot() + " long.  They have dangerous looking points.");
 				if (player.horns.value >= 20)
 					outputText("  Two huge horns erupt from your forehead, curving outward at first, then forwards.  The weight of them is heavy, and they end in dangerous looking points.");
 			}
 			//Lizard horns
 			if (player.horns.value > 0 && player.horns.type == Horns.DRACONIC_X2)
 			{
-				outputText("  A pair of " + numInchesOrCentimetres(player.horns.value) + " horns grow from the sides of your head, sweeping backwards and adding to your imposing visage.");
+				outputText("  A pair of " + UnitSystem.displayInchWithHyphenTextually(player.horns.value) + " horns grow from the sides of your head, sweeping backwards and adding to your imposing visage.");
 			}
 			//Super lizard horns
 			if (player.horns.type == Horns.DRACONIC_X4_12_INCH_LONG)
-				outputText("  Two pairs of horns, roughly a foot long, sprout from the sides of your head.  They sweep back and give you a fearsome look, almost like the dragons from your village's legends.");
+				outputText("  Two pairs of horns, roughly " + UnitSystem.aFoot() + " long, sprout from the sides of your head.  They sweep back and give you a fearsome look, almost like the dragons from your village's legends.");
 			//Antlers!
 			if (player.horns.type == Horns.ANTLERS)
 			{
@@ -496,9 +491,9 @@ package classes
 			}
 			if (player.horns.type == Horns.RAM) {
 				if (player.horns.value == 1)
-					outputText("  A set of " + player.horns.value + " inch ram horns sit atop your head, curling around in a tight spiral at the side of your head before coming to an upwards hook around your ears.");
+					outputText("  A set of " + UnitSystem.displayInchWithHyphen(player.horns.value) + " ram horns sit atop your head, curling around in a tight spiral at the side of your head before coming to an upwards hook around your ears.");
 				else
-					outputText("  A set of large " + player.horns.value + " inch ram horns sit atop your head, curling around in a tight spiral at the side of your head before coming to an upwards hook around your ears.");
+					outputText("  A set of large " + UnitSystem.displayInchWithHyphen(player.horns.value) + " ram horns sit atop your head, curling around in a tight spiral at the side of your head before coming to an upwards hook around your ears.");
 			}
 
 			if (player.horns.type == Horns.GOAT)
@@ -515,33 +510,33 @@ package classes
 						outputText("  A second horn sprouts from your forehead just above the horn on your nose.");
 					else
 						outputText("  A single horn sprouts from your forehead.  It is conical and resembles a rhino's horn.");
-					outputText("  You estimate it to be about "+numInchesOrCentimetres(7)+" long.");
+					outputText("  You estimate it to be about " + UnitSystem.displayInchesTextually(7) + " long.");
 				}
 				else {
-					outputText("  A single horn sprouts from your forehead.  It is conical and resembles a rhino's horn.  You estimate it to be about "+numInchesOrCentimetres(6)+" long.");
+					outputText("  A single horn sprouts from your forehead.  It is conical and resembles a rhino's horn.  You estimate it to be about " + UnitSystem.displayInchesTextually(6) + " long.");
 				}
 			}
 			if (player.horns.type == Horns.UNICORN)
 			{
 				outputText("  A single sharp nub of a horn sprouts from the center of your forehead.");
 				if (player.horns.value < 12)
-					outputText("  You estimate it to be about "+numInchesOrCentimetres(6)+" long.");
+					outputText("  You estimate it to be about " + UnitSystem.displayInchesTextually(6) + " long.");
 				else
-					outputText("  It has developed its own cute little spiral. You estimate it to be about "+numInchesOrCentimetres(12)+" long, "+numInchesOrCentimetres(2)+" thick and very sturdy. A very useful natural weapon.");
+					outputText("  It has developed its own cute little spiral. You estimate it to be about " + UnitSystem.aFoot() + " long, " + UnitSystem.displayInchesTextually(2) + " thick and very sturdy. A very useful natural weapon.");
 			}
 			// neckLen
 			if (player.neck.type == Neck.DRACONIC)
 			{
 				// length description
 				if (player.hasDragonNeck())
-					outputText("  Your neck starts at the backside of your head and is about two and a half feet long, roughly six inches longer, than your arm length.");
+					outputText("  Your neck starts at the backside of your head and is about " + UnitSystem.display("two and a half feet", UnitSystem.displayFeetEstimate(2.5)) + " long, roughly " + UnitSystem.displayInchesEstimateTextually(6) + " longer, than your arm length.");
 				else {
 					var lengthText:String = "";
-					if (player.neck.len < 8) lengthText = "a few inches longer";
+					if (player.neck.len < 8) lengthText = "a few " + UnitSystem.literalInches() + " longer";
 					else if (player.neck.len < 13) lengthText = "somewhat longer";
 					else if (player.neck.len < 18) lengthText = "very long";
 					else lengthText = "extremely long";
-					outputText("  Where normal humans have a short neck, yours is " + lengthText + ", measuring " + player.neck.len + " inches.");
+					outputText("  Where normal humans have a short neck, yours is " + lengthText + ", measuring " + UnitSystem.displayInches(player.neck.len) + ".");
 				}
 
 				// bending your neck
@@ -593,13 +588,13 @@ package classes
 				case RearBody.DRACONIC_MANE:
 					outputText("  Tracing your spine, a mane of [rearBodyColor] hair grows; starting at the base of your neck and continuing down"
 					          +" your tail, ending on the tip of your tail in a small tuft. It grows in a thick vertical strip,"
-					          +" maybe two inches wide. It reminds you vaguely of a horse's mane.");
+					          +" maybe " + UnitSystem.displayInchesTextually(2) + " wide. It reminds you vaguely of a horse's mane.");
 					break;
 				case RearBody.DRACONIC_SPIKES:
 					// Teh spiky mane, similar to the hairy one.
 					outputText("  Tracing your spine, a row of short steel-gray and curved backwards spikes protrude; starting at the base of your"
 					          +" neck and continuing down your tail, ending on the tip of your tail. They've grown in a thick vertical strip,"
-					          +" maybe an inch wide and two inches high. It reminds you very vaguely of a horse's mane.");
+					          +" maybe " + UnitSystem.anInch() + " wide and " + UnitSystem.displayInchesEstimateTextually(2) + " high. It reminds you very vaguely of a horse's mane.");
 					break;
 				default:
 					//Nothing here, move along!
@@ -959,7 +954,7 @@ package classes
 					break;
 				case Tail.COCKATRICE:
 					outputText("  A thick, scaly, prehensile reptilian tail hangs from your [butt], about half as long as you are tall."
-					          +" The first inch or so is feathered, terminating in a 'v'shape and giving way to your [skinTone] scales.");
+					          +" The first " + UnitSystem.inch() + " or so is feathered, terminating in a 'v'shape and giving way to your [skinTone] scales.");
 					break;
 				case Tail.RED_PANDA:
 					var tailColors:String = player.hasFur() ? (player.skin.furColor + " and " + player.redPandaTailColor2()) : "russet and orange";
@@ -1240,7 +1235,7 @@ package classes
 			{
 				outputText("You have " + num2Text(player.breastRows[temp].breasts) + " " + player.breastDescript(temp) + ", each supporting ");
 				outputText( player.breastRows[temp].nipplesPerBreast == 1 ? "a" : num2Text(player.breastRows[temp].nipplesPerBreast)); //Number of nipples.
-				outputText(" " + shortSuffix(player.nippleLength) + " ");		  // Length of nipples
+				outputText(" " + UnitSystem.displayInchWithHyphen(player.nippleLength, 1) + " ");		  // Length of nipples
 				outputText(player.nippleDescript(temp) + (player.breastRows[0].nipplesPerBreast == 1 ? "." : "s.")); //Nipple description and plural
 				if (player.breastRows[0].milkFullness > 75)
 					outputText("  Your " + player.breastDescript(temp) + " are painful and sensitive from being so stuffed with milk.  You should release the pressure soon.");
@@ -1267,7 +1262,7 @@ package classes
 						outputText("\n--Your fifth and final mammary grouping swells with ");
 					outputText(num2Text(player.breastRows[temp].breasts) + " " + player.breastDescript(temp) + " with ");
 					outputText(num2Text(player.breastRows[temp].nipplesPerBreast)); //Number of nipples per breast
-					outputText(" " + shortSuffix(player.nippleLength) + " ");		// Length of nipples
+					outputText(" " + UnitSystem.displayInchWithHyphen(player.nippleLength, 1) + " ");		// Length of nipples
 					outputText(player.nippleDescript(temp) + (player.breastRows[0].nipplesPerBreast == 1 ? " each." : "s each.")); //Description and Plural
 					if (player.breastRows[temp].breastRating >= 1)
 						outputText("  They could easily fill a " + player.breastCup(temp) + " bra.");
@@ -1315,8 +1310,8 @@ package classes
 					else if (rando % 5 == 4)       outputText("--Another of your ");
 
 					// How large?
-					outputText(player.cockDescript(cock_index) + ((rando % 5) % 3 == 0 || cock_index == 0 ? "":"s") +  " is " + inchesOrCentimetres(player.cocks[cock_index].cockLength) + " long and ");
-					outputText(inchesOrCentimetres(player.cocks[cock_index].cockThickness));
+					outputText(player.cockDescript(cock_index) + ((rando % 5) % 3 == 0 || cock_index == 0 ? "":"s") +  " is " + UnitSystem.displayInches(player.cocks[cock_index].cockLength, 1) + " long and ");
+					outputText(UnitSystem.displayInches(player.cocks[cock_index].cockThickness, 1));
 					if      (rando % 3 == 0)  outputText(" wide.");
 					else if (rando % 3 == 1)  outputText(" thick.");
 					else if (rando % 3 == 2)  outputText(" in diameter.");
@@ -1334,7 +1329,7 @@ package classes
 						case CockTypesEnum.ANEMONE:   outputText("  The crown is surrounded by tiny tentacles with a venomous, aphrodisiac payload.  At its base a number of similar, longer tentacles have formed, guaranteeing that pleasure will be forced upon your partners."); break;
 						case CockTypesEnum.KANGAROO:  outputText("  It usually lies coiled inside a sheath, but undulates gently and tapers to a point when erect, somewhat like a taproot."); break;
 						case CockTypesEnum.DRAGON:    outputText("  With its tapered tip, there are few holes you wouldn't be able to get into.  It has a strange, knot-like bulb at its base, but doesn't usually flare during arousal as a dog's knot would."); break;
-						case CockTypesEnum.BEE:       outputText("  It's a long, smooth black shaft that's rigid to the touch.  Its base is ringed with a layer of " + shortSuffix(4) + " long soft bee hair.  The tip has a much finer layer of short yellow hairs.  The tip is very sensitive, and it hurts constantly if you don’t have bee honey on it."); break;
+						case CockTypesEnum.BEE:       outputText("  It's a long, smooth black shaft that's rigid to the touch.  Its base is ringed with a layer of " + UnitSystem.displayInchWithHyphenTextually(4) + " long soft bee hair.  The tip has a much finer layer of short yellow hairs.  The tip is very sensitive, and it hurts constantly if you don’t have bee honey on it."); break;
 						case CockTypesEnum.PIG:       outputText("  It's bright pinkish red, ending in a prominent corkscrew shape at the tip."); break;
 						case CockTypesEnum.AVIAN:     outputText("  It's a red, tapered cock that ends in a tip.  It rests nicely in a sheath."); break;
 						case CockTypesEnum.RHINO:     outputText("  It's a smooth, tough pink colored and takes on a long and narrow shape with an oval shaped bulge along the center."); break;
@@ -1351,7 +1346,7 @@ package classes
 							outputText("  A large bulge of flesh nestles just above the bottom of your " + player.cockDescript(cock_index) + ", to ensure it stays where it belongs during mating.");
 						else // knotMultiplier < 1.4
 							outputText("  A small knot of thicker flesh is near the base of your " + player.cockDescript(cock_index) + ", ready to expand to help you lodge it inside a female.");
-						outputText("  The knot is " + inchesOrCentimetres(player.cocks[cock_index].cockThickness * player.cocks[cock_index].knotMultiplier) + " thick when at full size.");
+						outputText("  The knot is " + UnitSystem.displayInches(player.cocks[cock_index].cockThickness * player.cocks[cock_index].knotMultiplier, 1) + " thick when at full size.");
 					}
 
 					// Sock Flavor
@@ -1402,7 +1397,7 @@ package classes
 					if (player.hasGooSkin())
 						outputText("An oozing, semi-solid sack with " + player.ballsDescript() + " swings heavily beneath your " + player.multiCockDescriptLight() + ".");
 				}
-				outputText("  You estimate each of them to be about " + numInchesOrCentimetres(player.ballSize) + " across\n");
+				outputText("  You estimate each of them to be about " + UnitSystem.displayInchesTextually(player.ballSize) + " across\n");
 			}
 			//VAGOOZ
 			if (player.vaginas.length > 0)
@@ -1411,12 +1406,12 @@ package classes
 					outputText("\nYour womanly parts have shifted to lie between your hind legs, in a rather feral fashion.");
 				outputText("\n");
 				if (player.vaginas.length == 1)
-					outputText("You have a " + player.vaginaDescript(0) + ", with a " + inchesOrCentimetres(player.getClitLength()) + " clit");
+					outputText("You have a " + player.vaginaDescript(0) + ", with a " + UnitSystem.displayInchWithHyphen(player.getClitLength(), 1) + " clit");
 				if (player.vaginas[0].virgin)
 					outputText(" and an intact hymen"); // Wait, won't this fuck up, with multiple vaginas?
 				outputText(".  ");
 				if (player.vaginas.length > 1)
-					outputText("You have " + player.vaginas.length+ " " + player.vaginaDescript(0) + "s, with " + inchesOrCentimetres(player.getClitLength()) + "-centimetre clits each.  ");
+					outputText("You have " + player.vaginas.length+ " " + player.vaginaDescript(0) + "s, with " + UnitSystem.displayInchWithHyphen(player.getClitLength(), 1) + " clits each.  ");
 				if (player.lib100 < 50 && player.lust100 < 50) //not particularly horny
 
 				{

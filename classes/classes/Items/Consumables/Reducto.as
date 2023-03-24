@@ -10,6 +10,7 @@ package classes.Items.Consumables
 	import classes.Player;
 	import classes.internals.Utils;
 	import classes.GlobalFlags.kGAMECLASS;
+	import classes.UnitSystem;
 
 	public final class Reducto extends Consumable {
 		
@@ -151,7 +152,7 @@ package classes.Items.Consumables
 			outputText("You rub the paste evenly over your " + game.player.nippleDescript(0) + "s, being sure to cover them completely.\n\n");
 			//Shrink
 			if (game.player.nippleLength / 2 < 0.25) {
-				outputText("Your nipples continue to shrink down until they stop at 1/4\" long.");
+				outputText("Your nipples continue to shrink down until they stop at " + UnitSystem.displayInchesShort2(0.25) + " long.");
 				game.player.nippleLength = 0.25;
 			}
 			else {
@@ -164,7 +165,7 @@ package classes.Items.Consumables
 		
 		public function shrinkHorns():void {
 			outputText("You doubt if the reducto is going to work but you apply the foul-smelling paste all over your horns anyways.\n\n");
-			outputText("Incredibly, it works and you can feel your horns receding by an inch.")
+			outputText("Incredibly, it works and you can feel your horns receding by " + UnitSystem.anInch() + ".")
 			game.player.horns.value -= 1;
 			game.inventory.itemGoNext();
 		}

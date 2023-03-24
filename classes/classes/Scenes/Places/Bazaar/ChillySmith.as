@@ -87,7 +87,7 @@ package classes.Scenes.Places.Bazaar
 			outputText("You make your way into ");
 			if (silly()) outputText("the Chili's");
 			else outputText("Chilly Smith");
-			outputText(" and glance around, faced with cool-colored walls and a rather calm setting. The jaguar-morph shopowner, Sun, looks over to you and flicks his tail as if that's a proper greeting. The black avian beside him, Harmony, waves and calls out a hello. The two are a rather funny pair, with Sun being a 6'4\" wall of muscle and Harmony slender as can be, barely reaching Sun's shoulder. The shop itself is minimalist and straight-forward. You walk among shelves and glance over the stock.");
+			outputText(" and glance around, faced with cool-colored walls and a rather calm setting. The jaguar-morph shopowner, Sun, looks over to you and flicks his tail as if that's a proper greeting. The black avian beside him, Harmony, waves and calls out a hello. The two are a rather funny pair, with Sun being a " + UnitSystem.displayHeight2Short2(6, 4) + " wall of muscle and Harmony slender as can be, barely reaching Sun's shoulder. The shop itself is minimalist and straight-forward. You walk among shelves and glance over the stock.");
 			menu();
 			addButton(0, "Buy", buySomeShit).hint("Browse the merchandise available in the shop."); // Shop section
 			addButton(1, "Talk", theFuckIsYouWho).hint("Try to talk to the jaguar-morph. He doesn't look like a nice guy though."); // Left over from original; still need a way for you to learn Blackfire

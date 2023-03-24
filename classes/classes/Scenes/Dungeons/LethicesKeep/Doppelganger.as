@@ -299,7 +299,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 			var str:String = "";
 			
 			str += "You are fighting the doppelganger. " + player.mf("He", "She") +" is a ";
-			str += String(Math.floor(player.tallness / 12) + " foot " + player.tallness % 12 + " inch tall ");
+			str += UnitSystem.displayHeight(player.tallness) + " tall ";
 			str += player.race + ", with " + player.bodyType() + ". ";
 			
 			str += player.mf("His", "Her") + " face is " + player.faceDesc() + ".";

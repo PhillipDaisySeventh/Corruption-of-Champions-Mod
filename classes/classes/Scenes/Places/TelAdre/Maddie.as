@@ -65,7 +65,7 @@ private function followMinotaurIntoBackroom():void {
 //[Not Yet/No]
 public function nopeAintGotNoneODemSpeculIngredimathings():void {
 	clearOutput();
-	outputText("The chef sighs and slams a fist into the counter hard enough to dent the metal and throw the bowls full of dough inches into the air.  A number of empty éclairs bounce and roll everywhere.  The minotaur looks back at you and snorts, \"<i>Best you go.  Don't come without ingredients.</i>\"\n\n");
+	outputText("The chef sighs and slams a fist into the counter hard enough to dent the metal and throw the bowls full of dough " + UnitSystem.literalInches() + " into the air.  A number of empty éclairs bounce and roll everywhere.  The minotaur looks back at you and snorts, \"<i>Best you go.  Don't come without ingredients.</i>\"\n\n");
 	
 	outputText("Well, no point in ");
 	if (player.cor > 50) outputText("starting a fight inside Tel'Adre");
@@ -175,7 +175,7 @@ private function talkToMaddie():void {
 		if (player.cor < 33) outputText("You muster as much authority as you can in such a compromising position and explain to Maddie that what comes out of there is NOT icing.");
 		else if (player.cor < 66) outputText("You offhandedly mention that you don't actually make icing.");
 		else outputText("You smirk and mention that what you squirt isn't quite icing.");
-		outputText("  \"<i>Liar!  If that wasn't icing, then why would Daddy have put his in all those eclairs and me?</i>\" retorts the busty cupcake, continuing on to say, \"<i>I know, I can suck it out!</i>\"  She purses her jelly-like lips and plunges forward, slurping all " + num2Text(Math.floor(player.cocks[x].cockLength)) + " inches into her oven-warmed esophagus.  Your protests are cut off by the tightness squeezing around your " + player.cockDescript(x) + ".  It milks you in rippling motions, buttery-slick and pulsing hungrily.\n\n");
+		outputText("  \"<i>Liar!  If that wasn't icing, then why would Daddy have put his in all those eclairs and me?</i>\" retorts the busty cupcake, continuing on to say, \"<i>I know, I can suck it out!</i>\"  She purses her jelly-like lips and plunges forward, slurping all " + UnitSystem.displayInchesTextually(player.cocks[x].cockLength) + " into her oven-warmed esophagus.  Your protests are cut off by the tightness squeezing around your " + player.cockDescript(x) + ".  It milks you in rippling motions, buttery-slick and pulsing hungrily.\n\n");
 		
 		outputText("A half-melted tongue ");
 		if (!player.hasSheath()) outputText("encircles the base");
@@ -226,7 +226,7 @@ private function talkToMaddie():void {
 		
 		outputText("The weighty breast and its spongy nipple retreat, popping from your questing lips.  You whine weakly in disappointment at the sudden disappearance of your treat, licking and smearing the white cream over your already icing-smeared mouth.  Maddie grabs her other tit with a two handed grip and struggles with the wobbling mass while she aims her unused nipple your way.  The areola heaves, bulging out like an overfilled balloon.  The nipple wiggles in place from the pressure, stretching out around the sides until it looks ready to rupture.  Creamy confection beads at the tip, slowly forming a fat, sticky drop that hangs down and threatens to fall to the floor.  Before it falls, the nipple pulses one last time and opens up a flow of icing.  It's like watching a dam burst – awe-inspiring for the first few seconds until the torrent of fluid begins to drown you.\n\n");
 	
-		outputText("You rock back as the gushing stream impacts your solar plexus, splattering the frosty white stuff into a spray of rain.  Goop rains and explodes all around, and Maddie just giggles and moans while she guides the flow over every inch of your form, drenching you in sugary sweetness.  You swallow nearly as much as you spit and sputter.  After a few moments you just kind of open wide and sigh, hoping she'll hold it in your mouth and hit you with enough force to pump it into your gurgling gut.\n\n");
+		outputText("You rock back as the gushing stream impacts your solar plexus, splattering the frosty white stuff into a spray of rain.  Goop rains and explodes all around, and Maddie just giggles and moans while she guides the flow over every " + UnitSystem.literalInch() + " of your form, drenching you in sugary sweetness.  You swallow nearly as much as you spit and sputter.  After a few moments you just kind of open wide and sigh, hoping she'll hold it in your mouth and hit you with enough force to pump it into your gurgling gut.\n\n");
 	
 		outputText("\"<i>Ohhh, you look good enough to eat!</i>\" exclaims Maddie.  Meanwhile, your restraints slowly liquify under the warm, sugary strikes.  They stretch lower and lower, letting you sink into the soft, half-melted pile of icing.  At last the icing-based bindings snap, letting you sink into the sweetened mass as if it was a giant cushion.  Maddie sighs, giving a few last, fickle squirts that splatter in your hair before her flow completely stops.\n\n");
 		

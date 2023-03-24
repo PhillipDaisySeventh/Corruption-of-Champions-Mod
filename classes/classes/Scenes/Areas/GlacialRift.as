@@ -161,7 +161,7 @@ package classes.Scenes.Areas {
 			spriteSelect(SpriteDb.s_valeria);
 			flags[kFLAGS.VALERIA_FOUND_IN_GLACIAL_RIFT] = 1;
 			outputText(images.showImage("monster-gooarmor"));
-			outputText("As you make your way across the Rift's icy extremities, you hear a metallic CLANK CLANK approaching through the snow flurries. You turn in time to see a suit of plated mail charging toward you, its helm and limbs filled with bright blue goo. It skids to a stop a few yards away, a greatsword forming from the goo of its hand. A beautiful, feminine face appears beneath the armor’s visor grinning at you. You suddenly recognize her face!\n\n");
+			outputText("As you make your way across the Rift's icy extremities, you hear a metallic CLANK CLANK approaching through the snow flurries. You turn in time to see a suit of plated mail charging toward you, its helm and limbs filled with bright blue goo. It skids to a stop a few " + UnitSystem.literalYards() + " away, a greatsword forming from the goo of its hand. A beautiful, feminine face appears beneath the armor’s visor grinning at you. You suddenly recognize her face!\n\n");
 			outputText("\"<i>This is my territory!</i>\" she shouts, bringing her two-handed sword to bare. \"<i>You’ll give me your fluids, or I’ll take them.</i>\"");
 			addButton(0, "Fight", fightValeria);
 			addButton(1, "Submit", kGAMECLASS.valeria.pcWinsValeriaSparDefeat, true);
@@ -193,7 +193,7 @@ package classes.Scenes.Areas {
 			clearOutput();
 			outputText(images.showImage("encounter-valkyrie"));
 			outputText("Making your way across the hard-packed ice of the Rift, you’re surprised to see the thick gray clouds part overhead.  You see a beautiful woman descend from on high, her snow-white wings flapping powerfully behind her back.  Armed with a long spear and shield, and clad in a bronze cuirass and a winged helm, she looks every bit the part of a mighty warrior.\n\n");
-			outputText("She touches down gently a few feet before you, her shield and spear raised.  \"<i>You seem a worthy sort to test my skills against, wanderer.  Prepare yourself!</i>\" she shouts, bearing down on you.  She doesn’t look like she’s going to back down -- you ready your " + player.weaponName + " for a fight!");
+			outputText("She touches down gently " + UnitSystem.aFewFeet() + " before you, her shield and spear raised.  \"<i>You seem a worthy sort to test my skills against, wanderer.  Prepare yourself!</i>\" she shouts, bearing down on you.  She doesn’t look like she’s going to back down -- you ready your " + player.weaponName + " for a fight!");
 			startCombat(new Valkyrie());
 		}
 		private function amarokEncounter():void {

@@ -5,6 +5,7 @@ package classes.Items.Consumables
 	import classes.Items.Consumable;
 	import classes.CockTypesEnum;
 	import classes.PerkLib;
+	import classes.UnitSystem;
 
 	/**
 	 * Moved out of classes.Scenes.NPCs.EmberScene
@@ -99,7 +100,7 @@ package classes.Items.Consumables
 			}
 			//Gain Dragon Tongue
 			if (changes < changeLimit && rand(3) == 0 && player.tongue.type != Tongue.DRACONIC) {
-				output.text("\n\nYour tongue suddenly falls out of your mouth and begins undulating as it grows longer.  For a moment it swings wildly, completely out of control; but then settles down and you find you can control it at will, almost like a limb.  You're able to stretch it to nearly 4 feet and retract it back into your mouth to the point it looks like a normal human tongue.  <b>You now have a draconic tongue.</b>");
+				output.text("\n\nYour tongue suddenly falls out of your mouth and begins undulating as it grows longer.  For a moment it swings wildly, completely out of control; but then settles down and you find you can control it at will, almost like a limb.  You're able to stretch it to nearly " + UnitSystem.displayFeetEstimate(4) + " and retract it back into your mouth to the point it looks like a normal human tongue.  <b>You now have a draconic tongue.</b>");
 				player.tongue.type = Tongue.DRACONIC;
 				changes++;
 				//Note: This type of tongue should be eligible for all things you can do with demon tongue... Dunno if it's best attaching a boolean just to change the description or creating a whole new tongue type.
@@ -107,7 +108,7 @@ package classes.Items.Consumables
 			//(Pending Tongue Masturbation Variants; if we ever get around to doing that.)
 			//Gain Dragon Scales
 			if (!player.hasDragonScales() && changes < changeLimit && rand(3) == 0) {
-				output.text("\n\nPrickling discomfort suddenly erupts all over your body, like every last inch of your skin has suddenly developed"
+				output.text("\n\nPrickling discomfort suddenly erupts all over your body, like every last " + UnitSystem.literalInch() + " of your skin has suddenly developed"
 				           +" pins and needles.  You scratch yourself, hoping for relief; and when you look at your hands you notice small fragments"
 				           +" of your [skinFurScales] hanging from your fingers.  Nevertheless you continue to scratch yourself, and when you're"
 				           +" finally done, you look yourself over. New shield-like scales have grown to replace your peeled off [skinFurScales]."
@@ -235,7 +236,7 @@ package classes.Items.Consumables
 						          +" grows longer and the splotches grow until they slowly merge to a vertical strip right above your spine.");
 						outputText("\n\nTracing your spine, a mane of hair has grown; starting at the base of your neck and continuing down your"
 						          +" tail, ending on the tip of your tail in a small tuft. It is the same color as the hair on your head,"
-						          +" but shorter and denser; it has grown in a thick vertical strip, maybe two inches wide. It reminds you vaguely"
+						          +" but shorter and denser; it has grown in a thick vertical strip, maybe " + UnitSystem.displayInchesEstimateTextually(2) + " wide. It reminds you vaguely"
 						          +" of a horse's mane. <b>You now have a hairy mane on your rear.</b>");
 						player.rearBody.setAllProps({
 							type:  RearBody.DRACONIC_MANE,
@@ -252,7 +253,7 @@ package classes.Items.Consumables
 						          +" continue watching them slowly growing longer curving backwards until finally the pain has ceased.");
 						outputText("\n\nTracing your spine, a row of short steel-gray and curved backwards spikes protrude; starting at the base of"
 						          +" your neck and continuing down your tail, ending on the tip of your tail. They've grown in a thick vertical"
-						          +" strip, maybe an inch wide and two inches high. It reminds you very vaguely of a horse's mane.");
+						          +" strip, maybe " + UnitSystem.anInch() + " wide and " + UnitSystem.displayInchesEstimateTextually(2) + " high. It reminds you very vaguely of a horse's mane.");
 						outputText("  <b>Your rear is now decorated with a row of curved spikes.</b>");
 						player.rearBody.setAllProps({type: RearBody.DRACONIC_SPIKES});
 						break;
@@ -274,11 +275,11 @@ package classes.Items.Consumables
 				var nlChange:int = 4 + rand(5);
 				if (!player.hasNormalNeck()) { // Note: hasNormalNeck checks the length, not the type!
 					player.neck.modify(nlChange);
-					outputText("\n\nWith less pain than the last time your neck grows a few more inches reaching " + player.neck.len + " inches.");
+					outputText("\n\nWith less pain than the last time your neck grows a few more " + UnitSystem.literalInches() + " reaching " + UnitSystem.displayInches(player.neck.len) + ".");
 				} else {
 					player.neck.modify(nlChange, Neck.DRACONIC);
 					// Growing a dragon neck may be limited to Ember's blood only in the future.
-					outputText("\n\nAfter you have finished " + (drakesHeart ? "eating the flower" : "drinking Ember's dragon blood") + " you start feeling a sudden pain in your neck. Your skin stretches and your spine grows a bit. Your neck has grown a few inches longer than that of a normal human reaching " + player.neck.len + " inches.");
+					outputText("\n\nAfter you have finished " + (drakesHeart ? "eating the flower" : "drinking Ember's dragon blood") + " you start feeling a sudden pain in your neck. Your skin stretches and your spine grows a bit. Your neck has grown a few " + UnitSystem.literalInches() + " longer than that of a normal human reaching " + UnitSystem.displayInches(player.neck.len) + ".");
 				}
 				if (player.hasDragonNeck() && !player.neck.pos) {
 					outputText("\n\nAfter the enlongation has finally ceased, your spine begins to readjust its position on your head until its settled at the backside of your head. After that you want to try out your new draconic neck and begin to bend your neck finding that you can bend it at ease like a snake can bend its tail. Eager to see, how you look from behind you quickly turn your head around. Staring at your magnificent draconic rear your mouth and eyes open wide in astonishment. You muster your tail, your backside fully covered in scales and finally, you unfold your wings. This is the first time, you can see every single scale of them. You look at them from all sides, flapping them slowly, just to watch them moving.");

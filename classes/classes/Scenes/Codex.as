@@ -191,7 +191,7 @@ package classes.Scenes
 			}
 			if (flags[flag] > 0) {
 				if (flags[kFLAGS.CODEX_CURRENT_ENTRY] == codexEntryId) addButton(button, "( " + codexEntryName + " )", codexEntry);
-				else addButton(button, "" + codexEntryName + "", codexEntry);
+				else addButton(button, codexEntryName, codexEntry);
 			}
 			else addButtonDisabled(button, "???");
 		}
@@ -269,7 +269,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Anemones");
 			outputText("<b>Genders:</b> Universally hermaphroditic\n");
-			outputText("<b>Height:</b> Ranges from 5' to 6', though the body is mildly elastic to cope with water pressure, making determination of an individual's 'natural' height highly subjective.\n");
+			outputText("<b>Height:</b> Ranges from " + UnitSystem.displayHeight2Short2(5) + " to " + UnitSystem.displayHeight2Short2(6) + ", though the body is mildly elastic to cope with water pressure, making determination of an individual's 'natural' height highly subjective.\n");
 			outputText("<b>Build:</b> Slender\n");
 			outputText("<b>Skin:</b> Varies due to camouflage reflex, but most usually shades of dark blue in their normal habitat.\n");
 			outputText("<b>Hair:</b>  Properly speaking, anemones have no body hair, though they have a great number of long tentacles atop their heads that are colloquially referred to as ‘hair’ by those who have seen one; the tentacles are a mixture of greens and purples that become bright when the anemone wants to attract attention but fade when one is dormant or hiding from a predator.\n");
@@ -347,7 +347,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Giant Bees");
 			outputText("<b>Genders:</b> Almost exclusively Female, save for a few Drones in each hive.\n");
-			outputText("<b>Height:</b> The average bee is roughly five feet tall. Drones are typically much shorter, but are rarely seen outside the hive. Warrior Bees can reach seven feet in height, and are fearsome when riled. Queens are by far the largest, at up to thirteen feet in length, though much of a queen’s body-size is dominated by her reproductive systems. Fertile-Caste tend to be of average height, anywhere from five to six feet tall.\n");
+			outputText("<b>Height:</b> The average bee is roughly " + UnitSystem.displayHeight2EstimateTextually(5) + " tall. Drones are typically much shorter, but are rarely seen outside the hive. Warrior Bees can reach " + UnitSystem.displayHeight2EstimateTextually(7) + " in height, and are fearsome when riled. Queens are by far the largest, at up to " + UnitSystem.displayHeight2EstimateTextually(13) + " in length, though much of a queen’s body-size is dominated by her reproductive systems. Fertile-Caste tend to be of average height, anywhere from " + UnitSystem.displayFeetEstimateRangeTextually(5, " to ", 6) + " tall.\n");
 			outputText("<b>Hair:</b> Typically black, or black with vertical yellow strands.\n");
 			outputText("<b>Eyes:</b> The eyes of Workers, Drones, and Warrior Bees eyes are glossy black orbs, while the Fertile-Caste and Queens can change their eye-color at will, and may even alter the appearance of their pupils and irises at will, to better entrance their targets. Some of the tainted hive-clusters are rumored to have slitted cat-like eyes, but those few who have gotten close enough to see them have never returned.\n");
 			headerSub("Appearances");
@@ -368,14 +368,14 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Echidna-Morphs");
 			outputText("<b>Genders:</b> Male, Female\n");
-			outputText("<b>Height:</b> Short, never exceeding 5'4\", but never under 4'. Males are usually taller.\n");
+			outputText("<b>Height:</b> Short, never exceeding " + UnitSystem.displayHeight2Short2(5, 4) + ", but never under " + UnitSystem.displayHeight2Short2(4) + ". Males are usually taller.\n");
 			outputText("<b>Build:</b> Stout and thick-bodied, females having noticeable hips.\n");
 			outputText("<b>Skin:</b> Typically ranging from tan to ebony in color, with the occasional albino.\n");
 			outputText("<b>Fur:</b> All echidna-morphs are coated in a thin layer of fur. Fur is almost always varying shades of brown, but the rare albino echidna-morph will have white or very light blonde fur.\n");
 			outputText("<b>Hair:</b> Instead of a normal head of hair, echidna-morphs have a full head of quill hair. These quills are typically just a few shades lighter than their fur. Females only have quills on their heads, but males often have them on their backs as well.\n");
 			outputText("<b>Ears:</b> Echidna-morph ears are almost identical in appearance to that of Lizan ears. They are small, rounded, and nearly-invisible at first glance. The only difference is, of course, the lack of scales.\n");
 			outputText("<b>Arms and Legs:</b> Their arms and legs are almost completely humanoid in appearance, the only differences being that their fingers and toes are tipped with long claws, and the bottoms of the feet being padded.\n");
-			outputText("<b>Face:</b> Echidna-morphs have a rather prominent snout. It is long and noticeably thin. Their eyes are rounded and beady, usually brown or black, red for albinos. Sometimes, their tongue flits out from between their lips when they’re not thinking about it. This tongue is always at least a foot in length.\n");
+			outputText("<b>Face:</b> Echidna-morphs have a rather prominent snout. It is long and noticeably thin. Their eyes are rounded and beady, usually brown or black, red for albinos. Sometimes, their tongue flits out from between their lips when they’re not thinking about it. This tongue is always at least " + UnitSystem.aFoot() + " in length.\n");
 			outputText("<b>Tail:</b> The echidna-morph tail is short and stumpy, barely noticeable at first glance.");
 			headerSub("Sexual Characteristics");
 			outputText("Males possess an unusual four-headed penis that remains retracted inside a sheath when not aroused. A duo of balls swings under their shaft, as you would expect. Females experience a heat cycle once a month. During this time, some eggs have dropped, and they are capable of being fertilized. If not fertilized by the time the cycle is over, the eggs develop a shell, and are subsequently expelled from the body.  These eggs, if consumed by non-echidna-morphs, can cause echidna-related mutations.");
@@ -394,7 +394,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Goblins");
 			outputText("<b>Genders:</b> Female\n");
-			outputText("<b>Height:</b> 2 to 4 feet tall.\n");
+			outputText("<b>Height:</b> " + UnitSystem.displayFeetEstimateRange(2, " to ", 4) + " tall.\n");
 			outputText("<b>Eye colors:</b> Red, Violet, Amber, or Pink\n");
 			outputText("<b>Hair colors:</b> Red, Very Light Blonde, Purple, Pink, White, or Black\n");
 			outputText("<b>Skin colors:</b> Green, though in rare cases blue or red-tinged.\n");
@@ -427,7 +427,7 @@ package classes.Scenes
 			headerSub("Facial features");
 			outputText("Goo girls are featureless at birth, but have an insatiable urge to mimic the appearance of those they encounter. Usually, they acquire these faces by sliding over the head of the creature they’re investigating, though sometimes they’ll composite several features they’ve already learned into unique combinations. They favor female appearances because they tend to be softer, which is easier to maintain, and lack facial hair, which frustrates most mimic attempts.");
 			headerSub("Build");
-			outputText("Body types change as Goo girls absorb bodily fluids. In their base, unfed state, they appear like large amoebae, little more than a blob of goo around a red nucleus/heart. As they increase their protein and lactate consumption, their nucleus increases its ability to maintain larger and larger surface area, producing more goo from the surrounding liquids. In sufficiently large goo girls, humanoid appearance is taken after initial contact with a suitable creature. Because increasing mass becomes exponentially harder as they grow, most goo girls maintain a volume suitable for a 4-5’ statue, though they may be found smaller or larger according to food supplies. Goo girls particularly enjoy the softness, heat, and milk of breasts and will mimic the bust size of their target’s breasts even before touching them.");
+			outputText("Body types change as Goo girls absorb bodily fluids. In their base, unfed state, they appear like large amoebae, little more than a blob of goo around a red nucleus/heart. As they increase their protein and lactate consumption, their nucleus increases its ability to maintain larger and larger surface area, producing more goo from the surrounding liquids. In sufficiently large goo girls, humanoid appearance is taken after initial contact with a suitable creature. Because increasing mass becomes exponentially harder as they grow, most goo girls maintain a volume suitable for a " + UnitSystem.display("4-5’", UnitSystem.displayFeetEstimateRange(4, '-', 5)) + " statue, though they may be found smaller or larger according to food supplies. Goo girls particularly enjoy the softness, heat, and milk of breasts and will mimic the bust size of their target’s breasts even before touching them.");
 			headerSub("Appendages");
 			outputText("Due to their shifting states, arms are merely a habitual expression of their tendrils. They lack the strength to pull or push in any great capacity, usually preferring to flow around obstructions. However, they have a great degree of control over the movements and pressure of their hands, fingers, and vaginal cavities, which affords them an unrivaled, delicate touch. They will gladly sculpt additional orifices to compensate multi-genital humanoids. Goo girls rarely form full legs and almost never bother with feet, preferring to let their bodies pool into a puddle beneath them.");
 			headerSub("Combat");
@@ -467,7 +467,7 @@ package classes.Scenes
 			flags[kFLAGS.CODEX_CURRENT_ENTRY] = "Hellhounds";
 			clearOutput();
 			headerMain("Hellhounds");
-			outputText("<b>Height:</b> 5.5-6 feet when standing\n");
+			outputText("<b>Height:</b> " + UnitSystem.display("5.5-6 feet", UnitSystem.displayFeetEstimateRange(5.5, "-", 6)) + " when standing\n");
 			outputText("<b>Body type:</b> Biped or quadrupedal, it is completely comfortable with either\n");
 			outputText("<b>Fur:</b> Thick armor of black fur\n");
 			outputText("<b>Eye color:</b> Red, full of corrupt flames\n");
@@ -476,7 +476,7 @@ package classes.Scenes
 			headerSub("Diet and hunting habits");
 			outputText("Hellhounds are predators that typically prey on smaller corrupt creatures like goblins or imps. They typically will try to overpower their prey through force, then rape their victims. After they have finished, they may decide to let their catch go, or they may proceed to devour it. While Hellhounds often will try to attack the first thing that they happen upon, they will almost never eat anything that isn’t a goblin or an imp. Their food is consumed by their flames, and any waste that results is ejected when they breath fire. This causes them to not need an asshole, and thus they do not have one.");
 			headerSub("Sexual characteristics");
-			outputText("A pair of eight inch long pointed black shafts with a quad of balls underneath that carry the same flames as in their eyes.");
+			outputText("A pair of " + UnitSystem.displayInchWithHyphenTextually(8) + " long pointed black shafts with a quad of balls underneath that carry the same flames as in their eyes.");
 			headerSub("Special abilities");
 			outputText("Hellhounds can breath corrupt flames to hurt their foes and fill them with tainted desire. Hellhounds may also sniff out a foes scent during battle, making it harder for the foe to flee. Hellhounds also have the power to link their minds with a powerful corrupted individual, drawing on that individual’s mind to allow them to think, in exchange for absolute loyalty to their new “master”. The first power that a Hellhound generally gains from such a link is the power to speak, and the sharper their master’s mind, the greater their own abilities become.");
 			headerSub("Mentality");
@@ -492,7 +492,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Imps");
 			outputText("<b>Genders:</b> Male\n");
-			outputText("<b>Height:</b> 2 to 4 feet tall.\n");
+			outputText("<b>Height:</b> " + UnitSystem.displayFeetEstimateRange(2, " to ", 4) + " tall.\n");
 			outputText("<b>Build:</b> Spindly\n");
 			outputText("<b>Skin tone:</b> Red, orange, or rarely, purple.\n");
 			outputText("<b>Hair color:</b> Rusty, red, black, and rarely brown.\n");
@@ -502,7 +502,7 @@ package classes.Scenes
 			headerSub("Weaponry");
 			outputText("Clawed hands and feet.");
 			headerSub("Notable features");
-			outputText("Four inch horns on their foreheads, small spaded tails, and tiny dragon-like wings. They are not particularly intelligent, always seeming to be about as smart as a human teenager.");
+			outputText(capitalizeFirstLetter(UnitSystem.displayInchWithHyphenTextually(4)) + " horns on their foreheads, small spaded tails, and tiny dragon-like wings. They are not particularly intelligent, always seeming to be about as smart as a human teenager.");
 			headerSub("Sexual characteristics");
 			outputText("A large human-like penis that seems to dwarf the rest of the imp, along with two human sized testes. They do have an asshole comparable to a humans, though it seems to exist more for sport and pleasure than for waste removal. ");
 			setCodexMenusAfterDisplay();
@@ -513,7 +513,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Kobolds");
 			outputText("<b>Genders:</b> Genderless, save for hermaphroditic Broodmothers\n");
-			outputText("<b>Height:</b> Typically 3 to 4 feet tall.\n");
+			outputText("<b>Height:</b> Typically " + UnitSystem.displayFeetEstimateRange(3, " to ", 4) + " tall.\n");
 			outputText("<b>Scale color:</b> Green, grey, orange and occasionally brown\n");
 			headerSub("History");
 			outputText("First showed up as the corrupted newborns of the dragons. They originally were divided into males and females and would procreate at an alarming speed, quickly growing in population and outnumbering the bewildered dragons.");
@@ -552,7 +552,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Lizans (Lizard-Morphs)");
 			outputText("<b>Genders:</b> Male, Female, Hermaphrodite\n");
-			outputText("<b>Height:</b> Shorter than Average to Average (5'4\" to 5'11\")\n");
+			outputText("<b>Height:</b> Shorter than Average to Average (" + UnitSystem.displayHeight2Short2(5, 4) + " to " + UnitSystem.displayHeight2Short2(5, 11) + ")\n");
 			outputText("<b>Build:</b> Lean and slender\n");
 			outputText("<b>Skin:</b> Black, Blue, White, Green, Red, Silver, Purple\n");
 			outputText("<b>Hair:</b> None\n");
@@ -597,7 +597,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Minotaurs");
 			outputText("<b>Genders:</b> Male\n");
-			outputText("<b>Height:</b> 7 to 10 feet tall.\n");
+			outputText("<b>Height:</b> " + UnitSystem.displayFeetEstimateRange(7, " to ", 10) + " tall.\n");
 			outputText("<b>Body type:</b> Heavily muscled with a thick coat of shaggy fur.\n");
 			outputText("<b>Skin tone:</b> Brown, black, or white with brown spots.\n");
 			outputText("<b>Fur/hair color:</b> Matches skin tone. Very rarely straw colored.\n");
@@ -608,7 +608,7 @@ package classes.Scenes
 			headerSub("Weaponry");
 			outputText("Fists, horns, and when they can find them, axes.");
 			headerSub("Sexual characteristics");
-			outputText("A two to three foot long penis with a flared tip. Typically they have two to three bands of thick skin encircling the shaft, spaced evenly along it’s length. The purpose of this is unknown. Minotaur testicles vary in size depending on how long the minotaur has gone without orgasm. They typically shrink down to the size of baseballs when empty, but can swell as large as basketballs for particularly unlucky cow-men. This is quite painful for them, and is made worse by due to the difficulty they have orgasming without a tight opening to impregnate. It is not uncommon for the loser in a minotaur dual to be brutally sodomized, if only for the winner to relieve his aching pressure. All minotaurs are male, but their seed is so potent as to totally override the mother’s race, resulting in the birth of yet another pure-blood minotaur. Minotaurs bodily fluids are renowned for their magical properties, but great care must be taken to refine them for any proper use.");
+			outputText("A " + UnitSystem.displayFootEstimateRangeWithHyphenTextually(2, "to", 3) + " long penis with a flared tip. Typically they have two to three bands of thick skin encircling the shaft, spaced evenly along it’s length. The purpose of this is unknown. Minotaur testicles vary in size depending on how long the minotaur has gone without orgasm. They typically shrink down to the size of baseballs when empty, but can swell as large as basketballs for particularly unlucky cow-men. This is quite painful for them, and is made worse by due to the difficulty they have orgasming without a tight opening to impregnate. It is not uncommon for the loser in a minotaur dual to be brutally sodomized, if only for the winner to relieve his aching pressure. All minotaurs are male, but their seed is so potent as to totally override the mother’s race, resulting in the birth of yet another pure-blood minotaur. Minotaurs bodily fluids are renowned for their magical properties, but great care must be taken to refine them for any proper use.");
 			headerSub("Mentality");
 			outputText("Most beings think of minotaurs as stupid brutes, but in truth their intelligence rivals that of humans. This misconception is perpetuated by the fact that minotaurs place a much higher priority on their self-reliance, strength, and sexual release than other races, often leading them to ignore social graces in favor of trying to overpower those around them.");
 			headerSub("Minitaurs");
@@ -621,16 +621,16 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Nagas");
 			outputText("<b>Genders:</b> Male, Female\n");
-			outputText("<b>Length:</b> Varies a lot. 10-12 feet is considered as average. There are no noticeable size difference between males and females.\n");
+			outputText("<b>Length:</b> Varies a lot. " + UnitSystem.displayFeetEstimateRange(10, "-", 12) + " is considered as average. There are no noticeable size difference between males and females.\n");
 			outputText("<b>Build:</b> Slender\n");
 			outputText("<b>Hair:</b> Jet black, other colors are seen as very exotic in societies\n");
 			outputText("<b>Eyes:</b> Mostly blue and light brown\n");
 			outputText("<b>Skin (body):</b> Tanned to various degrees, as Nagas prefer to live in desert regions.\n");
 			outputText("<b>Skin (tail):</b> Anything goes. It is possible to track the origin of any given Naga just by looking at the color of his tail..\n");
 			headerSub("Appearance");
-			outputText("Normal humans with a snake body from the waist down. They also have a rather long forked tongue (5 usable inches, though they rarely extend it this far) which they flick out every so often to get information on their surroundings.");
+			outputText("Normal humans with a snake body from the waist down. They also have a rather long forked tongue (" + UnitSystem.displayQualifiedInches(5, "usable ") + ", though they rarely extend it this far) which they flick out every so often to get information on their surroundings.");
 			headerSub("Sexual characteristics");
-			outputText("Nagas, just like snakes, have no external genitalia. Those remain concealed in a genital slit until needed. Unlike actual snakes and lizards, however, the genital slit is distinct from the anus which is also on the front, as Nagas have no buttocks. Male Nagas usually have two penises ranging from 5 to 10 inches. Nagas a foreign race to Mareth. Only gods can recall of the last time one have ever seen a Naga roaming on these lands.");
+			outputText("Nagas, just like snakes, have no external genitalia. Those remain concealed in a genital slit until needed. Unlike actual snakes and lizards, however, the genital slit is distinct from the anus which is also on the front, as Nagas have no buttocks. Male Nagas usually have two penises ranging from " + UnitSystem.displayInchesRange(5, " to ", 10) + ". Nagas a foreign race to Mareth. Only gods can recall of the last time one have ever seen a Naga roaming on these lands.");
 			headerSub("Social structure");
 			outputText("Most Nagas live in groups of 100-150. Living in such small communities means that everyone is likely to know each other, something that influenced their culture a lot. Nagas communicate using a mixture of soundwaves and ground impulsions. They can still communicate using only one of these methods, but their vocabulary will be limited as a result. They pick up the impulsions through the underside of their tail, which is full of sensitive nerve endings. This also a makes it a major erogenous zone, explaining why Nagas enjoy coiling together while mating. Their particular sense of hearing means they can’t “hear” the difference between a human talking and a Naga saying the same thing : they understand both but to answer back, they have to know that difference and they need to learn to speak this way too.");
 			headerSub("Culture");
@@ -645,7 +645,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Orcs");
 			outputText("<b>Genders:</b> Children are born as boys or girls. It is rare to see an Orc that is both or neither of these, they are very similar to humans in this respect. They do not typically practice gender alteration.\n");
-			outputText("<b>Body structure:</b> On average they are taller and wider than humans. It’s been recorded that some Orc men have reached 10 feet tall, though most stop developing at around 7 feet and women are on average a few inches shorter.\n");
+			outputText("<b>Body structure:</b> On average they are taller and wider than humans. It’s been recorded that some Orc men have reached " + UnitSystem.displayHeight2Estimate(10) + " tall, though most stop developing at around " + UnitSystem.displayHeight2Estimate(7) + " and women are on average a few " + UnitSystem.literalInches() + " shorter.\n");
 			outputText("<b>Facial:</b> Compared to humans, Orc noses are typically smaller and more pressed in. Their ears are pointed without being any longer than a human’s. The only other notable difference is they grow a pair of tusks from their lower gums that grows outward to protrude from the lips and curl upwards, though the direction can change according to breeding.\n");
 			outputText("<b>Hair & Eye Coloration:</b> Darker hair colors such as black and brown are the norm for both men and women, although colors such as blond and even bright red have been recorded. It is unclear if blond and red hair are a mutation, however. Eye colors have a very wide range, from silver to dark purples. Among the Orcs, eye colors are considered beautiful. The colors widely vary between individuals, thus making eyes a notable feature in Orcish art, writing, and courtship.\n");
 			headerSub("History");
@@ -663,13 +663,13 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Rhino-Morphs");
 			outputText("<b>Genders:</b> Male, Female\n");
-			outputText("<b>Height:</b> 7 feet 6 inches to 8 feet 6 inches\n");
+			outputText("<b>Height:</b> " + UnitSystem.displayHeight2Estimate(7, 6) + " to " + UnitSystem.displayHeight2Estimate(8, 6) + "\n");
 			outputText("<b>Build:</b> Thick/curvy \n");
 			outputText("<b>Skin:</b> Pale grey to dark grey\n");
 			outputText("<b>Eyes:</b> Brown to black\n");
 			outputText("<b>Diet:</b> Omnivores, though still have a penchant for the good old food: leafy plants, branches, shoots, thorny wood bushes, and fruit. \n");
 			headerSub("Appearance");
-			outputText("A bipedal race of anthropomorphic rhinos, this species is massive, standing approximately eight-foot tall, and are thick to put it mildly. They have roughly humanoid body characteristics, save for their rhino-like face, four-fingered hands and four-toed feet, and the main non-human feature, their rhino-cocks. With their thick pale to dark grey hide, horse-like ears, extended snout with one or two horns protruding out the upper side, this species looks to be ready for war.");
+			outputText("A bipedal race of anthropomorphic rhinos, this species is massive, standing approximately " + UnitSystem.displayHeight2EstimateWithHyphenTextually(8) + " tall, and are thick to put it mildly. They have roughly humanoid body characteristics, save for their rhino-like face, four-fingered hands and four-toed feet, and the main non-human feature, their rhino-cocks. With their thick pale to dark grey hide, horse-like ears, extended snout with one or two horns protruding out the upper side, this species looks to be ready for war.");
 			headerSub("Behavior");
 			outputText("Rhino-morphs are a naturally occurring species in Mareth. The rhino-morphs were best known for their dualistic psychological nature. ");
 			outputText("\n\nOn one hand they tend to be gentle giants: Some are boisterous and loving creatures who care a bit too much and wear their emotions on their sleeve. Others are more quiet and reserved. Their personalities are as varied as any other race but their default state is one of kindness and community. Even before the fall they were known to adopt members of other species into their crashes and treat them as family because to a rhino that’s what a crash is, their family.");
@@ -688,7 +688,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Salamanders");
 			outputText("<b>Genders:</b> Males and Females occur naturally, though transformative items leave none too few Salamanders as hermaphrodites or genderless.\n");
-			outputText("<b>Body structures:</b> Salamanders stand taller than most humans – usually between 6.5 and 7 feet tall. They have human-like bodies, though their forearms and legs, up to the mid-thigh, are covered in thick, leathery red scales. Their hands and feet have powerful claws that, combined with the natural strength of a Salamander, allows them to easily rend through even some metals. Salamanders also possess a long, prehensile tail that is usually alight with a burning fire.\n");
+			outputText("<b>Body structures:</b> Salamanders stand taller than most humans – usually between " + UnitSystem.display("6.5 and 7 feet", UnitSystem.displayFeetEstimateRange(6.5, " and ", 7)) + " tall. They have human-like bodies, though their forearms and legs, up to the mid-thigh, are covered in thick, leathery red scales. Their hands and feet have powerful claws that, combined with the natural strength of a Salamander, allows them to easily rend through even some metals. Salamanders also possess a long, prehensile tail that is usually alight with a burning fire.\n");
 			outputText("<b>Facial structures:</b> Salamanders have human-like faces, save for the smattering of scales on their cheeks (akin to freckles on a human), and frilled, reptilian ears.\n");
 			outputText("<b>Hair & Eye Coloration:</b> Salamanders have red, orange, and rarely, pink hair. Most members of the species have bright red eyes, though some few manifest yellow or grey-blue eyes.\n");
 			headerSub("Fire mastery");
@@ -708,7 +708,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Sand Witches");
 			outputText("<b>Genders:</b> Exclusively female\n");
-			outputText("<b>Height:</b> Sand Witches are typically five to six feet tall.\n");
+			outputText("<b>Height:</b> Sand Witches are typically " + UnitSystem.displayFeetEstimateRangeTextually(5, " to ", 6) + " tall.\n");
 			outputText("<b>Hair:</b> Always sandy blond.\n");
 			outputText("<b>Eyes:</b> The eye color of Sand Witches varies from witch to witch, but is most often brown.\n");
 			headerSub("Appearance");
@@ -751,7 +751,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Shark-Girls & Tigershark-Girls");
 			outputText("<b>Genders:</b> Mostly female, though there are males and herms. Due to the nature of their conception, the vast majority of tiger sharks are hermaphrodites.\n");
-			outputText("<b>Height:</b> 5-6 feet tall. Tiger sharks are primarily in the 6 foot region.\n");
+			outputText("<b>Height:</b> " + UnitSystem.displayFeetEstimateRange(5, "-", 6) + " tall. Tiger sharks are primarily in the " + UnitSystem.displayHeight2EstimateWithHyphen(6) + " region.\n");
 			outputText("<b>Build:</b> Well-toned and athletic.\n");
 			outputText("<b>Skin tone:</b> Grey. Light orange with stripes for tiger sharks.\n");
 			outputText("<b>Hair color:</b> Silver and in rare cases, Black.\n");
@@ -796,7 +796,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Behemoths");
 			outputText("<b>Genders:</b> Male.\n");
-			outputText("<b>Height:</b> Typically 8 to 10 feet, but 11 feet is not unheard of.\n");
+			outputText("<b>Height:</b> Typically " + UnitSystem.displayFeetEstimateRange(8, " to ", 10) + ", but " + UnitSystem.displayHeight2Estimate(11) + " is not unheard of.\n");
 			outputText("<b>Build:</b> Muscular and athletic\n");
 			outputText("<b>Skin tone:</b> Purple\n");
 			outputText("<b>Hair color:</b> Usually blonde or black.\n");
@@ -816,7 +816,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Zebra-morphs");
 			outputText("<b>Genders:</b> Male, Female\n");
-			outputText("<b>Height:</b> 5 feet 5 inches to 6 feet\n");
+			outputText("<b>Height:</b> " + UnitSystem.displayHeight2Estimate(5, 5) + " to " + UnitSystem.displayHeight2Estimate(6) + "\n");
 			outputText("<b>Build:</b> Lean/slender\n");
 			outputText("<b>Skin:</b> Zebra pattern\n");
 			outputText("<b>Fur:</b> Zebra pattern with mohawk-style mane\n");			
@@ -843,7 +843,7 @@ package classes.Scenes
 			clearOutput();
 			headerMain("Basilisks");
 			outputText("<b>Genders:</b> Male, though rumours of female and herm basilisks re-emerging are spreading.\n");
-			outputText("<b>Height:</b> Basilisk tend to grow up to 6 foot 8, with rare basilisks being to be taller. Around the 6 foot 2 mark is"
+			outputText("<b>Height:</b> Basilisk tend to grow up to " + UnitSystem.display("6 foot 8", UnitSystem.displayHeight2Estimate(6, 8)) + ", with rare basilisks being to be taller. Around the " + UnitSystem.display("6 foot 2", UnitSystem.displayHeight2EstimateWithHyphen(8, 2)) + " mark is"
 			          +" where they grow to on average.\n");
 			outputText("<b>Build:</b> Basilisks tend to have thin and wiry frames, taut with muscles. These powerful and lean predators,have slender"
 			          +" hips and average behinds. It is rumoured females have much wider hips, plump behinds and overall softer frames, though still"
@@ -904,7 +904,7 @@ package classes.Scenes
 			headerMain("Cockatrices");
 			outputText("<b>Genders:</b> Male, female and hermaphrodite. On average 55% of the cockatrices are male, with 35% being female"
 			          +" and 10% being natural herms.\n");
-			outputText("<b>Height:</b> Cockatrices can grow between 5 foot 7 and 6 foot 8,"
+			outputText("<b>Height:</b> Cockatrices can grow between " + UnitSystem.display("5 foot 7", UnitSystem.displayHeight2Estimate(5, 7)) + " and " + UnitSystem.display("6 foot 8", UnitSystem.displayHeight2Estimate(6, 8)) + ","
 			          +" though their long tails and feathered ears tend to make them look larger.\n");
 			outputText("<b>Build:</b> Cockatrices tend to have light and athletic builds, with their muscle mass being noticeable particularly"
 			          +" around the chest and stomach. Similar to harpies females have small busts, while their behinds tends to be small,"
@@ -936,11 +936,11 @@ package classes.Scenes
 			          +" and calves, where their scaled reptile arms and legs begin. Usually these scales are black or yellow."
 			          +" Their hands are tipped with sharp claws, while their digitigrade reptile feet have sharp talons on each of their 3 toes,"
 			          +" their 4th hind claw being somewhat smaller. Above their rump they have a long,thick reptile tail which is the same color"
-			          +" as their feathers. Their feathers grow down it from their rear about 4 inches before terminating in a v-shape and their"
+			          +" as their feathers. Their feathers grow down it from their rear about " + UnitSystem.displayInches(4) + " before terminating in a v-shape and their"
 			          +" scales begin. Their tails are usually close to half their body length.");
 			outputText("\n\nA Cockatrice’s genitals are contained within a genital slit when not aroused, making their scaly underbelly seem smooth"
-			          +" regardless of gender. When aroused, the male’s penis emerges from the slit, usually between 6 and 12 inches long"
-			          +" and up to 2 inches thick. The Cockatrice’s member is usually a deep purple and similar in structure to that of a reptile.");
+			          +" regardless of gender. When aroused, the male’s penis emerges from the slit, usually between " + UnitSystem.displayInchesRange(6, " and ", 12) + " long"
+			          +" and up to " + UnitSystem.displayInches(2) + " thick. The Cockatrice’s member is usually a deep purple and similar in structure to that of a reptile.");
 			headerSub("Reproduction");
 			outputText("Female Cockatrices lay eggs, usually in a clutch of up to 4, once every 3 months. While any male can try to fertilize"
 			          +" a Cockatrice, and during her time with clutch she will aggressively pursue males so she can breed, they are not the most"

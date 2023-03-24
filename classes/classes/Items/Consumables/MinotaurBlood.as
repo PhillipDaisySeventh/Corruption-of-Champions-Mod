@@ -9,6 +9,7 @@ package classes.Items.Consumables
 	import classes.PerkLib;
 	import classes.StatusEffects;
 	import classes.Vagina;
+	import classes.UnitSystem;
 	
 	/**
 	 * Minotaur transformative item.
@@ -231,8 +232,8 @@ package classes.Items.Consumables
 						temp = player.increaseCock(selectedCock, 2 + rand(8));
 						temp += player.cocks[selectedCock].thickenCock(1);
 						//Comment on length changes
-						if (temp > 6) outputText("\n\nGasping in sudden pleasure, your " + player.cockDescript(selectedCock) + " surges free of its sheath, emerging with over half a foot of new dick-flesh.");
-						if (temp <= 6 && temp >= 3) outputText("\n\nYou pant in delight as a few inches of " + player.cockDescript(selectedCock) + " pop free from your sheath, the thick new horse-flesh still slick and sensitive.");
+						if (temp > 6) outputText("\n\nGasping in sudden pleasure, your " + player.cockDescript(selectedCock) + " surges free of its sheath, emerging with over " + UnitSystem.halfAFoot() + " of new dick-flesh.");
+						if (temp <= 6 && temp >= 3) outputText("\n\nYou pant in delight as a few " + UnitSystem.literalInches() + " of " + player.cockDescript(selectedCock) + " pop free from your sheath, the thick new horse-flesh still slick and sensitive.");
 						if (temp < 3) outputText("\n\nGroaning softly, you feel a pleasurable change in your groin.  Looking down, you see [oneCock] grow slightly longer.");
 						//Add a blurb about thickness...
 						outputText("  To your delight and surprise, you discover it has grown slightly thicker as well!");
@@ -242,8 +243,8 @@ package classes.Items.Consumables
 						//Increase by 2 + rand(8), and store the actual amount in temp
 						temp = player.increaseCock(selectedCock, 2 + rand(8));
 						//Comment on length changes
-						if (temp > 6) outputText("\n\nGasping in sudden pleasure, your " + player.cockDescript(selectedCock) + " surges free of its sheath, emerging with over half a foot of new dick-flesh.");
-						if (temp <= 6 && temp >= 3) outputText("\n\nYou pant in delight as a few inches of " + player.cockDescript(selectedCock) + " pop free from your sheath, the thick new horse-flesh still slick and sensitive.");
+						if (temp > 6) outputText("\n\nGasping in sudden pleasure, your " + player.cockDescript(selectedCock) + " surges free of its sheath, emerging with over " + UnitSystem.halfAFoot() + " of new dick-flesh.");
+						if (temp <= 6 && temp >= 3) outputText("\n\nYou pant in delight as a few " + UnitSystem.literalInches() + " of " + player.cockDescript(selectedCock) + " pop free from your sheath, the thick new horse-flesh still slick and sensitive.");
 						if (temp < 3) outputText("\n\nGroaning softly, you feel a pleasurable change in your groin.  Looking down, you see [oneCock] grow slightly longer.");
 					}
 					changes++;
@@ -265,7 +266,7 @@ package classes.Items.Consumables
 					//Text for humandicks or others
 					if (player.cocks[selectedCockValue].cockType === CockTypesEnum.HUMAN || player.cocks[selectedCockValue].cockType.Index > 2) outputText("\n\nYour " + player.cockDescript(selectedCockValue) + " begins to feel strange... you pull down your pants to take a look and see it darkening as you feel a tightness near the base where your skin seems to be bunching up.  A sheath begins forming around your cock's base, tightening and pulling your cock inside its depths.  A hot feeling envelops your member as it suddenly grows into a horse penis, dwarfing its old size.  The skin is mottled brown and black and feels more sensitive than normal.  Your hands are irresistibly drawn to it, and you jerk yourself off, splattering cum with intense force.");
 					//Text for dogdicks
-					if (player.cocks[selectedCockValue].cockType === CockTypesEnum.DOG) outputText("\n\nYour " + Appearance.cockNoun(CockTypesEnum.DOG) + " begins to feel odd...  You pull down your clothes to take a look and see it darkening.  You feel a growing tightness in the tip of your " + Appearance.cockNoun(CockTypesEnum.DOG) + " as it flattens, flaring outwards.  Your cock pushes out of your sheath, inch after inch of animal-flesh growing beyond its traditional size.  You notice your knot vanishing, the extra flesh pushing more fresh horsecock out from your sheath.  <b>Your hands are drawn to the strange new " + Appearance.cockNoun(CockTypesEnum.HORSE) + "</b>, and you jerk yourself off, splattering thick ropes of cum with intense force.");
+					if (player.cocks[selectedCockValue].cockType === CockTypesEnum.DOG) outputText("\n\nYour " + Appearance.cockNoun(CockTypesEnum.DOG) + " begins to feel odd...  You pull down your clothes to take a look and see it darkening.  You feel a growing tightness in the tip of your " + Appearance.cockNoun(CockTypesEnum.DOG) + " as it flattens, flaring outwards.  Your cock pushes out of your sheath, " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " of animal-flesh growing beyond its traditional size.  You notice your knot vanishing, the extra flesh pushing more fresh horsecock out from your sheath.  <b>Your hands are drawn to the strange new " + Appearance.cockNoun(CockTypesEnum.HORSE) + "</b>, and you jerk yourself off, splattering thick ropes of cum with intense force.");
 					player.cocks[selectedCockValue].cockType = CockTypesEnum.HORSE;
 					player.increaseCock(selectedCockValue, 4);
 					dynStats("lib", 5, "sen", 4, "lus", 35);
@@ -341,9 +342,9 @@ package classes.Items.Consumables
 							temp = 1 + rand(3);
 							player.horns.value += temp;
 							if (temp === 0) changes--;
-							if (temp === 1) outputText("\n\nAn aching pressure builds in your temples as you feel your horns push another inch of length from your skull.  ");
-							if (temp === 2) outputText("\n\nA powerful headache momentarily doubles you over.  With painful slowness, you feel your horns push another two inches of length out from your brow, gradually thickening as they grow.  ");
-							if (temp === 3) outputText("\n\nAgony overwhelms you as a headache of terrifying intensity sweeps through your skull.  You squeeze your eyes shut from the pain, but it does little to help.  The torture intensifies before finally diminishing as you feel an inch or two of new horn force its way out of your forehead.  The headache remains despite this, and desperate for relief, you grab hold of your horns and tug, pulling another inch of new horn free.  At last the pain fades, leaving you with significantly enhanced head-spikes.  ");
+							if (temp === 1) outputText("\n\nAn aching pressure builds in your temples as you feel your horns push another " + UnitSystem.inch() + " of length from your skull.  ");
+							if (temp === 2) outputText("\n\nA powerful headache momentarily doubles you over.  With painful slowness, you feel your horns push another " + UnitSystem.displayInchesTextually(2) + " of length out from your brow, gradually thickening as they grow.  ");
+							if (temp === 3) outputText("\n\nAgony overwhelms you as a headache of terrifying intensity sweeps through your skull.  You squeeze your eyes shut from the pain, but it does little to help.  The torture intensifies before finally diminishing as you feel " + UnitSystem.anInchOrTwo() + " of new horn force its way out of your forehead.  The headache remains despite this, and desperate for relief, you grab hold of your horns and tug, pulling another " + UnitSystem.inch() + " of new horn free.  At last the pain fades, leaving you with significantly enhanced head-spikes.  ");
 							if (player.horns.value < 3) outputText("They are the size of tiny nubs.");
 							if (player.horns.value >= 3 && player.horns.value < 6) outputText("They are similar to what you would see on a young bull.");
 							if (player.horns.value >= 6 && player.horns.value < 12) outputText("They look like the horns on a grown bull, big enough and dangerous enough to do some damage.");

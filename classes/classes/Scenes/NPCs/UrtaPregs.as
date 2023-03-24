@@ -2,6 +2,7 @@ package classes.Scenes.NPCs{
 	import classes.BodyParts.*;
 	import classes.GlobalFlags.*;
 	import classes.PregnancyStore;
+	import classes.UnitSystem;
 	import classes.display.SpriteDb;
 	import classes.Scenes.VaginalPregnancy;
 	import classes.Scenes.PregnancyProgression;
@@ -169,7 +170,7 @@ internal function urtaPreggoApproached():void {
 				addButton(14,"Leave",telAdre.barTelAdre);
 				break;
 		case 5:
-				outputText("Urta's still in the private booth she's moved to, and for a good, reason, too - her pregnancy is so obvious you'd have to be blind to miss it, adding what easily has to be around ten inches to her waistline - and straight out, at that.  The black dress she wears is stretching to its limit around her distended belly, pulled tight across the spherical bulge.  She is tucking away eagerly into a glass of fizzy, sweet-smelling orange drink, a picked-clean plate resting before her.  She spots you and nods even as she continues to drink.");
+				outputText("Urta's still in the private booth she's moved to, and for a good, reason, too - her pregnancy is so obvious you'd have to be blind to miss it, adding what easily has to be around " + UnitSystem.displayInchesEstimateTextually(10) + " to her waistline - and straight out, at that.  The black dress she wears is stretching to its limit around her distended belly, pulled tight across the spherical bulge.  She is tucking away eagerly into a glass of fizzy, sweet-smelling orange drink, a picked-clean plate resting before her.  She spots you and nods even as she continues to drink.");
 				if (flags[kFLAGS.URTA_TIME_SINCE_LAST_CAME] == 0) outputText("\n\nYour [foot] steps in something wet, and you realize Urta's dick is hanging out under the table and oozing precum all over the floor, her nipples blatantly displayed through her dress - you're half-surprised it hasn't split over them, yet.  Urta wordlessly puts the glass down and gives you a hooded stare, lust glazing in her eyes.  \"<i>Hey there, sexy... want to slip out the back with me?</i>\"  She purrs.");
 				//Else: 
 				else outputText("She places the glass down and licks her lips.  \"<i>Mmm... that stuff tastes a lot better than you think, especially when you're pregnant.  So, sexy, what brings you here?  Wanted to check up on us?</i>\"  She pats her belly with a smile.  \"<i>Or did you maybe want to talk?  ...Or perhaps <b>talk</b> a little?</i>\"  She grins wickedly.");
@@ -569,7 +570,7 @@ public function updateVaginalPregnancy():Boolean {
 		
 		outputText("\n\nUrta smiles at you and gives you a friendly wave as she walks up.  \"<i>Hi, lover; how's the baby?</i>\"  She asks, already looking at your swollen stomach.  You take a deep breath and begin telling Urta about the burdens you're facing. The vixen gives you a sympathetic expression as you complain, timidly advancing closer to you as you speak, then gently reaching out with one hand, stopping before she fully touches your belly, looking at you with an obvious nonverbal request for permission.  You simply smile and nod your head.");
 		
-		outputText("\n\nUrta smiles and eagerly starts patting and rubbing your belly, gleefully running her fingers over its taut skin, feeling every inch of the gravid swell.  \"<i>Have you felt it kick, yet?</i>\"  She asks, ");
+		outputText("\n\nUrta smiles and eagerly starts patting and rubbing your belly, gleefully running her fingers over its taut skin, feeling every " + UnitSystem.literalInch() + " of the gravid swell.  \"<i>Have you felt it kick, yet?</i>\"  She asks, ");
 		if (pregnancy.type != PregnancyStore.PREGNANCY_PLAYER) outputText("sounding somewhat jealous that it's you carrying and not her.");
 		else outputText("sounding a little smug as she caresses her own gravid tummy.");
 		outputText("  You shake your head, but considering how far you are into the pregnancy, it shouldn't take long... if Urta keeps visiting, you're pretty sure it'll be kicking the next time she comes around.");
@@ -980,10 +981,10 @@ private function massagePregnantUrtasBelly():void {
 	
 	//1st Time:
 	if (flags[kFLAGS.TIMES_MASSAGED_URTA_BELLY] == 0) {
-		outputText("\n\nUrta shakes her head, \"<i>No, [name], sorry... it's not something I normally have much interest in,</i>\" she sadly tells you.  You declare that there must be something you can use for the purpose you have in mind, and, with Urta's approval, start to poke around the house.  You find quite a few different kinds of dildoes and even some hyper-sized fleshlights, but no oil.  Eventually, however, you find a gallon-sized bucket of lube in one closet and promptly carry that over to your pregnant lover.");
+		outputText("\n\nUrta shakes her head, \"<i>No, [name], sorry... it's not something I normally have much interest in,</i>\" she sadly tells you.  You declare that there must be something you can use for the purpose you have in mind, and, with Urta's approval, start to poke around the house.  You find quite a few different kinds of dildoes and even some hyper-sized fleshlights, but no oil.  Eventually, however, you find " + UnitSystem.aGallon() + "-sized bucket of lube in one closet and promptly carry that over to your pregnant lover.");
 		
 		outputText("\n\nWhen she sees what you have, however, she blushes with embarrassment and snatches it away from you.  \"<i>Nuh-uh, no way!  I may use this on my dick, but there's no way I'm letting you rub me all over with it!</i>\"");
-		outputText("\n\nYou ask her what the problem is.  It's just lube, all it'll do is make her slick for you.  \"<i>I don't care, I'm not letting you put that on me - it's embarrassing!</i>\"  She whines.  Now that you think about it... you decide to ask why Urta has a gallon of lube in her place.  Isn't that a bit excessive?  Plus you're seeing each other, so what does she need all that lube for anyway?");
+		outputText("\n\nYou ask her what the problem is.  It's just lube, all it'll do is make her slick for you.  \"<i>I don't care, I'm not letting you put that on me - it's embarrassing!</i>\"  She whines.  Now that you think about it... you decide to ask why Urta has " + UnitSystem.aGallon() + " of lube in her place.  Isn't that a bit excessive?  Plus you're seeing each other, so what does she need all that lube for anyway?");
 		outputText("\n\n\"<i>H-hey, I do have a lot of cock to cover, you know,</i>\"  Urta points out, blushing.  \"<i>Besides... it's... ah... good for when you can't be here, too.</i>\"  You chuckle at Urta's reply, but agree to look for something else.  \"<i>Thank you,</i>\" she replies sheepishly.");
 		outputText("\n\nYou decide to poke around her kitchen next; maybe you can find some cooking oil.  That's hardly a suitable substitute, and Urta's fur would likely get very sticky, but maybe... wait a moment.  You grab a can nearby and examine its label.  It reads <i>Whipped Cream</i>.  Curiosity gets the better of you and you decide to ask Urta about this.");
 		
@@ -1433,7 +1434,7 @@ private function getBlownByPregnantUrta():void {
 private function holdOnYouAintGettingYerCumYetYouNaughtyFox():void {
 	clearOutput();
 	outputText("You're not going to give in so easily.  If she wants it she'd best work hard for it.  You smile at her mischievously, even as you hump against her grip.");
-	outputText("\n\n\"<i>Hmm... you need a little more encouragement, I see...</i>\"  Urta notes, then lowers her head and starts to slowly, teasingly, swallow her way down your shaft, noisily gulping and lapping up inch after inch of it, trying to make sure you blow your load down her throat.");
+	outputText("\n\n\"<i>Hmm... you need a little more encouragement, I see...</i>\"  Urta notes, then lowers her head and starts to slowly, teasingly, swallow her way down your shaft, noisily gulping and lapping up " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " of it, trying to make sure you blow your load down her throat.");
 	outputText("\n\nThis is too much for you, and with a throaty moan you blow your load deeply inside her throat and straight into her stomach.");
 	if (player.cockTotal() > 1) {
 		outputText("  Your other cock");
@@ -2645,9 +2646,9 @@ private function acceptARandomGenderFromASkunk():void {
 		//if PC becomes male:
 		//(Discomfortable feeling, mild reaction)
 		outputText("\n\nA nagging, burning, unpleasant feel begins blooming inside your blank, featureless crotch.  You whimper and moan, wriggling as you try to find some relief from the pain - it feels like there's something poking into your groin from the inside.");
-		outputText("\n\nA bump forms on your otherwise flat groin. Slowly it enlarges into a mound, then a protrusion.  You feel a certain tightness inside it, and can't help but groan.  Moments later the skin visibly rips as a four inch meat pole bursts out of your groin, throbbing and leaking pre.  It looks fairly human too.");
+		outputText("\n\nA bump forms on your otherwise flat groin. Slowly it enlarges into a mound, then a protrusion.  You feel a certain tightness inside it, and can't help but groan.  Moments later the skin visibly rips as a " + UnitSystem.displayInchEstimateWithHyphenTextually(4) + " meat pole bursts out of your groin, throbbing and leaking pre.  It looks fairly human too.");
 		if (player.balls == 0) {
-			outputText("\n\nYou feel strange as a pair of lumps form at the base of your newly acquired dick; these lumps quickly grow to sag, forming an excess of skin.  Moments later you groan as a pair of weighty nuts fills your new ballsack, instantly filling it up with some cum.  It's not much to look at, being only 1 inch in diameter, but it certainly seems productive.  Small dollops of pre escape your new cock in agreement.");
+			outputText("\n\nYou feel strange as a pair of lumps form at the base of your newly acquired dick; these lumps quickly grow to sag, forming an excess of skin.  Moments later you groan as a pair of weighty nuts fills your new ballsack, instantly filling it up with some cum.  It's not much to look at, being only " + UnitSystem.displayInches(1) + " in diameter, but it certainly seems productive.  Small dollops of pre escape your new cock in agreement.");
 			player.balls = 2;
 			player.ballSize = 1;
 		}
@@ -2666,7 +2667,7 @@ private function acceptARandomGenderFromASkunk():void {
 		if (player.biggestTitSize() < 1) {
 			outputText("\n\nThe same itchy feeling that previously assaulted your groin returns, but this time on your chest.  It's not too uncomfortable this time, and your flat chest begins swelling into a perky, A-Cup bust.");
 			if (player.nippleLength < .5) {
-				outputText("  Your nipples erect into small half-inch nubs, complementing the transformation.");
+				outputText("  Your nipples erect into small " + UnitSystem.halfInchCompound() + " nubs, complementing the transformation.");
 				player.nippleLength = .5;
 			}
 			player.breastRows[0].breastRating = 1;	
@@ -2680,7 +2681,7 @@ private function acceptARandomGenderFromASkunk():void {
 	//if PC becomes Herm:
 	else {
 		outputText("\n\nYou moan lewdly as a warmth spreads between your legs, pleasure spiked with pain, itching under your skin, making you wriggle and squirm to try and find some kind of release.  The sensation just keeps building and building, feeling like it's driving you mad!");
-		outputText("\n\nYou feel like your groin is on fire and you eagerly knead the flesh there, trying your best to quench the flames, but it's useless.  The more you stroke it, the more it burns.  A scream of pained pleasure forces itself out of your mouth as a lump forms under your hands, erupting into a searing hot, four inch erection.  You quickly stroke yourself, trying to put out the flames that torment your sensitive new organ, but all you manage to do is make it harder... and the harder it gets, the bigger it grows.  It's not until your cock grows another inch that you finally cum, finally dousing the flames and Lianna in ropy spunk.");
+		outputText("\n\nYou feel like your groin is on fire and you eagerly knead the flesh there, trying your best to quench the flames, but it's useless.  The more you stroke it, the more it burns.  A scream of pained pleasure forces itself out of your mouth as a lump forms under your hands, erupting into a searing hot, " + UnitSystem.displayInchEstimateWithHyphenTextually(4) + " erection.  You quickly stroke yourself, trying to put out the flames that torment your sensitive new organ, but all you manage to do is make it harder... and the harder it gets, the bigger it grows.  It's not until your cock grows another " + UnitSystem.literalInch() + " that you finally cum, finally dousing the flames and Lianna in ropy spunk.");
 		outputText("\n\nYou sigh in relief, glad that your torment is over.  But before you get too comfortable, the feeling of something boiling makes itself known between your legs, and you set forth to stroke the flesh anew.  For a moment you're worried that you might actually be melting; the flesh there grows softer the more you knead and stroke it.  Suddenly there is wetness, a cascade of juices exploding from within, wetting your hands and Lianna's carpet, as the flesh there grows plump, wet and slick.  The heat concentrates on a small point, that quickly forms into a nub; your clit.");
 		outputText("\n\nWeak after these violent transformations, you don't even process that you've grown both sets of genders; instead you walk over to Lianna's bed and plop down there.");
 		player.createVagina();
@@ -2694,14 +2695,14 @@ private function acceptARandomGenderFromASkunk():void {
 			if (player.biggestTitSize() < 1) outputText("s");
 			outputText(" swelling into a soft C-Cup.");
 			if (player.nippleLength < 0.5) {
-				outputText("  Your nipples erect into small, half-inch nubs, complementing the transformation.");
+				outputText("  Your nipples erect into small, " + UnitSystem.halfInchCompound() + " nubs, complementing the transformation.");
 				player.nippleLength = 0.5;
 			}
 			outputText("  You watch the soft mounds in your chest, unable to do anything but pant.");
 			player.breastRows[0].breastRating = 3;
 		}
 		if (player.balls == 0) {
-			outputText("\n\nYou feel strange as a pair of lumps form at the base of your newly acquired dick.  These lumps quickly grow to sag, forming an excess of skin.  Moments later you groan as a pair of weighty nuts fills your new ballsack, instantly filling it up with some cum.  It's only 2 inches in diameter.  At first you don't think much of it, but a sudden feeling of discomfort makes itself known as your balls grow fuller and fuller.  Despite not being huge, your balls seem as productive as a minotaur's.  Soon enough you run out of space in your churning, full sack, and begin climaxing in a spontaneous orgasm, adding to the mess you made of Lianna and her carpet.");
+			outputText("\n\nYou feel strange as a pair of lumps form at the base of your newly acquired dick.  These lumps quickly grow to sag, forming an excess of skin.  Moments later you groan as a pair of weighty nuts fills your new ballsack, instantly filling it up with some cum.  It's only " + UnitSystem.displayInches(2) + " in diameter.  At first you don't think much of it, but a sudden feeling of discomfort makes itself known as your balls grow fuller and fuller.  Despite not being huge, your balls seem as productive as a minotaur's.  Soon enough you run out of space in your churning, full sack, and begin climaxing in a spontaneous orgasm, adding to the mess you made of Lianna and her carpet.");
 			player.balls = 2;
 			player.ballSize = 2;
 		}
@@ -2745,9 +2746,9 @@ private function getEggsHarvested():void {
 	if (player.looseness() >= 4) outputText("; your loose pussy doesn't hurt, either");
 	outputText(".  Finally, you can feel it stop inside of you, the tip pushing against your cervix, which is what has brought it to a halt.");
 	
-	outputText("\n\nLianna takes her time, examining your vagina and moving the dildo mere inches at a time, as if adjusting it.  You can't help but note that this isn't that pleasurable; it's not painful, just... well, more boring than anything.  \"<i>Good enough,</i>\"  She declares, then presses a switch on the dildo.  You moan as the dildo suddenly inflates inside of you, swelling and surging until you can feel it pressing insistently into every little nook and cranny inside of you, sealing your honeypot firmly shut as it sucks up your juices like a thirsty sponge.  \"<i>Just a sec.</i>\"  The skunk says, ducking out into her closet once more.");
+	outputText("\n\nLianna takes her time, examining your vagina and moving the dildo mere " + UnitSystem.literalInches() + " at a time, as if adjusting it.  You can't help but note that this isn't that pleasurable; it's not painful, just... well, more boring than anything.  \"<i>Good enough,</i>\"  She declares, then presses a switch on the dildo.  You moan as the dildo suddenly inflates inside of you, swelling and surging until you can feel it pressing insistently into every little nook and cranny inside of you, sealing your honeypot firmly shut as it sucks up your juices like a thirsty sponge.  \"<i>Just a sec.</i>\"  The skunk says, ducking out into her closet once more.");
 	
-	outputText("\n\nShe comes out holding a small hose attached to a pump and a glass bottle; the hose, she attaches to the base of your dildo; the bottle, she places carefully out of reach and plugs the other end of the hose on the open lid.  \"<i>All set.</i>\"  She takes a small remote in her hand.  \"<i>Begin extraction, now.</i>\"  You moan again as the dildo suddenly comes alive inside of you, pleasure beginning to wash through you as it ripples and vibrates, throbbing inside of your clenching walls, massaging your stretched interior so that every single inch of skin is being pleasured at once by its moving surface.  You hiss, groan, and arch your back as you bask in this; now things are finally getting pleasant.");
+	outputText("\n\nShe comes out holding a small hose attached to a pump and a glass bottle; the hose, she attaches to the base of your dildo; the bottle, she places carefully out of reach and plugs the other end of the hose on the open lid.  \"<i>All set.</i>\"  She takes a small remote in her hand.  \"<i>Begin extraction, now.</i>\"  You moan again as the dildo suddenly comes alive inside of you, pleasure beginning to wash through you as it ripples and vibrates, throbbing inside of your clenching walls, massaging your stretched interior so that every single " + UnitSystem.literalInch() + " of skin is being pleasured at once by its moving surface.  You hiss, groan, and arch your back as you bask in this; now things are finally getting pleasant.");
 	
 	outputText("\n\nLianna watches you with a blank expression, rolling her lollipop in her mouth and taking notes in a notebook.  Things continue to intensify inside your loins, leaving you moaning like a whore; this dildo of hers seems to know exactly how to modify its vibrations to bring you the most pleasure, especially with every surface inside of you being touched at once.");
 	

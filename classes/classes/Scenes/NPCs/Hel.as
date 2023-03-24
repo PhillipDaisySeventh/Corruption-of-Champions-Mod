@@ -32,7 +32,7 @@ package classes.Scenes.NPCs
 			}
 			//Determine if cat'ed
 			else if (player.findPerk(PerkLib.Flexibility) >= 0 && rand(100) < 6) {
-				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short + "");
+				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short);
 			}
 			//Determine damage - str modified by enemy toughness!
 			else
@@ -173,7 +173,7 @@ package classes.Scenes.NPCs
 				this.short = "salamander";
 			}
 			this.imageName = "hel";
-			this.long = "You are fighting a (literally) smoking hot salamander – a seven foot tall woman with crimson scales covering her legs, back, and forearms, with a tail swishing menacingly behind her, ablaze with a red-hot fire.  Her red hair whips wildly around her slender shoulders, occasionally flitting over her hefty E-cup breasts, only just concealed within a scale-covered bikini top.  Bright red eyes focus on you from an almost-human face as she circles you, ready to close in for the kill.  Her brutal, curved sword is raised to her side, feinting at you between genuine attacks.";
+			this.long = "You are fighting a (literally) smoking hot salamander – a " + UnitSystem.displayHeight2WithHyphenTextually(7) + " tall woman with crimson scales covering her legs, back, and forearms, with a tail swishing menacingly behind her, ablaze with a red-hot fire.  Her red hair whips wildly around her slender shoulders, occasionally flitting over her hefty E-cup breasts, only just concealed within a scale-covered bikini top.  Bright red eyes focus on you from an almost-human face as she circles you, ready to close in for the kill.  Her brutal, curved sword is raised to her side, feinting at you between genuine attacks.";
 			this.race = "Salamander";
 			createVagina(true,Vagina.WETNESS_NORMAL,Vagina.LOOSENESS_NORMAL);
 			createStatusEffect(StatusEffects.BonusVCapacity,85,0,0,0);

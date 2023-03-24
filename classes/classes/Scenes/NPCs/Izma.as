@@ -145,7 +145,7 @@ package classes.Scenes.NPCs
 			this.a = "";
 			this.short = "Izma";
 			this.imageName = "izma";
-			this.long = "Izma the tigershark stands a bit over 6' tall, with orange skin bearing horizontal stripes covering most of her body.  Her silver-white hair cascades past her shoulders, draping over an impressive pair of DD-cup breasts barely restrained by a skimpy black bikini top.  Under the knee-length grass skirt below them rustles her beastly fifteen-inch penis and four-balled sack; you catch occasional glimpses of them as she moves.  She's tucked her usual reading glasses into her locker at the moment.";
+			this.long = "Izma the tigershark stands a bit over " + UnitSystem.displayHeight2Short2(6, 0) + " tall, with orange skin bearing horizontal stripes covering most of her body.  Her silver-white hair cascades past her shoulders, draping over an impressive pair of DD-cup breasts barely restrained by a skimpy black bikini top.  Under the knee-length grass skirt below them rustles her beastly " + UnitSystem.displayInchWithHyphenTextually(15) + " penis and four-balled sack; you catch occasional glimpses of them as she moves.  She's tucked her usual reading glasses into her locker at the moment.";
 			this.race = "Shark-Morph";
 			// this.plural = false;
 			this.createCock(15,2.2);

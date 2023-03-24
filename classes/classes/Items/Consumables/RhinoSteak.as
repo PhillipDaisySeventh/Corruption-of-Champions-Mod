@@ -6,6 +6,7 @@ package classes.Items.Consumables
 	import classes.Items.Consumable;
 	import classes.Items.ConsumableLib;
 	import classes.StatusEffects;
+	import classes.UnitSystem;
 
 	/**
 	 * @since  March 27, 2018
@@ -71,13 +72,13 @@ package classes.Items.Consumables
 			// Special TFs
 			//------------
 			if (rand(4) == 0 && changes < changeLimit && player.horns.type != Horns.UNICORN && player.ears.type == Ears.HORSE && (player.lowerBody.type == LowerBody.HOOFED || player.lowerBody.type == LowerBody.CLOVEN_HOOFED || player.horseScore() >= 3)) {
-				outputText("\n\nYou begin to feel an annoying tingling sensation at the top of your head. Reaching up to inspect it you find the <b>sharp nub of a horn protruding from the center of your forehead</b> and growing. Once it's complete you estimate it to be about six inches long.");
+				outputText("\n\nYou begin to feel an annoying tingling sensation at the top of your head. Reaching up to inspect it you find the <b>sharp nub of a horn protruding from the center of your forehead</b> and growing. Once it's complete you estimate it to be about " + UnitSystem.displayInchesEstimateTextually(6) + " long.");
 				player.horns.type = Horns.UNICORN;
 				player.horns.value = 6;
 				changes++;
 			}
 			if (rand(4) == 0 && changes < changeLimit && player.horns.type == Horns.UNICORN && player.horns.value > 0 && player.horns.value < 12) {
-				outputText("\n\nYou begin to feel an intense pinching sensation in your central horn as it pushes out, growing longer and larger. You reach up and find <b>it has developed its own cute little spiral,</b> you estimate it to be about a foot long, two inches thick and very sturdy, a very useful natural weapon.");
+				outputText("\n\nYou begin to feel an intense pinching sensation in your central horn as it pushes out, growing longer and larger. You reach up and find <b>it has developed its own cute little spiral,</b> you estimate it to be about " + UnitSystem.aFoot() + " long, " + UnitSystem.displayInchesEstimateTextually(2) + " thick and very sturdy, a very useful natural weapon.");
 				player.horns.value = 12;
 				changes++;
 			}
@@ -218,14 +219,14 @@ package classes.Items.Consumables
 			//Gain rhino horns
 			//Tier 1
 			if (rand(4) == 0 && changes < changeLimit && player.face.type == Face.RHINO && player.horns.type != Horns.RHINO) {
-				outputText("\n\nYou begin to feel an annoying tingling sensation at the top of your head. Reaching up to inspect it you find the sharp nub of a horn protruding from the center of your forehead and growing. Once it's complete you estimate it to be about six inches long. If it were sharper and a little longer it would make a useful natural weapon.");
+				outputText("\n\nYou begin to feel an annoying tingling sensation at the top of your head. Reaching up to inspect it you find the sharp nub of a horn protruding from the center of your forehead and growing. Once it's complete you estimate it to be about " + UnitSystem.displayInchesEstimateTextually(6) + " long. If it were sharper and a little longer it would make a useful natural weapon.");
 				player.horns.value = 1;
 				player.horns.type = Horns.RHINO;
 				changes++;
 			}
 			//Tier 2
 			if (rand(4) == 0 && changes < changeLimit && player.face.type == Face.RHINO && player.horns.type == Horns.RHINO && player.horns.value == 1) {
-				outputText("\n\nYou begin to feel an annoying tingling sensation at the edge of your nose, above your field of vision. Reaching up you feel the sharp edge of a curved horn growing out the edge of your face. The itchy tingle continues as you feel both of your horns become sharp and tall. You estimate your older horn to be a mere seven inches and your new horn to be around a foot long. They’ll be useful natural weapons.");
+				outputText("\n\nYou begin to feel an annoying tingling sensation at the edge of your nose, above your field of vision. Reaching up you feel the sharp edge of a curved horn growing out the edge of your face. The itchy tingle continues as you feel both of your horns become sharp and tall. You estimate your older horn to be a mere " + UnitSystem.displayInchesTextually(7) + " and your new horn to be around " + UnitSystem.aFoot() + " long. They’ll be useful natural weapons.");
 				outputText("\n<b>(Gained physical special: Upheaval! Any time you lose your rhino face or horns, you will lose this ability.)</b>");
 				player.horns.value = 2;
 				player.horns.type = Horns.RHINO;

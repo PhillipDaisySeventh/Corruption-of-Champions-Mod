@@ -1,10 +1,11 @@
-﻿package classes.Scenes.Dungeons.LethicesKeep 
+package classes.Scenes.Dungeons.LethicesKeep 
 {
 	import classes.BaseContent;
 	import classes.StatusEffects;
 	import classes.GlobalFlags.kFLAGS;
 	import classes.GlobalFlags.kACHIEVEMENTS;
 	import classes.CockTypesEnum;
+	import classes.UnitSystem;
 	
 	/**
 	 * ...
@@ -130,7 +131,7 @@
 				if (player.biggestCockLength() <= 12) outputText(" The ease with which you slide inside is no surprise, given the disparity in size.");
 				else if (player.biggestCockLength() <= 30) outputText(" The ease with which you enter is no real surprise, given that even your bloated length"+ ((player.cocks.length > 1) ? "s are" : " is") +" small by comparison.");
 				else if (player.biggestCockLength() <= 48) outputText(" You slide in with ease, perfectly matched to the hungry fuck-tunnel in size.");
-				else outputText(" Sliding in must take quite the effort. The orange-hued twat is drooling around you, slowly working down an inch at a time. It takes all of you, even if it has to stretch beyond all reason to do so.");
+				else outputText(" Sliding in must take quite the effort. The orange-hued twat is drooling around you, slowly working down " + UnitSystem.literalAnInch() + " at a time. It takes all of you, even if it has to stretch beyond all reason to do so.");
 				outputText(" It feels good, better");
 				if (player.biggestCockLength() <= 12) outputText(" than a giant that looks that loose should. You'd swear it was tight little twat from how firmly it's squeezing you!");
 				else if (player.biggestCockLength() <= 30) outputText(" than you had thought at a glance. Not only is it the perfect size, but it seems to hug and touch every part of your maleness" + ((player.cocks.length > 1) ? "es" : "") + " just right.");
@@ -143,9 +144,9 @@
 
 					outputText("\n\nThe tentacle starts sliding up and down. At first, it's motions are slow and languid, giving you plenty of time to feel the supple slickness of its interior texture against you, but as your mass increases, so too does the speed of its up-and-down pumping motion. Even when it's pushing down, it somehow maintains a gentle suction that the velvety walls are tight against you, allowing you to subsume yourself in slippery cunt. The bigger you get, the better it feels. You aren't sure whether you're simply feeling more and more pussy at once or if you're somehow getting more sensitive, but it's enough to make your eyes roll back and your " + player.multiCockDescriptLight() + " practically piss pre-cum.");
 
-					outputText("\n\nWhimpering from more ecstasy than you know what to do with, you feel yourself surge in size again. It's impossible to tell just how big you've gotten with your view forced to look straight ahead. All you can be sure of is that it's getting bigger, and you're feeling a LOT of pussy. By comparison, the dozens of other tentacles surrounding you are barely there. It's like your cock" + ((player.cocks.length > 1) ? "s are" : " is") + " the only part of you worth feeling, and the rest of you is just floating in a void - a sensation that strengthens with every inch of length and girth that you gain.");
+					outputText("\n\nWhimpering from more ecstasy than you know what to do with, you feel yourself surge in size again. It's impossible to tell just how big you've gotten with your view forced to look straight ahead. All you can be sure of is that it's getting bigger, and you're feeling a LOT of pussy. By comparison, the dozens of other tentacles surrounding you are barely there. It's like your cock" + ((player.cocks.length > 1) ? "s are" : " is") + " the only part of you worth feeling, and the rest of you is just floating in a void - a sensation that strengthens with every " + UnitSystem.literalInch() + " of length and girth that you gain.");
 
-					outputText("\n\nCumming almost comes as a surprise to you, but there's only so much pleasure a body can receive before it helplessly and completely cumming, spraying thick wads of jism into the tentacle's hungry folds with instinctive convulsions. Every squirt leaves you a few inches longer and a good deal thicker. Only after emptying every ounce of cum from your [balls] does the feverish expansion finally halt.");
+					outputText("\n\nCumming almost comes as a surprise to you, but there's only so much pleasure a body can receive before it helplessly and completely cumming, spraying thick wads of jism into the tentacle's hungry folds with instinctive convulsions. Every squirt leaves you a few " + UnitSystem.literalInches() + " longer and a good deal thicker. Only after emptying every ounce of cum from your [balls] does the feverish expansion finally halt.");
 
 					outputText("\n\nUnfortunately, the sensations don't. Even though the tentacle has stopped moving to digest its meal, you're still hyper-aware of the feeling of its slick folds against you. There's enough sensitivity in your enhanced package that unmoving pressure is giving your nervous system more feedback than your old dick's most vigorous fuck. The glowing, orange goo wasn't just making you bigger! It was stimulating nerve growth in your " + player.multiCockDescriptLight() + ", making you so sensitive that you can't help but stay hard, even after cumming.");
 
@@ -625,7 +626,7 @@
 			}
 			outputText(". The interior is covered with tiny, wiggling nubs that wiggle into action on contact with your trembling member");
 			if (player.cocks.length > 1) outputText("s");
-			outputText(". It's like every single nerve has its own skilled masseuse giving it a rubdown, coaxing more pleasure from every square inch of skin than you thought it capable of producing. You cry out, totally overwhelmed, only to be silenced by a familiar presence in your mouth.");
+			outputText(". It's like every single nerve has its own skilled masseuse giving it a rubdown, coaxing more pleasure from every square " + UnitSystem.literalInch() + " of skin than you thought it capable of producing. You cry out, totally overwhelmed, only to be silenced by a familiar presence in your mouth.");
 
 			outputText("\n\nThis new tentacle is already cumming, though. Using its own sappy spooge for lube, it slithers past your unresisting tonsils to provide its life-giving moisture directly. It can't quite compete with the huge, stalk-distending blobs of jism you're pouring out, at least not alone. A second tendril winds its way");
 			if (player.tail.type != 0) outputText(" past your tail to slither");

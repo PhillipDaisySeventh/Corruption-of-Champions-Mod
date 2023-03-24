@@ -1,6 +1,7 @@
 package classes.Scenes.Places.TelAdre {
 
 	import classes.GlobalFlags.kFLAGS;
+	import classes.UnitSystem;
 	
 	public class Gym extends TelAdreAbstractContent {
 		
@@ -173,20 +174,20 @@ package classes.Scenes.Places.TelAdre {
 				}
 			}//If hips is over 15 guaranteed reduction
 			if (player.hips.rating >= 15) {
-				outputText("\n\nIt feels like your " + player.hipDescript() + " have shed some pounds and narrowed.");
+				outputText("\n\nIt feels like your " + player.hipDescript() + " have shed some " + UnitSystem.literalPounds() + " and narrowed.");
 				player.hips.rating--;
 			}
 			else {
 				if (player.hips.rating >= 10 && rand(3) == 0) {
-					outputText("\n\nIt feels like your " + player.hipDescript() + " have shed some pounds and narrowed.");
+					outputText("\n\nIt feels like your " + player.hipDescript() + " have shed some " + UnitSystem.literalPounds() + " and narrowed.");
 					player.hips.rating--;
 				}
 				else if (player.hips.rating >= 5 && rand(3) == 0) {
-					outputText("\n\nIt feels like your " + player.hipDescript() + " have shed some pounds and narrowed.");
+					outputText("\n\nIt feels like your " + player.hipDescript() + " have shed some " + UnitSystem.literalPounds() + " and narrowed.");
 					player.hips.rating--;
 				}
 				else if (player.hips.rating > 1 && rand(4) == 0) {
-					outputText("\n\nIt feels like your " + player.hipDescript() + " have shed some pounds and narrowed.");
+					outputText("\n\nIt feels like your " + player.hipDescript() + " have shed some " + UnitSystem.literalPounds() + " and narrowed.");
 					player.hips.rating--;
 				}
 			}

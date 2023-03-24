@@ -62,7 +62,7 @@ package classes.Scenes.Areas.HighMountains
 		{
 			var damage:int = int(str + 35 + game.highMountains.minervaScene.minervaSparIntensity());
 			damage = player.reduceDamage(damage);
-			outputText("She runs at you, holding the weapon like she's about to chop into your side. You brace yourself, but when she's only a few feet away, she starts to turn her body.");
+			outputText("She runs at you, holding the weapon like she's about to chop into your side. You brace yourself, but when she's only " + UnitSystem.aFewFeet() + " away, she starts to turn her body.");
 			//[else block]
 			if (damage <= 0) outputText(" Lashing out with a fierce kick you intercept the tail-whip, your [foot] impacting against her strong appendage and totally neutralizing its momentum.");
 
@@ -141,7 +141,7 @@ package classes.Scenes.Areas.HighMountains
 //Pole licking
 		private function lickDatPole():void
 		{
-			outputText("Minerva stands, holding her halberd straight up next to her as she looks it over with a seductive stare. Giving you a suggestive look she rolls out a two-foot long tongue from her mouth, licking a good length of the massive weapon, even wrapping her tongue around it a few times. Suddenly she sucks her tongue back into her mouth and gives you a little smirk, almost to say \"<i>Yeah, I can do that... and more.</i>\" ");
+			outputText("Minerva stands, holding her halberd straight up next to her as she looks it over with a seductive stare. Giving you a suggestive look she rolls out a " + UnitSystem.displayFootEstimateWithHyphenTextually(2) + " long tongue from her mouth, licking a good length of the massive weapon, even wrapping her tongue around it a few times. Suddenly she sucks her tongue back into her mouth and gives you a little smirk, almost to say \"<i>Yeah, I can do that... and more.</i>\" ");
 			player.takeLustDamage(20 + player.lib / 10 + rand(5), true);
 			combatRoundOver();
 		}
@@ -207,9 +207,9 @@ package classes.Scenes.Areas.HighMountains
 			else if (flags[kFLAGS.MINERVA_CORRUPTION_PROGRESS] >= 10) this.imageName = "minervacorrupt";
 			else this.imageName = "minerva";
 			//Set description based on pure/corrupt
-			if (flags[kFLAGS.MINERVA_PURIFICATION_PROGRESS] >= 10) this.long = "You're fighting the purified siren, Minerva. Standing around eight feet and wielding a weapon just as tall, she is a force to be reckoned with. Her skin is a golden yellow, though her belly, neck and inner thighs are as white as the clouds in the sky, and a golden piecing decorates her navel. White stripes adorn her legs, tail and back. Two large wings sprout from her back, their feathers an attention-grabbing white and . She wears a tube-top that hold back her G-cups, and short shorts around her wide waist that seem to be holding back a huge bulge.\n\nHer weapon is a halberd, made from a shiny, silvery metal, and seems to have an unnatural glow to it.";
+			if (flags[kFLAGS.MINERVA_PURIFICATION_PROGRESS] >= 10) this.long = "You're fighting the purified siren, Minerva. Standing around " + UnitSystem.displayFeetEstimateTextually(8) + " and wielding a weapon just as tall, she is a force to be reckoned with. Her skin is a golden yellow, though her belly, neck and inner thighs are as white as the clouds in the sky, and a golden piecing decorates her navel. White stripes adorn her legs, tail and back. Two large wings sprout from her back, their feathers an attention-grabbing white and . She wears a tube-top that hold back her G-cups, and short shorts around her wide waist that seem to be holding back a huge bulge.\n\nHer weapon is a halberd, made from a shiny, silvery metal, and seems to have an unnatural glow to it.";
 			else if (flags[kFLAGS.MINERVA_CORRUPTION_PROGRESS] >= 10) this.long = "You're fighting the corrupted siren, Minerva.";
-			else this.long = "You're fighting the tainted siren, Minerva. Standing around eight feet and wielding a weapon just as tall, she is a force to be reckoned with. Her skin is a dark navy blue, though her belly, neck and inner thighs are as white as the clouds in the sky, and a golden piecing decorates her navel. Orange and white stripes adorn her legs, tail and back. Two large wings sprout from her back, their feathers an attention-grabbing red and orange mix. She wears a tube-top that hold back her double d-cups, and short shorts around her wide waist that seem to be holding back a huge bulge.\n\nHer weapon is a halberd, made from a shiny, silvery metal, and seems to have an unnatural glow to it.";
+			else this.long = "You're fighting the tainted siren, Minerva. Standing around " + UnitSystem.displayFeetEstimateTextually(8) + " and wielding a weapon just as tall, she is a force to be reckoned with. Her skin is a dark navy blue, though her belly, neck and inner thighs are as white as the clouds in the sky, and a golden piecing decorates her navel. Orange and white stripes adorn her legs, tail and back. Two large wings sprout from her back, their feathers an attention-grabbing red and orange mix. She wears a tube-top that hold back her double d-cups, and short shorts around her wide waist that seem to be holding back a huge bulge.\n\nHer weapon is a halberd, made from a shiny, silvery metal, and seems to have an unnatural glow to it.";
 			this.race = "Siren";
 			// this.plural = false;
 			this.createCock(16, 3);

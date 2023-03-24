@@ -7,6 +7,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 	import classes.GlobalFlags.kFLAGS;
 	import classes.PerkLib;
 	import classes.PregnancyStore;
+	import classes.UnitSystem;
 	
 	public class DriderIncubusScenes extends BaseContent
 	{
@@ -293,7 +294,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 			}
 			else
 			{
-				outputText(" unspools a three-foot long tongue from between her plump lips");
+				outputText(" unspools a " + UnitSystem.displayFootEstimateWithHyphenTextually(3) + " long tongue from between her plump lips");
 			}
 			outputText(", winking. <i>“Be mitzi’s [master], and mitzi will help you!”</i>");
 			outputText("\n\nIt looks like the demons intend to let you relieve yourself of any lusts you might have. You’ve got a willing goblin right there, but Kinarial may be of use as well...");
@@ -435,7 +436,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 				outputText(" wraps her tail around your [leg], giving you eager little tugs.");
 			}
 			outputText(" She doesn’t need to pull you in - you can handle that all on your own. Grabbing her petite waist one handed, you pull her down onto your [cock biggest] using your free hand to keep your aim true.");
-			outputText("\n\nKnowing that a girl’s pussy is overflowing is one thing; experiencing the sodden reality is another. Her pumped-up petals kiss your [cockHead biggest], slowly giving as you try to thread yourself between them. Ribbons of wetness run down the underside of your [cock biggest], thickening the longer you’re in contact with the fountaining love-slave. The obscene plushness of her labia majora actually holds you back, but at a certain amount of force, they bow around you, allowing you to slip your first few inches into Mitzi’s silken vice.");
+			outputText("\n\nKnowing that a girl’s pussy is overflowing is one thing; experiencing the sodden reality is another. Her pumped-up petals kiss your [cockHead biggest], slowly giving as you try to thread yourself between them. Ribbons of wetness run down the underside of your [cock biggest], thickening the longer you’re in contact with the fountaining love-slave. The obscene plushness of her labia majora actually holds you back, but at a certain amount of force, they bow around you, allowing you to slip your first few " + UnitSystem.literalInches() + " into Mitzi’s silken vice.");
 			outputText("\n\nWith what she looks like on the outside, falling somewhere between high class call-girl and short, stacked succubus, you expected her slit to be equally pleasing. The slippery, heated heaven into which you now sheath yourself is beyond any expectations. She feels molded to you, her entrance designed to welcome cocks deep inside its deepest recesses. Even compared to other goblins and succubi, Mitzi’s cunt is exceptional. Her silky folds squeeze down on you the further you thrust in, tending to your budding pleasure with excess of slickened sensation.");
 			if (player.biggestCockArea() > 250)
 			{
@@ -544,7 +545,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 			}
 			outputText(" stretching your cunny with a pair of fingers. <i>“Get over here and put that tongue of yours to work; if you do a good job, maybe I’ll take you away from here”</i>");
 			outputText("\n\n<i>“Mitzi is the best slave, you’ll see.”</i> The little love-slave crawls her way to you, her eyes locked on your [vagina]. Her tongue slithers from her plump lips down... and down to her pillowy tits, wrapping around one sinfully thick nipple. The extensive organ flicks to the other, repeating the action before retreating into her smiling mouth. Mitzi’s small hands slide up your [hips] as she leans in to plant small kisses up your inner thighs. Her eyes look up at you, mesmerized by the sight of your horny slit as only a sex-addled slut can be.");
-			outputText("\n\nThe little greenskin tart worshipfully licks and kisses her way up your body, inching closer and closer to the nexus of your sexuality. You grin down at her and run your hands over her head, your fingers threading through her purple hair as you guide her closer and closer. Just another inch, so close you can feel her breath against your [vagina]. You bite your lower lip in anticipation as you pull her in the final distance and press her pillowy lips against your nethers.");
+			outputText("\n\nThe little greenskin tart worshipfully licks and kisses her way up your body, inching closer and closer to the nexus of your sexuality. You grin down at her and run your hands over her head, your fingers threading through her purple hair as you guide her closer and closer. Just another " + UnitSystem.literalInch() + ", so close you can feel her breath against your [vagina]. You bite your lower lip in anticipation as you pull her in the final distance and press her pillowy lips against your nethers.");
 			outputText("\n\nThe simple contact of flesh is the final straw for the barely restrained goblin, her lips seal against your cunt in a lewd kiss, her tongue lashing out to lick along your oozing entrance before darting inside like a serpentine tentacle. The sudden penetration brings a moan of pleasure to your lips as your nerves light up with delicious fire. You grip your playmate’s head tighter and pull her against your crotch. The goblins lips mash against your cunt, her tongue making love to the horny hole as her hands clutch at your hips. She delves deep within you, her writhing tongue slithering back and forth, sliding incessantly against every surface it can get at.");
 			outputText("\n\nEager to please you, Mitzi lets out a whorish moan, her plump lips pressing harder against your entrance as she plunges her tongue into your body, thrusting the thick oral tentacle like a rutting lover. The tip teases your cervix, ticking the entrance to your womb at the apex of each deep, ecstatic plunge. Your legs quiver under the pressure of your sexual need. Your lips part in throaty moan; your own tongue darts out to lick your parched lips as you hold your little lover against you, forcing her to please your feminine sex.");
 			outputText("\n\nMitzi might as well be a creature born of sapphic desire. She doesn’t show any sign of needing to breath or talk. It’s like her whole world is composed of vaginas, clits, and the fluids within. Her single mindedness is reflected in the motions of her unholy tongue, prowling around every sensitive fold to press on the most sensitive nerves, channeling your");

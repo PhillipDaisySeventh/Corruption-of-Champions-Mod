@@ -1,4 +1,4 @@
-﻿package classes
+package classes
 {
 	import classes.BodyParts.*;
 	import classes.GlobalFlags.kFLAGS;
@@ -1045,7 +1045,7 @@
 			if (tail.type === Tail.NONE) result += "no tail, ";
 			else result+=(Appearance.DEFAULT_TAIL_NAMES[tail.type]||("tailType#"+tail.type))+" tail with venom="+tail.venom+" and recharge="+tail.recharge+", ";
 			if (horns.type === Horns.NONE) result += "no horns, ";
-			else result += horns.value+" "+(Appearance.DEFAULT_HORNS_NAMES[horns.type]||("hornsPart.type#"+horns.type))+" horns, ";
+			else result += horns.value+" "+(Appearance.getDefaultHornsNames(horns.type)||("hornsPart.type#"+horns.type))+" horns, ";
 			if (wings.type === Wings.NONE) result += "no wings, ";
 			else result += Appearance.DEFAULT_WING_DESCS[wings.type]+" wings (type "+(Appearance.DEFAULT_WING_NAMES[wings.type]||("wingType#"+wings.type))+"), ";
 			if (antennae.type === Antennae.NONE) result += "no antennae.\n\n";

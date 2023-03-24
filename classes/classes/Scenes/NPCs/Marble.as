@@ -86,7 +86,7 @@ package classes.Scenes.NPCs
 			this.a = "";
 			this.short = "Marble";
 			this.imageName = "marble";
-			this.long = "Before you stands a female humanoid with numerous cow features, such as medium-sized cow horns, cow ears, and a cow tail.  She is very well endowed, with wide hips and a wide ass.  She stands over 6 feet tall.  She is using a large two handed hammer with practiced ease, making it clear she is much stronger than she may appear to be.";
+			this.long = "Before you stands a female humanoid with numerous cow features, such as medium-sized cow horns, cow ears, and a cow tail.  She is very well endowed, with wide hips and a wide ass.  She stands over " + UnitSystem.displayHeight2Estimate(6) + " tall.  She is using a large two handed hammer with practiced ease, making it clear she is much stronger than she may appear to be.";
 			this.race = "Cow-Girl";
 			// this.plural = false;
 			this.createVagina(false, Vagina.WETNESS_NORMAL, Vagina.LOOSENESS_NORMAL);

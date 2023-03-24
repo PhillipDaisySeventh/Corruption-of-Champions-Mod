@@ -11,6 +11,7 @@ package classes.Items.Consumables
 	import classes.StatusEffects;
 	import classes.Vagina;
 	import classes.lists.ColorLists;
+	import classes.UnitSystem;
 	
 	/**
 	 * Equine transformative item.
@@ -180,7 +181,7 @@ package classes.Items.Consumables
 						}
 						if (player.cocks[0].cockType === CockTypesEnum.DOG) {
 							temp = player.addHorseCock();
-							outputText("\n\nYour " + Appearance.cockNoun(CockTypesEnum.DOG) + " begins to feel odd... you pull down your clothes to take a look and see it darkening.  You feel a growing tightness in the tip of your " + Appearance.cockNoun(CockTypesEnum.DOG) + " as it flattens, flaring outwards.  Your cock pushes out of your sheath, inch after inch of animal-flesh growing beyond it's traditional size.  You notice your knot vanishing, the extra flesh pushing more horsecock out from your sheath.  Your hands are drawn to the strange new " + Appearance.cockNoun(CockTypesEnum.HORSE) + ", and you jerk yourself off, splattering thick ropes of cum with intense force.");
+							outputText("\n\nYour " + Appearance.cockNoun(CockTypesEnum.DOG) + " begins to feel odd... you pull down your clothes to take a look and see it darkening.  You feel a growing tightness in the tip of your " + Appearance.cockNoun(CockTypesEnum.DOG) + " as it flattens, flaring outwards.  Your cock pushes out of your sheath, " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " of animal-flesh growing beyond it's traditional size.  You notice your knot vanishing, the extra flesh pushing more horsecock out from your sheath.  Your hands are drawn to the strange new " + Appearance.cockNoun(CockTypesEnum.HORSE) + ", and you jerk yourself off, splattering thick ropes of cum with intense force.");
 							temp2 = player.increaseCock(temp, rand(4) + 4);
 							temp3 = 1;
 							dynStats("lib", 5, "sen", 4, "lus", 35);
@@ -251,8 +252,8 @@ package classes.Items.Consumables
 						dynStats("sen", 1, "lus", 10);
 					}
 					outputText("\n\n");
-					if (temp2 > 2) outputText("Your " + player.cockDescript(temp) + " tightens painfully, inches of taut horse-flesh pouring out from your sheath as it grows longer.  Thick animal-pre forms at the flared tip, drawn out from the pleasure of the change.");
-					if (temp2 > 1 && temp2 <= 2) outputText("Aching pressure builds within your sheath, suddenly releasing as an inch or more of extra dick flesh spills out.  A dollop of pre beads on the head of your enlarged " + player.cockDescript(temp) + " from the pleasure of the growth.");
+					if (temp2 > 2) outputText("Your " + player.cockDescript(temp) + " tightens painfully, " + UnitSystem.literalInches() + " of taut horse-flesh pouring out from your sheath as it grows longer.  Thick animal-pre forms at the flared tip, drawn out from the pleasure of the change.");
+					if (temp2 > 1 && temp2 <= 2) outputText("Aching pressure builds within your sheath, suddenly releasing as " + UnitSystem.anInch() + " or more of extra dick flesh spills out.  A dollop of pre beads on the head of your enlarged " + player.cockDescript(temp) + " from the pleasure of the growth.");
 					if (temp2 <= 1) outputText("A slight pressure builds and releases as your " + player.cockDescript(temp) + " pushes a bit further out of your sheath.");
 					changes++;
 				}
@@ -433,7 +434,7 @@ package classes.Items.Consumables
 			//Fur - if has horse tail && ears and not at changelimit
 			if (!player.hasFur() && changes < changeLimit && rand(4) === 0 && player.tail.type === Tail.HORSE) {
 				player.setFurColor(ColorLists.HORSE_FUR);
-				if (player.hasPlainSkin()) outputText("\n\nAn itchy feeling springs up over every inch of your skin.  As you scratch yourself madly, you feel fur grow out of your skin until <b>you have a fine coat of " + player.skin.furColor + "-colored fur.</b>");
+				if (player.hasPlainSkin()) outputText("\n\nAn itchy feeling springs up over every " + UnitSystem.literalInch() + " of your skin.  As you scratch yourself madly, you feel fur grow out of your skin until <b>you have a fine coat of " + player.skin.furColor + "-colored fur.</b>");
 				if (player.hasScales()) {
 					player.skin.desc = "fur";
 					outputText("\n\nYour " + player.skin.tone + " scales begin to itch insufferably.  You reflexively scratch yourself, setting off an avalanche of discarded scales.  The itching intensifies as you madly scratch and tear at yourself, revealing a coat of " + player.skin.furColor + " " + player.skin.desc + ".  At last the itching stops as <b>you brush a few more loose scales from your new coat of " + player.skin.furColor + "-colored fur.</b>");

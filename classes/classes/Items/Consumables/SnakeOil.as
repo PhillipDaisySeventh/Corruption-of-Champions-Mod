@@ -6,6 +6,7 @@ package classes.Items.Consumables
 	import classes.Items.Consumable;
 	import classes.Items.ConsumableLib;
 	import classes.PerkLib;
+	import classes.UnitSystem;
 	
 		/*Effects:
 	  Boosts Speed stat
@@ -101,7 +102,7 @@ package classes.Items.Consumables
 			}
 			//9c) III The fangs
 			if (changes === 0 && player.tongue.type === Tongue.SNAKE && player.face.type !== Face.SNAKE_FANGS && rand(3) === 0 && changes < changeLimit) {
-				outputText("\n\nWithout warning, you feel your canine teeth jump almost an inch in size, clashing on your gums, cutting yourself quite badly. As you attempt to find a new way to close your mouth without dislocating your jaw, you notice that they are dripping with a bitter, khaki liquid.  Watch out, and <b>try not to bite your tongue with your poisonous fangs!</b>");
+				outputText("\n\nWithout warning, you feel your canine teeth jump almost " + UnitSystem.anInch() + " in size, clashing on your gums, cutting yourself quite badly. As you attempt to find a new way to close your mouth without dislocating your jaw, you notice that they are dripping with a bitter, khaki liquid.  Watch out, and <b>try not to bite your tongue with your poisonous fangs!</b>");
 				if (player.face.type !== Face.HUMAN && player.face.type !== Face.SHARK_TEETH && player.face.type !== Face.BUNNY && player.face.type !== Face.SPIDER_FANGS) {
 					outputText("  As the change progresses, your " + player.faceDescript() + " reshapes.  The sensation is far more pleasant than teeth cutting into gums, and as the tingling transformation completes, <b>you've gained with a normal-looking, human visage.</b>");
 				}

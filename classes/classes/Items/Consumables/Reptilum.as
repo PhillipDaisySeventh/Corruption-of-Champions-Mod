@@ -9,6 +9,7 @@ package classes.Items.Consumables
 	import classes.Items.ConsumableLib;
 	import classes.PerkLib;
 	import classes.StatusEffects;
+	import classes.UnitSystem;
 	
 	/**
 	 * Reptile transformativ item.
@@ -311,7 +312,7 @@ package classes.Items.Consumables
 					          +" scales covering most of your body.  The rest of the fur is easy to remove.");
 				}
 				else if (player.hasNonLizardScales()) {
-					outputText("\n\nPrickling discomfort suddenly erupts all over your body, like every last inch of your skin has suddenly"
+					outputText("\n\nPrickling discomfort suddenly erupts all over your body, like every last " + UnitSystem.literalInch() + " of your skin has suddenly"
 					          +" developed pins and needles.  You scratch yourself, hoping for relief; and when you look at your hands you notice"
 					          +" small fragments of your " + player.skinFurScales() + " hanging from your fingers.  Nevertheless you continue to"
 					          +" scratch yourself, and when you're finally done, you look yourself over. New scales have grown to replace your"

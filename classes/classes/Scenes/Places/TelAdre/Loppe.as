@@ -1,6 +1,7 @@
-﻿package classes.Scenes.Places.TelAdre {
+package classes.Scenes.Places.TelAdre {
 	import classes.BodyParts.*;
 	import classes.GlobalFlags.kFLAGS;
+	import classes.UnitSystem;
 
 	public class Loppe extends TelAdreAbstractContent {
 public function Loppe(){
@@ -39,7 +40,7 @@ LoppeDenial: Counter for determining when Loppe is willing to go through with th
 private function appearanceOfLoppe():void {
 	clearOutput();
 	if (flags[kFLAGS.LOPPE_FURRY] == 0) {
-		outputText("Loppe is a 6'2\" bunny-girl with deep brown eyes set in her pretty face.  Shoulder-length black hair and a pair of snow-white rabbit ears adorn the top of her head, tilted and lying backward to conceal the insides.  Curiously, her face is that of a normal human woman.");
+		outputText("Loppe is a " + UnitSystem.displayHeight2Short2(6, 2) + " bunny-girl with deep brown eyes set in her pretty face.  Shoulder-length black hair and a pair of snow-white rabbit ears adorn the top of her head, tilted and lying backward to conceal the insides.  Curiously, her face is that of a normal human woman.");
 		outputText("\n\nHer body is covered in smooth olive-colored skin, save for her wrists, where she has a pair of fluffy cushion-like fur bracelets; her legs are what you would expect of a bunny, curved and with elongated furry feet; her fur color is snow-white.  Her butt is firm and girly; it fills out her shorts nicely.  If you were to look at her from behind, her hips and butt would form a perfect heart shape.  A long, elegantly-cared for black horse's tail falls from her butt, easily reaching to the back of her knees.");
 
 		outputText("\n\nShe usually has a smile on her face, which is nice, and her tight-fitting shorts reveal her slender-but-powerful legs but struggle to contain her hefty package.  Covering her chest, she has a tight-fitting sleeveless top that holds her C-cup breasts snugly together.");
@@ -50,7 +51,7 @@ private function appearanceOfLoppe():void {
 	}
 	//Appearance (Anthro) (edited) (C)
 	else {
-		outputText("Loppe is a 6'2</i>\" bunny-morph with deep brown eyes set above her soft muzzle.  Shoulder-length black hair and a pair of snow-white rabbit ears adorn the top of her head; both ears flop backward at an angle.  Her face used to be that of a human woman, but it has since returned to 'normal' ever since you helped her rid herself of her curse.");
+		outputText("Loppe is a " + UnitSystem.displayHeight2Short2(6, 2) + "</i>\" bunny-morph with deep brown eyes set above her soft muzzle.  Shoulder-length black hair and a pair of snow-white rabbit ears adorn the top of her head; both ears flop backward at an angle.  Her face used to be that of a human woman, but it has since returned to 'normal' ever since you helped her rid herself of her curse.");
 		outputText("\n\nHer body is covered in silky smooth snow-white fur, and on her wrists she has a pair of fluffy cushion-like fur bracelets; her legs are what you would expect of a bunny, curved and with elongated furry feet, white-furred like the rest of her.");
 		outputText("\n\nShe usually has a smile on her face, which is nice, and her tight-fitting short reveal her slender, but powerful legs but struggle to contain her hefty package; covering her chest, she has a tight-fitting sleeveless top that holds her C-cup breasts snuggly together.");
 		outputText("\n\nFrom what you recall, her phallus looks like that of a horse; it is 14</i>\" long and about 2.5</i>\" wide.  A heavy sack dangles beneath her sheath.");
@@ -1428,13 +1429,13 @@ private function getButtFuckedNonHoarseByLoppe():void {
 		outputText("\n\n\"<i>I see that you're no stranger to anal, sugar.  But damn, you're still tight!</i>\" Loppe sighs, shuddering as your sphincter contracts around her shaft.");
 
 		outputText("\n\nYou manage to look at her over your shoulder and tell her it's no fun for your partners if you let yourself get too stretched out; you take good care of yourself.  Loppe leers at you.  \"<i>Don't worry, sugar. I'll take very good care of you, too.</i>\"  She licks her lips salaciously at the thought of what she intends.");
-		outputText("\n\nYour eyes twinkle with eagerness; as much fun as banter is, you're waiting for the hard rod in your ass to start moving.  Loppe smiles back and gently humps you, sliding herself in inch by inch until she's as deep in your tight confines as she'll go.  You just purr in pleasure, wiggling your ass back into her crotch in appreciation.");
+		outputText("\n\nYour eyes twinkle with eagerness; as much fun as banter is, you're waiting for the hard rod in your ass to start moving.  Loppe smiles back and gently humps you, sliding herself in " + UnitSystem.literalInch() + " by " + UnitSystem.literalInch() + " until she's as deep in your tight confines as she'll go.  You just purr in pleasure, wiggling your ass back into her crotch in appreciation.");
 		player.buttChange(35,true,true,false);
 	}
 	else {
 		outputText("\n\nLoppe presses her flared head against your [butt] and gasps in surprise as her tip all but glides inside without a hitch.  You croon in delight at the welcome feeling of cock up your trained ass once more.  \"<i>Whoa, sugar.  I can see you really enjoy some butt-fun.</i>\"");
 		outputText("\n\nHaving an enormous cock and a libido as large as she claims, you would think she'd be pretty used to stimulating herself with a little ass-play as well.  \"<i>Of course I do, once in a while, but I'm not nearly as loose as you are.  But I won't lie and say this doesn't feel good; it's like a moist little pussy...</i>\" Loppe retorts.");
-		outputText("\n\nWell, in that case, surely Loppe knows what to do.  You push back against her, sliding several more inches into yourself, and Loppe giggles.  \"<i>Of course I do, sugar.</i>\"  She bucks her hips into you, quickly hilting herself within your gaping, accommodating ass.  You gasp in pleasure and surprise as you suddenly find yourself filled with Loppe's equine-prick, moaning audibly as Loppe settles inside you, and turn to smile at her, eager to see what she can do once she really gets going.");
+		outputText("\n\nWell, in that case, surely Loppe knows what to do.  You push back against her, sliding several more " + UnitSystem.literalInches() + " into yourself, and Loppe giggles.  \"<i>Of course I do, sugar.</i>\"  She bucks her hips into you, quickly hilting herself within your gaping, accommodating ass.  You gasp in pleasure and surprise as you suddenly find yourself filled with Loppe's equine-prick, moaning audibly as Loppe settles inside you, and turn to smile at her, eager to see what she can do once she really gets going.");
 		player.buttChange(35,true,true,false);
 	}
 	outputText("\n\nLoppe grabs your [hips], leaning over your back to whisper into your ear.  \"<i>Should I get started, sugar?  Or do you want me to wait while you get used to me?</i>\"");
@@ -1579,13 +1580,13 @@ private function getAssFuckedByLoppeAsACentaur():void {
 		outputText("\n\n\"<i>I see that you're no stranger to anal, sugar.  But damn, you're still tight!</i>\" Loppe sighs, shuddering as your sphincter contracts around her shaft.");
 
 		outputText("\n\nYou manage to look at her over your shoulder and tell her it's no fun for your partners if you let yourself get too stretched out; you take good care of yourself.  Loppe leers at you.  \"<i>Don't worry, sugar. I'll take very good care of you, too.</i>\"  She licks her lips salaciously at the thought of what she intends.");
-		outputText("\n\nYour eyes twinkle with eagerness; as much fun as banter is, you're waiting for the hard rod in your ass to start moving.  Loppe smiles back and gently humps you, sliding herself in inch by inch until she's as deep in your tight confines as she'll go.  You just purr in pleasure, wiggling your ass back into her crotch in appreciation.");
+		outputText("\n\nYour eyes twinkle with eagerness; as much fun as banter is, you're waiting for the hard rod in your ass to start moving.  Loppe smiles back and gently humps you, sliding herself in " + UnitSystem.literalInch() + " by " + UnitSystem.literalInch() + " until she's as deep in your tight confines as she'll go.  You just purr in pleasure, wiggling your ass back into her crotch in appreciation.");
 		player.buttChange(35,true,true,false);
 	}
 	else {
 		outputText("\n\nLoppe presses her flared head against your [butt] and gasps in surprise as her tip all but glides inside without a hitch.  You croon in delight at the welcome feeling of cock up your trained ass once more.  \"<i>Whoa, sugar.  I can see you really enjoy some butt-fun.</i>\"");
 		outputText("\n\nHaving an enormous cock and a libido as large as she claims, you would think she'd be pretty used to stimulating herself with a little ass-play as well.  \"<i>Of course I do, once in a while, but I'm not nearly as loose as you are.  But I won't lie and say this doesn't feel good; it's like a moist little pussy...</i>\" Loppe retorts.");
-		outputText("\n\nWell, in that case, surely Loppe knows what to do.  You push back against her, sliding several more inches into yourself, and Loppe giggles.  \"<i>Of course I do, sugar.</i>\"  She bucks her hips into you, quickly hilting herself within your gaping, accommodating ass.  You gasp in pleasure and surprise as you suddenly find yourself filled with Loppe's equine-prick, moaning audibly as Loppe settles inside you, and turn to smile at her, eager to see what she can do once she really gets going.");
+		outputText("\n\nWell, in that case, surely Loppe knows what to do.  You push back against her, sliding several more " + UnitSystem.literalInches() + " into yourself, and Loppe giggles.  \"<i>Of course I do, sugar.</i>\"  She bucks her hips into you, quickly hilting herself within your gaping, accommodating ass.  You gasp in pleasure and surprise as you suddenly find yourself filled with Loppe's equine-prick, moaning audibly as Loppe settles inside you, and turn to smile at her, eager to see what she can do once she really gets going.");
 	}
 	outputText("\n\nA hand grips either of your hips; the half-breed grinds her crotch against your ass before she pulls herself out and then thrusts back in.  It's a little awkward, but soon she starts to pick up her rhythm, her flared head scraping against your inner walls, her balls slapping meatily against you");
 	if (player.balls > 0) outputText("rs");
@@ -1784,7 +1785,7 @@ private function letsLoppeGoCum():void {
 	outputText(images.showImage("loppe-comes-after-orgasm-denial"));
 	outputText("As your fingers slacken on the laquine's straining shaft, they're practically pushed away by the violent force of long-delayed ejaculation, which rockets out of her horse-cock with immense speed and volume as you back away.  For an instant you almost think like she's going to punch a hole through the wall.  She screams, both in pleasure and relief as she fountains cum like a perverted geyser.  Spooge flies through the air, spilling all over the room; you manage to avoid the brunt of it, but some droplets inevitably hit you.");
 	outputText("\n\nOnce she is done, all Loppe can do is smile goofily at you, dizzy due to her explosive climax.  \"<i>Why are you spinning?</i>\" she asks, disjointedly.");
-	outputText("\n\nYou look around at the room, cum dripping wetly from the ceiling, puddling inches deep on the floor... maybe her mother should have installed drains in her bedroom.");
+	outputText("\n\nYou look around at the room, cum dripping wetly from the ceiling, puddling " + UnitSystem.literalInches() + " deep on the floor... maybe her mother should have installed drains in her bedroom.");
 
 	outputText("\n\nHaving caught her breath and recovered her senses, Loppe looks at you with a smile.  \"<i>No kidding.  I don't think I've ever come so hard before.  You really know how to get a girl worked up, don't you?  I still can't feel my toes.</i>\"  She tries to wiggle them experimentally, but if they're moving, you can't tell under the complete glazing she gave herself.  \"<i>Help me up, we should get cleaned up.</i>\"");
 
@@ -1818,7 +1819,7 @@ private function superLoppeOrgasmDenialGo():void {
 
 	outputText("\n\n\"<i>[name]... can you come closer... ?</i>\" you hear the sleepy voice of Loppe call after a few minutes.  Wondering what she wants, you lean in to hear.");
 
-	outputText("\n\nLoppe surprises you by wrapping both arms around your neck and pulling you in for a passionate kiss.  \"<i>That was so intense, I probably lost a few pounds!</i>\" she exclaims, laughing happily.");
+	outputText("\n\nLoppe surprises you by wrapping both arms around your neck and pulling you in for a passionate kiss.  \"<i>That was so intense, I probably lost a few " + UnitSystem.literalPounds() + "!</i>\" she exclaims, laughing happily.");
 
 	outputText("\n\n\"<i>Wow... I mean, I still can't feel my toes.  You really put me out of commission with that one.  Simply amazing!</i>\"");
 
@@ -2105,7 +2106,7 @@ private function teaseLoppeNSuck():void {
 
 	outputText("\n\n\"<i>Ah!  Oh, yes!  That hits the spot!</i>\" Loppe cries in relief.");
 
-	outputText("\n\nYou smile around your sizable obstruction and back up before slurping and gulping your way down again.  Her sheer length proves something of a hindrance, and her flare butts irritatingly against the back of your throat before you finally force it down and feel her girthy cock stretching your throat as you swallow inch after inch.  Finally, amazingly, you've managed to swallow all 14 inches of it, your nose pressed into her crotch, your nostrils filled with the scent of her over-aroused cunt. Though you can't move too far, you still manage to bob your head up and down, to an extent, eager to help push her over the brink.");
+	outputText("\n\nYou smile around your sizable obstruction and back up before slurping and gulping your way down again.  Her sheer length proves something of a hindrance, and her flare butts irritatingly against the back of your throat before you finally force it down and feel her girthy cock stretching your throat as you swallow " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + ".  Finally, amazingly, you've managed to swallow all " + UnitSystem.displayInches(14) + " of it, your nose pressed into her crotch, your nostrils filled with the scent of her over-aroused cunt. Though you can't move too far, you still manage to bob your head up and down, to an extent, eager to help push her over the brink.");
 
 	outputText("\n\nLoppe's panting becomes even more audible and she begins humping against you each time you bob your head.  \"<i>Oh, sugar.  Your mouth feels heavenly; it takes all my self control not to take you right here and now...</i>\"");
 

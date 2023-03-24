@@ -8,6 +8,7 @@ package classes.Items.Consumables
 	import classes.StatusEffects;
 	import classes.lists.BreastCup;
 	import classes.lists.ColorLists;
+	import classes.UnitSystem;
 
 	/**
 	 * @since  30.11.2017
@@ -199,8 +200,8 @@ package classes.Items.Consumables
 				if (player.shortestCockLength() < 6 && rand(3) === 0 && changes < changeLimit) {
 					var increment:Number = player.increaseCock(player.shortestCockIndex(), 1 + rand(2));
 					outputText("Your [if (cocks > 1)shortest] cock fills to its normal size, but doesn’t just stop there. Your cock feels incredibly"
-					          +" tight as a few more inches of length seem to pour out from your crotch."
-					          +" Your cock has gained "+ increment + " inches.");
+					          +" tight as a few more " + UnitSystem.literalInches() + " of length seem to pour out from your crotch."
+					          +" Your cock has gained "+ UnitSystem.displayInches(increment) + ".");
 					changes++;
 				}
 

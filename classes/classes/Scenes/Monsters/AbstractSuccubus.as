@@ -29,7 +29,7 @@ package classes.Scenes.Monsters
 				}
 				//Whip yo tits!
 				if (temp == 1) {
-					if (player.breastRows.length > 0 && player.biggestTitSize() > 0) outputText(player.allBreastsDescript() + "");
+					if (player.breastRows.length > 0 && player.biggestTitSize() > 0) outputText(player.allBreastsDescript());
 					else outputText("chest");
 					damage = 9 - player.armor.def;
 					if (damage <= 0) {

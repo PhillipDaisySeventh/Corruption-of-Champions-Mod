@@ -668,10 +668,10 @@ package classes {
 			mainView.nameBox.restrict = null;
 			outputText(images.showImage("event-creation"));
 			outputText("You can finalize your appearance customization before you proceed to perk selection. You will be able to alter your appearance through the usage of certain items.\n\n");
-			outputText("Height: " + Math.floor(player.tallness / 12) + "'" + player.tallness % 12 + "\"\n");
+			outputText("Height: " + UnitSystem.displayHeightShort2(player.tallness) + "\n");
 			outputText("Skin tone: " + player.skin.tone + "\n");
 			outputText("Hair color: " + player.hair.color + "\n");
-			if (player.hasCock()) outputText("Cock size: " + player.cocks[0].cockLength + "\" long, " + player.cocks[0].cockThickness + "\" thick\n");
+			if (player.hasCock()) outputText("Cock size: " + UnitSystem.displayInchesShort2(player.cocks[0].cockLength) + " long, " + UnitSystem.displayInchesShort2(player.cocks[0].cockThickness) + " thick\n");
 			outputText("Breast size: " + player.breastCup(0) + "\n");
 			menu();
 			addButton(0, "Complexion", menuSkinComplexion);
@@ -769,15 +769,15 @@ package classes {
 		//----------------- HEIGHT -----------------
 		private function setHeight():void {
 			clearOutput();
-			outputText("Set your height in inches.");
-			outputText("\nYou can choose any height between 4 feet (48 inches) and 8 feet (96 inches).");
+			outputText("Set your height in " + UnitSystem.literalInches() + ".");
+			outputText("\nYou can choose any height between " + UnitSystem.displayHeight2(4, 0) + " (" + UnitSystem.displayInches(48) + ") and " + UnitSystem.displayHeight2(8, 0) + " (" + UnitSystem.displayInches(96) + ").");
 			mainView.nameBox.visible = true;
-			mainView.nameBox.maxChars = 2;
+			mainView.nameBox.maxChars = 3;
 			mainView.nameBox.restrict = "0-9";
-			if (player.gender === 0) mainView.nameBox.text = "69";
-			if (player.gender === 1) mainView.nameBox.text = "71";
-			if (player.gender === 2) mainView.nameBox.text = "67";
-			if (player.gender === 3) mainView.nameBox.text = "69";
+			if (player.gender === 0) mainView.nameBox.text = UnitSystem.lengthInInches(69).toString();
+			if (player.gender === 1) mainView.nameBox.text = UnitSystem.lengthInInches(71).toString();
+			if (player.gender === 2) mainView.nameBox.text = UnitSystem.lengthInInches(67).toString();
+			if (player.gender === 3) mainView.nameBox.text = UnitSystem.lengthInInches(69).toString();
 			menu();
 			addButton(0, "OK", confirmHeight);
 			addButton(4, "Back", genericStyleCustomizeMenu);
@@ -786,13 +786,14 @@ package classes {
 		}
 		private function confirmHeight():void {
 			mainView.nameBox.visible = false;
-			if (int(mainView.nameBox.text) < 48) {
+			var value:int = int(mainView.nameBox.text);
+			if (value < UnitSystem.lengthInInches(48)) {
 				clearOutput();
 				outputText("That is below your minimum height choices!");
 				doNext(setHeight); //off to the height selection!
 				return;
 			}
-			if (int(mainView.nameBox.text) > 96) {
+			if (value > UnitSystem.lengthInInches(96)) {
 				clearOutput();
 				outputText("That is above your maximum height choices!");
 				doNext(setHeight); //off to the height selection!
@@ -804,27 +805,27 @@ package classes {
 				doNext(setHeight); //off to the height selection!
 				return;
 			}
-			player.tallness = int(mainView.nameBox.text);
+			player.tallness = UnitSystem.isSI() ? UnitSystem.centimeterToInch(value) : value;
 			mainView.nameBox.maxChars = 16;
 			mainView.nameBox.restrict = null;
 			clearOutput();
-			outputText("You'll be " + Math.floor(player.tallness / 12) + " feet and " + player.tallness % 12 + " inches tall. Is this okay with you?");
+			outputText("You'll be " + UnitSystem.displayHeight(player.tallness) + " tall. Is this okay with you?");
 			doYesNo(genericStyleCustomizeMenu, setHeight);
 		}
 		//----------------- COCK LENGTH -----------------
 		private function menuCockLength():void {
 			clearOutput();
-			outputText("You can choose a cock length between 4 and 8 inches. Your starting cock length will also affect starting cock thickness.\n\nCock type and size can be altered later in the game through certain items.");
+			outputText("You can choose a cock length between " + UnitSystem.displayInchesRange(4, " and ", 8, 1) + ". Your starting cock length will also affect starting cock thickness.\n\nCock type and size can be altered later in the game through certain items.");
 			menu();
-			addButton(0, "4\"", chooseCockLength, 4);
-			addButton(1, "4.5\"", chooseCockLength, 4.5);
-			addButton(2, "5\"", chooseCockLength, 5);
-			addButton(3, "5.5\"", chooseCockLength, 5.5);
-			addButton(4, "6\"", chooseCockLength, 6);
-			addButton(5, "6.5\"", chooseCockLength, 6.5);
-			addButton(6, "7\"", chooseCockLength, 7);
-			addButton(7, "7.5\"", chooseCockLength, 7.5);
-			addButton(8, "8\"", chooseCockLength, 8);
+			addButton(0, UnitSystem.displayInchesShort2(4), chooseCockLength, 4);
+			addButton(1, UnitSystem.displayInchesShort2(4.5), chooseCockLength, 4.5);
+			addButton(2, UnitSystem.displayInchesShort2(5), chooseCockLength, 5);
+			addButton(3, UnitSystem.displayInchesShort2(5.5), chooseCockLength, 5.5);
+			addButton(4, UnitSystem.displayInchesShort2(6), chooseCockLength, 6);
+			addButton(5, UnitSystem.displayInchesShort2(6.5), chooseCockLength, 6.5);
+			addButton(6, UnitSystem.displayInchesShort2(7), chooseCockLength, 7);
+			addButton(7, UnitSystem.displayInchesShort2(7.5), chooseCockLength, 7.5);
+			addButton(8, UnitSystem.displayInchesShort2(8), chooseCockLength, 8);
 			addButton(14, "Back", genericStyleCustomizeMenu);
 		}
 		private function chooseCockLength(length:Number):void {
@@ -892,10 +893,10 @@ package classes {
 				case PerkLib.Sensitive: outputText("Is your skin unusually sensitive?  (+5 Sensitivity)\n\nSensitivity affects how easily touches and certain magics will raise your lust.  Very low sensitivity will make it difficult to orgasm."); break;
 				case PerkLib.Pervert: outputText("Are you unusually perverted?  (+5 Corruption)\n\Corruption affects certain scenes and having a higher corruption makes you more prone to Bad Ends.\n"); break;
 				//Gender-specific
-				case PerkLib.BigCock: outputText("Do you have a big cock?  (+2\" Cock Length)\n\nA bigger cock will make it easier to get off any sexual partners, but only if they can take your size."); break;
+				case PerkLib.BigCock: outputText("Do you have a big cock?  (+" + UnitSystem.displayInchesShort2(2) + " Cock Length)\n\nA bigger cock will make it easier to get off any sexual partners, but only if they can take your size."); break;
 				case PerkLib.MessyOrgasms: outputText("Are your orgasms particularly messy?  (+50% Cum Multiplier)\n\nA higher cum multiplier will cause your orgasms to be messier."); break;
 				case PerkLib.BigTits: outputText("Are your breasts bigger than average? (+1 Cup Size)\n\nLarger breasts will allow you to lactate greater amounts, tit-fuck larger cocks, and generally be a sexy bitch."); break;
-				case PerkLib.BigClit: outputText("Do you have a big clit?  (1\" Long)\n\nA large enough clit may eventually become as large as a cock.  It also makes you gain lust much faster during oral or manual stimulation."); break;
+				case PerkLib.BigClit: outputText("Do you have a big clit?  (" + UnitSystem.displayInchesShort2(1) + " Long)\n\nA large enough clit may eventually become as large as a cock.  It also makes you gain lust much faster during oral or manual stimulation."); break;
 				case PerkLib.Fertile: outputText("Is your family particularly fertile?  (+15% Fertility)\n\nA high fertility will cause you to become pregnant much more easily.  Pregnancy may result in: Strange children, larger bust, larger hips, a bigger ass, and other weirdness."); break;
 				case PerkLib.WetPussy: outputText("Does your pussy get particularly wet?  (+1 Vaginal Wetness)\n\nVaginal wetness will make it easier to take larger cocks, in turn helping you bring the well-endowed to orgasm quicker."); break;
 				default: outputText("Something broke!");
@@ -1085,7 +1086,7 @@ package classes {
 			getGame().time.hours = 18;
 			outputText(images.showImage("encounter-zetaz"));
 			spriteSelect(SpriteDb.s_zetaz_imp);
-			outputText("You wake with a splitting headache and a body full of burning desire.  A shadow darkens your view momentarily and your training kicks in.  You roll to the side across the bare ground and leap to your feet.  A surprised looking imp stands a few feet away, holding an empty vial.  He's completely naked, an improbably sized pulsing red cock hanging between his spindly legs.  You flush with desire as a wave of lust washes over you, your mind reeling as you fight ");
+			outputText("You wake with a splitting headache and a body full of burning desire.  A shadow darkens your view momentarily and your training kicks in.  You roll to the side across the bare ground and leap to your feet.  A surprised looking imp stands " + UnitSystem.aFewFeet() + " away, holding an empty vial.  He's completely naked, an improbably sized pulsing red cock hanging between his spindly legs.  You flush with desire as a wave of lust washes over you, your mind reeling as you fight ");
 			if (player.gender === Gender.FEMALE) outputText("the urge to chase down his rod and impale yourself on it.\n\n");
 			else outputText("the urge to ram your cock down his throat.  The strangeness of the thought surprises you.\n\n");
 			outputText("The imp says, \"<i>I'm amazed you aren't already chasing down my cock, human.  The last Champion was an eager whore for me by the time she woke up.  This lust draft made sure of it.</i>\"");
@@ -1112,7 +1113,7 @@ package classes {
 			hideUpDown();
 			outputText(images.showImage("camp-portal"));
 			spriteSelect(null);
-			outputText("You look around, surveying the hellish landscape as you plot your next move.  The portal is a few yards away, nestled between a formation of rocks.  It does not seem to exude the arousing influence it had on the other side.  The ground and sky are both tinted different shades of red, though the earth beneath your feet feels as normal as any other lifeless patch of dirt.   You settle on the idea of making a camp here and fortifying this side of the portal.  No demons will ravage your beloved hometown on your watch.\n\nIt does not take long to set up your tent and a few simple traps.  You'll need to explore and gather more supplies to fortify it any further.  Perhaps you will even manage to track down the demons who have been abducting the other champions!");
+			outputText("You look around, surveying the hellish landscape as you plot your next move.  The portal is a few " + UnitSystem.literalYards() + " away, nestled between a formation of rocks.  It does not seem to exude the arousing influence it had on the other side.  The ground and sky are both tinted different shades of red, though the earth beneath your feet feels as normal as any other lifeless patch of dirt.   You settle on the idea of making a camp here and fortifying this side of the portal.  No demons will ravage your beloved hometown on your watch.\n\nIt does not take long to set up your tent and a few simple traps.  You'll need to explore and gather more supplies to fortify it any further.  Perhaps you will even manage to track down the demons who have been abducting the other champions!");
 			awardAchievement(kACHIEVEMENTS.STORY_NEWCOMER);
 			doNext(playerMenu);
 		}
@@ -1263,7 +1264,7 @@ package classes {
 		private function ascensionPerkSelection(perk:* = null, maxLevel:int = 10):void {
 			clearOutput();
 			outputText("Perk Effect: " + perk.longDesc);
-			outputText("\nCurrent level: " + player.perkv1(perk) + (maxLevel > 0 ? " / " + maxLevel : " (No maximum level)") + "");
+			outputText("\nCurrent level: " + player.perkv1(perk) + (maxLevel > 0 ? " / " + maxLevel : " (No maximum level)"));
 			if (player.perkv1(perk) >= maxLevel && maxLevel > 0) outputText(" <b>(Maximum)</b>");
 			var cost:int = player.perkv1(perk) + 1;
 			if (cost > 5) cost = 5;

@@ -112,7 +112,7 @@ package classes.Scenes.NPCs
 			
 			cut.isaAppearance();
 			
-			assertThat(cut.collectedOutput, hasItem(equalTo(IsabellaFollowerScene.DESC_APPEAR_EVENT_NOT_PREGNANT)));
+			assertThat(cut.collectedOutput, hasItem(equalTo(IsabellaFollowerScene.getDescAppearEventNotPregnant())));
 		}
 		
 		[Test]
@@ -120,7 +120,7 @@ package classes.Scenes.NPCs
 		{
 			cut.isaAppearance();
 			
-			assertThat(cut.collectedOutput, hasItem(equalTo(IsabellaFollowerScene.DESC_APPEAR_EVENT_FIRST_STAGE_PREGNANT)));
+			assertThat(cut.collectedOutput, hasItem(equalTo(IsabellaFollowerScene.getDescAppearEventFirstStagePregnant())));
 		}
 		
 		[Test]
@@ -152,7 +152,7 @@ package classes.Scenes.NPCs
 			
 			cut.isaAppearance();
 			
-			assertThat(cut.collectedOutput, hasItem(containsString(IsabellaFollowerScene.DESC_APPEAR_EVENT_LAST_STAGE_PREGNANT)));
+			assertThat(cut.collectedOutput, hasItem(containsString(IsabellaFollowerScene.getDescAppearEventLastStagePregnant())));
 		}
 		
 		private function createTentaCocks(count:int, length:Number) :void {

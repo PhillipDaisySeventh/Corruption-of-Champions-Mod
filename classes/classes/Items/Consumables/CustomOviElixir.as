@@ -7,6 +7,7 @@ import classes.Items.Consumable;
 import classes.PerkLib;
 import classes.PregnancyStore;
 import classes.StatusEffects;
+import classes.UnitSystem;
 //Oviposition Elixer!
 /* Notes on StatusEffects.Eggs
  v1 = egg type.
@@ -83,7 +84,7 @@ public class CustomOviElixir extends Consumable {
 			}
 		}
 		if (!changeOccurred && canSpeedUp()) { //If no changes, speed up pregnancy.
-			outputText("\n\nYou gasp as your pregnancy suddenly leaps forwards, your belly bulging outward a few inches as it gets closer to time for birthing.");
+			outputText("\n\nYou gasp as your pregnancy suddenly leaps forwards, your belly bulging outward a few " + UnitSystem.literalInches() + " as it gets closer to time for birthing.");
 			var newIncubation:int = doSpeedUp(incubation);
 			if (newIncubation < 2) newIncubation = 2;
 			game.player.knockUpForce(game.player.pregnancyType, newIncubation);

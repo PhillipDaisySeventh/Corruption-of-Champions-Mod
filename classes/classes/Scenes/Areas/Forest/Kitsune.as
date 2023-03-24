@@ -19,7 +19,7 @@ package classes.Scenes.Areas.Forest
 			this.a = "a ";
 			this.short = "kitsune";
 			this.imageName = "kitsune";
-			this.long = "A kitsune stands in front of you, about five and a half feet tall.  She has a head of " + ({
+			this.long = "A kitsune stands in front of you, about " + UnitSystem.display("five and a half feet", UnitSystem.displayHeight2EstimateTextually(5.5)) + " tall.  She has a head of " + ({
 						"blonde": "long flaxen",
 						"black": "lustrous, ass-length black",
 						"red": "unkempt, shoulder-length reddish"
@@ -144,7 +144,7 @@ package classes.Scenes.Areas.Forest
 		{
 			var select:int = rand(3);
 			if (hair.color == "red" && rand(2) == 0) select = 3;
-			if (select == 0) outputText("You rub your eyes, suddenly seeing triple as you find yourself in the midst of a crowd of kitsune doppelgangers.  They run their hands all over you, teasing and doting on you as their tails caress every inch of your body.  Taken by surprise, you forget to fight back until they have already dispersed, blending back into a single fox-woman.");
+			if (select == 0) outputText("You rub your eyes, suddenly seeing triple as you find yourself in the midst of a crowd of kitsune doppelgangers.  They run their hands all over you, teasing and doting on you as their tails caress every " + UnitSystem.literalInch() + " of your body.  Taken by surprise, you forget to fight back until they have already dispersed, blending back into a single fox-woman.");
 			else if (select == 1) outputText("Bending forward, the kitsune runs her hands down over her breasts, jiggling them enticingly and squeezing them together.  Hooking a finger in her robes, she slides it down, tugging them aside until her nipples are just barely covered, and with a teasing smirk, pulls them back up, leaving you wanting.");
 			else if (select == 2) outputText("Turning her back to you, the kitsune fans out her tails, peering back as she lifts the hem of her robe to expose her plump hindquarters.  Her tails continually shift and twist, blocking your view, but it only serves to make you want it even <i>more</i>, licking your lips in anticipation.");
 			//Redhead only:

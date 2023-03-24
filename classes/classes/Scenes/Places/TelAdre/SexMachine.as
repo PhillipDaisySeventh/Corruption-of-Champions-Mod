@@ -164,7 +164,7 @@ private function useTheSexMachine():void {
 
 			outputText("It whirs for a moment, confused. It seems to ponder matters for a second before simply lifting you up into a sitting position. It doesn't take but a moment for you to feel a firm steel tip press against your anus, the machine bouncing you slowly in your restraints on the mechanical cock, each bounce smearing more and more cum on your " + player.assholeDescript() + ", lubing you up for your eventual penetration.\n\n");
 
-			outputText("You gasp with each bounce, your ass finally lubed enough that each gentle jostle forces you to sink another half-inch down on the thick phallic member. With a groan you finally bottom out, your anus stretched around the thick member.  ");
+			outputText("You gasp with each bounce, your ass finally lubed enough that each gentle jostle forces you to sink another " + UnitSystem.halfInch() + " down on the thick phallic member. With a groan you finally bottom out, your anus stretched around the thick member.  ");
 			player.buttChange(30,true,false,true);
 			outputText("The machine forces you forwards, onto your hands and knees, the thick cock beginning to slip in and out of your ass, pounding away with fervor to the sound of your exhausted moans. Each thrust seems to get closer and closer to a pleasurable spot, as if homing in on it slowly.\n\n");
 
@@ -184,7 +184,7 @@ private function useTheSexMachine():void {
 
 			outputText("You turn your head, look back, and gasp. You expected to see a latex cock molesting your backdoor, but instead see a latex tentacle brushing cum against your anus. What is this machine planning to do?!\n\n");
 
-			outputText("It doesn't take long for your " + player.assholeDescript() + " to be slathered in cum, the machine pressing on your muscular ring with the tip of its tentacle cock, starting to fill your ass with its prehensile member. Inch after inch slips inside of you, each humming ring of the cock stroking your anus as it fills your ass, vibrating deep inside of you.");
+			outputText("It doesn't take long for your " + player.assholeDescript() + " to be slathered in cum, the machine pressing on your muscular ring with the tip of its tentacle cock, starting to fill your ass with its prehensile member. " + capitalizeFirstLetter(UnitSystem.literalInch()) + " after " + UnitSystem.literalInch() + " slips inside of you, each humming ring of the cock stroking your anus as it fills your ass, vibrating deep inside of you.");
 			player.buttChange(30,true,false,true);
 			outputText("  You moan, closing your eyes and enjoying the pleasure, only to have a second tentacled cock thrust into your mouth, and down your throat. It doesn't take long for them both to begin thrusting, vibrating in both your holes.\n\n");
 
@@ -208,7 +208,7 @@ private function useTheSexMachine():void {
 			else outputText(player.cockDescript(0));
 			outputText(" is gently stroked by the sheathe-like device now slipping over it. It rubs the flaccid member gently, stroking it up and down as it begins to swell with blood, growing harder by the second. You shudder with pleasure, wondering what could come next, only to be forced to gasp by a firm press on your " + player.assholeDescript() + ". A metallic cock presses hard against your muscular ring, taking the opportunity given by your gasp of surprise to force another cock into your mouth.\n\n");
 
-			outputText("It's almost impossible to stay focused on any one stimulation at once, your mind flowing effortlessly between your asshole as the cock lubes it up, your cock as it's milked slowly, your throat as it's slowly fucked by another cock, and your pussy as it grows wet, slowly allowing inch after inch of the invading phallus to penetrate your walls and stretch you wide open.");
+			outputText("It's almost impossible to stay focused on any one stimulation at once, your mind flowing effortlessly between your asshole as the cock lubes it up, your cock as it's milked slowly, your throat as it's slowly fucked by another cock, and your pussy as it grows wet, slowly allowing " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " of the invading phallus to penetrate your walls and stretch you wide open.");
 			player.cuntChange(30,true,true,false);
 			player.buttChange(30,true,true,false);
 			outputText("  You moan lustfully, your girly juices beginning to flow down your thighs as the cock begins to thrust deep inside of you.  The metallic sleeve on your member thrusts down around you, even as the machine penetrates your " + player.vaginaDescript() + ". It's almost as if you were fucking your own cunt!\n\n");

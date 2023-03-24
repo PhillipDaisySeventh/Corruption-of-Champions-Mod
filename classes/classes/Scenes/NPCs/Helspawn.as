@@ -147,7 +147,7 @@ public class Helspawn extends Monster
 							(game.flags[kFLAGS.HELSPAWN_PERSONALITY] >= 50 ?
 									"a slutty scale bikini like her mother's, barely concealing anything" :
 									"a short skirt, thigh-high boots, and a sky-blue blouse, in stark contrast to her mother’s sluttier attire") +
-							", she stands about six feet in height, with a lengthy, fiery tail swishing menacingly behind her. She's packing a " +
+							", she stands about " + UnitSystem.displayHeight2EstimateTextually(6) + " in height, with a lengthy, fiery tail swishing menacingly behind her. She's packing a " +
 							{
 								'bow': "recurve bow, using " + (game.helSpawnScene.helspawnSparIntensity() < 40 ? "blunted, soft-tipped" : "sharpened, hard-tipped") + " arrows",
 								'scimitar': "scimitar, just like her mom's, and holds it in the same berserk stance Helia is wont to use",
@@ -172,7 +172,7 @@ public class Helspawn extends Monster
 			initLibSensCor(35, 55, 20);
 			this.weaponName = weapon;
 			this.weaponVerb = {
-				'bow': "" + (game.helSpawnScene.helspawnSparIntensity() < 40 ? "blunted" : "sharpened") + " arrow",
+				'bow': (game.helSpawnScene.helspawnSparIntensity() < 40 ? "blunted" : "sharpened") + " arrow",
 				'scimitar': (game.helSpawnScene.helspawnSparIntensity() < 40 ? "" : "fiery") + "slash",
 				'scimitar and shield': (game.helSpawnScene.helspawnSparIntensity() < 40 ? "" : "fiery") + "slash"}[weapon];
 			this.weaponAttack = 20;

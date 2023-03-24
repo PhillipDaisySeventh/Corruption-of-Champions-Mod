@@ -213,11 +213,11 @@ package classes
 			
 			if (player.cumQ() > 0) {
 				bodyStats += "<b>Virility Rating:</b> " + Math.round(player.virilityQ() * 100) + "\n";
-				if (flags[kFLAGS.HUNGER_ENABLED] >= 1) bodyStats += "<b>Cum Production:</b> " + addComma(Math.round(player.cumQ())) + " / " + addComma(Math.round(player.cumCapacity())) + "mL (" + Math.round((player.cumQ() / player.cumCapacity()) * 100) + "%) \n";
-				else bodyStats += "<b>Cum Production:</b> " + addComma(Math.round(player.cumQ())) + "mL\n";
+				if (flags[kFLAGS.HUNGER_ENABLED] >= 1) bodyStats += "<b>Cum Production:</b> " + addComma(Math.round(player.cumQ())) + " / " + UnitSystem.displayLitersShort(player.cumCapacity()) + " (" + Math.round((player.cumQ() / player.cumCapacity()) * 100) + "%) \n";
+				else bodyStats += "<b>Cum Production:</b> " + UnitSystem.displayLitersShort(player.cumQ()) + "\n";
 			}
 			if (player.lactationQ() > 0)
-				bodyStats += "<b>Milk Production:</b> " + addComma(Math.round(player.lactationQ())) + "mL\n";
+				bodyStats += "<b>Milk Production:</b> " + UnitSystem.displayLitersShort(player.lactationQ()) + "\n";
 			
 			if (player.hasStatusEffect(StatusEffects.Feeder)) {
 				bodyStats += "<b>Hours Since Last Time Breastfed Someone:</b>  " + player.statusEffectv2(StatusEffects.Feeder);
@@ -251,8 +251,8 @@ package classes
 						totalCockGirth += player.cocks[i].cockThickness
 				}
 						
-				bodyStats += "<b>Total Cock Length:</b> " + Math.round(totalCockLength) + " inches\n";
-				bodyStats += "<b>Total Cock Girth:</b> " + Math.round(totalCockGirth) + " inches\n";
+				bodyStats += "<b>Total Cock Length:</b> " + UnitSystem.displayInches(totalCockLength) + "\n";
+				bodyStats += "<b>Total Cock Girth:</b> " + UnitSystem.displayInches(totalCockGirth) + "\n";
 				
 			}
 			

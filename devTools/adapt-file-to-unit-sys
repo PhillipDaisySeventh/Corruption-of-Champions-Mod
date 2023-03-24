@@ -1,0 +1,288 @@
+#!/bin/bash
+
+# This script uses regular expression to find common pattern of measurements to convert them to use the methods from the UnitSystem.
+# Perl is used to execute the regex.
+# This is a shell script that usually run on POSIX compliant system (Unix-like).
+# This has been tested with a bash shell on a Linux OS.
+# If you want to run this script on Windows, try running it from a program such as git-bash.
+
+declare -A wordsToNumber=(
+  ["zero"]=0
+  ["one"]=1
+  ["two"]=2
+  ["three"]=3
+  ["four"]=4
+  ["five"]=5
+  ["six"]=6
+  ["seven"]=7
+  ["eight"]=8
+  ["nine"]=9
+  ["ten"]=10
+  ["eleven"]=11
+  ["twelve"]=12
+  ["thirteen"]=13
+  ["fourteen"]=14
+  ["fifteen"]=15
+  ["sixteen"]=16
+  ["seventeen"]=17
+  ["eighteen"]=18
+  ["nineteen"]=19
+  ["twenty"]=20
+  ["thirty"]=30
+  ["forty"]=40
+  ["fifty"]=50
+  ["sixty"]=60
+  ["seventy"]=70
+  ["eighty"]=80
+  ["ninety"]=90
+  ["hundred"]=100
+)
+
+# Create list of number words that can be handled with a regex
+listOfNumberWords=$(IFS="|" ; echo "${!wordsToNumber[*]}")
+
+if [ ! "$PERL" ]; then
+  PERL="perl"
+fi
+
+if ! $PERL -v &> /dev/null ; then
+  printf "This script requires Perl to perform Regex substitution and the program named \"%s\" have not been found on your system.\n" "$PERL"
+  printf "You can specify the name of the Perl program by setting the variable PERL before executing this script.\n"
+  printf "Ex: PERL=my-perl-install %s path/to/file\n" "$0"
+  exit
+fi
+
+file="$(realpath $1)"
+
+if [ ! -f "$file" ]; then
+  printf "The file does not exist: \033[1m%s\033[m\n" "$file"
+  exit
+fi
+
+printf "Adapting: \033[1m%s\033[m\n" "$file"
+printf "This script is a tool to help changing measurements in the Imperial system to use methods from UnitSystem.\n"
+printf "It finds commons pattern of measurements, and convert them with their appropriate replacement.\n"
+printf "Always perform a review of the changes made as they could be incorrect, or some measurements might not have been found.\n\n"
+
+
+# === feet form ======================================================================================================================================
+
+# replace the form x to y feet, or x-y feet to displayFeetRange(x, " to ", y)
+perl -i -pe 's%(\d+)([\-a-z ]+)(\d+) f(?:oo|ee)t%" + UnitSystem.displayFeetRange(\1, "\2", \3) + "%g' "$file"
+
+# replace the form xWord to yWord feet, or xWord-yWord feet to displayFeetRangeTextually(##xWord##, " to ", ##yWord##)
+perl -i -pe 's%\b(?i)('$listOfNumberWords')(?-i)\b(?!\s*(?:inch(?:es)?|f(?:oo|ee)t))([\-a-z ]+?)('$listOfNumberWords') f(?:oo|ee)t%" + UnitSystem.displayFeetRangeTextually(##\1##, "\2", ##\3##) + "%g' "$file"
+
+# replace a height with the form x foot and y inch / x feet and y inch to UnitSystem.displayHeight2(x, y, "and")
+perl -i -pe 's%(\d+) f(?:oo|ee)t (?:([ a-z]+) )?(\d+) inch(?:es)?%" + (UnitSystem.displayHeight2($1, $3, "$2") + "%g' "$file"
+
+# replace a height with the form xWord foot and yWord inch / xWord feet and yWord inch to UnitSystem.displayHeight(##xWord##, ##yWord##, "and")
+perl -i -pe 's%\b(?i)('$listOfNumberWords')(?-i)\b f(?:oo|ee)t (?:([ a-z]+) )?\b(?i)('$listOfNumberWords')(?-i)\b inch(?:es)?%" + (UnitSystem.displayHeight2Textually(##$1##, ##$3##, "$2") + "%g' "$file"
+
+# replace x' y" with displayHeight2Short2(x, y)
+# ’ = \x{2019}
+# ” = \x{201d}
+# -CSD enable input and output to use unicode
+perl -CSD -i -pe 's%(\d+)\\?['\''\x{2019}]\s*(\d+)\\?["\x{201d}]%" + UnitSystem.displayHeight2Short2(\1, \2) + "%g' "$file"
+
+# replace x' with displayHeight2Short2(x, 0)
+# ’ = \x{2019}
+# ” = \x{201d}
+# -CSD enable input and output to use unicode
+perl -CSD -i -pe 's%(\d+)\\?['\''\x{2019}]%" + UnitSystem.displayHeight2Short2(\1, 0) + "%g' "$file"
+
+# replace x.y feet with displayFeet(x.y, 1)
+perl -i -pe 's%(\d+\.\d) f(?:oo|ee)t%" + UnitSystem.displayFeet(\1, 1) + "%g' "$file"
+
+# replace x feet with displayFeet(x)
+perl -i -pe 's%(\d+) f(?:oo|ee)t%" + UnitSystem.displayFeet(\1) + "%g' "$file"
+
+# replace xWord feet with displayFeet(##xWord##)
+perl -i -pe 's%(?:\b|(?<=\\n))(?i)('$listOfNumberWords')(?-i)\b \bfeet\b%" + UnitSystem.displayFeetTextually(##\1##) + "%g' "$file"
+
+# replace x-foot with displayFootWithHyphen(x)
+perl -i -pe 's%(\d+)-f(?:oo|ee)t%" + UnitSystem.displayFootWithHyphen(\1) + "%g' "$file"
+
+# replace xWord-foot with displayFootWithHyphenTextually(##xWord##)
+perl -i -pe 's%\b(?i)('$listOfNumberWords')(?-i)\b-f(?:oo|ee)t%" + UnitSystem.displayFootWithHyphenTextually(##\1##) + "%g' "$file"
+
+# replace xWord foot with displayFootWithHyphenTextually(##xWord##)
+perl -i -pe 's%\b(?i)('$listOfNumberWords')(?-i)\b foot%" + UnitSystem.displayFootWithHyphenTextually(##\1##) + "%g' "$file"
+
+# replace half a foot with halfAFoot
+perl -i -pe 's%\b[hH]alf a foot\b%" + UnitSystem.halfAFoot() + "%g' "$file"
+
+# replace foot-long with footCompound
+perl -i -pe 's%\b[fF]oot-?long\b%" + UnitSystem.footCompound() + "-long%g' "$file"
+
+# replace a foot with aFoot
+perl -i -pe 's%\b[aA] foot\b%" + UnitSystem.aFoot() + "%g' "$file"
+
+# replace feet with literalFeet
+#perl -i -pe 's%\bfeet\b%" + UnitSystem.literalFeet() + "%g' "$file"
+perl -i -pe 's%\b(?<!my |your |his |her |its |their |those |both |bare |'\''s |’s |\[pc\.|\[|player\.)[fF]eet\b%" + UnitSystem.literalFeet() + "%g' "$file"
+
+# replace foot with literalFoot
+perl -i -pe 's%\b(?<!my |your |his |her |its |their |bare |'\''s |’s |\[pc\.|\[|player\.)[fF]oot\b%" + UnitSystem.literalFoot() + "%g' "$file"
+
+# === inches form ====================================================================================================================================
+
+# replace num2Text(Math.round(value)) inches with displayInchesTextually(value)
+perl -i -pe 's%((?:"\s*\+\s*)|\()num2Text\(Math.round\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\)\)\s*\+\s*"\s*inch(?:es)?%\1UnitSystem.displayInchesTextually(\2) + "%g' "$file"
+
+# replace num2Text(int(value)) inches with displayInchesTextually(value)
+perl -i -pe 's%((?:"\s*\+\s*)|\()num2Text\(int\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\)\)\s*\+\s*"\s*inch(?:es)?%\1UnitSystem.displayInchesTextually(\2) + "%g' "$file"
+
+# replace num2Text(Math.round(value*10)/10) inches with displayInchesTextually(value, 1)
+perl -i -pe 's%((?:"\s*\+\s*)|\()num2Text\(Math.round\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\s*\*\s*10\s*\)\s*/\s*10\s*\)\s*\+\s*"\s*inch(?:es)?%\1UnitSystem.displayInchesTextually(\2, 1) + "%g' "$file"
+
+# replace num2Text(value) inches with displayInchesTextually(value)
+perl -i -pe 's%((?:"\s*\+\s*)|\()num2Text\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\)\s*\+\s*"\s*inch(?:es)?%\1UnitSystem.displayInchesTextually(\2) + "%g' "$file"
+
+# replace Math.round(value) inches with displayInches(value)
+perl -i -pe 's%((?:"\s*\+\s*)|\()Math.round\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\)\s*\+\s*"\s*inch(?:es)?%\1UnitSystem.displayInches(\2) + "%g' "$file"
+
+# replace Math.round(value*10)/10 inches with deisplayInches(value, 1)
+perl -i -pe 's%((?:"\s*\+\s*)|\()Math.round\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\s*\*\s*10\s*\)\s*/\s*10\s*\+\s*"\s*inch(?:es)?%\1UnitSystem.displayInches(\2, 1) + "%g' "$file"
+
+# replace Math.round(value*100)/100 inches with deisplayInches(value, 2)
+perl -i -pe 's%((?:"\s*\+\s*)|\()Math.round\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\s*\*\s*100\s*\)\s*/\s*100\s*\+\s*"\s*inch(?:es)?%\1UnitSystem.displayInches(\2, 2) + "%g' "$file"
+
+# replace the form: value inch(es) with displayInches(value)
+perl -i -pe 's%((?:"\s*\+\s*)|\()([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\s*\+\s*"\s*inch(?:es)?%\1UnitSystem.displayInches(\2) + "%g' "$file"
+
+# replace the form x.y inch(es) with displayInches(x.y, 1)
+perl -i -pe 's%(\d+\.\d) inch(?:es)?%" + UnitSystem.displayInches(\1, 1) + "%g' "$file"
+
+# replace the form x to y inches, or x-y inches to displayInchesRange(x, " to ", y)
+perl -i -pe 's%(\d+)([\-a-z ]+)(\d+) inch(?:es)?%" + UnitSystem.displayInchesRange(\1, "\2", \3) + "%g' "$file"
+
+# replace the form x to y", or x-y" to displayInchesRangeShort2(x, " to ", y)
+perl -CSD -i -pe 's%(\d+)([\-a-z ]+)(\d+)(?:\\"|\x{201d})%" + UnitSystem.displayInchesRangeShort2(\1, "\2", \3) + "%g' "$file"
+
+# replace the form xWord to yWord inches, or xWord-yWord inches to "lengthInInches(##xWord##) and displayInches(##yWord##)"
+perl -i -pe 's%\b(?i)('$listOfNumberWords')(?-i)\b([\-a-z ]+?)('$listOfNumberWords') inch(?:es)?%" + UnitSystem.displayInchesRangeTextually(##\1##, "\2", ##\3##) + "%g' "$file"
+
+# replace the form x inch(es) with displayInches(x)
+perl -i -pe 's%(\d+) inch(?:es)?%" + UnitSystem.displayInches($1) + "%g' "$file"
+
+# replace the form xWord inches with displayInchesTextually(##xWord##) for a later conversion from word to number
+perl -i -pe 's%\b('$listOfNumberWords')\b inches%" + UnitSystem.displayInchesTextually(##$1##) + "%g' "$file"
+
+# replace the form x" with display displayInchesShort2(x)
+perl -i -pe 's%((?:"\s*\+\s*)|\()([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\s*\+\s*"\\"%\1UnitSystem.displayInchesShort2(\2) + "%g' "$file"
+perl -CSD -i -pe 's%(\d+)(?:\\"|\x{201d})%" + UnitSystem.displayInchesShort2(\1) + "%g' "$file"
+
+# === -inches form ===================================================================================================================================
+
+# replace num2Text(value) -inches with displayInchWithHyphenTextually(value)
+perl -i -pe 's%((?:"\s*\+\s*)|\()num2Text\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\)\s*\+\s*"-inches%\1UnitSystem.displayInchWithHyphenTextually(\2) + "%g' "$file"
+
+# replace static value in form of value-inches with displayInchWithHyphen(value)
+perl -i -pe 's%((?:0\.)?\d+)-inches%" + UnitSystem.displayInchWithHyphen(\1) + "%g' "$file"
+
+# === -inch form =====================================================================================================================================
+
+# replace the form xWord inch with displayInchWithHyphen(##xWord##) for a later conversion from word to number
+perl -i -pe 's%\b('$listOfNumberWords')\b \binch\b%" + UnitSystem.displayInchWithHyphenTextually(##$1##) + "%g' "$file"
+
+# replace num2Text(Math.round(value)) -inch with displayInchWithHyphenTextually(value)
+perl -i -pe 's%((?:"\s*\+\s*)|\()num2Text\(Math.round\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\)\)\s*\+\s*"-inch%\1UnitSystem.displayInchWithHyphenTextually(\2) + "%g' "$file"
+
+# replace num2Text(Math.round(value*10)/10) -inch with displayInchWithHyphenTextually(value, 1)
+perl -i -pe 's%((?:"\s*\+\s*)|\()num2Text\(Math.round\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\s*\*\s*10\s*\)\s*/\s*10\s*\)\s*\+\s*"-inch%\1UnitSystem.displayInchWithHyphenTextually(\2, 1) + "%g' "$file"
+
+# replace num2Text(value) -inch with displayInchWithHyphenTextually(value)
+perl -i -pe 's%((?:"\s*\+\s*)|\()num2Text\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\)\s*\+\s*"-inch%\1UnitSystem.displayInchWithHyphenTextually(\2) + "%g' "$file"
+
+# replace Math.round(value*10)/10 -inch with displayInchWithHyphen(value, 1)
+perl -i -pe 's%((?:"\s*\+\s*)|\()Math.(?:round|floor)\(([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\s*\*\s*10\s*\)\s*/\s*10\s*\+\s*"-inch%\1UnitSystem.displayInchWithHyphen(\2, 1) + "%g' "$file"
+
+# replace static value in form of value-inch with displayInchWithHyphen(value)
+perl -i -pe 's%((?:0\.)?\d+)-inch%" + UnitSystem.displayInchWithHyphen(\1) + "%g' "$file"
+
+# replace static value in form of xWord-inch with displayInchWithHyphen(##xWord##)
+perl -i -pe 's%\b(?i)('$listOfNumberWords')(?-i)\b-inch%" + UnitSystem.displayInchWithHyphenTextually(##\1##) + "%g' "$file"
+
+# === literal form of inch ===========================================================================================================================
+
+# replace an inch with literalAnInch()
+perl -i -pe 's%\b[hH]alf an inch\b%" + UnitSystem.halfAnInch() + "%g' "$file"
+
+# replace an inch with literalAnInch()
+perl -i -pe 's%\b[aA]n inch\b%" + UnitSystem.literalAnInch() + "%g' "$file"
+
+# replace inches with literalInches()
+perl -i -pe 's%\b[iI]nches\b%" + UnitSystem.literalInches() + "%g' "$file"
+
+# replace inch with literalInch()
+perl -i -pe 's%\b[iI]nch\b%" + UnitSystem.literalInch() + "%g' "$file"
+
+# === yard form ======================================================================================================================================
+
+# replace a yard with aYard()
+perl -i -pe 's%\b[aA] yard\b%" + UnitSystem.aYard() + "%g' "$file"
+
+# replace yards with literalYards()
+perl -i -pe 's%\b[yY]ards\b%" + UnitSystem.literalYards() + "%g' "$file"
+
+# replace yards with literalYards()
+perl -i -pe 's%\b[yY]ard\b%" + UnitSystem.literalYard() + "%g' "$file"
+
+# === pound form =====================================================================================================================================
+
+# replace the form x to y pounds, or x-y pounds to displayWeightRange(x, " to ", y)
+perl -i -pe 's%(\d+)([\-a-z ]+)(\d+) pounds?%" + UnitSystem.displayWeightRange(\1, "\2", \3) + "%g' "$file"
+
+# replace the form xWord to yWord pounds, or xWord-yWord pounds to displayWeightRangeTextually(##xWord##, " to ", ##yWord##)
+perl -i -pe 's%\b(?i)('$listOfNumberWords')(?-i)\b([\-a-z ]+?)('$listOfNumberWords') pounds?%" + UnitSystem.displayWeightRangeTextually(##\1##, "\2", ##\3##) + "%g' "$file"
+
+# replace the form x to y XYZ pounds, or x-y pounds to displayQualifiedWeightRange(x, " to ", y, "XYZ ")
+perl -i -pe 's%(\d+)([\-a-z ]+)(\d+) ([a-zA-Z\-]+\s*)pounds?%" + UnitSystem.displayQualifiedWeightRange(\1, "\2", \3, "\4") + "%g' "$file"
+
+# replace the form xWord pounds to displayWeightTextually(##xWord##)
+perl -i -pe 's%(?i)('$listOfNumberWords')(?-i) pounds?%" + UnitSystem.displayWeightTextually(##\1##) + "%g' "$file"
+
+# replace x to y lbs with displayWeightRangeShort(x, " to ", y)
+perl -i -pe 's%(\d+)([\-a-z ]+)(\d+)\s*lbs?%" + UnitSystem.displayWeightRangeShort(\1, "\2", \3) + "%g' "$file"
+
+# replace x lbs to displayWeightShort(x)
+perl -i -pe 's%(\d+)\s*lbs?%" + UnitSystem.displayWeightShort(\1) + "%g' "$file"
+
+# replace pounds with literalPounds
+perl -i -pe 's%\b[pP]ounds\b%" + UnitSystem.literalPounds() + "%g' "$file"
+
+# === gallon form ====================================================================================================================================
+
+# replace gallons with literalGallons()
+perl -i -pe 's%\b[aA] gallon\b%" + UnitSystem.aGallon() + "%g' "$file"
+
+# replace gallons with literalGallons()
+perl -i -pe 's%\b[gG]allons\b%" + UnitSystem.literalGallons() + "%g' "$file"
+
+# replace gallon with literalGallon()
+perl -i -pe 's%\b[gG]allon\b%" + UnitSystem.literalGallon() + "%g' "$file"
+
+# === liter form =====================================================================================================================================
+
+# replace myVar.getData.getX mLs with displayLitersShort(myVar.getData.getX)
+perl -i -pe 's%((?:"\s*\+\s*)|\()([a-zA-Z0-9\(\)\. \+\-"\[\]]+?)\s*\+\s*"\s*m[lL]s?%\1UnitSystem.displayLitersShort(\2) + "%g' "$file"
+
+# replace x mLs with displayLitersShort(x)
+perl -i -pe 's%((?:0\.)?\d+) m[lL]s?%" + UnitSystem.displayLitersShort(\1) + "%g' "$file"
+
+# === Aftermath cleaning =============================================================================================================================
+
+# clear concatenation to empty string, e.g. + "", "" +
+perl -i -pe 's%\s*\+\s*""%%g' "$file"
+perl -i -pe 's%""\s*\+\s*%%g' "$file"
+
+# Convert previously found number word to number
+for el in ${!wordsToNumber[@]}; do
+  perl -i -pe 's%##(?i)'$el'(?-i)##%'${wordsToNumber[$el]}'%g' "$file"
+done
+
+# === List remaining things ==========================================================================================================================
+
+printf "Remaining occurences of units or symbols:\n"
+grep --color -n -E "\b(inch(es)?|f(oo|ee)t|gallons?|pounds?|ton(ne)?s?|lit(er|re)s?|[mM]?[lL][sS]?|([kK]ilo|([cC]enti|[mM]illi))?met(er|re)s?|yards?)\b|([0-9]+(”|\\\\\")|[0-9]+\s*\b([cC]|[kK]|[mM])?[mM]\b)" "$file"

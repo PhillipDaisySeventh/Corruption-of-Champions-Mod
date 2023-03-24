@@ -4,6 +4,7 @@ package classes.Items.Consumables
 	import classes.GlobalFlags.*;
 	import classes.Items.Consumable;
 	import classes.Items.ConsumableLib;
+	import classes.UnitSystem;
 
 	/**
 	 * @since March 31, 2018
@@ -60,7 +61,7 @@ package classes.Items.Consumables
 				player.hips.rating++;
 				player.refillHunger(20);
 			} else {
-				outputText("You stagger wildly as your hips spread apart, widening by inches."
+				outputText("You stagger wildly as your hips spread apart, widening by " + UnitSystem.literalInches() + "."
 				          +" When the transformation finishes you feel as if you have to learn to walk all over again.");
 				player.hips.rating += 2 + rand(2);
 				player.refillHunger(60);

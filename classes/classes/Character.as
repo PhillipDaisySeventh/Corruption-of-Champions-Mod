@@ -856,7 +856,7 @@ package classes
 		
 		public function hornDescript():String
 		{
-			return Appearance.DEFAULT_HORNS_NAMES[horns.type] + " horns";
+			return Appearance.getDefaultHornsNames(horns.type) + " horns";
 		}
 
 		public function tailDescript():String

@@ -147,7 +147,7 @@ package classes.Scenes.Dungeons.DeepCave
 				}
 				//Determine if cat'ed
 				else if (player.findPerk(PerkLib.Flexibility) >= 0 && rand(100) < 6) {
-					outputText("With your incredible flexibility, you squeeze out of the way of " + a + short + "");
+					outputText("With your incredible flexibility, you squeeze out of the way of " + a + short);
 					if (plural) outputText("' attacks.\n");
 					else outputText("'s attack.\n");
 				}

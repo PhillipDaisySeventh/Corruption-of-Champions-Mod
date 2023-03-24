@@ -123,7 +123,7 @@ package classes.Scenes.Areas.Plains
 			this.a = "the ";
 			this.short = "guard";
 			this.imageName = "bazaarguard";
-			this.long = "This crimson-skinned demon-morph guarding the entrance to Bizarre Bazaar stands ten feet tall. He has red skin and is wearing almost sky-blue turban on his head. He has solid black eyes. He is wearing a simple tunic and loose-fitting pants. He is wielding a pair of scimitars."
+			this.long = "This crimson-skinned demon-morph guarding the entrance to Bizarre Bazaar stands " + UnitSystem.displayHeight2EstimateTextually(10) + " tall. He has red skin and is wearing almost sky-blue turban on his head. He has solid black eyes. He is wearing a simple tunic and loose-fitting pants. He is wielding a pair of scimitars."
 			this.race = "Demon-Morph";
 			this.createCock(8, 1.5, CockTypesEnum.DEMON);
 			createBreastRow(Appearance.breastCupInverse("flat"));

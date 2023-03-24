@@ -5,6 +5,7 @@ package classes.Scenes.Places.Bazaar
 	import classes.PregnancyStore;
 	import classes.display.SpriteDb;
 	import classes.internals.*;
+	import classes.UnitSystem;
 
 	public class Lilium extends BazaarAbstractContent
 	{
@@ -40,7 +41,7 @@ package classes.Scenes.Places.Bazaar
 			var pay:Function = null;
 			//#########FIRST TIME INTRODUCTION#########
 			if (flags[kFLAGS.LILIUM_TIMES_TALKED] == 0) {
-				outputText("As you approach the demon woman, her gaze shifts to you, and she runs her eyes down your body, scrutinizing you. You respond in kind, taking in her form. Two nearly foot-long horns grow up and out of her forehead, one of which is adorned with a shiny, silver band. Her dark hair spills across her bare shoulders in loose coils and her black lipstick and heavy eyeshadow contrast with the paleness of her skin. A black underbust corset wraps around her waist, leaving her breasts exposed, and long black gloves adorn her arms up to the shoulder. She also wears a crinoline skirt with an opening at the front which reveals her smooth bare legs, a tail which wraps around her thigh like a garter, and her crotch, which sports an average cock curiously clad in a lacy sock in spite of her otherwise brazen exposure.\n\n");
+				outputText("As you approach the demon woman, her gaze shifts to you, and she runs her eyes down your body, scrutinizing you. You respond in kind, taking in her form. Two nearly " + UnitSystem.footCompound() + "-long horns grow up and out of her forehead, one of which is adorned with a shiny, silver band. Her dark hair spills across her bare shoulders in loose coils and her black lipstick and heavy eyeshadow contrast with the paleness of her skin. A black underbust corset wraps around her waist, leaving her breasts exposed, and long black gloves adorn her arms up to the shoulder. She also wears a crinoline skirt with an opening at the front which reveals her smooth bare legs, a tail which wraps around her thigh like a garter, and her crotch, which sports an average cock curiously clad in a lacy sock in spite of her otherwise brazen exposure.\n\n");
 
 				outputText("Her assessment of you seems to be positive, as a smile crosses her face and she says, \"<i>You look like you've got more than a few gems to rub together; looking for a little fun?</i>\"\n\n");
 
@@ -50,7 +51,7 @@ package classes.Scenes.Places.Bazaar
 			}
 			//#########REPEAT INTRODUCTION#########
 			else {
-				outputText("Lilium stands before you. Her two nearly foot-long horns grow up and out of her forehead, one of which is adorned with a shiny, silver band. Her dark hair spills across her bare shoulders in loose coils and her black lipstick and heavy eyeshadow contrast with the paleness of her skin. A black underbust corset wraps around her waist, leaving her breasts exposed and long black gloves cling to her arms up to her shoulders. She also wears a crinoline skirt with an opening at the front which reveals her smooth bare legs, a tail which wraps around her thigh like a garter, and her crotch which sports her average cock curiously clad in her lacy cock sock in spite of her otherwise brazen exposure.\n\n");
+				outputText("Lilium stands before you. Her two nearly " + UnitSystem.footCompound() + "-long horns grow up and out of her forehead, one of which is adorned with a shiny, silver band. Her dark hair spills across her bare shoulders in loose coils and her black lipstick and heavy eyeshadow contrast with the paleness of her skin. A black underbust corset wraps around her waist, leaving her breasts exposed and long black gloves cling to her arms up to her shoulders. She also wears a crinoline skirt with an opening at the front which reveals her smooth bare legs, a tail which wraps around her thigh like a garter, and her crotch which sports her average cock curiously clad in her lacy cock sock in spite of her otherwise brazen exposure.\n\n");
 
 				outputText("\"<i>Back again? I thought I was finally rid of you!</i>\" Lilium teases, but you can see the eager smile on her face. \"<i>Is this visit business or pleasure? I'm hoping both.</i>\"\n\n");
 			}
@@ -133,7 +134,7 @@ package classes.Scenes.Places.Bazaar
 			if (x < 0) x = 0;
 			outputText("The two of you find a secluded alley between two buildings. Lilium removes her corset and skirt before moving to help you remove your " + player.armorName + ".\n\n");
 			
-			outputText("Squatting before you, she traces a single gloved finger along the underside of your " + player.cockDescript(x) + ", teasing it until it grows to its full " + Math.round(player.cocks[x].cockLength) + "-inch length. Once your maleness has sprung to life, she turns around and bends over to brace herself against the wall before looking back over her shoulder at you mischievously and giving her hips a little wiggle. Taking position behind her, you slide your " + player.cockDescript(x) + " between her soft thighs.");
+			outputText("Squatting before you, she traces a single gloved finger along the underside of your " + player.cockDescript(x) + ", teasing it until it grows to its full " + UnitSystem.displayInchWithHyphen(player.cocks[x].cockLength) + " length. Once your maleness has sprung to life, she turns around and bends over to brace herself against the wall before looking back over her shoulder at you mischievously and giving her hips a little wiggle. Taking position behind her, you slide your " + player.cockDescript(x) + " between her soft thighs.");
 			//(If player cock length > 8 inches)
 			if (player.cocks[x].cockLength > 8) outputText(" You can feel Lilium's smaller cock resting atop your " + player.cockDescript(x) + ".");
 			outputText(" With each thrust you can feel more and more feminine lube coating your shaft as you glide across Lilium's labia, her dick stiffening with arousal.\n\n");
@@ -182,7 +183,7 @@ package classes.Scenes.Places.Bazaar
 
 			outputText("You draw yourself up and position yourself above Lilium's twitching cock. Your fingers part the lips of your " + player.vaginaDescript(0) + " which are slick with your own arousal. ");
 			//(If virgin/tight)
-			if (player.vaginalCapacity() < 25) outputText("Gingerly you lower yourself down onto Lilium's cock, your breath tight in your chest as the head strains against your moist inner walls. Each inch is easier than the last and soon you release a long slow exhale as your crotch meets hers and the pleasurable feeling of fullness washes over you. ");
+			if (player.vaginalCapacity() < 25) outputText("Gingerly you lower yourself down onto Lilium's cock, your breath tight in your chest as the head strains against your moist inner walls. Each " + UnitSystem.literalInch() + " is easier than the last and soon you release a long slow exhale as your crotch meets hers and the pleasurable feeling of fullness washes over you. ");
 			//(if loose or produce lots of lube)
 			else outputText("Without a second thought you plunge yourself down on Lilium's fuckrod, your " + player.buttDescript() + " jiggling from the sudden impact. ");
 			outputText("You pull yourself up until only the head of the demon girl's dick remains within you, before sliding back down to let her fill you again. Up and down you bounce on top of her, your speed and force increasing with every stroke. You let out a contented half moan, half grunt each time your " + player.hipDescript() + " collide with hers as her stiff cock stimulates your insides. Lilium's own search for more pleasure brings her hands to her breasts and she begins to finger-fuck her nipples. Before long she has two and then three fingers furiously plunging in and out of her gaping nipplecunts and you can see her eyes rolled back in her head as her mouth hangs open in testament to the excitement flowing through her body.");

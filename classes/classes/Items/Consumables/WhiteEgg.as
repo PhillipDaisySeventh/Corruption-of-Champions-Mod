@@ -4,6 +4,7 @@ package classes.Items.Consumables
 	import classes.GlobalFlags.*;
 	import classes.Items.Consumable;
 	import classes.Items.ConsumableLib;
+	import classes.UnitSystem;
 
 	/**
 	 * @since March 31, 2018
@@ -61,7 +62,7 @@ package classes.Items.Consumables
 				//Grow nipples
 				if (player.nippleLength < 3 && player.biggestTitSize() > 0) {
 					outputText("\n\nYour nipples engorge, prodding hard against the inside of your [armor]."
-					          +" Abruptly you realize they've gotten almost a quarter inch longer.");
+					          +" Abruptly you realize they've gotten almost a " + UnitSystem.quarterInch() + " longer.");
 					player.nippleLength += .2;
 					dynStats("lus", 15);
 				}
@@ -72,7 +73,7 @@ package classes.Items.Consumables
 				//Grow nipples
 				if (player.nippleLength < 3 && player.biggestTitSize() > 0) {
 					outputText("\n\nYour nipples engorge, prodding hard against the inside of your [armor]."
-					          +" Abruptly you realize they've grown more than an additional quarter-inch.");
+					          +" Abruptly you realize they've grown more than an additional " + UnitSystem.quarterInch() + ".");
 					player.nippleLength += (rand(2) + 3) / 10;
 					dynStats("lus", 15);
 				}

@@ -8,6 +8,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 	import classes.BodyParts.Butt;
 	import classes.BodyParts.Hips;
 	import classes.GlobalFlags.kGAMECLASS;
+	import classes.UnitSystem;
 	
 	public class Lethice extends Monster
 	{
@@ -232,7 +233,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 			}
 			else if (player.lust100 <= 75)
 			{
-				outputText("\n\nDespite the dire situation, your mind keeps filling with images of Lethice fully uncovered, her body poised just inches away. You can’t help but want her.");
+				outputText("\n\nDespite the dire situation, your mind keeps filling with images of Lethice fully uncovered, her body poised just " + UnitSystem.literalInches() + " away. You can’t help but want her.");
 			}
 			else if (player.lust100 <= 90)
 			{
@@ -250,7 +251,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 		
 		private function rapetacles():void
 		{
-			outputText("Lethice gestures at the ground underfoot. A pulse of black mist rolls out around you for dozens of feet in every direction. The crowd of watching demons pulls back fearfully, save for a few foolish slaves who blithely step into the magic circle. A second later, hundreds of oily, black tentacles emerge from the floor, unspooling from whatever horrible dimension they were summoned from. They immediately attack every living creature within reach, wrapping around wrists and ankles, violating vaginas and assholes alike. They come at you from every direction!");
+			outputText("Lethice gestures at the ground underfoot. A pulse of black mist rolls out around you for " + UnitSystem.dozensOfFeet() + " in every direction. The crowd of watching demons pulls back fearfully, save for a few foolish slaves who blithely step into the magic circle. A second later, hundreds of oily, black tentacles emerge from the floor, unspooling from whatever horrible dimension they were summoned from. They immediately attack every living creature within reach, wrapping around wrists and ankles, violating vaginas and assholes alike. They come at you from every direction!");
 			if (player.canFly())
 			{
 				outputText("\n\nYou laugh as you fly out of their reach, immune to their touches.");
@@ -313,7 +314,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 		
 		private function claw():void
 		{
-			outputText("Swooping low, the Demonic Queen takes a swipe at you with claws that are suddenly six inches long and as sharp as razors!");
+			outputText("Swooping low, the Demonic Queen takes a swipe at you with claws that are suddenly " + UnitSystem.displayInchesTextually(6) + " long and as sharp as razors!");
 			var damage:Number = str + weaponAttack - rand(player.tou);
 			var evade:String = player.getEvasionReason();
 			if (evade == EVASION_SPEED || evade == EVASION_UNHINDERED)

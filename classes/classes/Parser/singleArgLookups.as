@@ -9,8 +9,8 @@
 		import classes.BodyParts.BaseBodyPart;
 		import classes.GlobalFlags.kFLAGS;
 		import classes.GlobalFlags.kGAMECLASS;
-		import classes.Measurements;
 		import classes.internals.Utils;
+		import classes.UnitSystem;
 		
 		public var singleArgConverters:Object =
 		{
@@ -105,7 +105,7 @@
 				"skindesc"					: function():* { return kGAMECLASS.player.skin.desc; },
 				"skinfurscales"				: function():* { return kGAMECLASS.player.skinFurScales(); },
 				"skintone"					: function():* { return kGAMECLASS.player.skin.tone; },
-				"tallness"					: function():* { return Measurements.footInchOrMetres(kGAMECLASS.player.tallness); },
+				"tallness"					: function():* { return UnitSystem.displayHeight(kGAMECLASS.player.tallness); },
 				"tits"						: function():* { return kGAMECLASS.player.breastDescript(0); },
 				"lasttits"					: function():* { return kGAMECLASS.player.breastDescript(-1); },
 				"breastcup"					: function():* { return kGAMECLASS.player.breastCup(0); },

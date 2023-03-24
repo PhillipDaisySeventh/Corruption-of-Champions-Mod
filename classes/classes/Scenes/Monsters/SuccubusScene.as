@@ -46,7 +46,7 @@ package classes.Scenes.Monsters
 		
 		public function winAgainstSuccubusRape():void {
 			clearOutput();
-			outputText("Seeing the succubus in such a vulnerable state, you move over to her" + player.clothedOrNakedLower(", stripping out of your " + player.armorDescript() + ", exposing your " + player.cockDescript() + "", " while your " + player.cockDescript() + " swings freely") + ".\n\n");
+			outputText("Seeing the succubus in such a vulnerable state, you move over to her" + player.clothedOrNakedLower(", stripping out of your " + player.armorDescript() + ", exposing your " + player.cockDescript(), " while your " + player.cockDescript() + " swings freely") + ".\n\n");
 			outputText("Lost in the moment, you grind your pelvic region into hers, feeling around for her fuckhole with your erect member");
 			//Has cocks
 			if (player.hasCock()) {

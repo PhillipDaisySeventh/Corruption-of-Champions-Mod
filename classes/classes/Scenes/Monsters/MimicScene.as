@@ -6,6 +6,7 @@ package classes.Scenes.Monsters
 	import classes.GlobalFlags.*;
 	import classes.Scenes.Monsters.Mimic;
 	import classes.StatusEffects;
+	import classes.UnitSystem;
 	
 	public class MimicScene extends BaseContent
 	{
@@ -52,7 +53,7 @@ package classes.Scenes.Monsters
 		public function mimicTentacle1():void
 		{
 			clearOutput();
-			outputText("You approach within a few feet of the ");
+			outputText("You approach within " + UnitSystem.aFewFeet() + " of the ");
 			if (mimicAppearance == 1) outputText("stone ");
 			else if (mimicAppearance == 2) outputText("huge tit ");
 			else if (mimicAppearance == 3) outputText("giant dick ");
@@ -81,7 +82,7 @@ package classes.Scenes.Monsters
 					return;
 				} 
 				else { //you just escape, no fancy item!
-					outputText("and slowly reach towards it with one hand. As your fingers hover within inches of touching it, you feel a sudden sense of danger, and leap back just as dozens of tentacles sprout from the thing's surface. The strange creature lunges for you again, but you have already escaped its reach and, to your great relief, it appears to be immobile.  Do you want to fight this creature? You can try to attack from a safe distance, but it would have the first strike should you try to approach for a melee strike.");
+					outputText("and slowly reach towards it with one hand. As your fingers hover within " + UnitSystem.literalInches() + " of touching it, you feel a sudden sense of danger, and leap back just as dozens of tentacles sprout from the thing's surface. The strange creature lunges for you again, but you have already escaped its reach and, to your great relief, it appears to be immobile.  Do you want to fight this creature? You can try to attack from a safe distance, but it would have the first strike should you try to approach for a melee strike.");
 					menu();
 					addButton(0, "Fight", function():*{
 						player.createStatusEffect(StatusEffects.KnockedBack, 0, 0, 0, 0);
@@ -128,7 +129,7 @@ package classes.Scenes.Monsters
 				//nipplecocks?
 				if (player.breastRows[0].nippleCocks)
 				{
-					outputText("but before it does something rash, your " + nippleCockDescript + " " + tempSize + " inch nipplecocks grow painfully erect, throbbing in time with your racing heart. The creature burbles appreciatively, clearly glad that you have something to offer. ");
+					outputText("but before it does something rash, your " + nippleCockDescript + " " + UnitSystem.displayInchWithHyphen(tempSize) + " nipplecocks grow painfully erect, throbbing in time with your racing heart. The creature burbles appreciatively, clearly glad that you have something to offer. ");
 					if (mimicAppearance == 2 || mimicAppearance == 3)
 					{
 						outputText("The tentacles move your torso towards the thing’s toothy maw, and with mounting terror, you realize that it intends to suck all of your throbbing dicknipples into its nightmare hole of a mouth! As the echoes of your screams finally die away, you realize that your breasts are still intact, and that the horrible looking teeth are actually fairly soft. However, you quickly understand their purpose when they dig painfully into your tits as you attempt to pull them free. ");
@@ -220,7 +221,7 @@ package classes.Scenes.Monsters
 				//Do you have dicknipples?
 				if (player.breastRows[0].nippleCocks)
 				{
-					outputText("\n\nMeanwhile, the tiny tendrils continue to stimulate the rest of your body, causing your " + nippleCockDescript + " " + tempSize + " inch nipplecocks to grow painfully erect, throbbing in time with your racing heart. The creature lets loose an irritated burble");
+					outputText("\n\nMeanwhile, the tiny tendrils continue to stimulate the rest of your body, causing your " + nippleCockDescript + " " + UnitSystem.displayInchWithHyphen(tempSize) + " nipplecocks to grow painfully erect, throbbing in time with your racing heart. The creature lets loose an irritated burble");
 					//if not swallowed
 					if (mimicAppearance == 2 || mimicAppearance == 3) outputText(", and you see its eyes narrow with anger");
 					outputText(". It seems to be annoyed that you would dare sprout more cocks in such an inconvenient location! Your affront is dealt with quickly as your errant dicknipples are engulfed in hastily sprouted sucker tentacles. ");
@@ -372,7 +373,7 @@ package classes.Scenes.Monsters
 				//do you have nipplecocks?
 				if (player.breastRows[0].nippleCocks)
 				{
-					outputText("your " + nippleCockDescript + " " + tempSize + " inch nipplecocks to grow painfully erect, throbbing in time with your racing heart. The creature lets loose an irritated burble");
+					outputText("your " + nippleCockDescript + " " + UnitSystem.displayInchWithHyphen(tempSize) + " nipplecocks to grow painfully erect, throbbing in time with your racing heart. The creature lets loose an irritated burble");
 					//if not swallowed
 					if (mimicAppearance == 2 || mimicAppearance == 3) outputText(", and you see its eyes narrow with anger");
 					outputText(". It seems to be annoyed that you would dare sprout more cocks in such an inconvenient location! Your affront is dealt with quickly as your errant dicknipples are engulfed in hastily sprouted sucker tentacles. ");

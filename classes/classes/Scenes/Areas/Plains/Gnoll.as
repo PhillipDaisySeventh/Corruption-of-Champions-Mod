@@ -38,7 +38,7 @@ package classes.Scenes.Areas.Plains
 			}
 			//Determine if cat'ed
 			else if (player.findPerk(PerkLib.Flexibility) >= 0 && rand(100) < 6) {
-				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short + "");
+				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short);
 				if (plural) outputText("' attacks.\n");
 				else outputText("'s attack.\n");
 			}
@@ -101,7 +101,7 @@ package classes.Scenes.Areas.Plains
 			}
 			//Gnoll Tease #2
 			else if (tease == 1) {
-				outputText("With one hand, the hyena girl grasps her eight-inch clitoris and strokes it.  \"<i>I know you're curious!</i>\" she laughs.  \"<i>You want to try this.</i>\"");
+				outputText("With one hand, the hyena girl grasps her " + UnitSystem.displayInchWithHyphenTextually(8) + " clitoris and strokes it.  \"<i>I know you're curious!</i>\" she laughs.  \"<i>You want to try this.</i>\"");
 				bonus += 5;
 			}
 			//Gnoll Tease #3
@@ -151,7 +151,7 @@ package classes.Scenes.Areas.Plains
 			}
 			//Determine if cat'ed
 			else if (player.findPerk(PerkLib.Flexibility) >= 0 && rand(100) < 6) {
-				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short + "");
+				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short);
 				if (plural) outputText("' attacks.\n");
 				else outputText("'s attack.\n");
 			}
@@ -290,7 +290,7 @@ package classes.Scenes.Areas.Plains
 				}
 				//Determine if cat'ed
 				else if (player.findPerk(PerkLib.Flexibility) >= 0 && rand(100) < 6) {
-					outputText("With your incredible flexibility, you squeeze out of the way of " + a + short + "");
+					outputText("With your incredible flexibility, you squeeze out of the way of " + a + short);
 					if (plural) outputText("' attacks.\n");
 					else outputText("'s attack.\n");
 				}

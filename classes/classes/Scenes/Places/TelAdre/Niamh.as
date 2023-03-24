@@ -1,4 +1,4 @@
-﻿package classes.Scenes.Places.TelAdre {
+package classes.Scenes.Places.TelAdre {
 	import classes.*;
 	import classes.GlobalFlags.kFLAGS;
 
@@ -686,7 +686,7 @@ private function barBeerOrgyTits():void {
 	}
 	//ELSE IF player has pussy and Urta is not in the bar.
 	else if (player.hasVagina()) {
-		outputText("\n\nHands grip your legs and spread you apart while slathering your thighs with your own pussy juices until every square inch of your lower body is slick and slippery.  A pair of dog morphs clamor for position between your thighs.");
+		outputText("\n\nHands grip your legs and spread you apart while slathering your thighs with your own pussy juices until every square " + UnitSystem.literalInch() + " of your lower body is slick and slippery.  A pair of dog morphs clamor for position between your thighs.");
 		//IF [player has less than a gaping pussy]
 		if (player.vaginalCapacity() < 60) outputText("  One is sporting a cock that is obviously too massive for your pussy, and eventually backs down so that the other one, despite still being on the large size, can take the honor of fucking your cunt silly.");
 		//ELSE IF [player has a gaping pussy or bigger]
@@ -697,7 +697,7 @@ private function barBeerOrgyTits():void {
 	/*================
 	Fourth Paragraph
 	================*/
-	outputText("\n\nNiamh crawls up and on to the table, moving to position her hips over your head while leaning over the rest of your torso.  It's obvious that she either removed her undergarments, or wasn't wearing any in the first place.  Her bare pussy is now hovering just inches from your face.");
+	outputText("\n\nNiamh crawls up and on to the table, moving to position her hips over your head while leaning over the rest of your torso.  It's obvious that she either removed her undergarments, or wasn't wearing any in the first place.  Her bare pussy is now hovering just " + UnitSystem.literalInches() + " from your face.");
 	// IF [Player has a large pregnancy]
 	if (player.pregnancyIncubation > 0 && player.pregnancyIncubation < 100) outputText("  \"<i>Oi!  Careful folks, this babe could blow at any time!</i>\"  Niamh pats your belly with chiding affection.");
 	// IF [Player has a single cock]

@@ -324,7 +324,7 @@ package classes.Scenes.Camp
 				outputText("It’s good to see that your memory didn’t fail you! Your plans should work quite nicely and the manual was a good review of the basic principles of laying a foundation.\n\n");
 			else
 				outputText("Wow… there’s a lot more to this carpentry than you thought. You spend some time making some major corrections to your foundation plan using the information in the manual.\n\n");
-			outputText("First you lay down a foundation beam as a guideline and stack up field stone in the corners to about a foot off the ground in each corner. Then you put a stack in between each one and one in the middle. With a loud grunt you lift your hewn timbers onto the two long edges and get to work chiseling notches. ");
+			outputText("First you lay down a foundation beam as a guideline and stack up field stone in the corners to about " + UnitSystem.aFoot() + " off the ground in each corner. Then you put a stack in between each one and one in the middle. With a loud grunt you lift your hewn timbers onto the two long edges and get to work chiseling notches. ");
 			//NPCs hear sounds
 			if (camp.companionsCount() > 0) outputText("The sound attracts some of your companions.");
 			outputText("\n\n");

@@ -1,4 +1,4 @@
-﻿//const GATS_ANGEL_GOOD_ENDED:int = 638;
+//const GATS_ANGEL_GOOD_ENDED:int = 638;
 //const GATS_ANGEL_DISABLED:int = 639;
 //const GATS_ANGEL_QUEST_BEGAN:int = 640;
 //const GATS_ANGEL_TIME_TO_FIND_KEY:int = 641;
@@ -119,7 +119,7 @@ package classes.Scenes.Seasonal {
 			if (player.tallness > 60) outputText("  You can't even stand straight up below the low-hanging ceiling, forced to carefully tread along on your knees over the slick, hard rock.");
 			outputText("  Squinting around the small, deep green grotto, a pedestal in the center calls out to you.  As you approach it, it becomes evident to you why things are so chilly in here; the outcrop is made up of clear ice - and within, the bodies of the many who had found this place before you.  At least that mystery is cleared up.  Atop the frozen prop lies a small, crystal... crank? Upon closer inspection, it actually resembles a - kitty titties, it's a windup key!  Despite the fact that you should've seen this one coming, you surmise that this is the item you've come searching for.");
 			outputText("\n\nYou reach over the bitter base to pluck your prize free, again careful that your moistened, exposed body refrain from making contact with the frigid obelisk.  There isn't an ounce of your being that wants to experience ripping any frozen flesh free.  As you grasp and pull free the slick, clear trinket you're taken by surprise as the brilliant glow surrounding you snuffs out, quickly leaving you in silent, black darkness.  Your hands grasp tightly onto your bounty, gently rubbing over its curves with your fingertips as you fruitlessly glance around in search of light.");
-			outputText("\n\nOne surprise leads to another when a warm glow breaks free from between your hands.  A swirling of green and red mist is concentrated within the frame of your prize, glowing brightly as they swim endlessly through the key's curves at a variety of velocities.  It's plain to see that this little treasure was the cause for the cave's unnatural brilliance.  You're a little ashamed to rob it of its power source... but not enough to give it a second thought as you crawl back down to the entrance only a few feet away.  The last thing you want is for your magical lantern to dull and leave your naked body blind in this hazard-filled hole.");
+			outputText("\n\nOne surprise leads to another when a warm glow breaks free from between your hands.  A swirling of green and red mist is concentrated within the frame of your prize, glowing brightly as they swim endlessly through the key's curves at a variety of velocities.  It's plain to see that this little treasure was the cause for the cave's unnatural brilliance.  You're a little ashamed to rob it of its power source... but not enough to give it a second thought as you crawl back down to the entrance only " + UnitSystem.aFewFeet() + " away.  The last thing you want is for your magical lantern to dull and leave your naked body blind in this hazard-filled hole.");
 			outputText("\n\nYou carefully re-enter the flooded tunnel, unsure how the supposed key will take to water.  It makes little impact as you submerge it, though the glowing light looks lovely on the pitch black tunnel.  The sight reinvigorates you slightly, though the warmer waters are probably more to blame.  Chalking up yet another simple retrieval asked of your person, you surface back outside, eager to get back into your [armor] and return to the high mountains.");
 			player.createKeyItem("North Star Key",0,0,0,0);
 			doNext(camp.returnToCampUseOneHour);
@@ -332,7 +332,7 @@ package classes.Scenes.Seasonal {
 		//If Leave
 		public function goodEndLeaveBeforeSexings():void {
 			clearOutput();
-			outputText("You get the message, feeling that letting them do their own thing might be for the best.  With a hasty pardon, you promptly turn around and walk a good twenty yards down the mountainside, idly playing in the snow while the two reunited lovebirds do their thing.");
+			outputText("You get the message, feeling that letting them do their own thing might be for the best.  With a hasty pardon, you promptly turn around and walk a good twenty " + UnitSystem.literalYards() + " down the mountainside, idly playing in the snow while the two reunited lovebirds do their thing.");
 			outputText("\n\nYou hear the sound of a gentle humming in the distance, and you figure that the two lovers might be quite done with their 'honeymoon'.");
 			//[Go to Conclusion]
 			menu();

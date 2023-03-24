@@ -679,7 +679,7 @@ package classes.Scenes.Combat
 				//5 breast jiggle
 				case 5:
 					outputText("You lean forward, letting the well-rounded curves of your " + player.allBreastsDescript() + " show to " + monsterTarget.a + monsterTarget.short + ".");
-					outputText("  You cup them in your palms and lewdly bounce them, putting on a show and giggling the entire time.  An inch at a time, your " + player.armorName + " starts to come down, dropping tantalizingly slowly until your " + player.nippleDescript(0) + "s pop free.");
+					outputText("  You cup them in your palms and lewdly bounce them, putting on a show and giggling the entire time.  " + capitalizeFirstLetter(UnitSystem.literalAnInch()) + " at a time, your " + player.armorName + " starts to come down, dropping tantalizingly slowly until your " + player.nippleDescript(0) + "s pop free.");
 					if (player.lust100 >= 50) {
 						if (player.hasFuckableNipples()) {
 							chance++;

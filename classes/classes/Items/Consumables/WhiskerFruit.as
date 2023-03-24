@@ -8,6 +8,7 @@ package classes.Items.Consumables
 	import classes.Items.ConsumableLib;
 	import classes.PerkLib;
 	import classes.lists.ColorLists;
+	import classes.UnitSystem;
 	
 	/**
 	 * Feline transformative item.
@@ -199,7 +200,7 @@ package classes.Items.Consumables
 						player.cocks[j].cockLength *= .66;
 					}
 					else if (player.cocks[j].cockLength > 6) {
-						outputText("\n\nYour " + player.cockDescript(j) + " tingles and withdraws further into your sheath.  If you had to guess, you'd say you've lost about two inches of total length and perhaps some girth.");
+						outputText("\n\nYour " + player.cockDescript(j) + " tingles and withdraws further into your sheath.  If you had to guess, you'd say you've lost about " + UnitSystem.displayInchesEstimateTextually(2) + " of total length and perhaps some girth.");
 						player.cocks[j].cockLength -= 2;
 					}
 					if (player.cocks[j].cockLength / 5 < player.cocks[j].cockThickness && player.cocks[j].cockThickness > 1.25) player.cocks[j].cockThickness = player.cocks[j].cockLength / 6;

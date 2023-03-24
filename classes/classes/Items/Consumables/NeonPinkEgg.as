@@ -9,6 +9,7 @@ package classes.Items.Consumables
 	import classes.PregnancyStore;
 	import classes.lists.BodyPartLists;
 	import classes.lists.Gender;
+	import classes.UnitSystem;
 
 	/**
 	 * @since March 30, 2018
@@ -292,16 +293,16 @@ package classes.Items.Consumables
 			//Shrink Balls!
 			if (player.balls > 0 && player.ballSize > 5 && rand(3) === 0 && changes < changeLimit) {
 				if (player.ballSize < 10) {
-					outputText("\n\nRelief washes through your groin as your [balls] lose about an inch of their diameter.");
+					outputText("\n\nRelief washes through your groin as your [balls] lose about " + UnitSystem.anInch() + " of their diameter.");
 					player.ballSize--;
 				}
 				else if (player.ballSize < 25) {
-					outputText("\n\nRelief washes through your groin as your [balls] lose a few inches of their diameter."
+					outputText("\n\nRelief washes through your groin as your [balls] lose a few " + UnitSystem.literalInches() + " of their diameter."
 					          +" Wow, it feels so much easier to move!");
 					player.ballSize -= (2 + rand(3));
 				}
 				else {
-					outputText("\n\nRelief washes through your groin as your [balls] lose at least six inches of diameter."
+					outputText("\n\nRelief washes through your groin as your [balls] lose at least " + UnitSystem.displayInchesEstimateTextually(6) + " of diameter."
 					          +" Wow, it feels SOOOO much easier to move!");
 					player.ballSize -= (6 + rand(3));
 				}

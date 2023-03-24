@@ -12,6 +12,7 @@ package classes.Items.Armors
 	import classes.Scenes.Areas.Mountain.Minotaur;
 	import classes.lists.BreastCup;
 	import classes.GlobalFlags.kGAMECLASS;
+	import classes.UnitSystem;
 
 	public final class LustyMaidensArmor extends Armor {
 		
@@ -63,7 +64,7 @@ package classes.Items.Armors
 			}
 			if (game.player.wetness() >= 3) outputText("  The moisture you normally drip seems to soak right into the gusset instead of running down your [legs] like normal, giving you a much more chaste appearance in spite of the lewd garments that even now seem to shape your femininity and [butt] into perfectly arousing shapes.");
 
-			outputText("\n\nLast is the chain skirt - perhaps the easiest part to put on.  It's barely three inches long, such that it exposes your [butt] almost entirely, and when you bend over, fully.  The bottom of your vaginal crease can be spied as well, and should you desire to show yourself off, a simple stretch or tug would put you completely on display.  You wiggle about, watching the reflective material ripple almost hypnotically, one hand still on your boobs, mauling at your own tits with passion.  THIS is how a chaste champion should dress - perfectly modest but full of erotic energy to overwhelm her enemies with!\n\n");
+			outputText("\n\nLast is the chain skirt - perhaps the easiest part to put on.  It's barely " + UnitSystem.displayInchesEstimateTextually(3) + " long, such that it exposes your [butt] almost entirely, and when you bend over, fully.  The bottom of your vaginal crease can be spied as well, and should you desire to show yourself off, a simple stretch or tug would put you completely on display.  You wiggle about, watching the reflective material ripple almost hypnotically, one hand still on your boobs, mauling at your own tits with passion.  THIS is how a chaste champion should dress - perfectly modest but full of erotic energy to overwhelm her enemies with!\n\n");
 			return true;
 		}
 		

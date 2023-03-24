@@ -2,6 +2,7 @@
 package classes.GlobalFlags 
 {
 	import classes.Achievement;
+	import classes.Achievements.*;
 	import classes.display.AchievementDb;
 	
 	public class kACHIEVEMENTS 
@@ -192,7 +193,7 @@ package classes.GlobalFlags
 		public static const GENERAL_FENCER:Achievement		    = new Achievement(162, null, "Fencer", "Complete rapier training from Raphael.", "", true); //Shadow until there's a way for non-females to train.
 		public static const GENERAL_FUCK_WITH_PORTALS:Achievement = new Achievement(164, null, "Now You're Fucking with Portals", "Engage in portal sex with Ceraph.", "", true);
 		public static const GENERAL_DICK_BANISHER:Achievement	= new Achievement(166, null, "Dick Banisher", "Remove cocks from at least three dedickable NPCs. Don't you think they'll miss having their own cocks?", "", true);
-		public static const GENERAL_UP_TO_11:Achievement		= new Achievement(168, null, "Up to Eleven", "Take your height up to 11 feet."); //This one goes to eleven.
+		public static const GENERAL_UP_TO_11:Achievement		= new UpToElevenAchievement(168); //This one goes to eleven.
 		public static const GENERAL_YOU_BASTARD:Achievement		= new Achievement(169, null, "You Bastard", "Perform something only someone who's evil would do. Like corrupting NPCs or removing dick from at least 7 dedickable NPCs.", "", true);
 		
 		public static const GENERAL_OFF_WITH_HER_HEAD:Achievement = new Achievement(172, null, "Off With Her Head!", "You've managed to behead Lethice and show her head to the demons!", "", true); //Awarded for beheading Lethice.

@@ -156,7 +156,7 @@ private function playDumbToTamanisDaughters():void {
 		return;
 	}
 	
-	outputText("The leader stamps her foot in a fit of rage.  It would be more imposing if she wasn't three feet tall... Her eyes lock onto your crotch and she says, \"<i>Last chance.   We're getting our ");
+	outputText("The leader stamps her foot in a fit of rage.  It would be more imposing if she wasn't " + UnitSystem.displayHeight2EstimateTextually(3) + " tall... Her eyes lock onto your crotch and she says, \"<i>Last chance.   We're getting our ");
 	if (flags[kFLAGS.TIMES_ENCOUNTED_TAMANIS_DAUGHTERS] == 1) outputText("first ");
 	outputText("litters one way or another!</i>\"\n\n");
 	
@@ -287,9 +287,9 @@ private function fuckYoDaughtersHomie():void {
 			if (daughters > 20) {
 				outputText("You lie there, feeling like an empty husk.  The crowd starts to disperse");
 				if (tamaniPresent) outputText(" while Tamani walks away");
-				outputText(", but a few of the little sluts don't look satisfied yet.  They crowd around.  One straddles your chest and begins dancing in an erotic display.  Somehow, your " + player.cockDescript(primary) + " still manages to twitch weakly in response.  Another goblin opens a satchel and pulls out some fruit and a canteen.  She delicately begins feeding you, clearing wanting you to regain your strength.  It seems they aren't finished with you yet.  You down what feels like gallons of water, and then find yourself presented with another flask of pink goo.  Shrugging, you gulp it down willingly, enjoying the sensation of your " + player.cockDescript(0) + " re-inflating to its maximum, turgid size.\n\n");
+				outputText(", but a few of the little sluts don't look satisfied yet.  They crowd around.  One straddles your chest and begins dancing in an erotic display.  Somehow, your " + player.cockDescript(primary) + " still manages to twitch weakly in response.  Another goblin opens a satchel and pulls out some fruit and a canteen.  She delicately begins feeding you, clearing wanting you to regain your strength.  It seems they aren't finished with you yet.  You down what feels like " + UnitSystem.literalGallons() + " of water, and then find yourself presented with another flask of pink goo.  Shrugging, you gulp it down willingly, enjoying the sensation of your " + player.cockDescript(0) + " re-inflating to its maximum, turgid size.\n\n");
 				
-				outputText("Sighing happily, you lie there as the remainder of your daughters take you, fucking you one after another.  The whole time you don't stop eating, converting all of the girl's rations into gallons of baby batter.  Your daughters don't seem to mind, and take turns posing sexily and feeding you while they take turns riding your pole until they're bloating and pregnant.  By the time the last one rises up on shaky legs, you're exhausted and your eyes are drifting closed.  ");
+				outputText("Sighing happily, you lie there as the remainder of your daughters take you, fucking you one after another.  The whole time you don't stop eating, converting all of the girl's rations into " + UnitSystem.literalGallons() + " of baby batter.  Your daughters don't seem to mind, and take turns posing sexily and feeding you while they take turns riding your pole until they're bloating and pregnant.  By the time the last one rises up on shaky legs, you're exhausted and your eyes are drifting closed.  ");
 				if (daughters < 50) outputText("Girlish giggles sooth you to sleep as the crowd slowly disperses.");
 				else outputText("Girlish giggles sooth you to sleep as your body caves in to its fatigue.  The last thing you hear is the biggest daughter suggesting, \"<i>We should keep daddy around all the time...</i>\"");
 			}
@@ -817,7 +817,7 @@ private function tamaniDaughtersCombatLossDrain():void {
 	
 	outputText("The goblins, upon seeing your change in demeanor, begin smiling to one another and congratulating each other on their hard work.  The girl at the console twists a few more levers and the warmth inside you seems to double as more drugs are forced into your captive frame.  You start " + player.mf("laughing","giggling") + ", the narcotics and pleasure overwhelming your thought processes, leaving you feeling like you're floating in heaven.  To anyone watching, you're panting and moaning in between the laughter, slobbering all over the milky goblin-tit in your mouth as your body begins squirting pre-cum into the cock-milker.\n\n");
 	
-	outputText("A few seconds away from your orgasm, the goblin running the machinery makes a few adjustments, and you feel the flow into your rectum growing stronger until you start to feel full and bloated.  Your body caves in to the pleasure, every inch of your skin tingling as you're forced to climax.  ");
+	outputText("A few seconds away from your orgasm, the goblin running the machinery makes a few adjustments, and you feel the flow into your rectum growing stronger until you start to feel full and bloated.  Your body caves in to the pleasure, every " + UnitSystem.literalInch() + " of your skin tingling as you're forced to climax.  ");
 	if (player.balls > 0) outputText("Straining and shaking, your " + player.ballsDescriptLight() + " clench against you, feeling tight as your body struggles to pump out the spooge they're producing.");
 	else outputText("Straining and shaking , your body struggles through the orgasm as it tries to deal with all the cum your prostate and glands are putting out.");
 	outputText("  The drugs and milking machines squish, suck, and whir noisily as you cum, flooding the tubes above the mechanical cunt-bulb with white.\n\n");
@@ -973,7 +973,7 @@ private function loseToDaughtersWithTamaniThere():void {
 	else outputText("reinforcing your image of yourself as an obedient husband");
 	outputText(", \"<i>It feels so good to service your wife's aching pussy and fill it full of cum.  Your cock knows it and wants it so much that any time you see your wife, Tamani, you'll get so hard and hot for her that you'll forget about anything but worshipping her cunt, won't you?</i>\"\n\n");
 			   
-	outputText("You start nodding while she talks, your eyes never leaving the glistening fuck-hole a few inches away.  Your wife is so smart, and though you stop hearing the words, you know everything she's telling you is the truth.  The smooth skin of her hands strokes you perfectly, only getting better as they become slick with pre-cum.  Tamani's voice rises, taking on a tone of command, and then you're squirting obediently for her – a good husband.\n\n");
+	outputText("You start nodding while she talks, your eyes never leaving the glistening fuck-hole a few " + UnitSystem.literalInches() + " away.  Your wife is so smart, and though you stop hearing the words, you know everything she's telling you is the truth.  The smooth skin of her hands strokes you perfectly, only getting better as they become slick with pre-cum.  Tamani's voice rises, taking on a tone of command, and then you're squirting obediently for her – a good husband.\n\n");
 	
 	if (player.cumQ() < 50) outputText("Cum splatters and drips down Tamani's hand, forming a tiny puddle on your chest.");
 	//(ALT)
@@ -983,7 +983,7 @@ private function loseToDaughtersWithTamaniThere():void {
 	//(ALT3)
 	else {
 		outputText("A massive wave of cum erupts from you, soaking Tamani from the shoulders to the knees in thick goop.  The next wave comes out with less force, pooling your belly before rolling off to puddle on the ground.   The puddle grows into a thick pool of the stuff as your orgasm drags on.");
-		if (player.cumQ() >= 2000) outputText("  Eventually it stops, but by then the pool is huge and nearly five inches deep.");
+		if (player.cumQ() >= 2000) outputText("  Eventually it stops, but by then the pool is huge and nearly " + UnitSystem.displayInchesEstimateTextually(5) + " deep.");
 	}
 	outputText("  Pride wells up in you when you realize what a good husband you've been.  Tamani pats you on the head, and whispers, \"<i>Good job lover</i>\" as the cobwebs slowly clear away.   You remember your wife pouring a lust draft down your throat and giving you the 69 of a lifetime, but now it's time to be a good husband and father and help your daughters out too.   The girls clamber forwards, giggling to each other excitedly as they remove what little garments they have.\n\n");
 	

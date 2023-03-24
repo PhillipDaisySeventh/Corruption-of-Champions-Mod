@@ -6,6 +6,7 @@ package classes.Items.Consumables
 	import classes.Items.Consumable;
 	import classes.Items.ConsumableLib;
 	import classes.PerkLib;
+	import classes.UnitSystem;
 	
 	/**
 	 * Tentacle transformative item.
@@ -101,7 +102,7 @@ package classes.Items.Consumables
 					rand(2) === 0 && changes < changeLimit) {
 				temp = 5 + rand(3);
 				player.hair.length += temp;
-				outputText("\n\nAs you laboriously chew the rubbery dried anemone, your head begins to feel heavier.  Using your newfound control, you snake one of your own tentacles forward; holding it out where you can see it, the first thing you notice is that it appears quite a bit longer.  <b>Your head-tentacles are now " + num2Text(temp) + " inches longer!</b>");
+				outputText("\n\nAs you laboriously chew the rubbery dried anemone, your head begins to feel heavier.  Using your newfound control, you snake one of your own tentacles forward; holding it out where you can see it, the first thing you notice is that it appears quite a bit longer.  <b>Your head-tentacles are now " + UnitSystem.displayInchesTextually(temp) + " longer!</b>");
 				//(add one level of hairlength)
 				changes++;
 			}

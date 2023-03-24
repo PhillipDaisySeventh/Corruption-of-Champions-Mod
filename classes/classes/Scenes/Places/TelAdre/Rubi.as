@@ -1462,7 +1462,7 @@ private function rubiAppearance():void {
 	clearOutput();
 	rubiSprite();
 	outputText("You look over your naked, demon-morph lover.");
-	outputText("\n\nRubi is about five feet tall, with a very lithe, feminine body.  [rubi Eir] skin is ");
+	outputText("\n\nRubi is about " + UnitSystem.displayHeight2EstimateTextually(5) + " tall, with a very lithe, feminine body.  [rubi Eir] skin is ");
 
 	if (flags[kFLAGS.RUBI_SKIN] == 0) outputText("pale, almost like porcelain");
 	else if (flags[kFLAGS.RUBI_SKIN] == 1) outputText("an exotic cherry red");
@@ -1507,7 +1507,7 @@ private function rubiAppearance():void {
 
 	outputText("\n\nBetween [rubi eir] legs is a ");
 	if (flags[kFLAGS.RUBI_COCK_SIZE] > 0) {
-		outputText(rubiCock() + ", which starts to perk up under your scrutiny. From experience, you know it can reach an impressive " + flags[kFLAGS.RUBI_COCK_SIZE] + " inches when erect.  ");
+		outputText(rubiCock() + ", which starts to perk up under your scrutiny. From experience, you know it can reach an impressive " + UnitSystem.displayInches(flags[kFLAGS.RUBI_COCK_SIZE]) + " when erect.  ");
 		outputText("Under [rubi eir] cock swings a set of ");
 		if (flags[kFLAGS.RUBI_BLU_BALLS] >= 4 && flags[kFLAGS.RUBI_BLU_BALLS] < 9) outputText("cum-swollen ");
 		else if (flags[kFLAGS.RUBI_BLU_BALLS] >= 9) outputText("engorged, blue-tinged ");
@@ -2278,7 +2278,7 @@ private function anallyTrainYourBitchBoySlutHowToBeAnalForDCL():void {
 		else outputText("asshole");
 		outputText(" clinging so tightly to the toy you imagine it must be like a vice.");
 
-		outputText("\n\nThe sweet little creature before you moans lightly as more of the dildo's length presses inside, until [rubi ey] finds [rubi ey]'s bottomed out, reaching the large flared bottom of the dildo.  Rubi's soft rosy lips curl upwards in a proud smile.  [rubi Eir] hand and tail take a renewed grip on the fake cock, and [rubi ey] lifts [rubi eir] hips a few inches before slamming them back down onto the dildo.");
+		outputText("\n\nThe sweet little creature before you moans lightly as more of the dildo's length presses inside, until [rubi ey] finds [rubi ey]'s bottomed out, reaching the large flared bottom of the dildo.  Rubi's soft rosy lips curl upwards in a proud smile.  [rubi Eir] hand and tail take a renewed grip on the fake cock, and [rubi ey] lifts [rubi eir] hips a few " + UnitSystem.literalInches() + " before slamming them back down onto the dildo.");
 
 		outputText("\n\nYou bite your lip and find [eachCock] straining against your [armor] and close your eyes for a moment, letting your imagination take over.  You imagine Rubi astride your naked body, your hands moving up [rubi eir] own.  The sensations of thrusting inside your lover overtake you like a breath of fresh air.  Rubi's hips gyrate atop you, and you can feel a powerful urge building inside of you...");
 
@@ -2342,7 +2342,7 @@ private function anallyTrainYourBitchBoySlutHowToBeAnalForDCL():void {
 		outputText("\n\nYou lick your lips hungrily.  \"<i>Oh?</i>\" Rubi asks, sauntering over to you.  The way [rubi eir] hips sway with each step makes your heart flutter ever so slightly.  \"<i>Would you,</i>\" [rubi ey] leans down, [rubi eir] half-closed eyes giving [rubi em] a sultry look.  [rubi Eir] lips brush past your own, the briefest of contact, but nonetheless electric in its sensations. \"<i>Like a,</i>\" [rubi ey] puckers [rubi eir] lips as they meet with yours in a wet, steamy kiss that leaves you breathless.  \"<i>Taste?</i>\" [rubi ey] concludes, breaking away from your mouth with a small, feminine gasp.");
 
 		outputText("\n\nYou're left breathless as Rubi pulls away, giggling.  \"<i>Sorry, babe, you just look so awestruck.  I couldn't help but tease you a little.</i>\"  You laugh, then wrap your arm around [rubi eir] waist, pulling [rubi em] onto your lap with ease.  Your lips lock once again and Rubi just melts in your embrace.  Meeting no resistance, your tongue invades the " + rubiMF("demon","demoness"));
-		outputText("'s mouth, exploring every inch and entwining with Rubi's own.");
+		outputText("'s mouth, exploring every " + UnitSystem.literalInch() + " and entwining with Rubi's own.");
 
 		outputText("\n\nWhen you break away, it's Rubi that's left breathless.  [rubi Eir] mouth gapes slightly, and [rubi eir] eyes remain closed for several seconds, until your light chuckling snaps [rubi em] out of it.  Rubi's cheeks ");
 		if (flags[kFLAGS.RUBI_SKIN] == 0) outputText("go bright red");
@@ -2352,7 +2352,7 @@ private function anallyTrainYourBitchBoySlutHowToBeAnalForDCL():void {
 
 		outputText("\n\nRubi sits upon your leg, awkwardly staring into your eyes for a minute, before [rubi ey] seems to realize why [rubi ey] invited you back here in the first place.  \"<i>Right, right!  I do believe it's time for a little more </i>training,\" [rubi ey] says, putting a heavy emphasis on the word.  Rubi shimmies off your leg and retrieves the black and pink chest of toys from under the bed.  Your girly little lover pops the top on the chest and rummages through, until [rubi eir] eyes light up.");
 
-		outputText("\n\nWhat [rubi ey] produces from the box causes your eyes to widen as well.  A twelve inch tall purple and black mottled horsecock.  But that's not the most disconcerting thing... it's the rounded area just above the base of the wobbling dildo.  Something that reminds you of a canine knot.");
+		outputText("\n\nWhat [rubi ey] produces from the box causes your eyes to widen as well.  A " + UnitSystem.displayInchWithHyphenTextually(12) + " tall purple and black mottled horsecock.  But that's not the most disconcerting thing... it's the rounded area just above the base of the wobbling dildo.  Something that reminds you of a canine knot.");
 
 		outputText("\n\nRubi beams as [rubi ey] holds it up.  \"<i>This bad boy will get the job done, that's for sure!  See, it's got this little pump here,</i>\" [rubi ey] says, holding up a small, hand-held air-pump connected to the dildo by a long tube.  \"<i>That inflates the knot by the base... which will certainly stretch me wide open for you, babe.</i>\"  Rubi giggles and places the dildo on the floor in front of you and hands you the pump with a wink.  \"<i>You take this, and just give it a pump whenever, OK?  Now let's get this tasty treat all warmed up.</i>\"");
 
@@ -2361,11 +2361,11 @@ private function anallyTrainYourBitchBoySlutHowToBeAnalForDCL():void {
 		outputText("\n\nThe smell of peaches and alcohol fill the room, reminding you of peach schnapps, or perhaps a peach margarita.  The scent alone is almost intoxicating.  Setting the bottle of lube aside, Rubi runs [rubi eir] well-manicured fingers along the horsecock's length, spreading the thick, fruity substance around until the entire length is coated in it.  [rubi Ey] pours another dollop of the peach margarita-scented lube into [rubi eir] palm, leans forward and spreads it across [rubi eir] ");
 		if (flags[kFLAGS.RUBI_NO_CUNT] == 1) outputText("asshole");
 		else outputText("pussy");
-		outputText(", making sure to cover every inch.  You're certain you even see a few fingers press inside [rubi eir] hole.");
+		outputText(", making sure to cover every " + UnitSystem.literalInch() + ".  You're certain you even see a few fingers press inside [rubi eir] hole.");
 
 		outputText("\n\nWith everything prepped and ready to go, Rubi stands up and hovers over the dildo.  One of [rubi eir] lube covered hands reaches forwards, pulling you close, while the other reaches beneath [rubi em], making sure the dildo is positioned correctly.  [rubi Eir] lips meet yours again just as [rubi ey] lowers [rubi em]self down onto the rubbery horsecock.  What follows is the most passionate moan you've ever heard from Rubi, directed into your mouth.");
 
-		outputText("\n\n\"<i>Mmm, oh gods,</i>\" [rubi ey] exclaims, your lips parting from one another.  \"<i>It's so </i>big!\"  Rubi sinks down another couple inches, [rubi eir] face somewhere between torture and ecstasy.  [rubi Ey] backs away from you, enough so that you can see the huge, slick rod currently impaling your lover.");
+		outputText("\n\n\"<i>Mmm, oh gods,</i>\" [rubi ey] exclaims, your lips parting from one another.  \"<i>It's so </i>big!\"  Rubi sinks down another couple " + UnitSystem.literalInches() + ", [rubi eir] face somewhere between torture and ecstasy.  [rubi Ey] backs away from you, enough so that you can see the huge, slick rod currently impaling your lover.");
 
 		if (flags[kFLAGS.RUBI_COCK_SIZE] > 0) outputText("\n\nRubi's [rubi cock] twitches, rising from its state of semi-hardness.  Within a minute it's standing straight up, creating a noticeable tent in the pale blue, sheer fabric covering your lover's body.  ");
 		else outputText("\n\n");
@@ -2476,7 +2476,7 @@ private function getFuckedByRubi():void {
 	else outputText("<b>ERROR: Rubi Cock Type set invalid. Currently: " + this.rubiGetCockType() + "</b>  ")
 	outputText(" emerges from the foreskin surrounding it as [rubi eir] cock strains, aching for something, anything to fill.");
 
-	outputText("\n\nWith a look into your eyes, confirming [rubi eir] desires, [rubi ey] gives [rubi eir] cock what it wants.  One swift motion is all it takes as Rubi sinks [rubi eir] dick inside you several inches.  The feeling of penetration makes you moan suddenly, louder than you wanted to.  Rubi smiles, pulls out a few inches, and pushes back inside, just a little deeper.  This time it's your demonic lover's turn to moan as you clamp your [vagOrAss] around [rubi eir] invading member, tightening around [rubi em] like a vice.");
+	outputText("\n\nWith a look into your eyes, confirming [rubi eir] desires, [rubi ey] gives [rubi eir] cock what it wants.  One swift motion is all it takes as Rubi sinks [rubi eir] dick inside you several " + UnitSystem.literalInches() + ".  The feeling of penetration makes you moan suddenly, louder than you wanted to.  Rubi smiles, pulls out a few " + UnitSystem.literalInches() + ", and pushes back inside, just a little deeper.  This time it's your demonic lover's turn to moan as you clamp your [vagOrAss] around [rubi eir] invading member, tightening around [rubi em] like a vice.");
 	if (!player.hasVagina()) player.buttChange(flags[kFLAGS.RUBI_COCK_SIZE] * flags[kFLAGS.RUBI_COCK_SIZE]/6,true,true,false);
 	else player.cuntChange(flags[kFLAGS.RUBI_COCK_SIZE] * flags[kFLAGS.RUBI_COCK_SIZE]/6,true,true,false);
 
@@ -2557,7 +2557,7 @@ private function rubiHotdogging():void {
 
 	outputText("\n\nRubi responds with a giggle and a nod of [rubi eir] head.  \"<i>Oh yes, I'm positively </i>aching<i> for you, babe,</i>\" [rubi ey] says, slipping off your lap and onto [rubi eir] knees at your feet.");
 
-	outputText("\n\nYou grunt in approval at this show of submission and lean back on the couch, stretching your arms wide along the back.  You tell the little minx at your feet to get you ready first, before [rubi ey] gets [rubi eir] needs met.  [rubi Eir] ruby red lips morph into a grin, and [rubi ey] wastes no time in freeing your [cock biggest] from its trappings.  Rubi smacks [rubi eir] lips and descends upon your half-hard cock, planting a kiss on its tip, and down each and every inch.");
+	outputText("\n\nYou grunt in approval at this show of submission and lean back on the couch, stretching your arms wide along the back.  You tell the little minx at your feet to get you ready first, before [rubi ey] gets [rubi eir] needs met.  [rubi Eir] ruby red lips morph into a grin, and [rubi ey] wastes no time in freeing your [cock biggest] from its trappings.  Rubi smacks [rubi eir] lips and descends upon your half-hard cock, planting a kiss on its tip, and down each and every " + UnitSystem.literalInch() + ".");
 
 	outputText("\n\nYou sigh happily and sink deeper into the soft cushions of the couch, exulting as the fiery slut betwixt your legs goes to work.  [rubi Eir] lips pucker around the outside of your shaft, leaving a hazy reddish smudge of lipstick behind.  It isn't long until more such blotches join it, creating a \"crown\" of lipstick marks wreathing your [cockHead biggest].  Your [cock biggest] throbs almost painfully, oozing precum from its cumslit, which Rubi eagerly laps at, letting it roll over [rubi eir] tongue and then down [rubi eir] throat.");
 
@@ -2662,7 +2662,7 @@ private function popButtjobs():void {
 	else if (flags[kFLAGS.RUBI_BLU_BALLS] <= 5) outputText(" which is quickly followed by another, more powerful stream of cum, which splashes against [rubi eir] stomach, coating [rubi eir] [rubi breasts] in semen");
 	else if (flags[kFLAGS.RUBI_BLU_BALLS] <= 7) outputText(" which is quickly followed by another, more powerful stream of cum, and a third, and a fourth.  Before you know it, Rubi's entire torso, including [rubi eir] [rubi breasts] are practically glazed with cum");
 	else if (flags[kFLAGS.RUBI_BLU_BALLS] <= 9) outputText(" which is followed up by several more, each seemingly more powerful than the one previous.  Rubi's body twitches and shudders with every jet, until [rubi eir] entire torso, and the couch, is covered in the musky jizz");
-	else outputText(" which is followed by a dozen more, each one thicker and more powerful than the last.  Rubi's cock twitches uncontrollably, just like [rubi eir] body, as it coats the entire couch, [rubi eir] entire upper body, and even some of the wall five feet away in the musky stuff");
+	else outputText(" which is followed by a dozen more, each one thicker and more powerful than the last.  Rubi's cock twitches uncontrollably, just like [rubi eir] body, as it coats the entire couch, [rubi eir] entire upper body, and even some of the wall " + UnitSystem.displayFeetEstimateTextually(5) + " away in the musky stuff");
 	outputText(".");
 
 	outputText("\n\nYou feel your orgasm coming on, fueled by Rubi's own intense-looking one.  [rubi Eir] body lays face down on the couch, ass high into the air as you rub your cock between [rubi eir] supple ass.  Small aftershocks of bliss ripple through [rubi eir] body as you grip one buttcheek hard and thrust upwards as much as you can as a dam suddenly breaks within you.  Your [balls] ");
@@ -2726,13 +2726,13 @@ private function giveRubiATFItem(itype:ItemType):void {
 		}
 		//(If Penis size decreases)
 		if ((flags[kFLAGS.RUBI_COCK_SIZE] > 4) && (!flags[kFLAGS.HYPER_HAPPY])) {
-			outputText("\n\nRubi's [rubi cock] swells up suddenly, growing painfully hard.  [rubi Ey] grasps it and moans suddenly as it begins to dwindle in size, shrinking down by at least an inch, leaving [rubi em] with a ");
+			outputText("\n\nRubi's [rubi cock] swells up suddenly, growing painfully hard.  [rubi Ey] grasps it and moans suddenly as it begins to dwindle in size, shrinking down by at least " + UnitSystem.anInch() + ", leaving [rubi em] with a ");
 			flags[kFLAGS.RUBI_COCK_SIZE]--;
-			outputText(Math.round(flags[kFLAGS.RUBI_COCK_SIZE]*10)/10 + "-inch penis.");
+			outputText(UnitSystem.displayInchWithHyphen(flags[kFLAGS.RUBI_COCK_SIZE], 1) + " penis.");
 		}
 		//(If Penis is removed)
 		else if (flags[kFLAGS.RUBI_COCK_SIZE] <= 4 && flags[kFLAGS.RUBI_COCK_SIZE] > 0) {
-			outputText("\n\nRubi's cock swells up slightly, its inch-long hardness reminding you of a large clitoris at this point.  However, it doesn't remain for long.  The inch-long dick begins to dwindle away, retracting into the demon-morph's groin until it shrivels into nothingness.  Rubi's hand dives between [rubi eir] thighs, grasping for [rubi eir] lost manhood, but to no avail.");
+			outputText("\n\nRubi's cock swells up slightly, its " + UnitSystem.inchCompound() + "-long hardness reminding you of a large clitoris at this point.  However, it doesn't remain for long.  The " + UnitSystem.inchCompound() + "-long dick begins to dwindle away, retracting into the demon-morph's groin until it shrivels into nothingness.  Rubi's hand dives between [rubi eir] thighs, grasping for [rubi eir] lost manhood, but to no avail.");
 			flags[kFLAGS.RUBI_COCK_SIZE] = 0;
 			//if Penis is removed AND no vagina exists; add
 			if (flags[kFLAGS.RUBI_NO_CUNT] == 1) {
@@ -2755,7 +2755,7 @@ private function giveRubiATFItem(itype:ItemType):void {
 		}
 		//(If Rubi gets horns)
 		if (rand(3) == 0 && flags[kFLAGS.RUBI_HORNTYPE] == 0 && itype == consumables.SUCMILK) {
-			outputText("\n\nRubi's hands suddenly dart up, clutching [rubi eir] head as though [rubi ey] has a massive headache.  [rubi Ey] feels around blindly, trying to locate the source of the pain, and then you see it.  Two small bulges appear on [rubi eir] forehead, just at the hairline.  They grow larger and larger until the skin splits cleanly open revealing shiny black bone.  Horns.  They grow up and backwards, forming light ridges.  They don't quite grow completely past [rubi eir] head, however, before the growth stops.  Rubi calms and stands.  [rubi Eir] hands roam over every inch of [rubi eir] new addition as glances in the mirror, marveling at [rubi eir] demonic appearance.");
+			outputText("\n\nRubi's hands suddenly dart up, clutching [rubi eir] head as though [rubi ey] has a massive headache.  [rubi Ey] feels around blindly, trying to locate the source of the pain, and then you see it.  Two small bulges appear on [rubi eir] forehead, just at the hairline.  They grow larger and larger until the skin splits cleanly open revealing shiny black bone.  Horns.  They grow up and backwards, forming light ridges.  They don't quite grow completely past [rubi eir] head, however, before the growth stops.  Rubi calms and stands.  [rubi Eir] hands roam over every " + UnitSystem.literalInch() + " of [rubi eir] new addition as glances in the mirror, marveling at [rubi eir] demonic appearance.");
 			flags[kFLAGS.RUBI_HORNTYPE] = 1;
 		}
 		//(If Rubi gets red skin)
@@ -2794,16 +2794,16 @@ private function giveRubiATFItem(itype:ItemType):void {
 		if (flags[kFLAGS.RUBI_COCK_SIZE] > 0 && ((flags[kFLAGS.RUBI_COCK_SIZE] < 12 || (this.rubiGetCockType() == CockTypesEnum.HORSE && flags[kFLAGS.RUBI_COCK_SIZE] < 20)) ||
 										(flags[kFLAGS.RUBI_COCK_SIZE] < 30 && flags[kFLAGS.HYPER_HAPPY]) ) )
 		{
-			outputText("\n\nRubi's [rubi cock] swells up suddenly, growing painfully hard.  [rubi Ey] grasps it and moans suddenly as it begins to pulse, growing larger with every throb, increasing in size by at least an inch, leaving [rubi em] with a ");
+			outputText("\n\nRubi's [rubi cock] swells up suddenly, growing painfully hard.  [rubi Ey] grasps it and moans suddenly as it begins to pulse, growing larger with every throb, increasing in size by at least " + UnitSystem.anInch() + ", leaving [rubi em] with a ");
 			flags[kFLAGS.RUBI_COCK_SIZE]++;
-			outputText(Math.round(flags[kFLAGS.RUBI_COCK_SIZE]*10)/10 + "-inch penis.");
+			outputText(UnitSystem.displayInchWithHyphen(flags[kFLAGS.RUBI_COCK_SIZE], 1) + " penis.");
 		}
 		//(If Rubi has no penis; instead)
 		else if (flags[kFLAGS.RUBI_COCK_SIZE] == 0){
 			outputText("\n\nRubi gasps and [rubi eir] hands dart between [rubi eir] legs, grasping frantically for something.  Between [rubi eir] fingers you spot it, a fleshy ");
 			if (flags[kFLAGS.RUBI_SKIN] == 1 || flags[kFLAGS.RUBI_SKIN] == 3) outputText("red");
 			else outputText("pink");
-			outputText(" protrusion... a brand new cock!  Rubi shudders, [rubi eir] delicate little fingers wrapped around the new, five-inch cock.");
+			outputText(" protrusion... a brand new cock!  Rubi shudders, [rubi eir] delicate little fingers wrapped around the new, " + UnitSystem.displayInchWithHyphenTextually(5) + " cock.");
 			flags[kFLAGS.RUBI_COCK_SIZE] = 5;
 			flags[kFLAGS.RUBI_COCK_TYPE] = CockTypesEnum.HUMAN.Index
 		}
@@ -2826,7 +2826,7 @@ private function giveRubiATFItem(itype:ItemType):void {
 		}
 		//(If Rubi gets horns)
 		if (rand(3) == 0 && flags[kFLAGS.RUBI_HORNTYPE] == 0 && itype == consumables.INCUBID) {
-			outputText("\n\nRubi's hands suddenly dart up, clutching [rubi eir] head as though [rubi ey] has a massive headache.  [rubi Ey] feels around blindly, trying to locate the source of the pain, and then you see it.  Two small bulges appear on [rubi eir] forehead, just at the hairline.  They grow larger and larger until the skin splits cleanly open revealing shiny black bone.  Horns.  They grow up and backwards, forming light ridges.  They don't quite grow completely past [rubi eir] head, however, before the growth stops.  Rubi calms and stands.  [rubi Eir] hands roam over every inch of [rubi eir] new addition as glances in the mirror, marveling at [rubi eir] demonic appearance.");
+			outputText("\n\nRubi's hands suddenly dart up, clutching [rubi eir] head as though [rubi ey] has a massive headache.  [rubi Ey] feels around blindly, trying to locate the source of the pain, and then you see it.  Two small bulges appear on [rubi eir] forehead, just at the hairline.  They grow larger and larger until the skin splits cleanly open revealing shiny black bone.  Horns.  They grow up and backwards, forming light ridges.  They don't quite grow completely past [rubi eir] head, however, before the growth stops.  Rubi calms and stands.  [rubi Eir] hands roam over every " + UnitSystem.literalInch() + " of [rubi eir] new addition as glances in the mirror, marveling at [rubi eir] demonic appearance.");
 			flags[kFLAGS.RUBI_HORNTYPE] = 1;
 		}
 	}
@@ -2918,18 +2918,18 @@ private function giveRubiATFItem(itype:ItemType):void {
 			outputText("\n\nRubi gasps and [rubi eir] hands dart between [rubi eir] legs, grasping frantically for something.  Between [rubi eir] fingers you spot it, a fleshy ");
 			if (flags[kFLAGS.RUBI_SKIN] == 1 || flags[kFLAGS.RUBI_SKIN] == 3) outputText("red");
 			else outputText("pink");
-			outputText(" protrusion... a brand new cock!  Rubi shudders, [rubi eir] delicate little fingers wrapped around the new, five-inch cock.");
+			outputText(" protrusion... a brand new cock!  Rubi shudders, [rubi eir] delicate little fingers wrapped around the new, " + UnitSystem.displayInchWithHyphenTextually(5) + " cock.");
 			flags[kFLAGS.RUBI_COCK_SIZE] = 5;
 		}
 		//(If Rubi gets Horsecock)
 		if (this.rubiGetCockType() != CockTypesEnum.HORSE) {
 			outputText("\n\nFor a few moments nothing happens.  Then Rubi suddenly doubles over, clutching [rubi eir] stomach in pain.  With one hand clamped firmly around [rubi eir] midsection, [rubi eir] other hand reaches down to grasp at [rubi eir] [rubi cock].  The flesh on [rubi eir] cock ripples, veins suddenly bulging.  A low moan wrestles its way out of Rubi's throat as [rubi eir] cock morphs, the pink head flattening all of a sudden and flaring outwards.");
 			flags[kFLAGS.RUBI_COCK_TYPE] = CockTypesEnum.HORSE.Index;
-			outputText("\n\nRubi's dick thickens in [rubi eir] hand, gaining at least an inch of width as it continues to change.  A thick, fleshy ring bulges out near the base of the cock... the beginnings of a sheathe, no doubt.  As you watch on in awe, the flesh at the base of Rubi's cock begins to darken, slowly become a dusky grey-black, which also overtakes [rubi eir] ");
+			outputText("\n\nRubi's dick thickens in [rubi eir] hand, gaining at least " + UnitSystem.anInch() + " of width as it continues to change.  A thick, fleshy ring bulges out near the base of the cock... the beginnings of a sheathe, no doubt.  As you watch on in awe, the flesh at the base of Rubi's cock begins to darken, slowly become a dusky grey-black, which also overtakes [rubi eir] ");
 			if (flags[kFLAGS.RUBI_BLU_BALLS] >= 4 && flags[kFLAGS.RUBI_BLU_BALLS] < 9) outputText("swollen ");
 			else if (flags[kFLAGS.RUBI_BLU_BALLS] >= 9) outputText("engorged ");
 			if (flags[kFLAGS.RUBI_BALLS_TYPE] == 1) outputText("tight, trappy ");
-			outputText("ballsack.  The colors move forward, seemingly stopping at the thick ring that marks the edge of [rubi eir] sheathe... except patches of  dusky gray appear along the next few inches of [rubi eir] length, creating a nice contrast and pattern with the bright pink of [rubi eir] cockflesh.");
+			outputText("ballsack.  The colors move forward, seemingly stopping at the thick ring that marks the edge of [rubi eir] sheathe... except patches of  dusky gray appear along the next few " + UnitSystem.literalInches() + " of [rubi eir] length, creating a nice contrast and pattern with the bright pink of [rubi eir] cockflesh.");
 
 			outputText("\n\nSighing suddenly, Rubi relinquishes [rubi eir] stomach and cock, recovering for a moment before looking down in wonderment at [rubi eir] new horsecock.  \"<i>Oh wow,</i>\" [rubi ey] says, running [rubi eir] fingers along the spongy new ridge at its tip.  \"<i>Ah, this is going to take some getting used to...</i>\"");
 			flags[kFLAGS.RUBI_COCK_SIZE] += 3 + rand(5);
@@ -2972,10 +2972,10 @@ private function giveRubiATFItem(itype:ItemType):void {
 		}
 		//(If Penis size decreases)
 		else if ((flags[kFLAGS.RUBI_COCK_SIZE] > 3) && (!flags[kFLAGS.HYPER_HAPPY])) {
-			outputText("\n\nRubi's [rubi cock] swells up suddenly, growing painfully hard.  [rubi Ey] grasps it and moans suddenly as it begins to dwindle in size, shrinking down by at least an inch, leaving [rubi em] with a ");
+			outputText("\n\nRubi's [rubi cock] swells up suddenly, growing painfully hard.  [rubi Ey] grasps it and moans suddenly as it begins to dwindle in size, shrinking down by at least " + UnitSystem.anInch() + ", leaving [rubi em] with a ");
 			flags[kFLAGS.RUBI_COCK_SIZE]--;
 			if (flags[kFLAGS.RUBI_COCK_SIZE] < 3) flags[kFLAGS.RUBI_COCK_SIZE] = 3;
-			outputText(Math.round(flags[kFLAGS.RUBI_COCK_SIZE]*10)/10 + "-inch penis.");
+			outputText(UnitSystem.displayInchWithHyphen(flags[kFLAGS.RUBI_COCK_SIZE], 1) + " penis.");
 		}
 		//(Trappy ballsack)
 		else if (flags[kFLAGS.RUBI_BALLS_TYPE] == 0) {
@@ -3136,7 +3136,7 @@ private function rubiPenisGroPlus():void {
 
 	//(If Penis increase)
 	if (flags[kFLAGS.RUBI_COCK_SIZE] < 12 || (this.rubiGetCockType() == CockTypesEnum.HORSE && flags[kFLAGS.RUBI_COCK_SIZE] < 20) || (flags[kFLAGS.RUBI_COCK_SIZE] < 30 && flags[kFLAGS.HYPER_HAPPY])) {
-		outputText("\n\nRubi grips [rubi eir] cock as it suddenly hardens, visibly throbbing in [rubi eir] grasp.  It surges, growing larger, gaining about two inches right before your eyes.");
+		outputText("\n\nRubi grips [rubi eir] cock as it suddenly hardens, visibly throbbing in [rubi eir] grasp.  It surges, growing larger, gaining about " + UnitSystem.displayInchesEstimateTextually(2) + " right before your eyes.");
 		flags[kFLAGS.RUBI_COCK_SIZE] += 2 + rand(2);
 
 		if (flags[kFLAGS.HYPER_HAPPY])
@@ -3189,7 +3189,7 @@ private function rubiPenisReducto():void {
 	rubiSprite();
 	outputText("You hand over the jar of paste.  Rubi looks it over and, after giving it a sniff, uses two fingers to scoop up some of the pale substance, smearing it over [rubi eir] penis.  Before long, the jar is empty and [rubi eir] [rubi cock] is covered in the stuff.");
 	if (flags[kFLAGS.RUBI_COCK_SIZE] >= 3) {
-		outputText("\n\nIt seems to take a moment for the effects to kick in, and soon you see Rubi shiver while [rubi eir] [rubi cock] stiffens and then shrinks rapidly in size.  When the process is done, you're certain [rubi ey]'s lost an entire inch, and the paste has been completely absorbed in the process.");
+		outputText("\n\nIt seems to take a moment for the effects to kick in, and soon you see Rubi shiver while [rubi eir] [rubi cock] stiffens and then shrinks rapidly in size.  When the process is done, you're certain [rubi ey]'s lost an entire " + UnitSystem.inch() + ", and the paste has been completely absorbed in the process.");
 	}
 	else {
 		outputText("\n\nIt doesn't seem to have any effect.");
@@ -3673,7 +3673,7 @@ public function hypnoBimboficationForRubiSloots():void
 	outputText("\n\nYou slide closer and ");
 	if (player.tallness >= 72) outputText("bend down");
 	else outputText("lean forward");
-	outputText(" so that his cute face is just inches away from your own. The entire time, you continue your entrancing sway, drawing him deeper and deeper as his eyes lazily follow your body. Rubi's slack lips allow a strand of drool to dangle down to his chin, and you imagine his very consciousness is draining out of him in much the same way, leaking down towards his [rubi cock].");
+	outputText(" so that his cute face is just " + UnitSystem.literalInches() + " away from your own. The entire time, you continue your entrancing sway, drawing him deeper and deeper as his eyes lazily follow your body. Rubi's slack lips allow a strand of drool to dangle down to his chin, and you imagine his very consciousness is draining out of him in much the same way, leaking down towards his [rubi cock].");
 	outputText("\n\nYou cannot afford to spare a glance in that hand, yet your roving hand finds him stiffening soon enough. As a matter of fact, he's stiffening in record time. It only takes a few seconds for him to reach his full size and start pulsing in your hand. Moisture trickles through his clothing almost immediately. It's slick and sticky: pre-cum.");
 	outputText("\n\nAs you gaze deeply into the increasingly pliant boy's empty eyes, you realize that whatever dark power you've managed to harness has enhanced the hypnosis you started to an almost telepathic degree. Rubi is hopelessly, completely spellbound, and he's so deep already that he's literally letting his conscious thoughts drip out his dick as pre-cum. Just how far does your power go? There's only one way to test.");
 	outputText("\n\n\"<i>Rubi,</i>\" you say to get his attention, \"<i>You can feel the power of my eyes, can't you? They bind you, they control you, and they guide you into this blissful, thoughtless, dripping state.</i>\"");

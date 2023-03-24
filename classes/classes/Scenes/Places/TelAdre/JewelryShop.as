@@ -1,6 +1,7 @@
 package classes.Scenes.Places.TelAdre {
 import classes.ItemType;
 import classes.Scenes.Inventory;
+import classes.UnitSystem;
 
 /**
  * Updated strings
@@ -18,7 +19,7 @@ public class JewelryShop extends Shop {
 					"mostly shrouded by a hole-riddled awning, though small rays of desert sun make use of the tears to " +
 					"playfully dazzle a collection of tarnished treasures. Metal-laced glassware, necklaces, rings, baubles, " +
 					"clasps and more are haphazardly hung from the latticed walls.\n\n" +
-					"In the uneven glow of glinting glassware sits a short figure, no more than 4 feet tall. His appearance is " +
+					"In the uneven glow of glinting glassware sits a short figure, no more than " + UnitSystem.displayHeight2Estimate(4) + " tall. His appearance is " +
 					"shrouded by the hood and wraps of an all-concealing shawl, the opaque fabric patterned with distant " +
 					"dunes and trimmed in a glimmer of gold-threaded tassles.\n\n" +
 					"Your staring is interrupted by a passerby eclipsing your vision, and before you can even consider the " +
@@ -133,7 +134,7 @@ public class JewelryShop extends Shop {
 				"itss counterpart, a bride to be. Before the ceremony, the lecherouss and jealouss maiden asssailed the " +
 				"groom and sstole hiss purity. The bride to be, obsesssed with purity, sssacrificed hersself for a cursse, " +
 				"turning both of their sssoulss to sstone. And so, this one here is the bride.</i>\" His hand moves a few " +
-				"inches and taps the glass again, a contrastingly smooth stone of pearly white just beside it. " +
+				UnitSystem.literalInches() + " and taps the glass again, a contrastingly smooth stone of pearly white just beside it. " +
 				"\"<i>Keheheheh... I wouldn't sssell a sssoul for cheap, would you? Let's start at 3,000.</i>\"");
 		menu();
 		var button:int = 0;

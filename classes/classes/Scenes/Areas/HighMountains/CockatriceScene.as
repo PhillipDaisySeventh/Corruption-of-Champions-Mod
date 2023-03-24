@@ -39,7 +39,7 @@ package classes.Scenes.Areas.HighMountains {
 				          +"With a small sigh of relief you work your way across the ridge you had been clinging to, eventually managing to come across a small plateau, "
 				          +"a godsend in this uneven terrain which allows you to observe the creature in relative safety.\n\n");
 				outputText(images.showImage("monster-cockatrice"));
-				outputText("The creature before you is easily 6 feet tall, covered in a layer of vibrant midnight blue feathers with turquoise accents. "
+				outputText("The creature before you is easily " + UnitSystem.displayHeight2Estimate(6) + " tall, covered in a layer of vibrant midnight blue feathers with turquoise accents. "
 				          +"It appears to be relatively avian in appearance, more so than the harpies you’ve seen flying around. "
 				          +"It has a beaked face with large feathered ears, reminiscent of those of an owl. "
 				          +"A ruff of thicker and fluffier turquoise plumage sits puffed out around its neck, currently the target of its preening. "
@@ -49,7 +49,7 @@ package classes.Scenes.Areas.HighMountains {
 				          +"The visible portion of creature's hands and forearms are a contrast to its bright avian form, being oddly reptilian, coated in black scales and tipped with sharp claws.\n\n");
 				outputText("As the creature shifts its stance, evidently done with its grooming, you see that it's definitely some kind of avian/lizard hybrid. "
 				          +"It’s long thick tail swings above its tight rear, gradually tapering down into a point. "
-				          +"It has to be close to half its body length, with a mane of feathers stopping in a v-shape about 4 inches down its length as it transitions from its feathered body into midnight blue scales.\n\n");
+				          +"It has to be close to half its body length, with a mane of feathers stopping in a v-shape about " + UnitSystem.displayInchesEstimate(4) + " down its length as it transitions from its feathered body into midnight blue scales.\n\n");
 				outputText("From its slightly wide hips, powerful feathered haunches transition in reptilian legs at the knee, black scales coating its digitigrade legs. "
 				          +"Its three long toes terminate in wicked looking talons, while a smaller emerges at the heel. "
 				          +"You don’t want to get on the wrong side of those. You realise as you appraise its vaguely familiar features, that this must be some kind of harpy basilisk hybrid, a Cockatrice! "
@@ -136,18 +136,18 @@ package classes.Scenes.Areas.HighMountains {
 			          +"You slowly make your way to your knees, letting him get a good look at your body as you do so. "
 			          +"His breath is coming out in short pants now, devouring you with his raking gaze "
 			          +"[if (isLactating) and licking his lips as he gets an eyeful of your milky nipples]. "
-			          +"Slipping your hand around his curved reptilian length you align him with your hungry cunt, the tip now only centimetres away from your heated flesh. "
+			          +"Slipping your hand around his curved reptilian length you align him with your hungry cunt, the tip now only " + UnitSystem.literalInches() + " away from your heated flesh. "
 			          +"His low groan and feeble attempt to buck his hips show how much he wants this too, but with a slight squeeze you easily halt him.\n\n");
 			outputText("\"P…please…\" he hisses, a somewhat melodic nature to his husky voice. "
 			          +"If it weren’t for how much you wanted this too, you’d happily continue to tease him so you could have his hypnotic melody caress your senses further. "
-			          +"With a small nod you push yourself down on him, smirking as he watches inch after inch disappear into you. "
+			          +"With a small nod you push yourself down on him, smirking as he watches " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " disappear into you. "
 			          +"He whimpers and shudders under you, squirts of pre coating your insides as his tail thrashes.\n\n");
 			outputText(images.showImage("cockatrice-ridehim-vag"));
 			outputText("The combination of his tapered length and it’s bumpy texture causes you to sigh as you reach the bottom of his length, your hot cunt pressing against his cool scales. "
 			          +"With a slight squawk, pupils dilated into large circles, he pulls you forward into a heavy open mouthed kiss. "
 			          +"Your [tongue] and his slide across one another, his head tilted to the side to give you better access to his beak as his hand "
 			          +"[if (hairLength > 0)threads into your [hair]|cups the back of your head].\n\n");
-			outputText("You begin to rise up his length, the bumps rubbing firmly against your clit with each inch that leaves you. "
+			outputText("You begin to rise up his length, the bumps rubbing firmly against your clit with each " + UnitSystem.literalInch() + " that leaves you. "
 			          +"As you reach the tip you slam your hips back down, relishing the feeling of his length rapidly stretching you as the tip pokes your womb. "
 			          +"You keep this pace as you break the kiss, the regular ascent and rapid descent making lewd ");
 			if (player.vaginas[0].vaginalWetness >= Vagina.WETNESS_WET) outputText("squelching");
@@ -285,7 +285,7 @@ package classes.Scenes.Areas.HighMountains {
 			          +" heat that now engulfs you along with the panting whine you draw out from his chest. ");
 			outputText(images.showImage("cockatrice-win-buttfuck"));
 			if (player.longestCockLength() <= 12) {
-				outputText("You slowly feed more of your [cock] into him, reveling in the hot, twitching walls that cling to you, trying to wring you dry with each inch you see disappear. ");
+				outputText("You slowly feed more of your [cock] into him, reveling in the hot, twitching walls that cling to you, trying to wring you dry with each " + UnitSystem.literalInch() + " you see disappear. ");
 				if (player.balls > 0) outputText("Your [balls] " + (player.balls == 1 ? "presses":"press") + " firmly against his fluffy cheeks, caressed by his downy plumage in a delightful way.");
 			}
 			else outputText(" You slowly try to feed more of your [cock] into his tight cavity, but soon the crushing tightness becomes too much to handle. You sigh a little as you withdraw to a more comfortable position, disappointed you’re too big to give him a proper reaming. ");
@@ -588,7 +588,7 @@ package classes.Scenes.Areas.HighMountains {
 					          +"As his tongue retreats his hands slide up your sides, gripping your [hips] as he then gives your crack a long, hard lick. "
 					          +"As his tongue flicks against your cheeks, you grind your [chest] across the rock, a painful pleasure delighting your senses.");
 					outputText("His next rough lick is in a circular motion, punctuated by affectionate nips to your [butt] before jabbing his tongue back inside you. "
-					          +"You know that at this point he’s slipped at least an inch of tongue into you, and he doesn't seem inclined to stop until he’s tasted as much of you as he can. "
+					          +"You know that at this point he’s slipped at least " + UnitSystem.anInch() + " of tongue into you, and he doesn't seem inclined to stop until he’s tasted as much of you as he can. "
 					          +"As he works his tongue deeper you hear him whimper. With a smirk you turn your gaze to his thick purple member, his throbbing length straining against his belly, a slick trail of pre painting his scales. "
 					          +"You decide he’s done a good job on getting you warmed up with that tongue of his, now its time to see if he’s just as good with that thick cock of his.");
 			}

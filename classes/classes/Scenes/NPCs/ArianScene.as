@@ -622,7 +622,7 @@ private function peepOnArian():void {
 	clearOutput();
 	spriteSelect(SpriteDb.s_arian);
 	outputText(images.showImage("arian-fap"));
-	outputText("Curious, you decide to take a little peek through the lock; you press yourself against it as best you can, looking through into the bedroom beyond.  True to what your ears heard, the sickly albino's health has improved enough for him to focus on more... carnal matters.  Naked from the waist down, he sits on the edge of his bed, groinal slit disgorging a single, average-sized phallus.  Maybe 6 inches long, it's a bright purple-red color, covered in strange lumps");
+	outputText("Curious, you decide to take a little peek through the lock; you press yourself against it as best you can, looking through into the bedroom beyond.  True to what your ears heard, the sickly albino's health has improved enough for him to focus on more... carnal matters.  Naked from the waist down, he sits on the edge of his bed, groinal slit disgorging a single, average-sized phallus.  Maybe " + UnitSystem.displayInchesEstimate(6) + " long, it's a bright purple-red color, covered in strange lumps");
 	if (player.countCocksOfType(CockTypesEnum.LIZARD) > 0) outputText(" just like yours");
 	outputText(", though this isn't stopping him from enthusiastically stroking himself off.");
 	
@@ -1564,7 +1564,7 @@ private function giveArianAnal():void {
 		
 		outputText("\n\nYou tell [Arian em] that it feels wonderful; [Arian ey]'s so tight and firm back here... to be honest, [Arian ey]'s almost too tight; you can feel [Arian eir] heartbeat with every involuntary contraction of [Arian eir] anal walls, squeezing your cock like it's trying to wring it off and swallow it.  Arian chuckles.  \"<i>I'm not going to lie, [name].  It hurts, but it also feels good.  I think... maybe you should start moving?</i>\"");
 		
-		outputText("\n\nOh, and suddenly [Arian ey]'s an expert on this, hmm?  You agree [Arian ey] has a point.  You start to withdraw yourself from [Arian em], fighting against the squeezing walls and intense suction all the way, then painstakingly pushing yourself back in, worming your way in inch by inch until you have plunged yourself all the way into [Arian eir] depths, only to start again.  Arian moans and groans with each movement.  \"<i>It's starting to feel good now... really good.  Don't stop.</i>\"");
+		outputText("\n\nOh, and suddenly [Arian ey]'s an expert on this, hmm?  You agree [Arian ey] has a point.  You start to withdraw yourself from [Arian em], fighting against the squeezing walls and intense suction all the way, then painstakingly pushing yourself back in, worming your way in " + UnitSystem.literalInch() + " by " + UnitSystem.literalInch() + " until you have plunged yourself all the way into [Arian eir] depths, only to start again.  Arian moans and groans with each movement.  \"<i>It's starting to feel good now... really good.  Don't stop.</i>\"");
 		
 		outputText("\n\nTime fades away as you continue to squeeze your shaft in and out of Arian's tight, delicious little ass.  Soon - all too soon - the unmistakable feeling of orgasm starts boiling up from ");
 		if (player.balls == 0) outputText("the base of your cock");
@@ -2341,7 +2341,7 @@ private function getPenetratedByArianAndHisHitlerMustache():void {
 	}
 	else 
 	{ //Only one pole for that hole.
-		outputText("\n\nArian nervously begins to thrust [Arian eir] strange, bumpy cock into your cunt, timidly inserting an inch or two and then withdrawing, as if unable to bring [Arian em]self to fully penetrate you.");
+		outputText("\n\nArian nervously begins to thrust [Arian eir] strange, bumpy cock into your cunt, timidly inserting " + UnitSystem.anInchOrTwo() + " and then withdrawing, as if unable to bring [Arian em]self to fully penetrate you.");
 		
 		outputText("\n\nYou moan at the initial intrusion, and sigh as [Arian ey] pulls out.  Impatient and bothered by [Arian eir] impromptu teasing, you ask what's gotten into [Arian em] to make [Arian em] withdraw?  You're already more than ready for this.");
 		
@@ -3320,7 +3320,7 @@ private function giveArianReptilum():void {
 	if (flags[kFLAGS.ARIAN_FIRST_REPTILUM] == 1) {
 		outputText("\n\nFeeling a touch nervous, you ask if [Arian ey]'s feeling all right.  \"<i>All right?  I'm super!</i>\" [Arian ey] replies, giggling madly.");
 	}
-	else outputText("\n\nYou were kinda waiting for this part.  [Arian Ey] might not know it, but Arian's flexibility is truly impressive for a non-feline.  Just a few extra inches of tongue and [Arian ey] actually manages to lick [Arian eir] belly!");
+	else outputText("\n\nYou were kinda waiting for this part.  [Arian Ey] might not know it, but Arian's flexibility is truly impressive for a non-feline.  Just a few extra " + UnitSystem.literalInches() + " of tongue and [Arian ey] actually manages to lick [Arian eir] belly!");
 	
 	outputText("\n\nAt one point the bending lizan gives up and falls flat on [Arian eir] back then gets right up eyeing you with a glow in [Arian eir] eyes.  \"<i>That was a stupid idea!  I know just how to make it!  I can lick your butt instead!  Do you think it tastes like cloud ice-cream like your rainbow aura?</i>\"");
 	
@@ -3670,7 +3670,7 @@ private function listenToLowAnalXPArian():void {
 	else {
 		outputText("\n\nGiven you're rather lacking in the penis department, you decide to make do with your fingers; they should be close enough for someone new to anal like [Arian em], right?  Copiously lubricating your middle finger with saliva, you wriggle it between [Arian eir] soft asscheeks and begin gently pushing it into [Arian eir] tight little pucker.");
 	}
-	outputText("\n\nBefore you can even drive an inch in, Arian suddenly says, \"<i>No!  Wait!  I'm not ready yet!  I need to bake for a few more minutes before you can put the sausage in... and add more milk...</i>\"");
+	outputText("\n\nBefore you can even drive " + UnitSystem.literalAnInch() + " in, Arian suddenly says, \"<i>No!  Wait!  I'm not ready yet!  I need to bake for a few more minutes before you can put the sausage in... and add more milk...</i>\"");
 	outputText("\n\n...Okay, this is getting weird enough.  You're not really sure you can stay in the mood to fuck [Arian eir] ass.");
 	outputText("\n\n\"<i>[name]... just let me bake overnight.  I'll be ready tomorrow.  G'night...</i>\"  Having said that, Arian finally calms down.");
 	outputText("\n\nYou wonder if maybe Arian always dreamed of being a baker instead of a wizard... or if [Arian ey] just had a midnight craving for pastries  With a soft sigh, you make yourself settle down and try to get back to sleep.");

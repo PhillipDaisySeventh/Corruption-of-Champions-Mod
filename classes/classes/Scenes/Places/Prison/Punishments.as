@@ -100,7 +100,7 @@ package classes.Scenes.Places.Prison
 					prison.changeObey(1,prison.inPrison);
 					break;
 				case 3:
-					outputText("(Placeholder) A guard enters, but rather than helping you or taking advantage of your helplessness he adjusts the chain attached to the hook in your ass, shortening it by several inches leaving you barely able to reach the ground. He then looks on, chuckling with amusement as you wear yourself out trying to avoid the mortifying situation of being left hanging helplessly by your asshole.");
+					outputText("(Placeholder) A guard enters, but rather than helping you or taking advantage of your helplessness he adjusts the chain attached to the hook in your ass, shortening it by several " + UnitSystem.literalInches() + " leaving you barely able to reach the ground. He then looks on, chuckling with amusement as you wear yourself out trying to avoid the mortifying situation of being left hanging helplessly by your asshole.");
 					player.changeFatigue(20);
 					break;
 				default:
@@ -250,7 +250,7 @@ package classes.Scenes.Places.Prison
 		{
 			outputText("(Placeholder)A dark resolve comes over your [captorTitle], and [captorhe] drags you to the stone box in the corner of the room and presses a hidden switch somewhere near its base. The front panel slides open and " + prison.prisonCaptor.captorPronoun1 + " quickly forces you inside the narrow chamber.\n\n");
 			outputText("\"<i>I'm afraid I've done you a disservice by allowing you to take my kindness for granted for so long. Well, I'll correct that mistake today. You will soon feel like you are being harshly punished, but trust me, in the end you will thank me for it. You will thank me for breaking you of your false impressions about your station in life. You will thank me because you will understand just how kind I have been. You will thank me because you will have a new found appreciation for the truth that both your mind and your body eventually submit to my will no matter how hard you try to fight it. And until you <b>do</b> thank me <b>and</b> apologize for your bad behavior, you <b>will</b> remain in this box and learn its very direct and pointed lesson.</i>\"\n\n");
-			outputText("With that very conclusive statement " + prison.prisonCaptor.captorPronoun1 + " fastens a girdle around your waste and uses four belts to attach it to vertical metal bars in each of the four corners of the stone box. Once the belts are properly tightened you realize that they are designed to hold you securely in the center of the stone box. You can barely squirm more than an inch in any direction, and thus are completely unable to lean on the walls of the chamber.\n\n");
+			outputText("With that very conclusive statement " + prison.prisonCaptor.captorPronoun1 + " fastens a girdle around your waste and uses four belts to attach it to vertical metal bars in each of the four corners of the stone box. Once the belts are properly tightened you realize that they are designed to hold you securely in the center of the stone box. You can barely squirm more than " + UnitSystem.literalAnInch() + " in any direction, and thus are completely unable to lean on the walls of the chamber.\n\n");
 			outputText("But despite preventing any sideways movement, the straps wrap around the bars in a way that does allow you to crouch and stand freely. You understand why as your " + prison.prisonCaptor.captorTitle + " presents the final piece of the puzzle: a horizontal bar with a collection of demonically animated monstrous dildos bristling upwards along its length. Grinning, " + prison.prisonCaptor.captorPronoun1 + " positions the bar between your [legs] at a height where even if you stand on the tips of your toes the wriggling beasts can just barely find their way into your " + player.assholeDescript());
 			if (player.vaginas.length > 0)
 			{
@@ -340,15 +340,15 @@ package classes.Scenes.Places.Prison
 			statusVal = player.statusEffectv4(StatusEffects.PrisonCaptorEllyStatus);
 			if (statusVal <= 1)
 			{
-				outputText("There is now less than an inch of dildo wriggling around inside your " + player.assholeDescript());
+				outputText("There is now less than " + UnitSystem.anInch() + " of dildo wriggling around inside your " + player.assholeDescript());
 			}
 			else if (statusVal >= 20)
 			{
-				outputText("You've sank down as far as you can go and your " + player.assDescript() + " now rests on the bar. Over 20 inches of dildo are buried in your " + player.assholeDescript());
+				outputText("You've sank down as far as you can go and your " + player.assDescript() + " now rests on the bar. Over " + UnitSystem.displayInchesEstimate(20) + " of dildo are buried in your " + player.assholeDescript());
 			}
 			else
 			{
-				outputText("There are now almost " + Math.ceil(statusVal) + " inches of dildo wriggling around inside your " + player.assholeDescript());
+				outputText("There are now almost " + UnitSystem.displayInchesEstimate(statusVal) + " of dildo wriggling around inside your " + player.assholeDescript());
 			}
 			
 			if (player.vaginas.length > 0)
@@ -539,8 +539,8 @@ package classes.Scenes.Places.Prison
 				return;
 			}
 			outputText("(Placeholder) A devious look crosses your " + prison.prisonCaptor.captorTitle + "'s face. \"<i>Normally, this kind of behavior would call for stern punishment. But today, I think I'll teach you a lesson of a different kind. You still seem to be holding onto the idea that you want to be free. I'm going to show you that deep down in your soul you have already accepted the fact that I own both your body and your mind.</i>\"\n\n");
-			outputText("Two containers are brought into the room by imp guards. The larger of the two looks like it has a capacity of roughly twenty gallons, the smaller maybe five. Your " + prison.prisonCaptor.captorTitle + " points to the smaller one and says, \"<i>Copies of the keys to your restraints and to the door are inside this basin. As you see, it has a narrow neck that your hands won't be able to reach into, but don't lose hope: they have been attached to an object that will float. If you fill the basin with enough fluid, the keys will float up through the narrow opening and you will be able to take and use them to free yourself. However, you won't be able to fill the basin without a bit of effort. As you can see, the basin has a lid which is attached by a pneumatic tube to this device here.</i>\"\n\n");
-			outputText("Your eyes follow the tube across the room to the larger container, which " + prison.prisonCaptor.captorPronoun1 + " has had the imps set up about six feet away from the basin with the keys inside. The cask seems to have no obvious opening on top, but where the tube connects to the container there is a complicated valve with, unsurprisingly, a large, thick dildo attached. You notice that in addition to an opening at the tip, about six or seven inches down the shaft of the dildo there are a series of holes spread around the girthy circumference of the thing. You realize that sucking only on the head of the cock will do nothing thanks to those holes -- you will have to swallow the shaft to the point where the holes are all inside your mouth if you want anything to come of your efforts. You are starting to get a good idea of what you are meant to do with this contraption, but " + prison.prisonCaptor.captorTitle + " " + prison.prisonCaptor.captorName + " wants to be sure you fully understand and spells it out for you.\n\n");
+			outputText("Two containers are brought into the room by imp guards. The larger of the two looks like it has a capacity of roughly " + UnitSystem.displayGallonsEstimateTextually(20) + ", the smaller maybe " + num2Text(UnitSystem.volumeInGallonsEstimate(5)) + ". Your " + prison.prisonCaptor.captorTitle + " points to the smaller one and says, \"<i>Copies of the keys to your restraints and to the door are inside this basin. As you see, it has a narrow neck that your hands won't be able to reach into, but don't lose hope: they have been attached to an object that will float. If you fill the basin with enough fluid, the keys will float up through the narrow opening and you will be able to take and use them to free yourself. However, you won't be able to fill the basin without a bit of effort. As you can see, the basin has a lid which is attached by a pneumatic tube to this device here.</i>\"\n\n");
+			outputText("Your eyes follow the tube across the room to the larger container, which " + prison.prisonCaptor.captorPronoun1 + " has had the imps set up about " + UnitSystem.displayFeetEstimateTextually(6) + " away from the basin with the keys inside. The cask seems to have no obvious opening on top, but where the tube connects to the container there is a complicated valve with, unsurprisingly, a large, thick dildo attached. You notice that in addition to an opening at the tip, about " + UnitSystem.displayInchesEstimateRangeTextually(6, " or ", 7) + " down the shaft of the dildo there are a series of holes spread around the girthy circumference of the thing. You realize that sucking only on the head of the cock will do nothing thanks to those holes -- you will have to swallow the shaft to the point where the holes are all inside your mouth if you want anything to come of your efforts. You are starting to get a good idea of what you are meant to do with this contraption, but " + prison.prisonCaptor.captorTitle + " " + prison.prisonCaptor.captorName + " wants to be sure you fully understand and spells it out for you.\n\n");
 			outputText("\"<i>Form a good seal around the holes on this dick and suck hard, and the fluid you need will come out. Suck enough fluid through that valve, and the pressure generated will cause the pneumatic tube to open the lid to the basin giving you a few moments to deliver the fluid in your mouth to the basin. Do be careful not to waste the opportunity; it takes quite a while for my men to fill one of these casks with cum so you won't get another chance any time soon. Repeat this process until the basin is full, and you earn your freedom. Simple, yes?</i>\" As " + prison.prisonCaptor.captorPronoun1 + " continues speaking, she binds your arms behind your back and hobbles your legs.\n\n ");
 			outputText("\"<i>A small extra degree of difficulty. I do want you to feel like you've really earned it, after all. But don't worry, you'll have plenty of time to work at it. Ten hours should suffice, I think. Maybe even a little more if I feel generous. In any case, it will be more than enough time for a person who truly craves freedom to fill the basin and get the keys. But as I said, deep down you don't want freedom. Deep down you love being nothing more than a piece of flesh here to entertain me. I have no doubt that you will spend the next half a day sucking on that dildo and crawling back and forth to that basin with your mouth full of jizz, ostensibly to reach those keys. But really, you will be doing it because you enjoy the abject humiliation of the act. And that, ultimately, will be the lesson you learn today.</i>\" And with that " + prison.prisonCaptor.captorPronoun1 + " leaves you alone in your cell once again.\n\n ");
 			player.changeStatusValue(StatusEffects.PrisonCaptorEllyStatus,3,10 + rand(3));
@@ -575,18 +575,18 @@ package classes.Scenes.Places.Prison
 			outputText("and wrap your lips around the dildo.\n\n");
 			if (rand(20) > player.cor)
 			{
-				outputText("You spend the better part of an hour trying, but again and again you squeamishly balk before you manage to swallow enough of the simulated cock to cover the holes that dot the shaft about seven inches down. As a result, you never manage to form enough of a seal to suck more that a few dribbles of cum out of the cask leaving the basin exactly as full as it was before you started. This leaves you feeling especially humiliated and demoralized.\n\n");
+				outputText("You spend the better part of an hour trying, but again and again you squeamishly balk before you manage to swallow enough of the simulated cock to cover the holes that dot the shaft about " + UnitSystem.displayInchesEstimateTextually(7) + " down. As a result, you never manage to form enough of a seal to suck more that a few dribbles of cum out of the cask leaving the basin exactly as full as it was before you started. This leaves you feeling especially humiliated and demoralized.\n\n");
 				prison.changeObey(1,prison.inPrison);
 				prison.changeEsteem(-1,prison.inPrison);
 				doNext(camp.returnToCampUseOneHour);
 				return;
 			}
 			fillVal = player.statusEffectv4(StatusEffects.PrisonCaptorEllyStatus) + 5 + rand(10);
-			outputText("You slavishly struggle to cram the simulated cock into your throat, and eventually manage to swallow enough to form a proper seal around the holes that dot the shaft about seven inches down. You then begin to pump away, and before long a steady stream of cum begins pouring through the thing. With the hole at the tip of the cock so far down your throat the majority of it flows directly into your stomach. Nevertheless, your mouth is full to bursting with spunk several minutes later when you finally hear a loud click from the valve at the base of the dildo, followed by the sound of the basin's lid clanging open from the pressure you've induced on the pneumatic tube. \n\n");
+			outputText("You slavishly struggle to cram the simulated cock into your throat, and eventually manage to swallow enough to form a proper seal around the holes that dot the shaft about " + UnitSystem.displayInchesEstimateTextually(7) + " down. You then begin to pump away, and before long a steady stream of cum begins pouring through the thing. With the hole at the tip of the cock so far down your throat the majority of it flows directly into your stomach. Nevertheless, your mouth is full to bursting with spunk several minutes later when you finally hear a loud click from the valve at the base of the dildo, followed by the sound of the basin's lid clanging open from the pressure you've induced on the pneumatic tube. \n\n");
 			outputText("As quick as you can you extract the dong from your gullet, ");
 			if (player.statusEffectv2(StatusEffects.PrisonRestraints) > 1)
 			{
-				outputText("wriggle your way across the six feet between you and the basin, ");
+				outputText("wriggle your way across the " + UnitSystem.displayFeetEstimateTextually(6) + " between you and the basin, ");
 			}
 			else
 			{
@@ -610,7 +610,7 @@ package classes.Scenes.Places.Prison
 						fillVal = fillVal + (1 + rand(2));
 						break;
 					case 1:
-						outputText("Spurred on by your success, you return to the dildo and repeat the process. On your third trip back to the dildo, however, the click in the valve sounds a bit different and in addition to the basin lid opening behind you it seems to trigger a demoralizing change in the dildo. A new ring of holes pops open around the shaft an additional three inches below the original set. You spend the rest of the hour working to envelop the full ten inches of dildo now required to make a proper seal and generate suction, but when you finally do you are unable to pump the shaft fast enough to trigger the pressure valve again. Needless to say, the experience leaves you feeling helpless and exhausted.");
+						outputText("Spurred on by your success, you return to the dildo and repeat the process. On your third trip back to the dildo, however, the click in the valve sounds a bit different and in addition to the basin lid opening behind you it seems to trigger a demoralizing change in the dildo. A new ring of holes pops open around the shaft an additional " + UnitSystem.displayInchesTextually(3) + " below the original set. You spend the rest of the hour working to envelop the full " + UnitSystem.displayInchesTextually(10) + " of dildo now required to make a proper seal and generate suction, but when you finally do you are unable to pump the shaft fast enough to trigger the pressure valve again. Needless to say, the experience leaves you feeling helpless and exhausted.");
 						prison.changeObey(0.5,prison.inPrison);
 						player.changeFatigue(15);
 						fillVal = fillVal + (1 + rand(2));
@@ -681,7 +681,7 @@ package classes.Scenes.Places.Prison
 			}
 			else
 			{
-				outputText("inches away from being full enough for you to reach the key. ");
+				outputText(UnitSystem.literalInches() + " away from being full enough for you to reach the key. ");
 			}
 			
 			if (verbose)
@@ -708,7 +708,7 @@ package classes.Scenes.Places.Prison
 				}
 				else
 				{
-					outputText(" inches away from being full enough for you to reach the key. ");
+					outputText(" " + UnitSystem.literalInches() + " away from being full enough for you to reach the key. ");
 				}
 				
 			}

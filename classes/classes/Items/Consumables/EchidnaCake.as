@@ -8,6 +8,7 @@ package classes.Items.Consumables
 	import classes.PerkLib;
 	import classes.StatusEffects;
 	import classes.lists.Gender;
+	import classes.UnitSystem;
 
 	/**
 	 * @since  March 27, 2018
@@ -205,7 +206,7 @@ package classes.Items.Consumables
 			}
 			//Gain Echidna tongue
 			if (rand(3) == 0 && changes < changeLimit && player.echidnaScore() >= 2 && player.tongue.type != Tongue.ECHIDNA) {
-				outputText("\n\nYou feel an uncomfortable pressure in your tongue as it begins to shift and change. Within moments, you are able to behold your long, thin tongue. It has to be at least a foot long. <b>You now have an echidna tongue!</b>");
+				outputText("\n\nYou feel an uncomfortable pressure in your tongue as it begins to shift and change. Within moments, you are able to behold your long, thin tongue. It has to be at least " + UnitSystem.aFoot() + " long. <b>You now have an echidna tongue!</b>");
 				player.tongue.type = Tongue.ECHIDNA;
 				changes++;
 			}

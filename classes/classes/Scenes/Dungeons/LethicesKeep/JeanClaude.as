@@ -5,6 +5,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 	import classes.BodyParts.Butt;
 	import classes.internals.*;
 	import classes.Items.*
+	import classes.UnitSystem;
 	
 	/**
 	 * ...
@@ -84,7 +85,7 @@ package classes.Scenes.Dungeons.LethicesKeep
 			this.a = "";
 			this.short = "Jean-Claude";
 			this.imageName = "jeanclaude";
-			this.long = "You are fighting Jean-Claude. He stands over seven feet tall and has a perfect frame, padded with hard, defined muscle despite not looking heavy on his feet in the slightest; the way he circles you, his thighs tensing and relaxing, his powerful tail swishing, ready to spring forward at the first hint of an opening, makes a deep, monkey part of your brain panic, warning you that you are battling an apex predator in his prime. He is dressed in a leather tunic, a bronze cuirass and a centurion’s helmet that combine to give him even more protection than his thick, green and purple mottled hide otherwise would. His eyes glow with a depthless yellow light, endlessly catching your own, enticing you to look further into them. He wields a stained-looking cutlass, which he swings by his side with mocking casualness as he moves; it mimics the movement of his dual, tumescent purple cocks, swaying beneath his tunic in crude suggestion.";
+			this.long = "You are fighting Jean-Claude. He stands over " + UnitSystem.displayHeight2EstimateTextually(7) + " tall and has a perfect frame, padded with hard, defined muscle despite not looking heavy on his feet in the slightest; the way he circles you, his thighs tensing and relaxing, his powerful tail swishing, ready to spring forward at the first hint of an opening, makes a deep, monkey part of your brain panic, warning you that you are battling an apex predator in his prime. He is dressed in a leather tunic, a bronze cuirass and a centurion’s helmet that combine to give him even more protection than his thick, green and purple mottled hide otherwise would. His eyes glow with a depthless yellow light, endlessly catching your own, enticing you to look further into them. He wields a stained-looking cutlass, which he swings by his side with mocking casualness as he moves; it mimics the movement of his dual, tumescent purple cocks, swaying beneath his tunic in crude suggestion.";
 			this.race = "Basilisk";
 			this.plural = false;
 			

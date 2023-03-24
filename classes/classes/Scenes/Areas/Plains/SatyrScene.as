@@ -247,7 +247,7 @@ package classes.Scenes.Areas.Plains
 			outputText("\n\nThe satyr barely notices your orgasm as his own climax finally hits, letting out a surprisingly bleat-like cry as he cums inside you, a torrent of thick, hot cum gushing into your body, flooding into your guts until the sheer quantity forces it into your ");
 			if (player.hasVagina()) outputText("womb");
 			else outputText("stomach");
-			outputText("; your belly begins to swell and bulge as he pumps liters of semen into you.");
+			outputText("; your belly begins to swell and bulge as he pumps " + UnitSystem.liters() + " of semen into you.");
 			
 			outputText("\n\nFinally, by the time you look like a pregnant woman in her second trimester, he gives out a few last grunts and stops.  Messily he pulls out of you with an audible slurping sound, his cum-slicked cock dangling limply.  The beast grabs a wineskin from his belt, chugs down several mouthfuls and then belches, scratching his chest before loping away without a care in the world.");
 			
@@ -322,7 +322,7 @@ package classes.Scenes.Areas.Plains
 			
 			outputText("\n\nYou quiver and gyrate as his tongue slurps and licks its lewd way into your most intimate of places, sending delicious waves of pleasure shuddering and rippling through you.  Deciding to 'encourage' him to work harder, you tighten the grip of your [legs] and begin to stroke his shaft, dragging your clenched hands up and down in a rough handjob for the satyr's oversized male tool.");
 
-			outputText("\n\nThe satyr's muffled bleat of pleasure is all the warning that you get, as his massive prick throbs powerfully enough to break your grasp on its slimy length.  You can see it enlarging, as the little cum-slit at the tip opens up into a 'O' shape and fountains cum several feet over you head.  Several gobs of smelly, hot goat-cum rain down upon the both you as the satyr ejects gallons of pent-up jism into the air, no doubt catching the attention of any passers-by that might be around.");
+			outputText("\n\nThe satyr's muffled bleat of pleasure is all the warning that you get, as his massive prick throbs powerfully enough to break your grasp on its slimy length.  You can see it enlarging, as the little cum-slit at the tip opens up into a 'O' shape and fountains cum several " + UnitSystem.literalFeet() + " over you head.  Several gobs of smelly, hot goat-cum rain down upon the both you as the satyr ejects " + UnitSystem.literalGallons() + " of pent-up jism into the air, no doubt catching the attention of any passers-by that might be around.");
 
 			outputText("\n\nThe unexpected rain is so gross, and yet so hot, that you find your own orgasm rapidly following.  With a buck and a gasp and a moan, you grind your sopping wet gash squarely into the goat-man's mouth, painting his face as you cum all over it");
 			if (player.hasCock()) outputText(", your own cock belching its usual load across his stomach and the surroundings");
@@ -394,7 +394,7 @@ package classes.Scenes.Areas.Plains
 			
 			outputText("\n\nYou moan softly, telling him that sounds great, thinking to yourself how rare it is to find someone in these lands who's actually willing to ask your opinion on sex instead of just forcing you to do it the way they want.  The satyr smiles at your agreement and gently takes his cock in his hands, stroking and milking it for pre to help his entrance.  It doesn't take long; excited by the imminent pounding he's about to deliver you, his slit drizzles like a leaky tap.");
 			
-			outputText("\n\nHe takes hold of your hips and aligns his massive meat with your [vagOrAss]; then with a bleat he pushes in agonizingly slowly.  He slips a few inches in, then waits as his cock throbs, painting your [vagOrAss] walls with a slick dose of pre, then pulls out a couple inches and pushes more inches in. This process is repeated over and over, until finally he's hilted deep inside you.");
+			outputText("\n\nHe takes hold of your hips and aligns his massive meat with your [vagOrAss]; then with a bleat he pushes in agonizingly slowly.  He slips a few " + UnitSystem.literalInches() + " in, then waits as his cock throbs, painting your [vagOrAss] walls with a slick dose of pre, then pulls out a couple " + UnitSystem.literalInches() + " and pushes more " + UnitSystem.literalInches() + " in. This process is repeated over and over, until finally he's hilted deep inside you.");
 			//(cunt/buttchange)
 			if (player.hasVagina()) {
 				player.cuntChange(25,true,true,false);

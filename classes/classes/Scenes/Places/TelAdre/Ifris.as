@@ -4,6 +4,7 @@ package classes.Scenes.Places.TelAdre {
 	import classes.CockTypesEnum;
 	import classes.display.SpriteDb;
 	import classes.internals.*;
+	import classes.UnitSystem;
 
 	public class Ifris extends TelAdreAbstractContent {
 public function Ifris(){
@@ -14,7 +15,7 @@ public function Ifris(){
 public function ifrisIntro():Boolean {
 	if (getGame().time.hours >= 15) {
 		if (flags[kFLAGS.MET_IFRIS] > 0) outputText("\n\nIfris is standing in the corner of the room, wearing her usual black bikini and eyeing you as soon as you walk in.");
-		else outputText("\n\nIn the corner of the room stands a lone figure, her bright cherry-red skin making her stand out.  A long, spaded tail swishes behind her slowly, the length much thicker than most demon tails you've seen.  She couldn't be more than five feet tall, her slender, lithe form looking more athletic than muscular.  A black bikini covers just enough to be modest, her supple C-cup breasts more perky than they have a right to be.  She slowly rolls a lock of springy, curly hair around one index finger, her glowing crimson gaze set on a nearby weight-lifting machine incredulously.  Feeling your eyes on her glistening, oiled skin, she slowly turns them to you instead.");
+		else outputText("\n\nIn the corner of the room stands a lone figure, her bright cherry-red skin making her stand out.  A long, spaded tail swishes behind her slowly, the length much thicker than most demon tails you've seen.  She couldn't be more than " + UnitSystem.displayHeight2EstimateTextually(5) + " tall, her slender, lithe form looking more athletic than muscular.  A black bikini covers just enough to be modest, her supple C-cup breasts more perky than they have a right to be.  She slowly rolls a lock of springy, curly hair around one index finger, her glowing crimson gaze set on a nearby weight-lifting machine incredulously.  Feeling your eyes on her glistening, oiled skin, she slowly turns them to you instead.");
 		return true;
 	}
 	return false;
@@ -305,7 +306,7 @@ private function ifrisDP():void {
 	else if (player.countCocksOfType(CockTypesEnum.TENTACLE) >= 2) {
 		outputText("Both your plant-like pricks explode inside Ifris, the purplish tips swelling up inside her to disproportionate sizes.  A moment later, the vine-dicks explode out twin pillars of ropey seed, painting her inner walls with spunk.  ");
 		if (player.cumQ() >= 1000) outputText("She groans and moans as she's filled, her body distending to deal with the unholy amount of seed your cocks can spew.  ");
-		outputText("At the same time, both tentacle-shafts curl and piston, winding around in other in the space between your bodies, curling and thrusting to rub every inch of your sensitive, prehensile shafts against Ifris' pussy-walls.  You shake and shudder, feeling more like a tentacle beast than a " + player.mf("man","woman") + ".  ");
+		outputText("At the same time, both tentacle-shafts curl and piston, winding around in other in the space between your bodies, curling and thrusting to rub every " + UnitSystem.literalInch() + " of your sensitive, prehensile shafts against Ifris' pussy-walls.  You shake and shudder, feeling more like a tentacle beast than a " + player.mf("man","woman") + ".  ");
 	}
 	//(Anemone - stinging funtimes)
 	else if (player.countCocksOfType(CockTypesEnum.ANEMONE) >= 2) {

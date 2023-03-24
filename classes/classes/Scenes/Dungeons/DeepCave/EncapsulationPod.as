@@ -108,7 +108,7 @@ package classes.Scenes.Dungeons.DeepCave
 				
 				outputText("A tentacle takes the opportunity to slip into your mouth along with a wave of the slime.  You try to cough out the fluid, but there isn't any air left in your lungs to push it out.  The orally-fixated tendril widens and begins to pour more of it inside you, and with nowhere else to go, it packs your goo-filled lungs to the brim before you start to swallow.  You relax and exhale the last of your air from your nose as your body calms itself.  Somehow you can breathe the fungus-pod's fluids!\n\n");
 				
-				outputText("You're floating in pure liquid bliss.  Thoughts melt away before they can form, and every inch of your body is being caressed, squeezed, or penetrated by the warm, slime-slicked tentacles.  Nearly every muscle in your body goes completely slack as you're cradled with bliss.  Without your thoughts or stress bothering you, the pleasure swiftly builds to a crescendo.\n\n");
+				outputText("You're floating in pure liquid bliss.  Thoughts melt away before they can form, and every " + UnitSystem.literalInch() + " of your body is being caressed, squeezed, or penetrated by the warm, slime-slicked tentacles.  Nearly every muscle in your body goes completely slack as you're cradled with bliss.  Without your thoughts or stress bothering you, the pleasure swiftly builds to a crescendo.\n\n");
 				
 				outputText("The wave of need starts out inside your crotch, begging to be let out, but you can't even be bothered to move your " + game.player.hipDescript() + " anymore.  Without your help, release stays just out of reach, but the tentacles working your body seem intent on spurring it on.  The one inside your " + player.assholeDescript() + " begins to pump more quickly, and with the added pressure, you cum quickly.  ");
 				if (!player.hasVagina()) {
@@ -161,7 +161,7 @@ package classes.Scenes.Dungeons.DeepCave
 				_long = "You're still trapped inside the pod!  By now the walls are totally soaked with some kind of viscous slime.  The smell of it is unbearably sweet and you have to put a hand against the wall to steady yourself.  Warm tentacles are curling and twisting underneath your armor, caressing every ";
 				if (player.hasFur()) _long += "furry ";
 				if (player.hasScales()) _long += "scaley ";
-				_long += "inch of your " + player.legs() + ", crotch, and " + game.player.assDescript() + ".";
+				_long += UnitSystem.literalInch() + " of your " + player.legs() + ", crotch, and " + game.player.assDescript() + ".";
 			}
 			//[Round 3 Description]
 			else if (statusEffectv1(StatusEffects.Round) == 3) {

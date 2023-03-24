@@ -424,8 +424,7 @@ package classes
 				"Grants cat-like flexibility.  Useful for dodging and 'fun'.");
 		public static const FutaFaculties:PerkType = mk("Futa Faculties", "Futa Faculties",
 				"It's super hard to think about stuff that like, isn't working out or fucking!");
-		public static const FutaForm:PerkType = mk("Futa Form", "Futa Form",
-				"Ensures that your body fits the Futa look (Tits DD+, Dick 8\"+, & Pussy).  Also keeps your lusts burning bright and improves the tease skill.");
+		public static const FutaForm:PerkType = new FutaFormPerk();
 		public static const HarpyWomb:PerkType = mk("Harpy Womb", "Harpy Womb",
 				"Increases all laid eggs to large size so long as you have harpy legs and a harpy tail.");
 		public static const Incorporeality:PerkType = mk("Incorporeality", "Incorporeality",
@@ -470,8 +469,7 @@ package classes
 				"Increases fertility and reduces the time it takes to birth young.", null, true);
 		public static const FerasBoonMilkingTwat:PerkType = mk("Fera's Boon - Milking Twat", "Fera's Boon - Milking Twat",
 				"Keeps your pussy from ever getting too loose and increases pregnancy speed.");
-		public static const FerasBoonSeeder:PerkType = mk("Fera's Boon - Seeder", "Fera's Boon - Seeder",
-				"Increases cum output by 1,000 mLs.", null, true);
+		public static const FerasBoonSeeder:PerkType = new FerasBoonSeederPerk();
 		public static const FerasBoonWideOpen:PerkType = mk("Fera's Boon - Wide Open", "Fera's Boon - Wide Open",
 				"Keeps your pussy permanently gaped and increases pregnancy speed.");
 		public static const FireLord:PerkType = mk("Fire Lord", "Fire Lord",
@@ -482,8 +480,7 @@ package classes
 				"Grants immunity to the lust-increasing effects of lust-stick and allows its use.");
 		public static const MagicalFertility:PerkType = mk("Magical Fertility", "Magical Fertility",
 				"10% higher chance of pregnancy and increased pregnancy speed.");
-		public static const MagicalVirility:PerkType = mk("Magical Virility", "Magical Virility",
-				"200 mLs more cum per orgasm and enhanced virility.");
+		public static const MagicalVirility:PerkType = new MagicalVirilityPerk();
 		public static const MaraesGiftButtslut:PerkType = mk("Marae's Gift - Buttslut", "Marae's Gift - Buttslut",
 				"Makes your anus provide lubrication when aroused.");
 		public static const MaraesGiftFertility:PerkType = mk("Marae's Gift - Fertility", "Marae's Gift - Fertility",

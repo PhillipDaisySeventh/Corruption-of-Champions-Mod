@@ -2,6 +2,7 @@ package classes.Scenes.Places.Bazaar
 {
 	import classes.GlobalFlags.kFLAGS;
 	import classes.PerkLib;
+	import classes.UnitSystem;
 
 	public class GretasGarments extends BazaarAbstractContent 
 	{
@@ -82,7 +83,7 @@ package classes.Scenes.Places.Bazaar
 			outputText("\n\n\"<i>See something you like?</i>\" Greta asks, drawing your dazed eyes back up to her face. \"<i>Well it isn't on the menu today, though you do look like a scrumptious little morsel if I do say so myself. I've got a lot of work to do if I'm going to keep up with all the demand for my products!</i>\"");
 			outputText("\n\nYou look around the store and inquire about what products she could possible mean. Greta holds up the sock she was knitting and says, \"<i>These! I can't make them fast enough! Every time I get one done, some cute hermaphrodite or wide-hipped femboy is in here buying it up.</i>\"");
 			outputText("\n\nYou ask, \"<i>Socks?</i>\" with confusion showing on your face. What use do herms and girly-boys have for weird socks? This shop seemed like it would specialize in sexy, not everyday garb!");
-			outputText("\n\nGreta laughs so hard that her tits quake, scattering her knitting needles away. Her tail deftly catches one that rolls off the crude counter's edge, twirling it about before stuffing it into the tight bob she has atop her head. \"<i>You think this is a sock!? Ahahahahah! No, dear " + player.mf("boy","girl") + ", this isn't an ordinary sock. It's a cock-sock. See the pattern here? And the specially sewn gaps? They let the wearer accentuate every sweet curve and throbbing vein on their erection, all while exposing the most sensitive bits for busy hands and hungry tongues, like mine.</i>\" She lets her tongue slowly extend out from her mouth, inch after inch of the wiggling, slick organ slowly disappearing into the valley between her tits. She slowly retracts it with a giggle.");
+			outputText("\n\nGreta laughs so hard that her tits quake, scattering her knitting needles away. Her tail deftly catches one that rolls off the crude counter's edge, twirling it about before stuffing it into the tight bob she has atop her head. \"<i>You think this is a sock!? Ahahahahah! No, dear " + player.mf("boy","girl") + ", this isn't an ordinary sock. It's a cock-sock. See the pattern here? And the specially sewn gaps? They let the wearer accentuate every sweet curve and throbbing vein on their erection, all while exposing the most sensitive bits for busy hands and hungry tongues, like mine.</i>\" She lets her tongue slowly extend out from her mouth, " + UnitSystem.literalInch() + " after " + UnitSystem.literalInch() + " of the wiggling, slick organ slowly disappearing into the valley between her tits. She slowly retracts it with a giggle.");
 			outputText("\n\n\"<i>I've got back-orders on these things for miles, so you'll have to wait for me to get caught up before I consider crafting any for you.</i>\"");
 			//[Back]
 			if (flags[kFLAGS.FOUND_SOCKS] < 1) flags[kFLAGS.FOUND_SOCKS] = 1;

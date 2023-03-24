@@ -45,7 +45,7 @@ package classes.Scenes.NPCs
 			}
 			//Determine if cat'ed
 			if (player.findPerk(PerkLib.Flexibility) >= 0 && rand(100) < 6) {
-				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short + "");
+				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short);
 				outputText("'s attack.\n");
 				return;
 			}
@@ -104,7 +104,7 @@ package classes.Scenes.NPCs
 			}
 			//Determine if cat'ed
 			if (player.findPerk(PerkLib.Flexibility) >= 0 && rand(100) < 40) {
-				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short + "");
+				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short);
 				outputText("'s attack.\n");
 				return;
 			}
@@ -161,7 +161,7 @@ package classes.Scenes.NPCs
 			}
 			//Determine if cat'ed
 			if (player.findPerk(PerkLib.Flexibility) >= 0 && rand(100) < 40) {
-				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short + "");
+				outputText("With your incredible flexibility, you squeeze out of the way of " + a + short);
 				outputText("'s attack.\n");
 				return;
 			}

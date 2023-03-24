@@ -93,7 +93,7 @@ package classes.Scenes.Areas.Bog
 				else if (evade == EVASION_MISDIRECTION)
 					outputText(this.capitalA + this.short + " was watching you carefully before his throw.  That proves to be his undoing as your misleading movements cause him to lob the muck at the wrong time");
 				else if (evade == EVASION_FLEXIBILITY)
-					outputText("As the ball leaves his fingers you throw yourself back, your spine bending in an inhuman way.  You feel the ball sail past, inches above your chest.");
+					outputText("As the ball leaves his fingers you throw yourself back, your spine bending in an inhuman way.  You feel the ball sail past, " + UnitSystem.literalInches() + " above your chest.");
 				else if (evade != null) // failsafe
 					outputText("You throw yourself out of the way at the last moment!");
 				else {
@@ -172,13 +172,13 @@ package classes.Scenes.Areas.Bog
 		{
 			if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_BUNNY) return; //Already a bunny, so no change
 			if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_FAERIE) {
-				outputText("The faerie suddenly drops out of the air.  A look of concentration sets in on its face and it begins to expand and warp.  You blink and see that in front of you there is now a 5 foot tall bunny morph.\n\n");
+				outputText("The faerie suddenly drops out of the air.  A look of concentration sets in on its face and it begins to expand and warp.  You blink and see that in front of you there is now a " + UnitSystem.displayHeight2EstimateWithHyphen(5) + " tall bunny morph.\n\n");
 			}
 			else if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_GOAT) {
-				outputText("As the goat morph charges towards you it starts to grow.  By the time it gets close it has changed completely and you now face a 5 foot tall bunny morph.\n\n");
+				outputText("As the goat morph charges towards you it starts to grow.  By the time it gets close it has changed completely and you now face a " + UnitSystem.displayHeight2EstimateWithHyphen(5) + " tall bunny morph.\n\n");
 			}
 			else { //Was a horse
-				outputText("As the horse morph charges towards you it quite suddenly shrinks.  You have to adjust your defence as a 5 foot tall bunny morph is now hopping your way.\n\n");
+				outputText("As the horse morph charges towards you it quite suddenly shrinks.  You have to adjust your defence as a " + UnitSystem.displayHeight2EstimateWithHyphen(5) + " tall bunny morph is now hopping your way.\n\n");
 			}
 			this.long = "The " + this.short + " is hopping around near you, waiting for an opening.  He has the general appearance of a bunny with coal black fur.  A large cock stands erect between his legs.  His cat-like green eyes, filled with lust, follow your every motion.";
 			this.cocks[0].cockType = CockTypesEnum.HUMAN;
@@ -194,13 +194,13 @@ package classes.Scenes.Areas.Bog
 		{
 			if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_GOAT) return; //Already a goat, so no change
 			if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_FAERIE) {
-				outputText("The faerie suddenly drops out of the air.  A look of concentration sets in on its face and it begins to expand and warp.  You blink and see that in front of you there is now a 4 foot tall goat morph.\n\n");
+				outputText("The faerie suddenly drops out of the air.  A look of concentration sets in on its face and it begins to expand and warp.  You blink and see that in front of you there is now a " + UnitSystem.displayHeight2EstimateWithHyphen(4) + " tall goat morph.\n\n");
 			}
 			else if (PhoukaScene.phoukaForm == PhoukaScene.PHOUKA_FORM_BUNNY) {
-				outputText("The bunny morph hops back from you and starts to melt and change.  You blink and see that in front of you there is now a 4 foot tall goat morph.\n\n");
+				outputText("The bunny morph hops back from you and starts to melt and change.  You blink and see that in front of you there is now a " + UnitSystem.displayHeight2EstimateWithHyphen(4) + " tall goat morph.\n\n");
 			}
 			else { //Was a horse
-				outputText("As the horse morph charges towards you it quite suddenly shrinks.  You have to adjust your defence as it is now a 4 foot tall goat morph.\n\n");
+				outputText("As the horse morph charges towards you it quite suddenly shrinks.  You have to adjust your defence as it is now a " + UnitSystem.displayHeight2EstimateWithHyphen(4) + " tall goat morph.\n\n");
 			}
 			this.long = "The " + this.short + " is charging back and forth just out of reach, waiting for an opening.  He has the general appearance of a goat with coal black fur.  He has large glossy black horns and a large cock between his legs.  His cat-like green eyes, filled with lust, follow your every motion.";
 			this.cocks[0].cockType = CockTypesEnum.HUMAN;

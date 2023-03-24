@@ -1,4 +1,4 @@
-﻿package classes.Scenes.Areas.Forest{
+package classes.Scenes.Areas.Forest{
 	import classes.*;
 	import classes.BodyParts.*;
 	import classes.GlobalFlags.kFLAGS;
@@ -39,7 +39,7 @@ public function essrayleMeetingI():void {
 		if (player.cor < 33) outputText("Despite however chivalric you think yourself");
 		else if (player.cor < 66) outputText("Despite your better sense");
 		else outputText("Perhaps best of all");
-		outputText(", your attention falls to her chest.  This emerald maiden sports a pair of breasts that'd make even a demon blush, gorgeous green globes that look like small watermelons resting upon her upper belly, capped with purple areolae.  Four, thick, teat-like nipples dangle a good three or four inches from each.");
+		outputText(", your attention falls to her chest.  This emerald maiden sports a pair of breasts that'd make even a demon blush, gorgeous green globes that look like small watermelons resting upon her upper belly, capped with purple areolae.  Four, thick, teat-like nipples dangle a good " + UnitSystem.displayInchesRangeTextually(3, " or ", 4) + " from each.");
 		
 		outputText("\n\nLikewise, four slender, green arms grace her form.  Instead of legs, a single, serpentine, smooth stalk rises from what looks like a giant flower bulb resting on the grassy ground. With her movement it seems to quiver slightly, though not nearly as much as those gigantic breasts do.");
 		
@@ -69,7 +69,7 @@ public function essrayleMeetingI():void {
 		
 	}
 	else {
-		outputText("During your travels through the forest, you stumble upon a familiar face once again.  \"<i>Oh, hello!</i>\ Essrayle cheerily waves to you, causing her ample tits to jiggle slightly.  \"<i>I was wondering if you'd be back.</i>\"  She moves closer, massive melons wobbling mere inches away from you, \"<i>I had a feeling you would though.</i>\"  Cooing warmly, she brushes a lock of hair aside with enough of an exaggerated motion to set the bouncy pair to bobbing.");
+		outputText("During your travels through the forest, you stumble upon a familiar face once again.  \"<i>Oh, hello!</i>\ Essrayle cheerily waves to you, causing her ample tits to jiggle slightly.  \"<i>I was wondering if you'd be back.</i>\"  She moves closer, massive melons wobbling mere " + UnitSystem.literalInches() + " away from you, \"<i>I had a feeling you would though.</i>\"  Cooing warmly, she brushes a lock of hair aside with enough of an exaggerated motion to set the bouncy pair to bobbing.");
 		outputText("\n\n\"<i>So, did you come back just to say hi, or might there be some other reason?</i>\"  Those slender, green hands fall upon her shapely hips as her gorgeous amethyst eyes peer deeply into yours.  \"<i>If you came to give me a feeding, I simply must thank you this time, I insist.</i>\"  Abruptly, those tits squish against your chest as she leans in close, asking seductively, \"<i>So, feeling up for some gardening?</i>\"");
 	}
 	flags[kFLAGS.MET_ESSY]++;
@@ -168,7 +168,7 @@ private function plantsForMe2(BE:int = 0):void {
 	
 	//Cock=
 	if (player.hasCock()) {
-		outputText("\n\nEssy drags her thin tongue over the length of [oneCock], flowing over every inch of it, bending about its curve as she licks from base to tip before engulfing it with her lips. Without a moment's hesitation, she slides down to the hilt, giving amazing pleasure from the surreal tightness, hitting you as you feel the plant's throat rippling and actually milking at your length.");
+		outputText("\n\nEssy drags her thin tongue over the length of [oneCock], flowing over every " + UnitSystem.literalInch() + " of it, bending about its curve as she licks from base to tip before engulfing it with her lips. Without a moment's hesitation, she slides down to the hilt, giving amazing pleasure from the surreal tightness, hitting you as you feel the plant's throat rippling and actually milking at your length.");
 		
 		outputText("\n\nEssy just smiles as she begins to bob her head, slowly at first, but with increasing speed as your moans of delight egg her on.  Two tentacles rise up, funneling wide at the tips and engulfing your [nipples]");
 		if (player.breastRows[0].breastRating >= 1) outputText(" and " + player.breastCup(0) + " breasts");

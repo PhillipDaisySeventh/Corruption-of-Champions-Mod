@@ -61,7 +61,7 @@ private function gargoyleMeeting2():void {
 	
 	outputText("\n\nHowever, what most catches your eye upon entering the sanctuary are the statues that line the walls.  Beautifully carved gray stone idols of creatures, chimeras, and nearer to the altar, god-like beings, are each set into their own little alcove.  Unfortunately most have been destroyed along with the cathedral, each lying in a pile of its own shattered debris; some having whole limbs or other extremities broken off and carried away by looters, leaving them mere shadows of their former glory.");
 	outputText(images.showImage("gargoyle-cathedral"));
-	outputText("\n\nAll of them but one.  In the farthest, darkest alcove you see a single statue that still seems intact. It is of a woman – well, more like a succubus than a human woman.  Though posed in a low, predatory crouch, she would normally stand nearly six feet tall, hair sculpted to fall playfully about her shoulders.  A pair of bat-like wings protruding from her back curl back to expose the lush, smooth orbs of her breasts, easily DD's on a human.  A spiked, mace-like tail curls about her legs that are attached to the pedestal upon which she's placed.  As you stand marveling at the statue's beauty, you cannot help but notice the slit of her pussy nearly hidden beneath her.  Oddly, it seems to have been carved hollow so that you could easily stick a few fingers inside if you so choose.");
+	outputText("\n\nAll of them but one.  In the farthest, darkest alcove you see a single statue that still seems intact. It is of a woman – well, more like a succubus than a human woman.  Though posed in a low, predatory crouch, she would normally stand nearly " + UnitSystem.displayHeight2EstimateTextually(6) + " tall, hair sculpted to fall playfully about her shoulders.  A pair of bat-like wings protruding from her back curl back to expose the lush, smooth orbs of her breasts, easily DD's on a human.  A spiked, mace-like tail curls about her legs that are attached to the pedestal upon which she's placed.  As you stand marveling at the statue's beauty, you cannot help but notice the slit of her pussy nearly hidden beneath her.  Oddly, it seems to have been carved hollow so that you could easily stick a few fingers inside if you so choose.");
 	if (player.lib >= 40) outputText("  Maybe you could take this with you as a life-sized sex toy?");
 	
 	outputText("\n\nHowever, your attention is soon drawn from her body to the pedestal upon which she stands.  A pair of solid gold chains extend from the pedestal to her wrists, binding the statue.  You notice a plaque has been bolted to the pedestal, a feature not present on any of the other statues here.  Leaning down, you blow a sizable amount of dust from the plaque, revealing the following short inscription:");
@@ -395,9 +395,9 @@ private function gargoyleCoochiiGetsPlowed():void {
 //[b]Tit-Fuck[/b]
 private function titFuckTheGargoyle():void {
 	clearOutput();
-	outputText("You situate yourself on a pew and spread your legs.  You pat your thighs, telling " + flags[kFLAGS.GAR_NAME] + " to sit between your legs as you fish out your [cock biggest].  She approaches, hesitantly placing herself on the floor between your legs as you recline and stroke your shaft to full hardness.  You let the gargoyle sit there, watching you wide-eyed as you continue to masturbate.  Though you're only preparing for the main act, you can't help but enjoy the sensation of such a basic sexual act, made all the more pleasurable by the creature at your feet, her face barely an inch from your cock's head as you stroke yourself.");
+	outputText("You situate yourself on a pew and spread your legs.  You pat your thighs, telling " + flags[kFLAGS.GAR_NAME] + " to sit between your legs as you fish out your [cock biggest].  She approaches, hesitantly placing herself on the floor between your legs as you recline and stroke your shaft to full hardness.  You let the gargoyle sit there, watching you wide-eyed as you continue to masturbate.  Though you're only preparing for the main act, you can't help but enjoy the sensation of such a basic sexual act, made all the more pleasurable by the creature at your feet, her face barely " + UnitSystem.literalAnInch() + " from your cock's head as you stroke yourself.");
 	
-	outputText("\n\nOnce you're satisfied at your cock's rigid hardness, you tell " + flags[kFLAGS.GAR_NAME] + " to put those big, soft tits of hers to work.  \"<i>M-Master?</i>\" she gasps, making a cute little “o” with her mouth just an inch from your shaft.  You repeat the order, and giver her a thump on the nose with your cock for emphasis.  Shyly, she cups her D-cups and leans into you, squeezing your [cock biggest] between them.");
+	outputText("\n\nOnce you're satisfied at your cock's rigid hardness, you tell " + flags[kFLAGS.GAR_NAME] + " to put those big, soft tits of hers to work.  \"<i>M-Master?</i>\" she gasps, making a cute little “o” with her mouth just " + UnitSystem.literalAnInch() + " from your shaft.  You repeat the order, and giver her a thump on the nose with your cock for emphasis.  Shyly, she cups her D-cups and leans into you, squeezing your [cock biggest] between them.");
 	
 	outputText("\n\nWith a little encouragement, " + flags[kFLAGS.GAR_NAME] + " starts to rise and fall on her knees, dragging your shaft through her soft, cool mounds.  With a pleasured sigh, you reach down and stroke her hair, petting the girl as she begins to slowly but steadily titfuck you.  Still mumbling encouragements, you sit back and let the pleasure run over you, reveling in the incredible softness of her sizable chest massaging your cock, making steady progress toward stroking the cum out of you.");
 	
@@ -408,7 +408,7 @@ private function titFuckTheGargoyle():void {
 	outputText("\n\nYou grab " + flags[kFLAGS.GAR_NAME] + " and push her down hard, slamming your cock down her throat as you cum.  A human would surely have choked with this maneuver – instead, " + flags[kFLAGS.GAR_NAME] + " squirms and flails, but you can see and feel her swallow your cum as it pours into her mouth, her throat massaging your flaring head, milking it harder than any tit-job ever could have.  Once her face has been ground into your pubes, you buck your hips sharply, thrusting into her throat as the last of your jizz spurts out and down her gizzard.");
 	
 	outputText("\n\nBy the time you're done, " + flags[kFLAGS.GAR_NAME] + "'s face is an utter mess, with white lines trickling down her cheeks.  You drag your [cock biggest] out of her with a wet POP, unleashing a dam of jizz that quickly leaks out of her agape mouth to stain her breasts and belly.  You chuckle at the sight");
-	if (gargoyleConfidence() >= 70) outputText(", and to your surprise, so does " + flags[kFLAGS.GAR_NAME] + "");
+	if (gargoyleConfidence() >= 70) outputText(", and to your surprise, so does " + flags[kFLAGS.GAR_NAME]);
 	outputText(".");
 	
 	outputText("\n\n\"<i>Was that... pleasing, Master?</i>\" she asks innocently.");
@@ -470,7 +470,7 @@ private function tailFuckGargoyleScene():void {
 	outputText("You shudder as you finally bottom out on her tail, taking it until your cunt is almost painfully stretched by her ever - thickening tail and you can feel the tip pressing against the entrance to your womb.");
 	
 	
-	outputText("\n\nNow firmly inside your depths, " + flags[kFLAGS.GAR_NAME] + " begins to wiggle her tail inside you, slithering a few inches in and out of your [vagina].  Encouraging her, you grasp her shoulders for support and push your cunt a little closer to her face.  Taking the hint, she snakes out her long tongue and gives your clitty a little flick, eliciting an immediate gasp of pleasure from you.  She's soon engaging in a double-assault on you, suckling on your [clit] one moment, and ramming her tail into your [vagina] the next.");
+	outputText("\n\nNow firmly inside your depths, " + flags[kFLAGS.GAR_NAME] + " begins to wiggle her tail inside you, slithering a few " + UnitSystem.literalInches() + " in and out of your [vagina].  Encouraging her, you grasp her shoulders for support and push your cunt a little closer to her face.  Taking the hint, she snakes out her long tongue and gives your clitty a little flick, eliciting an immediate gasp of pleasure from you.  She's soon engaging in a double-assault on you, suckling on your [clit] one moment, and ramming her tail into your [vagina] the next.");
 	
 	outputText("\n\nJust as you feel your body begin to tense up in preparation for orgasm, the gargoyle slips her hands around your waist.  You're about to ask what she's doing when you feel a finger pressing up against your [asshole].  With her oral ministrations, it's hard to relax your sphincter to allow her entrance, but when she does finally get in, the feeling of her cold, smooth finger traveling up your rectal passage is incredible.");
 	
@@ -1216,7 +1216,7 @@ private function garNameB():void {
 	
 	outputText("\n\nBut her voice changes, hardening into a cold whisper, \"<i>And so very cruel.  To her, I was a living toy, nothing more than a way to sate her lusts when she desired.  And she was sadistic, using some sort of shock magic on me if I so much as hesitated at her commands.  I came to dread her every word, especially her demands for pleasure – she got off on pain, I think, and thoroughly enjoyed inflicting it on me.</i>\"");
 	
-	outputText("\n\nYou gently shift the conversation as she trails off, asking her for, say, her master's name, or appearance.  \"<i>Ah. Master was a woman, perhaps a hair beneath six feet tall.  She was beautiful, in a dark sort of way.  It was as if she always had a kind of storm-cloud around her.  I remember... I remember she had the softest skin.  Thick, golden hair that was so smooth, so...</i>\"");
+	outputText("\n\nYou gently shift the conversation as she trails off, asking her for, say, her master's name, or appearance.  \"<i>Ah. Master was a woman, perhaps a hair beneath " + UnitSystem.displayHeight2EstimateTextually(6) + " tall.  She was beautiful, in a dark sort of way.  It was as if she always had a kind of storm-cloud around her.  I remember... I remember she had the softest skin.  Thick, golden hair that was so smooth, so...</i>\"");
 	outputText("\n\nConfused, you have to ask if she's still talking about the same person.  \"<i>Oh.  Yes, I suppose I am.  I'm sorry, Master.  I just... looking back, I get confused. I remember the pain so well, but there was so much pleasure, too.  I hated her, with every fiber of my being.  But I loved her too.  I don't miss her, and I don't dwell on the years I was her toy, but some part of me did love her, I think.  Yet I do not regret her leaving.</i>\"");
 	
 	outputText("\n\nYou don't need to prompt " + flags[kFLAGS.GAR_NAME] + " this time.  \"<i>She left, perhaps ten years ago.  One day I was following orders to Master's pleasure, and the next I was bound to my pedestal, wearing the chains that Master broke to set me free.</i>\"");
@@ -1287,8 +1287,8 @@ private function berateGargoyleC():void {
 private function gargoyleAppearance():void {
 	clearOutput();
 	outputText(images.showImage("gargoyle-cathedral"));
-	outputText("" + flags[kFLAGS.GAR_NAME] + " is a gray marble statue that, through magics you can't quite grasp, has been animated.");
-	outputText("\n\nShe stands roughly six feet tall, with a slender, girly frame.  She wears no clothes, seemingly possessing no modesty at all, and uses her brutally spiked tail as a weapon.  She has a cute, somewhat angular face that is very feminine.  Her skin and hair are a light shade of gray, though she has solid, ruby-red eyes which ");
+	outputText(flags[kFLAGS.GAR_NAME] + " is a gray marble statue that, through magics you can't quite grasp, has been animated.");
+	outputText("\n\nShe stands roughly " + UnitSystem.displayHeight2EstimateTextually(6) + " tall, with a slender, girly frame.  She wears no clothes, seemingly possessing no modesty at all, and uses her brutally spiked tail as a weapon.  She has a cute, somewhat angular face that is very feminine.  Her skin and hair are a light shade of gray, though she has solid, ruby-red eyes which ");
 	if (gargoyleConfidence() < 70) outputText("glow timidly, reflecting a submissive and servile nature in the gargoyle.");
 	else outputText("have a cool fire in them, showing her steadily-growing confidence and warmth toward you.");
 	outputText("  Her skin is cold and smooth to the touch, a consequence of her marble material, yet she is quite soft, almost squishy.  " + flags[kFLAGS.GAR_NAME] + " has a pair of cute little horns upon her brow, and has bat-like wings sprouting from her back which give a gentle flap every few seconds, an unconscious gesture on her part as you stare at her.  She has a long, spiked tail that curls ");
@@ -1298,7 +1298,7 @@ private function gargoyleAppearance():void {
 	
 	outputText("\n\nShe has a pair of big, pleasingly soft D-cup breasts.  They are without nipples.");
 	
-	outputText("\n\nShe has a small yet easily stretched pussy between her legs, with a .2 inch clitoris.");
+	outputText("\n\nShe has a small yet easily stretched pussy between her legs, with a " + UnitSystem.display(".2 inch", UnitSystem.displayInches(0.2)) + " clitoris.");
 
 	outputText("\n\nShe has a tight asshole between her soft butt cheeks, right where it belongs.");
 	returnToCathedral(true);

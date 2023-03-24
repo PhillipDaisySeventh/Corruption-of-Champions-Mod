@@ -77,7 +77,7 @@ if (lust >= maxLust()) {
 			this.a = "";
 			this.short = "Jojo";
 			this.imageName = "jojo";
-			this.long = "Jojo is an anthropomorphic mouse with immaculate white fur.  Though he stands only four feet tall, he is covered in lean muscle and moves with incredible speed.  He wears loose white clothes wrapped in prayer beads and tattered prayer papers.";
+			this.long = "Jojo is an anthropomorphic mouse with immaculate white fur.  Though he stands only " + UnitSystem.displayHeight2Textually(4, 0) + " tall, he is covered in lean muscle and moves with incredible speed.  He wears loose white clothes wrapped in prayer beads and tattered prayer papers.";
 			this.race = "Mouse-Morph";
 			this.createCock(7.5, 1.8);
 			this.cocks[0].cockType = CockTypesEnum.HUMAN;
@@ -155,7 +155,7 @@ if (lust >= maxLust()) {
 					this.ass.analLooseness = 4;
 				}
 				
-				this.long = "Jojo is an anthropomorphic mouse with immaculate white fur.  Though he stands only four feet tall, he is covered in lean muscle and moves with incredible speed.  He's naked, with a large tainted throbbing member bouncing at attention.  A fuzzy sack with painfully large looking balls dangles between his legs.";
+				this.long = "Jojo is an anthropomorphic mouse with immaculate white fur.  Though he stands only " + UnitSystem.displayHeight2Textually(4, 0) + " tall, he is covered in lean muscle and moves with incredible speed.  He's naked, with a large tainted throbbing member bouncing at attention.  A fuzzy sack with painfully large looking balls dangles between his legs.";
 			}
 		}
 		

@@ -23,7 +23,7 @@ import classes.internals.WeightedDrop;
 			}
 			else {
 				if (rand(player.spe + 40) < spe) {
-					outputText("You take the full force of his grand slam, sending you flying a good 40 feet, plunging through a snowdrift. As you right yourself, his laugh shakes the ground, \"<i>Puny! Haaaa!</i>\" ");
+					outputText("You take the full force of his grand slam, sending you flying a good " + UnitSystem.displayFeetEstimate(40) + ", plunging through a snowdrift. As you right yourself, his laugh shakes the ground, \"<i>Puny! Haaaa!</i>\" ");
 					damage = ((str + 50) + rand(100));
 					damage = player.reduceDamage(damage);
 					if (damage < 40) damage = 40;
@@ -177,9 +177,9 @@ import classes.internals.WeightedDrop;
 		}
 		public function giantBoulderHit(mode:int = 0):void {
 			clearOutput();
-			if (mode == 0) outputText("You charge at the giant, running as fast as you can, hoping to get to him before he can throw the huge rock. However, you getting closer just makes it easier for him to hit you, and he does, the full force of the boulder hitting your upper body square-on, whipping you directly down into the snow while the boulder mercifully lands some yards away. ");
-			else if (mode == 1) outputText(", but you do look up just in time to nearly avoid the large boulder he chucked your way. Scrambling to react, you jump to the side, only to realize you chose the wrong side. The boulder hits you in the back, propelling you.  Battered, beaten, bruised, you struggle to stand, when the giant picks you up, laughs in his deep, mighty bellow, and punts you over a mountain. You land several feet deep in a snowbank, and see something flying toward you before passing out. ");
-			else outputText("You begin to cast, focusing intently on summoning your magic. Too focused, though, as the giant propels the boulder in an arc to you. You notice the boulder just in time to not be crushed by it, though it still hits you and you fly several dozen yards before hitting a nice, jagged rock face. ");
+			if (mode == 0) outputText("You charge at the giant, running as fast as you can, hoping to get to him before he can throw the huge rock. However, you getting closer just makes it easier for him to hit you, and he does, the full force of the boulder hitting your upper body square-on, whipping you directly down into the snow while the boulder mercifully lands some " + UnitSystem.literalYards() + " away. ");
+			else if (mode == 1) outputText(", but you do look up just in time to nearly avoid the large boulder he chucked your way. Scrambling to react, you jump to the side, only to realize you chose the wrong side. The boulder hits you in the back, propelling you.  Battered, beaten, bruised, you struggle to stand, when the giant picks you up, laughs in his deep, mighty bellow, and punts you over a mountain. You land several " + UnitSystem.literalFeet() + " deep in a snowbank, and see something flying toward you before passing out. ");
+			else outputText("You begin to cast, focusing intently on summoning your magic. Too focused, though, as the giant propels the boulder in an arc to you. You notice the boulder just in time to not be crushed by it, though it still hits you and you fly several dozen " + UnitSystem.literalYards() + " before hitting a nice, jagged rock face. ");
 			if (player.hasStatusEffect(StatusEffects.GiantBoulder)) player.removeStatusEffect(StatusEffects.GiantBoulder);
 			var damage:int = (str * 2) + 100 + rand(250);
 			damage = player.reduceDamage(damage);
@@ -223,7 +223,7 @@ import classes.internals.WeightedDrop;
 			this.a = "the ";
 			this.short = "frost giant";
 			this.imageName = "frost-giant";
-			this.long = "The giant reminds you of the stories you heard as a child in Ingnam, at least twenty feet tall and wider than your height. The giant's skin is a deep, icy blue with patches of frost and ice covering his body in place of armor. Fortunately for you, he's unarmed. Unfortunately for you, being as large as a house has the added benefit of boulders, trees, and handfuls of frozen dirt being ready weapons, all of which is abundant in the area. Plus those hands could probably crush you like a bug. Your battle instincts are definitely going to be tested.";
+			this.long = "The giant reminds you of the stories you heard as a child in Ingnam, at least " + UnitSystem.displayHeight2EstimateTextually(20) + " tall and wider than your height. The giant's skin is a deep, icy blue with patches of frost and ice covering his body in place of armor. Fortunately for you, he's unarmed. Unfortunately for you, being as large as a house has the added benefit of boulders, trees, and handfuls of frozen dirt being ready weapons, all of which is abundant in the area. Plus those hands could probably crush you like a bug. Your battle instincts are definitely going to be tested.";
 			this.race = "Giant";
 			// this.plural = false;
 			this.createCock(36, 4, CockTypesEnum.HUMAN);

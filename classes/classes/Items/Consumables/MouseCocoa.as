@@ -7,6 +7,7 @@ package classes.Items.Consumables
 	import classes.PerkLib;
 	import classes.PregnancyStore;
 	import classes.StatusEffects;
+	import classes.UnitSystem;
 	
 	//special attack - bite?
 	//tooth length counter starts when you get teef, mouse bite gets more powerful over time as teeth grow in
@@ -46,7 +47,7 @@ package classes.Items.Consumables
 				//not horse
 				if (!player.isTaur()) outputText("\n\nYou tap your [feet] idly against the rock you sit upon as you enjoy the treat; it takes several minutes before you realize you don't reach as far down as you did when you sat down!  In shock, you jerk upright and leap off, nearly falling forward as your body moves more responsively than before!  Experimentally, you move in place as you look down at your now-closer [feet]; the sensation of a more compact agility stays with you.");
 				//horse
-				else outputText("\n\nYou trot idly in place as you eat, moving quicker and quicker as you become increasingly bored; on one step, the ground sneaks up on you and you hit it sharply, expecting a few more inches before contact!  Looking down, you notice better resolution than before - you can make out the dirt a bit more clearly.  It looks like you just shed some height, but... you're feeling too jittery to care.  You just want to run around.");
+				else outputText("\n\nYou trot idly in place as you eat, moving quicker and quicker as you become increasingly bored; on one step, the ground sneaks up on you and you hit it sharply, expecting a few more " + UnitSystem.literalInches() + " before contact!  Looking down, you notice better resolution than before - you can make out the dirt a bit more clearly.  It looks like you just shed some height, but... you're feeling too jittery to care.  You just want to run around.");
 				dynStats("spe", 1);
 				player.tallness--;
 				if (player.tallness > 60) player.tallness--;

@@ -5,13 +5,14 @@ package classes.Perks
 {
 	import classes.Perk;
 	import classes.PerkType;
+	import classes.UnitSystem;
 
 	public class ElvenBountyPerk extends PerkType
 	{
 
 		override public function desc(params:Perk = null):String
 		{
-			return "Increases fertility by " + params.value2 + "% and cum production by " + params.value1 + "mLs.";
+			return "Increases fertility by " + params.value2 + "% and cum production by " + UnitSystem.displayLitersShort(params.value1) + ".";
 		}
 
 		public function ElvenBountyPerk()

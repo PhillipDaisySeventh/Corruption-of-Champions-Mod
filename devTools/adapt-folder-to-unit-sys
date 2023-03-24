@@ -1,0 +1,12 @@
+#!/bin/bash
+
+folder="$(realpath $1)"
+
+if [ ! -d "$folder" ]; then
+  printf "The folder does not exist: \033[1m%s\033[m\n" "$folder"
+  exit
+fi
+
+for file in $folder/*; do
+  "$(dirname $(readlink -f "$0"))"/adapt-file-to-unit-sys "$file";
+done

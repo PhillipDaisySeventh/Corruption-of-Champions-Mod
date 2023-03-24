@@ -376,7 +376,7 @@ package classes.Scenes.Dungeons {
 			clearOutput();
 			outputText(images.showImage("factory-repair-closet"));
 			outputText("<b><u>Repair Closet</u></b>\n");
-			outputText("As you carefully slip inside the room, you note with some relief that it seems to be an empty storage closet. The room is tiny, barely 6' by 8' and almost entirely empty.  The one piece of furniture inside the closet is a simple wooden cabinet, placed against the far wall.  ")
+			outputText("As you carefully slip inside the room, you note with some relief that it seems to be an empty storage closet. The room is tiny, barely " + UnitSystem.display("6' by 8'", UnitSystem.displayInchesEstimate(6) + " by " + UnitSystem.displayInchesEstimate(8)) + " and almost entirely empty.  The one piece of furniture inside the closet is a simple wooden cabinet, placed against the far wall.  ")
 			dungeons.setDungeonButtons(null, roomPumpRoom, null, null);
 			if (flags[kFLAGS.FACTORY_MILKER_BUILT] > 0) outputText("The shelves are empty.  ");
 			else {
@@ -435,7 +435,7 @@ package classes.Scenes.Dungeons {
 			outputText("This room is little more than a closet in reality.  There is a simple set of mechanical controls on a finely crafted terminal against the far wall.  ")
 			if (flags[kFLAGS.FACTORY_SHUTDOWN] <= 0) {
 				outputText("You spend a moment looking over them, and realize you have three options to deal with this place.\n\n");
-				outputText("-You could close the storage vent valves and overload the fluid storage systems.  The storage tanks along the back portion of the building would rupture, releasing thousands of gallons of tainted fluids into the surrounding area, but the facility's systems would suffer catastrophic failures and shut down forever.\n");
+				outputText("-You could close the storage vent valves and overload the fluid storage systems.  The storage tanks along the back portion of the building would rupture, releasing thousands of " + UnitSystem.literalGallons() + " of tainted fluids into the surrounding area, but the facility's systems would suffer catastrophic failures and shut down forever.\n");
 				//(Consequences - lake goddess becomes tainted!)
 				outputText("-You could perform a system shutdown and then smash the controls.  It'd let the girls go and keep the factory shut down in the short term.  However most of the equipment would be undamaged and the place could be re-opened without too much work on the demons' part.\n");
 				//(Consequences - If Marcus is a demon he takes over running the factory forever.  If not, nothing bad happens)

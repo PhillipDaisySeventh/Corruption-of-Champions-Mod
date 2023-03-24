@@ -7,6 +7,7 @@ package classes.Items.Consumables
 	import classes.PerkLib;
 	import classes.Vagina;
 	import classes.CockTypesEnum;
+	import classes.UnitSystem;
 	
 	/**
 	 * @since June 23, 2019
@@ -76,9 +77,9 @@ package classes.Items.Consumables
 					if (rand(4) === 0) temp = player.increaseCock(0, 3);
 					else temp = player.increaseCock(0, 1);
 					if (temp < .5) outputText("  It stops almost as soon as it starts, growing only a tiny bit longer.");
-					if (temp >= .5 && temp < 1) outputText("  It grows slowly, stopping after roughly half an inch of growth.");
-					if (temp >= 1 && temp <= 2) outputText("  The sensation is incredible as more than an inch of lengthened dick-flesh grows in.");
-					if (temp > 2) outputText("  You smile and idly stroke your lengthening " + player.cockDescript(0) + " as a few more inches sprout.");
+					if (temp >= .5 && temp < 1) outputText("  It grows slowly, stopping after roughly " + UnitSystem.halfAnInch() + " of growth.");
+					if (temp >= 1 && temp <= 2) outputText("  The sensation is incredible as more than " + UnitSystem.anInch() + " of lengthened dick-flesh grows in.");
+					if (temp > 2) outputText("  You smile and idly stroke your lengthening " + player.cockDescript(0) + " as a few more " + UnitSystem.literalInches() + " sprout.");
 					if (tainted) dynStats("int", 1, "lib", 2, "sen", 1, "lus", 5 + temp * 3, "cor", 1);
 					else dynStats("int", 1, "lib", 2, "sen", 1, "lus", 5 + temp * 3);
 					if (player.cocks[0].cockType !== CockTypesEnum.DEMON) outputText("  With the transformation complete, your " + player.cockDescript(0) + " returns to its normal coloration.");
@@ -104,9 +105,9 @@ package classes.Items.Consumables
 					else outputText("\n\nAll of your " + player.multiCockDescriptLight() + " become shockingly hard, swollen and twitching as they turn a shiny inhuman purple in color.  They spasm, dripping thick ropes of hot demon-like pre-cum along their lengths as your shortest " + player.cockDescript(temp2) + " begins to grow.");
 
 					if (temp3 < .5) outputText("  It stops almost as soon as it starts, growing only a tiny bit longer.");
-					if (temp3 >= .5 && temp3 < 1) outputText("  It grows slowly, stopping after roughly half an inch of growth.");
-					if (temp3 >= 1 && temp3 <= 2) outputText("  The sensation is incredible as more than an inch of lengthened dick-flesh grows in.");
-					if (temp3 > 2) outputText("  You smile and idly stroke your lengthening " + player.cockDescript(temp2) + " as a few more inches sprout.");
+					if (temp3 >= .5 && temp3 < 1) outputText("  It grows slowly, stopping after roughly " + UnitSystem.halfAnInch() + " of growth.");
+					if (temp3 >= 1 && temp3 <= 2) outputText("  The sensation is incredible as more than " + UnitSystem.anInch() + " of lengthened dick-flesh grows in.");
+					if (temp3 > 2) outputText("  You smile and idly stroke your lengthening " + player.cockDescript(temp2) + " as a few more " + UnitSystem.literalInches() + " sprout.");
 					outputText("  With the transformation complete, your " + player.multiCockDescriptLight() + " return to their normal coloration.");
 				}
 				//NO CAWKS?
@@ -141,8 +142,8 @@ package classes.Items.Consumables
 					player.lengthChange(temp2, player.cocks.length);
 					//Display the degree of thickness change.
 					if (temp3 >= 1) {
-						if (player.cocks.length == 1) outputText("\n\nYour cock spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.");
-						else outputText("\n\nYour cocks spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.");
+						if (player.cocks.length == 1) outputText("\n\nYour cock spreads rapidly, swelling " + UnitSystem.anInch() + " or more in girth, making it feel fat and floppy.");
+						else outputText("\n\nYour cocks spread rapidly, swelling as they grow " + UnitSystem.anInch() + " or more in girth, making them feel fat and floppy.");
 					}
 					if (temp3 <= .5) {
 						if (player.cocks.length > 1) outputText("\n\nYour cocks feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.");
@@ -162,8 +163,8 @@ package classes.Items.Consumables
 					player.lengthChange(temp2, 1);
 					//Display the degree of thickness change.
 					if (temp3 >= 1) {
-						if (player.cocks.length == 1) outputText("  Your cock spreads rapidly, swelling an inch or more in girth, making it feel fat and floppy.");
-						else outputText("  Your cocks spread rapidly, swelling as they grow an inch or more in girth, making them feel fat and floppy.");
+						if (player.cocks.length == 1) outputText("  Your cock spreads rapidly, swelling " + UnitSystem.anInch() + " or more in girth, making it feel fat and floppy.");
+						else outputText("  Your cocks spread rapidly, swelling as they grow " + UnitSystem.anInch() + " or more in girth, making them feel fat and floppy.");
 					}
 					if (temp3 <= .5) {
 						if (player.cocks.length > 1) outputText("  Your cocks feel swollen and heavy. With a firm, but gentle, squeeze, you confirm your suspicions. They are definitely thicker.");

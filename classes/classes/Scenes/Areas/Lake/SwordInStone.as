@@ -46,11 +46,11 @@ public class SwordInStone extends AbstractLakeContent implements Encounter {
 			}
 			else { //if not corrupted...
 				outputText("You grip the handle with both hands and ");
-				if (player.str > 70) outputText("pull so hard you fall on your ass when the sword slips free.  The tip buries itself a few inches from your head.  You count yourself lucky and stand up.  ");
+				if (player.str > 70) outputText("pull so hard you fall on your ass when the sword slips free.  The tip buries itself a few " + UnitSystem.literalInches() + " from your head.  You count yourself lucky and stand up.  ");
 				if (player.str <= 70 && player.str >= 40) outputText("give a mighty pull and nearly fall over as the sword easily slides free from the tree.  ");
 				if (player.str < 40) outputText("easily pull the sword free, surprising yourself with how easy it was to remove.  ");
 				outputText("Remarkably the tree's trunk is entirely intact.  While marveling at this new development, a leaf brushes your shoulder.  You look up and watch as every single leaf turns from healthy green, to brilliant orange, and finally changes to brown.  The leaves rain down around you, covering the ground in dead plant-matter, leaving you alone with the withering skeleton of a dead tree.  The sight saddens you, though you cannot fathom why.\n\n");
-				outputText("The blade itself is three and a half feet of the purest, shining steel you have ever seen.  It truly is a beautiful blade.\n\n");
+				outputText("The blade itself is " + UnitSystem.display("three and a half feet", "a " + UnitSystem.meter()) + " of the purest, shining steel you have ever seen.  It truly is a beautiful blade.\n\n");
 				dynStats("lib", -(player.lib/3), "lus", -15);
 				inventory.takeItem(weapons.B_SWORD, camp.returnToCampUseOneHour);
 				player.createStatusEffect(StatusEffects.TookBlessedSword,0,0,0,0);

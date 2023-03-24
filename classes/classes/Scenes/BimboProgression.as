@@ -297,10 +297,10 @@ package classes.Scenes
 						
 						if (rand(10) == 0 || (rand(2)==0 && player.vaginas[0].vaginalWetness >= Vagina.WETNESS_DROOLING) ) {
 							outputText("You blush nervously as you take your phallic toy form your possessions. The firm dildo bends slightly as you hold it in your hand. You begin to rub the length of the slender tube against your [vagina]. As you pick up the pace, moans begin to escape your lips.  Your [clit] fills with blood and twitches as the faux cock slides against it.  You tenderly caress your [chest] with your other hand, becoming more breathy as you do so. ");  
-							outputText("\n\nSwallowing, you lean back and position the dildo toward your [vagina], the entrance twitching as it yearns for penetration. With an experimental push, you prod at the hole, jumping at the realization of how large the object really is. It's not nearly as thin, short, and bendable as a finger. You bite your lip and press the toy into you. The pain of your splitting hymen shoots through you. You gasp, easing the pressure on the toy, letting it sink one more inch before letting go altogether.");
+							outputText("\n\nSwallowing, you lean back and position the dildo toward your [vagina], the entrance twitching as it yearns for penetration. With an experimental push, you prod at the hole, jumping at the realization of how large the object really is. It's not nearly as thin, short, and bendable as a finger. You bite your lip and press the toy into you. The pain of your splitting hymen shoots through you. You gasp, easing the pressure on the toy, letting it sink " + UnitSystem.displayQualifiedInchesTextually(1, "more ") + " before letting go altogether.");
 							player.cuntChange(8, true, true, false);
 							getGame().dynStats("cor", 3);
-							outputText("\n\nBreathing heavily, you slowly pull the invasive, fake phallus from your stinging vagina. A light stain of blood now coats the first several inches of the dildo. Taking a deep breath, you push the toy back in, this time feeling less pain. The worst of the experience behind you, you gently pump in and out. Your once pure pussy is now accepting the intruder deeply. Your speed increases as you get used to it. Breathing heavier in between moans, you thrust your cherry-picker in towards unforeseen ecstasy. The tears in your eyes, accumulated from pain, well up even larger in pleasure.\n\n");
+							outputText("\n\nBreathing heavily, you slowly pull the invasive, fake phallus from your stinging vagina. A light stain of blood now coats the first several " + UnitSystem.literalInches() + " of the dildo. Taking a deep breath, you push the toy back in, this time feeling less pain. The worst of the experience behind you, you gently pump in and out. Your once pure pussy is now accepting the intruder deeply. Your speed increases as you get used to it. Breathing heavier in between moans, you thrust your cherry-picker in towards unforeseen ecstasy. The tears in your eyes, accumulated from pain, well up even larger in pleasure.\n\n");
 							useDildo = 1;
 								
 						}
@@ -358,7 +358,7 @@ package classes.Scenes
 					if (player.vaginas[0].vaginalWetness < Vagina.WETNESS_SLICK)
 						outputText("The thickness of the toy gradually increases, filling you more and more effectively as it reacts to your bodily fluids.  You grab it two-handed and start slamming it into your [pussy], vigorously fucking yourself with the swelling dong.  The sensations just keep getting better and better as more and more of the goblin's sex-drug leaks into you. Even your [clit] and cunt-lips tingle with need. You answer that need by picking up the pace, pistoning faster and faster.\n\n");
 					else if (player.vaginas[0].vaginalWetness < Vagina.WETNESS_SLAVERING) {
-						outputText("The toy's girth seems to pulse and swell within you, spreading you wide open as it sops up your natural wetness and grows larger.  You grab it in a two-handed grip and begin working it in and out of your [pussy], gasping and twitching as every ridge and feature of the dildo rubs you just right.  Every inch of your nethers tingles with a desire to be touched, rubbed, and squeezed. ");
+						outputText("The toy's girth seems to pulse and swell within you, spreading you wide open as it sops up your natural wetness and grows larger.  You grab it in a two-handed grip and begin working it in and out of your [pussy], gasping and twitching as every ridge and feature of the dildo rubs you just right.  Every " + UnitSystem.literalInch() + " of your nethers tingles with a desire to be touched, rubbed, and squeezed. ");
 						outputText("You answer that need by pistoning the fat juicy dick even harder into your tightly stretched box, cooing as tiny squirts of fluid erupt with every thrust.\n\n");
 					}
 					else {
@@ -841,7 +841,7 @@ package classes.Scenes
 				outputText("You feel how the fabric of the skirt is stretched by your [hips] as they become wider, more appropriate for a whore in a heat. ");
 			}
 			if (rand(2) == 0 && ( player.tone > 0 || player.butt.rating < 12)) {
-				outputText("Your cheeks are burning hot with arousal now. Every inch of your [ass] seems alight with sensation. ");
+				outputText("Your cheeks are burning hot with arousal now. Every " + UnitSystem.literalInch() + " of your [ass] seems alight with sensation. ");
 				player.modTone(0, 4);
 				if (player.butt.rating < 12) player.butt.rating ++;
 				getGame().dynStats("cor", 0.5);
@@ -858,10 +858,10 @@ package classes.Scenes
 				}
 				else {
 					if (craving < 2) {
-						outputText("Working your finger deeply into your ass has your whole body twisting and writhing in just the right way to make your tits jiggle and quake, every muscle, every inch of skin touched by the building pleasure. ");
+						outputText("Working your finger deeply into your ass has your whole body twisting and writhing in just the right way to make your tits jiggle and quake, every muscle, every " + UnitSystem.literalInch() + " of skin touched by the building pleasure. ");
 					}
 					else {
-						outputText("Working your dildo deeply into your ass has your whole body twisting and writhing in just the right way to make your tits jiggle and quake, every muscle, every inch of skin touched by the building pleasure. ");
+						outputText("Working your dildo deeply into your ass has your whole body twisting and writhing in just the right way to make your tits jiggle and quake, every muscle, every " + UnitSystem.literalInch() + " of skin touched by the building pleasure. ");
 					}
 					if (player.biggestTitSize() < 12) player.growTits(0.5, 1, false, 3);
 					player.orgasm('Tits');

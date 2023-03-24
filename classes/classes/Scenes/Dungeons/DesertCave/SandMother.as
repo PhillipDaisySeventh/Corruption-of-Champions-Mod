@@ -29,7 +29,7 @@ package classes.Scenes.Dungeons.DesertCave
 		//Earthshield
 		public function earthShield():void {
 			//Surrounds the witch a vortex of stones, raising her defense greatly and conferring 25% block to standard attacks.
-			outputText("Lowering her scepter towards the ground, the eight-foot tall sorceress suddenly grunts, lifting it as if carrying great weight.  As the small staff passes her chest, bits of stone and rock begin to lift out of the ground, accelerating into a vortex of earth that spins around her.  <b>It's going to be harder to hit her with physical attacks now!</b>");
+			outputText("Lowering her scepter towards the ground, the " + UnitSystem.displayHeight2EstimateWithHyphenTextually(8) + " tall sorceress suddenly grunts, lifting it as if carrying great weight.  As the small staff passes her chest, bits of stone and rock begin to lift out of the ground, accelerating into a vortex of earth that spins around her.  <b>It's going to be harder to hit her with physical attacks now!</b>");
 			createStatusEffect(StatusEffects.Earthshield,0,0,0,0);
 			combatRoundOver();
 		}

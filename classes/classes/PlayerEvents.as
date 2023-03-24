@@ -503,7 +503,7 @@ package classes {
 					player.createCock();
 					player.cocks[0].cockLength = 10;
 					player.cocks[0].cockThickness = 2.75;
-					outputText("\n<b>As time passes, your loins grow itchy for a moment.  A split-second later, a column of flesh erupts from your crotch.  Your new, 10-inch cock pulses happily.");
+					outputText("\n<b>As time passes, your loins grow itchy for a moment.  A split-second later, a column of flesh erupts from your crotch.  Your new, " + UnitSystem.displayInchWithHyphen(10) + " cock pulses happily.");
 					if (player.balls == 0) {
 						outputText("  A pair of heavy balls drop into place below it, churning to produce cum.");
 						player.balls = 2;
@@ -514,7 +514,7 @@ package classes {
 					needNext = true;
 				}
 				if (player.cocks[0].cockLength < 8) { //(Dick rebiggening) 
-					outputText("\n<b>As time passes, your cock engorges, flooding with blood and growing until it's at 8 inches long.  You really have no control over your dick.</b>\n");
+					outputText("\n<b>As time passes, your cock engorges, flooding with blood and growing until it's at " + UnitSystem.displayInches(8) + " long.  You really have no control over your dick.</b>\n");
 					player.cocks[0].cockLength = 8;
 					if (player.cocks[0].cockThickness < 2) player.cocks[0].cockThickness = 2;
 					needNext = true;
@@ -582,7 +582,7 @@ package classes {
 					player.createCock();
 					player.cocks[0].cockLength = 10;
 					player.cocks[0].cockThickness = 2.75;
-					outputText("\n<b>As time passes, your loins grow itchy for a moment.  A split-second later, a column of flesh erupts from your crotch.  Your new, 10-inch cock pulses happily.");
+					outputText("\n<b>As time passes, your loins grow itchy for a moment.  A split-second later, a column of flesh erupts from your crotch.  Your new, " + UnitSystem.displayInchWithHyphen(10) + " cock pulses happily.");
 					if (player.balls == 0) {
 						outputText("  A pair of heavy balls drop into place below it, churning to produce cum.");
 						player.balls = 2;
@@ -592,7 +592,7 @@ package classes {
 					needNext = true;
 				}
 				if (player.cocks[0].cockLength < 8) { //(Dick rebiggening)
-					outputText("\n<b>As time passes, your cock engorges, flooding with blood and growing until it's at 8 inches long.  ");
+					outputText("\n<b>As time passes, your cock engorges, flooding with blood and growing until it's at " + UnitSystem.displayInches(8) + " long.  ");
 					if (player.findPerk(PerkLib.BroBrains) >= 0) outputText("Goddamn, that thing is almost as tough as you!  ");
 					outputText("You really have no control over your dick.</b>\n");
 					player.cocks[0].cockLength = 8;
@@ -624,7 +624,7 @@ package classes {
 					//trace("Feeder status: " + player.statusEffectv2(StatusEffects.Feeder) + " (modded " + ((player.statusEffectv2(StatusEffects.Feeder)) - 70) + ")");
 					//After 3 days without feeding someone sensitivity jumps.
 					if (player.statusEffectv2(StatusEffects.Feeder) >= 72 && getGame().time.hours == 14) {
-						outputText("\n<b>After having gone so long without feeding your milk to someone, you're starting to feel strange.  Every inch of your skin practically thrums with sensitivity, particularly your sore, dripping nipples.</b>\n");
+						outputText("\n<b>After having gone so long without feeding your milk to someone, you're starting to feel strange.  Every " + UnitSystem.literalInch() + " of your skin practically thrums with sensitivity, particularly your sore, dripping nipples.</b>\n");
 						getGame().dynStats("sen", 2 + (((player.statusEffectv2(StatusEffects.Feeder)) - 70) / 20));
 						needNext = true;
 					}

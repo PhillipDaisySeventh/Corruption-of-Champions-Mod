@@ -87,7 +87,7 @@ package classes.Scenes.Areas.Desert {
 					return;
 				}
 				else { //Damage
-					outputText("Blackened flames burst from the circle, causing you to seize with pain as they scorch every inch of your body. ");
+					outputText("Blackened flames burst from the circle, causing you to seize with pain as they scorch every " + UnitSystem.literalInch() + " of your body. ");
 					var damage:int = (rand(10) + 10);
 					damage = player.reduceDamage(damage);
 					player.takeDamage(damage, true);
@@ -436,7 +436,7 @@ package classes.Scenes.Areas.Desert {
 			["cow"],
 			["minotaur"],
 			["2 draconic"],
-			["4, 12-inch long draconic"],
+			["4, " + UnitSystem.displayInchWithHyphen(12) + " long draconic"],
 			["antlers"],
 			["goat"],
 			["unicorn"],

@@ -3,6 +3,7 @@ package classes.Items.Consumables
 	import classes.Items.Consumable;
 	import classes.PerkLib;
 	import classes.StatusEffects;
+	import classes.UnitSystem;
 	
 	/**
 	 * Maximum manliness!
@@ -25,7 +26,7 @@ package classes.Items.Consumables
 				outputText("The stuff hits you like a giant cube, nearly staggering you as it begins to settle.");
 				if (player.tallness < 77) {
 					player.tallness = 77;
-					outputText(".. Did the ground just get farther away?  You glance down and realize, you're growing!  Like a sped-up flower sprout, you keep on getting taller until finally stopping around... six and a half feet, you assume.  Huh.  You didn't expect that to happen!");
+					outputText(".. Did the ground just get farther away?  You glance down and realize, you're growing!  Like a sped-up flower sprout, you keep on getting taller until finally stopping around... " + UnitSystem.display("six and a half feet", UnitSystem.displayHeight2EstimateTextually(6.5)) + ", you assume.  Huh.  You didn't expect that to happen!");
 				}
 				if (player.tone < 100) {
 					outputText("  A tingling in your arm draws your attention just in time to see your biceps and triceps swell with new-found energy, skin tightening until thick cords of muscle run across the whole appendage.  Your other arm surges forward with identical results.  To compensate, your shoulders and neck widen to bodybuilder-like proportions while your chest and abs tighten to a firm, statuesque physique.  Your " + player.legs() + " and glutes are the last to go, bulking up to proportions that would make any female martial artist proud.  You feel like you could kick forever with legs this powerful.");
@@ -35,7 +36,7 @@ package classes.Items.Consumables
 
 				//female
 				if (!player.hasCock()) {
-					outputText("The beverage isn't done yet, however, and it makes it perfectly clear with a building pleasure in your groin.  You can only cry in ecstasy and loosen the bottoms of your " + player.armorName + " just in time for a little penis to spring forth.  You watch, enthralled, as blood quickly stiffens the shaft to its full length – then keeps on going!  Before long, you have a quivering 10-inch maleness, just ready to stuff into a welcoming box.");
+					outputText("The beverage isn't done yet, however, and it makes it perfectly clear with a building pleasure in your groin.  You can only cry in ecstasy and loosen the bottoms of your " + player.armorName + " just in time for a little penis to spring forth.  You watch, enthralled, as blood quickly stiffens the shaft to its full length – then keeps on going!  Before long, you have a quivering " + UnitSystem.displayInchWithHyphen(10) + " maleness, just ready to stuff into a welcoming box.");
 					player.createCock();
 					player.cocks[0].cockLength = 10;
 					player.cocks[0].cockThickness = 2;
@@ -122,7 +123,7 @@ package classes.Items.Consumables
 						outputText("thickening and ");
 						player.cocks[0].cockThickness = 2.75;
 					}
-					outputText("lengthening until it's ten inches long and almost three inches wide.  Fuck, you're hung!  ");
+					outputText("lengthening until it's " + UnitSystem.displayInchesTextually(10) + " long and almost " + UnitSystem.displayInchesEstimateTextually(3) + " wide.  Fuck, you're hung!  ");
 					player.cocks[0].cockLength = 10;
 				}
 				//Dick already big enough! BALL CHECK!
@@ -138,7 +139,7 @@ package classes.Items.Consumables
 			}
 			//(No dick)
 			else {
-				outputText("You hear a straining, tearing noise before you realize it's coming from your underwear.  Pulling open your " + player.armorName + ", you gasp in surprise at the huge, throbbing manhood that now lies between your " + player.hipDescript() + ".  It rapidly stiffens to a full, ten inches, and goddamn, it feels fucking good.  You should totally find a warm hole to fuck!");
+				outputText("You hear a straining, tearing noise before you realize it's coming from your underwear.  Pulling open your " + player.armorName + ", you gasp in surprise at the huge, throbbing manhood that now lies between your " + player.hipDescript() + ".  It rapidly stiffens to a full, " + UnitSystem.displayInchesTextually(10) + ", and goddamn, it feels fucking good.  You should totally find a warm hole to fuck!");
 				if (player.balls === 0) outputText("  Two rounded orbs drop down below, filling out a new, fleshy sac above your " + player.legs() + ".  Sweet!  You can probably cum buckets with balls like these.");
 				outputText("\n\n");
 				player.createCock();

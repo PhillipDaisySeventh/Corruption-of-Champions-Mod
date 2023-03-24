@@ -18,7 +18,7 @@ package classes.Scenes.Areas.GlacialRift
 			outputText("Unable to resist ")
 			if (player.HP <= 0) outputText("her onslaught")
 			else outputText("your rising lust")
-			outputText(", you collapse to your knees, utterly at the valkyrie’s mercy.  She plants her spear in the ground, just inches from your head, and rolls you onto your back with her foot. \n\n")
+			outputText(", you collapse to your knees, utterly at the valkyrie’s mercy.  She plants her spear in the ground, just " + UnitSystem.literalInches() + " from your head, and rolls you onto your back with her foot. \n\n")
 			if (monster.lust100 >= 70 && flags[kFLAGS.SFW_MODE] <= 0) loseToValkyrieForcedOral()
 			else {
 				outputText("With one swift, contemptuous kick to the head, she knocks you right out.")
@@ -123,7 +123,7 @@ package classes.Scenes.Areas.GlacialRift
 			outputText("You grab the defeated valkyrie by the hair and push her down onto all fours. She groans as you circle around behind her, giving her ass a hard slap. Defeated, though, she does not try to resist you as you kneel down behind her and flip up her skirt, revealing her lush ass cheeks, her slick cunt, and her tight, puckered little asshole. You reach into your " + player.armorName + " and pull out your " + player.cockDescript() + ", stroking yourself for warmth until your can get your shaft tucked in between the valkyrie’s butt.\n\n");
 			outputText("You grab her hips and start to thrust upwards and back, slowly hotdogging the defeated girl’s ass, stopping only to slather a bit of her drooling cunt juices onto your shaft for some much-needed lubricant. You give her ass a quick, playful slap, making her reflexively squeeze down on your cock. Laughing, you get into a nice rhythm, spanking her once every few thrusts to get a little extra thrill out of her.\n\n");
 			outputText("To your surprise, the valkyrie looks over her shoulder and, face flush with anxious lust, whispers, \"<i>Well. . . What are you waiting for, huh? Just. . . stick it in already!</i>\"\n\n");
-			outputText("Well, if she’s so eager. You lean back and thrust in, slamming your " + player.cockDescript() + " into her tight pucker. She had already tried to relax, but your sudden and forceful intrusion makes her clamp down hard, squeezing your shaft like a wet silken vice. You moan as you shove more and more of your shaft into her blessedly warm depths, feeding her ass your cock one inch at a time until ");
+			outputText("Well, if she’s so eager. You lean back and thrust in, slamming your " + player.cockDescript() + " into her tight pucker. She had already tried to relax, but your sudden and forceful intrusion makes her clamp down hard, squeezing your shaft like a wet silken vice. You moan as you shove more and more of your shaft into her blessedly warm depths, feeding her ass your cock " + UnitSystem.displayInchesTextually(1) + " at a time until ");
 			if (player.cockArea(0) >= 16) outputText("you bottom out.  ");
 			else outputText("hilt the valkyrie.  ");
 			outputText("She screams in pleasure and pain as you hammer into her backdoor, but settles down once you’ve stopped your advance, unable to continue. Slowly, you begin to rock your hips into her, fucking her ass slow and gentle.\n\n");

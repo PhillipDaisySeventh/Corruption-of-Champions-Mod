@@ -8,6 +8,7 @@ package classes.Items.Consumables
 	import classes.Vagina;
 	import classes.internals.WeightedChoice;
 	import classes.lists.ColorLists;
+	import classes.UnitSystem;
 	
 	/**
 	 * Goo transformative item.
@@ -144,7 +145,7 @@ package classes.Items.Consumables
 				return false;
 			}
 			else if (player.tallness < 100 && rand(3) <= 1) {
-				outputText("\n\nYour gel-like body swells up from the intake of additional slime.  If you had to guess, you'd bet you were about two inches taller.");
+				outputText("\n\nYour gel-like body swells up from the intake of additional slime.  If you had to guess, you'd bet you were about " + UnitSystem.displayInchesEstimateTextually(2) + " taller.");
 				player.tallness += 2;
 				dynStats("str", 1, "tou", 1);
 			}
