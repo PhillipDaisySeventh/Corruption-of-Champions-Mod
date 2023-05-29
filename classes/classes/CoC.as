@@ -576,7 +576,7 @@ package classes
 			 * Debug, Version, etc
 			 */
 			debug = false; //DEBUG, used all over the place
-			ver = "1.0.2_mod_1.4.19"; //Version NUMBER
+			ver = "1.0.2_mod_1.4.19+SI-v1"; //Version NUMBER
 			version = ver + " (<b>No More Updates?</b>)"; //Version TEXT
 			
 			//Indicates if building for mobile?
